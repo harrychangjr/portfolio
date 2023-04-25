@@ -53,6 +53,7 @@ img_dac = Image.open("images/dac.png")
 img_raffles = Image.open("images/raffles.jpg")
 img_gender = Image.open("images/gender.jpg")
 img_hci = Image.open("images/hci.jpg")
+img_runes = Image.open("images/runes.png")
 #img_lottie_animation = Image.open("images/lottie_animation.gif")
 lottie_coding = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_abqysclq.json")
 
@@ -102,7 +103,7 @@ def txt4(a, b):
 
 with st.sidebar:
     choose = option_menu("Harry Chang", ["About Me", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Featured Articles", "Contact"],
-                         icons=['person fill', 'clock history', 'tools', 'book half', 'clipboard', 'trophy fill', 'pencil square' 'envelope at'],
+                         icons=['person fill', 'clock history', 'tools', 'book half', 'clipboard', 'trophy fill', 'pencil square', 'envelope'],
                          menu_icon="file-bar-graph", default_index=0,
                          styles={
         "container": {"padding": "5!important", "background-color": "#fafafa"},
@@ -471,6 +472,15 @@ elif choose == "Competitions":
             st.subheader("Singapore Business Case Competition 2020 - Hosted by [NTU Business Solutions Club](https://clubs.ntu.edu.sg/businesssolutions/)")
             st.write("Proposed solutions to help increase competitiveness of BreadTalk after performing market research and analysis on the F&B industry")
             st.write("[Pitch Deck](https://drive.google.com/file/d/1kLgbBVuth4KvfhjaK00n30xlr4bmn-iM/view)")
+    with st.container():
+        image_column, text_column = st.columns((1,3))
+        with image_column:
+            st.image(img_runes)
+        with text_column:
+            st.subheader("Contest 2.2 Beautiful Runes - CS1010S Programming Methodology")
+            st.write("Awarded 1st Place for 2D Runes category out of over 600 students enrolled in the module for Academic Year 2020/21 Semester 1")
+            st.write("2D pixel art created using Pillow (PIL) Library in Python")
+            st.write("[Github Repo](https://github.com/harrychangjr/runes)")
 #st.write("##")
 
 elif choose == "Featured Articles":
