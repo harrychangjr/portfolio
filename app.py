@@ -118,29 +118,39 @@ st.write("June to December 2023 (Upcoming)")
 #st.markdown("- Implemented A/B testing to measure potency of new e-commerce features before reporting results")
 st.subheader("Marketing Intern, [Quest](https://quest-inc.co)")
 st.write("April to June 2023 (Ongoing)")
-st.markdown("- Launched marketing ad campaigns using Google Ads to target businesses to visit company's landing page")
-st.markdown("- Drafted content articles on Wordpress for search engine optimisation (SEO)")
-st.markdown("- Performed weekly reporting of user acquisition metrics from various marketing channels, including [TikTok](https://www.tiktok.com/@questhireahero?lang=en) and [Instagram](https://www.instagram.com/questhireahero/)")
+st.markdown("""
+- Launched marketing ad campaigns using Google Ads to target businesses to visit company's landing page
+- Drafted content articles on Wordpress for search engine optimisation (SEO)
+- Performed weekly reporting of user acquisition metrics from various marketing channels, including [TikTok](https://www.tiktok.com/@questhireahero?lang=en) and [Instagram](https://www.instagram.com/questhireahero/)
+""")
 st.subheader("Actuarial Intern, [SCOR](https://scor.com)")
 st.write("May to August 2022")
-st.markdown("- Performed actuarial analysis of reinsurance treaties in various APAC markets, including entry of client portfolio and loss data into xAct (treaty pricing system)")
-st.markdown("- Regularly updated and analysed risk profiles and claims databases for insurance markets in Pakistan, Thailand and Vietnam")
-st.markdown("- Trained machine learning models (logistic regression, random forest) to predict insurance claims, with an average accuracy of 80% for each model")
+st.markdown("""
+- Performed actuarial analysis of reinsurance treaties in various APAC markets, including entry of client portfolio and loss data into xAct (treaty pricing system)
+- Regularly updated and analysed risk profiles and claims databases for insurance markets in Pakistan, Thailand and Vietnam
+- Trained machine learning models (logistic regression, random forest) to predict insurance claims, with an average accuracy of 80% for each model
+""")
 st.subheader("Data Analytics Intern, [Quest](https://quest-inc.co)")
 st.write("February to May 2022")
-st.markdown("- Conducted cohort analysis to optimise user acquisition and retention rates")
-st.markdown("- Collected, analysed and interpreted trends within user data to improve company’s growth and marketing strategies")
-st.markdown("- Built visualizations and dashboards using RStudio and Tableau to report monthly key metrics of company’s mobile application")
+st.markdown("""
+- Conducted cohort analysis to optimise user acquisition and retention rates
+- Collected, analysed and interpreted trends within user data to improve company’s growth and marketing strategies
+- Built visualizations and dashboards using RStudio and Tableau to report monthly key metrics of company’s mobile application
+""")
 st.subheader("Public Health Intern, [Saw Swee Hock School of Public Health](https://sph.nus.edu.sg/)")
 st.write("January to May 2021")
-st.markdown("- Conducted literature reviews and summarized papers related to public health")
-st.markdown("- Drafted case study report on British population health system, including impacts from COVID-19")
-st.markdown("- Collaborated with other students to compare successes and challenges of Britain, Canada and New Zealand’s healthcare systems")
+st.markdown("""
+- Conducted literature reviews and summarized papers related to public health
+- Drafted case study report on British population health system, including impacts from COVID-19
+- Collaborated with other students to compare successes and challenges of Britain, Canada and New Zealand’s healthcare systems
+""")
 st.subheader("Data Migration Intern, [Immigration@SG LLP](https://iasg.com.sg/)")
 st.write("October 2020 to January 2021")
-st.markdown("- Cleaned over 30,000 records using Pandas to facilitate smooth data migration into new CRM system")
-st.markdown("- Derived customer segmentation models using regression models and market basket analysis (association rule mining) to improve company’s marketing strategies")
-st.markdown("- Completed time series analysis using past sales data to forecast future monthly revenue")
+st.markdown("""
+- Cleaned over 30,000 records using Pandas to facilitate smooth data migration into new CRM system
+- Derived customer segmentation models using regression models and market basket analysis (association rule mining) to improve company’s marketing strategies
+- Completed time series analysis using past sales data to forecast future monthly revenue
+""")
 
 st.markdown('''
 <style>
@@ -208,40 +218,52 @@ st.header("Projects")
 st.subheader("Statistical Learning: Analysis on Video Game Sales")
 st.write("Completed project within 48 hours for module ST4248: Statistical Learning II in Academic Year 2022/23 Semester 2")
 st.write("Methods performed on [Kaggle dataset](https://www.kaggle.com/rush4ratio/video-game-sales-with-ratings):")
-st.markdown("- Initial data cleaning and exploratory data analysis (EDA)")
-st.markdown("- Multiple regression to investigate impact of publishers on global sales by regression coefficient, including performing one-hot encoding on 'Publisher' categorical variable")
-st.markdown("- Compared performances of multiple linear regression, random forest and XGBoost to predict global sales using critic scores and user scores from Metacritic")
-st.markdown("- Trained Linear Mixed-Effects Model to investigate impact of publishers, platform and genres in global sales")
+st.markdown("""
+- Initial data cleaning and exploratory data analysis (EDA)
+- Multiple regression to investigate impact of publishers on global sales by regression coefficient, including performing one-hot encoding on 'Publisher' categorical variable
+- Compared performances of multiple linear regression, random forest and XGBoost to predict global sales using critic scores and user scores from Metacritic
+- Trained Linear Mixed-Effects Model to investigate impact of publishers, platform and genres in global sales
+""")
 st.write("[Term Paper](https://github.com/harrychangjr/st4248-termpaper/blob/main/ST4248%20Term%20Paper%20(A0201825N)%20v5.pdf) | [Github Repo](https://github.com/harrychangjr/st4248-termpaper)")
 st.subheader("Data Science Project on Biopics Dataset from Kaggle")
 st.write("Self-initiated project using various machine learning methods on [Kaggle dataset](https://www.kaggle.com/datasets/fivethirtyeight/fivethirtyeight-biopics-dataset)")
-st.markdown("- Performed data preprocessing and drafted visualizations to understand more about the dataset")
-st.markdown("- Ran regression models to predict box office revenue (linear regression, random forest, support vector machines")
-st.markdown("- Used k-means clustering with principal components analysis to identify similar types of movies")
-st.markdown("- Built content-based recommendation system using cosine similarity to recommend similar movies based on input title")
+st.markdown("""
+- Performed data preprocessing and drafted visualizations to understand more about the dataset
+- Ran regression models to predict box office revenue (linear regression, random forest, support vector machines
+- Used k-means clustering with principal components analysis to identify similar types of movies
+- Built content-based recommendation system using cosine similarity to recommend similar movies based on input title
+""")
 st.write("[RPubs](https://rpubs.com/harrychangjr/biopics) | [Github Repo](https://github.com/harrychangjr/biopics)")
 st.subheader("Optimisation for Large-Scale Data-Driven Inference: Anime Recommendation System")
 st.write("Completed assignment for module DSA4212: Optimisation for Large-Scale Data-Driven Inference in Academic Year 2022/23 Semester 2")
-st.markdown("- Built recommendation system using various non-factor models, including content-based collaborative filtering and clustering")
-st.markdown("- Utilised matrix factorisation (single value decomposition) to optimise performance of recommendation system with lower test MSE")
-st.markdown("- Provided optional recommendations to further optimise performance e.g scraping additional data, using deep learning methods")
+st.markdown("""
+- Built recommendation system using various non-factor models, including content-based collaborative filtering and clustering
+- Utilised matrix factorisation (single value decomposition) to optimise performance of recommendation system with lower test MSE
+- Provided optional recommendations to further optimise performance e.g scraping additional data, using deep learning methods
+""")
 st.write("[Github Repo](https://github.com/harrychangjr/dsa4212) | [Report](https://github.com/harrychangjr/dsa4212/blob/main/DSA4212%20Assignment%202%20Group%2039%20Report.pdf)")
 st.subheader("Optimisation for Large-Scale Data-Driven Inference: Word Embedding")
 st.write("Completed assigmment for module DSA4212: Optimisation for Large-Scale Data-Driven Inference in Academic Year 2022/23 Semester 2")
-st.markdown("- Trained Word2Vec model on 20 Newsgroups dataset from scikit-learn package in Python, which provides a number of similar words based on input word")
-st.markdown("- Evaluated usefulness of model by applying model to text classification (46% accuracy) and sentiment analysis (86.4% accuracy)")
+st.markdown("""
+- Trained Word2Vec model on 20 Newsgroups dataset from scikit-learn package in Python, which provides a number of similar words based on input word
+- Evaluated usefulness of model by applying model to text classification (46% accuracy) and sentiment analysis (86.4% accuracy)
+""")
 st.write("[Report](https://github.com/harrychangjr/dsa4212/blob/main/DSA4212%20Assignment%203%20Group%2039%20Report.pdf) | [Github Code](https://github.com/harrychangjr/dsa4212/blob/main/DSA4212%20Assignment%203%20Group%2039.ipynb)")
 st.subheader("Data-Driven Marketing: Exploration on 3 datasets related to cellphone billing and subscriber data")
 st.write("Self-initiated project based on past assignment from module BT4211: Data-Driven Marketing")
-st.markdown("- Performed preliminary churn analysis, customer segmentation and descriptive analysis to understand more about dataset")
-st.markdown("- Trained logit and probit models, as well as providing model estimations for duration models")
-st.markdown("- Utilised random forest classifier to predict customer churn")
+st.markdown("""
+- Performed preliminary churn analysis, customer segmentation and descriptive analysis to understand more about dataset
+- Trained logit and probit models, as well as providing model estimations for duration models
+- Utilised random forest classifier to predict customer churn
+""")
 st.write("[RPubs](https://rpubs.com/harrychangjr/cellphone) | [Github Repo](https://github.com/harrychangjr/cellphone-billing)")
 st.subheader("Data Visualization: Analysis on Spotify Dataset from [tidytuesday](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-01-21)")
 st.write("Completed group project for module DSA2101: Essential Data Analytics Tools: Data Visualization in Academic Year 2021/22 Semester 2")
-st.markdown("- Investigated variables that differentiates songs of different genres, which could be useful in designing recommendation systems")
-st.markdown("- Explored how do the four seasons affect number of songs produced in each period")
-st.markdown("- Visualizations used: ridgeline faceted density plot, boxplot, line chart, faceted donut chart")
+st.markdown("""
+- Investigated variables that differentiates songs of different genres, which could be useful in designing recommendation systems
+- Explored how do the four seasons affect number of songs produced in each period
+- Visualizations used: ridgeline faceted density plot, boxplot, line chart, faceted donut chart
+""")
 st.write("[Github Code](https://github.com/harrychangjr/dsa2101/blob/main/DSA2101_Group%20B.Rmd) | [RPubs](https://rpubs.com/harrychangjr/dsa2101-groupb)")
 #st.write("##")
 
