@@ -331,7 +331,7 @@ elif choose == "Projects":
             - Initial data cleaning and exploratory data analysis (EDA)
             - Multiple regression to investigate impact of publishers on global sales by regression coefficient, including performing one-hot encoding on 'Publisher' categorical variable
             - Compared performances of multiple linear regression, random forest and XGBoost to predict global sales using critic scores and user scores from Metacritic
-            - Trained Linear Mixed-Effects Model to investigate impact of publishers, platform and genres in global sales
+            - Trained linear mixed-effects model to investigate impact of publishers, platform and genres in global sales
             """)
             st.write("[Term Paper](https://github.com/harrychangjr/st4248-termpaper/blob/main/ST4248%20Term%20Paper%20(A0201825N)%20v5.pdf) | [Github Repo](https://github.com/harrychangjr/st4248-termpaper)")
         with image_column:
@@ -457,7 +457,7 @@ elif choose == "Featured Articles":
         image_column, text_column = st.columns((1,3))
         with text_column:
             st.subheader("Reflections on Organising an 850-participant Data Analytics Competition")
-            st.write("February 18, 2023")
+            st.write("February 18, 2022")
             st.markdown("""
             A personal reflection of organising a large-scale online competition over the course of 6 months - co-written with [Axel Lau](https://www.linkedin.com/in/axel-lau/)
             """)
