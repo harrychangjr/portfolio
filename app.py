@@ -195,7 +195,7 @@ st.subheader("Bachelor of Science - [Data Science and Analytics](https://www.sta
 st.write("Relevant Coursework: Computers and the Humanities, Convex Optimization, Data Science in Practice, Data Structures and Algorithms, Data Visualization, Database Technology and Management, Linear Algebra, Multivariable Calculus, Optimization for Large-Scale Data-Driven Inference, Probability, Programming Tools for Economics, Regression Analysis, Statistical Learning")
 st.write("Notable Student Activities: [NUS Statistics and Data Science Society](https://sites.google.com/view/nussds/home) - President (2022); Marketing Director (2021-22), [Google Developer Student Clubs NUS](https://dsc.comp.nus.edu.sg/) - Deputy Head of Finance (2021-22), [NUS Inter-Faculty Games](https://ifg.nussportsclub.org/) - Track and Field (Science) Captain (2022)")
 st.subheader("GCE A Level - [Tampines Junior College](https://www.tmjc.moe.edu.sg/our-heritage/tampines-jc/) (2015 - 2016)")
-st.write("Coursework: H2 Chemistry, H2 Economics, H2 Mathematics, H1 Economics, H1 Project Work, H1 Chinese, H1 History")
+st.write("Coursework: H2 Chemistry, H2 Economics, H2 Mathematics, H1 Project Work, H1 Chinese, H1 History")
 st.write("Notable Student Activities: Track and Field - 100m (2016 A Division Semi-finalist), 200m, 4x100m")
 st.subheader("GCE O Level - [Saint Joseph's Institution](https://www.sji.edu.sg/) (2011 - 2014)")
 st.write("Coursework: English, Elementary Mathematics, Additional Mathematics, Physics, Chemistry, History, Geography Elective, Chinese")
