@@ -309,7 +309,7 @@ elif choose == "Technical Skills":
 elif choose == "Education":
     st.header("Education")
     with st.container():
-        image_column, text_column = st.columns((1,3))
+        image_column, text_column = st.columns((1,2.5))
         with image_column:
             st.image(img_nus)
         with text_column:
@@ -322,7 +322,7 @@ elif choose == "Education":
             - [NUS Inter-Faculty Games](https://ifg.nussportsclub.org/) - Track and Field (Science) Captain (2022)
             """)
     with st.container():
-        image_column, text_column = st.columns((1,3))
+        image_column, text_column = st.columns((1,2.5))
         with image_column:
             st.image(img_tpjc)
         with text_column:
@@ -334,7 +334,7 @@ elif choose == "Education":
             - TPJC Economics and Financial Literacy Fair 2015 - Games Facilitator
             """)
     with st.container():
-        image_column, text_column = st.columns((1,3))
+        image_column, text_column = st.columns((1,2.5))
         with image_column:
             st.image(img_sji)
         with text_column:
