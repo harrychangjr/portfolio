@@ -39,7 +39,7 @@ input[type=submit]:hover {
 
 code {
     font-size: 20px;
-    color: orange;
+    color: #800000;
 }
 
 /* Hide Streamlit branding */

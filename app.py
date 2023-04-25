@@ -28,6 +28,11 @@ img_sbcc = Image.open("images/sbcc.png")
 img_sji = Image.open("images/sji.jpg")
 img_tpjc = Image.open("images/tpjc.jpg")
 img_nus = Image.open("images/nus.jpeg")
+img_questlogo = Image.open("images/questlogo.jpg")
+img_scor = Image.open("images/scor.jpg")
+img_sephora = Image.open("images/sephora.jpg")
+img_iasg = Image.open("images/iasg.jpg")
+img_sshsph = Image.open("images/sshsph.jpg")
 
 #####################
 # Custom function for printing text
@@ -118,46 +123,76 @@ with st.container():
 # Create section for Work Experience
 st.write("---")
 st.header("Experience")
-st.subheader("Product Data Analyst Intern, [Sephora](https://sephora.sg)")
-st.write("June to December 2023 (Upcoming)")
+with st.container():
+    image_column, text_column = st.columns((1,5))
+    with image_column:
+        st.image(img_sephora)
+    with text_column:
+        st.subheader("Product Data Analyst Intern, [Sephora](https://sephora.sg)")
+        st.write("June to December 2023 (Upcoming)")
 #st.markdown("- Built, documented and hosted SQL queries and processes to enable reproducible and effective pipelines, analysis and dashboards using BigQuery")
 #st.markdown("- Utilised Domo to create dataflows and visualizations that provide quick insights into product health and performance of e-commerce features (web and mobile)")
 #st.markdown("- Implemented A/B testing to measure potency of new e-commerce features before reporting results")
-st.subheader("Marketing Intern, [Quest](https://quest-inc.co)")
-st.write("April to June 2023 (Ongoing)")
-st.markdown("""
-- Launched marketing ad campaigns using Google Ads to target businesses to visit company's landing page
-- Drafted content articles on Wordpress for search engine optimisation (SEO)
-- Performed weekly reporting of user acquisition metrics from various marketing channels, including [TikTok](https://www.tiktok.com/@questhireahero?lang=en) and [Instagram](https://www.instagram.com/questhireahero/)
-""")
-st.subheader("Actuarial Intern, [SCOR](https://scor.com)")
-st.write("May to August 2022")
-st.markdown("""
-- Performed actuarial analysis of reinsurance treaties in various APAC markets, including entry of client portfolio and loss data into xAct (treaty pricing system)
-- Regularly updated and analysed risk profiles and claims databases for insurance markets in Pakistan, Thailand and Vietnam
-- Trained machine learning models (logistic regression, random forest) to predict insurance claims, with an average accuracy of 80% for each model
-""")
-st.subheader("Data Analytics Intern, [Quest](https://quest-inc.co)")
-st.write("February to May 2022")
-st.markdown("""
-- Conducted cohort analysis to optimise user acquisition and retention rates
-- Collected, analysed and interpreted trends within user data to improve company’s growth and marketing strategies
-- Built visualizations and dashboards using RStudio and Tableau to report monthly key metrics of company’s mobile application
-""")
-st.subheader("Public Health Intern, [Saw Swee Hock School of Public Health](https://sph.nus.edu.sg/)")
-st.write("January to May 2021")
-st.markdown("""
-- Conducted literature reviews and summarized papers related to public health
-- Drafted case study report on British population health system, including impacts from COVID-19
-- Collaborated with other students to compare successes and challenges of Britain, Canada and New Zealand’s healthcare systems
-""")
-st.subheader("Data Migration Intern, [Immigration@SG LLP](https://iasg.com.sg/)")
-st.write("October 2020 to January 2021")
-st.markdown("""
-- Cleaned over 30,000 records using Pandas to facilitate smooth data migration into new CRM system
-- Derived customer segmentation models using regression models and market basket analysis (association rule mining) to improve company’s marketing strategies
-- Completed time series analysis using past sales data to forecast future monthly revenue
-""")
+with st.container():
+    image_column, text_column = st.columns((1,5))
+    with image_column:
+        st.image(img_questlogo)
+    with text_column:
+        st.subheader("Marketing Intern, [Quest](https://quest-inc.co)")
+        st.write("April to June 2023 (Ongoing)")
+        st.markdown("""
+        - Launched marketing ad campaigns using Google Ads to target businesses to visit company's landing page
+        - Drafted content articles on Wordpress for search engine optimisation (SEO)
+        - Performed weekly reporting of user acquisition metrics from various marketing channels, including [TikTok](https://www.tiktok.com/@questhireahero?lang=en) and [Instagram](https://www.instagram.com/questhireahero/)
+        """)
+with st.container():
+    image_column, text_column = st.columns((1,5))
+    with image_column:
+        st.image(img_scor)
+    with text_column:
+        st.subheader("Actuarial Intern, [SCOR](https://scor.com)")
+        st.write("May to August 2022")
+        st.markdown("""
+        - Performed actuarial analysis of reinsurance treaties in various APAC markets, including entry of client portfolio and loss data into xAct (treaty pricing system)
+        - Regularly updated and analysed risk profiles and claims databases for insurance markets in Pakistan, Thailand and Vietnam
+        - Trained machine learning models (logistic regression, random forest) to predict insurance claims, with an average accuracy of 80% for each model
+        """)
+with st.container():
+    image_column, text_column = st.columns((1,5))
+    with image_column:
+        st.image(img_questlogo)
+    with text_column:
+        st.subheader("Data Analytics Intern, [Quest](https://quest-inc.co)")
+        st.write("February to May 2022")
+        st.markdown("""
+        - Conducted cohort analysis to optimise user acquisition and retention rates
+        - Collected, analysed and interpreted trends within user data to improve company’s growth and marketing strategies
+        - Built visualizations and dashboards using RStudio and Tableau to report monthly key metrics of company’s mobile application
+        """)
+with st.container():
+    image_column, text_column = st.columns((1,5))
+    with image_column:
+        st.image(img_sshsph)
+    with text_column:
+        st.subheader("Public Health Intern, [Saw Swee Hock School of Public Health](https://sph.nus.edu.sg/)")
+        st.write("January to May 2021")
+        st.markdown("""
+        - Conducted literature reviews and summarized papers related to public health
+        - Drafted case study report on British population health system, including impacts from COVID-19
+        - Collaborated with other students to compare successes and challenges of Britain, Canada and New Zealand’s healthcare systems
+        """)
+with st.container():
+    image_column, text_column = st.columns((1,5))
+    with image_column:
+        st.image(img_iasg)
+    with text_column:
+        st.subheader("Data Migration Intern, [Immigration@SG LLP](https://iasg.com.sg/)")
+        st.write("October 2020 to January 2021")
+        st.markdown("""
+        - Cleaned over 30,000 records using Pandas to facilitate smooth data migration into new CRM system
+        - Derived customer segmentation models using regression models and market basket analysis (association rule mining) to improve company’s marketing strategies
+        - Completed time series analysis using past sales data to forecast future monthly revenue
+        """)
 
 st.markdown('''
 <style>
