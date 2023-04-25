@@ -1,7 +1,7 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 import requests
-#from streamlit_lottie import st_lottie
+from streamlit_lottie import st_lottie
 from PIL import Image
 
 # Set page title
@@ -9,6 +9,12 @@ st.set_page_config(page_title="Harry Chang", page_icon = "desktop_computer", lay
 
 # Use the following line to include your style.css file
 st.markdown('<style>' + open('style.css').read() + '</style>', unsafe_allow_html=True)
+
+def load_lottieurl(url):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
 
 # Use local CSS
 def local_css(file_name):
@@ -40,6 +46,10 @@ img_cellphone = Image.open("images/cellphone.jpg")
 img_spotify = Image.open("images/spotify.jpg")
 img_videogames = Image.open("images/videogames.jpg")
 img_word2vec = Image.open("images/word2vec.jpg")
+img_outlier = Image.open("images/outlier.png")
+img_dac = Image.open("Images/dac.png")
+#img_lottie_animation = Image.open("images/lottie_animation.gif")
+lottie_coding = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_abqysclq.json")
 
 #####################
 # Custom function for printing text
@@ -86,8 +96,8 @@ def txt4(a, b):
 #####################
 
 with st.sidebar:
-    choose = option_menu("Harry Chang", ["About Me", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Contact"],
-                         icons=['person fill', 'clock history', 'tools', 'book half', 'pencil square', 'trophy fill', 'envelope at'],
+    choose = option_menu("Harry Chang", ["About Me", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Featured Articles", "Contact"],
+                         icons=['person fill', 'clock history', 'tools', 'book half', 'clipboard', 'trophy fill', 'pencil square' 'envelope at'],
                          menu_icon="file-bar-graph", default_index=0,
                          styles={
         "container": {"padding": "5!important", "background-color": "#fafafa"},
@@ -106,7 +116,7 @@ if choose == "About Me":
             st.subheader("Aspiring Data Analyst/Data Scientist")
             st.write("👋🏻 Hi, I'm Harry! I'm a data science and analytics undergraduate based in Singapore. Having prior relevant experiences in tech, reinsurance and consulting sectors, I am constantly seeking unique internships to broaden my horizons before embarking on my data career upon graduation.")
             st.write("💼 With the COVID-19 pandemic behind us, I believe there is potential for data science to be applied in the retail industry. In response to the increasing demand for data analytics from both online and brick-and-mortar sales, I am thus aiming to enter this industry for my first full-time job.")
-            st.write("🏋🏻 In addition, I like to exercise in the gym, write and play video games in my free time.")
+            st.write("🏋🏻 In addition, I like to exercise in the gym, run, write, play video games and... eat good food in my free time.")
             st.write("[Resume (1 page)](https://drive.google.com/file/d/13CHoDfb-mYr9F8YSA4ZDV3tZPpNF6eck/view?usp=sharing) | [CV (2 pages)](https://drive.google.com/file/d/1-aubNVEKkgmHdeCtlp_O1M99tVChXfYs/view?usp=sharing)")
         with right_column:
             st.image(img_utown)
@@ -301,7 +311,7 @@ elif choose == "Education":
             st.write("Coursework: English, Mathematics, Additional Mathematics, Physics, Chemistry, History, Geography Elective, Chinese")
             st.markdown("""
             Notable Student Activities: 
-            - Track and Field (Long Jump, 100m), 
+            - Track and Field (Long Jump, 100m) 
             - [Business Design Thinking](https://www.sp.edu.sg/sp/news/sp/Secondary-students-learn-to-innovate)
             - Josephian International Experience Programme (Siem Reap, Cambodia)
             """)
@@ -432,10 +442,39 @@ elif choose == "Competitions":
             st.write("[Pitch Deck](https://drive.google.com/file/d/1kLgbBVuth4KvfhjaK00n30xlr4bmn-iM/view)")
 #st.write("##")
 
+elif choose == "Featured Articles":
+    st.header("Featured Articles")
+    with st.container():
+        image_column, text_column = st.columns((1,3))
+        with text_column:
+            st.subheader("Finding success as an outlier")
+            st.write("April 12, 2023")
+            st.write("A personal reflection of my tumultous undergraduate journey so far - and how I finally found my resolve")
+            st.write("[Article](https://antcabbage.wordpress.com/2023/04/12/finding-success-as-an-outlier/)")
+        with image_column:
+            st.image(img_outlier)
+    with st.container():
+        image_column, text_column = st.columns((1,3))
+        with text_column:
+            st.subheader("Reflections on Organising an 850-participant Data Analytics Competition")
+            st.write("February 18, 2023")
+            st.markdown("""
+            A personal reflection of organising a large-scale online competition over the course of 6 months - co-written with [Axel Lau](https://www.linkedin.com/in/axel-lau/)
+            """)
+            st.write("[Article](https://sites.google.com/view/nussds/articles/reflections-about-dac?authuser=0&pli=1)")
+        with image_column:
+            st.image(img_dac)
+
+
 elif choose == "Contact":
 # Create section for Contact
     #st.write("---")
     st.header("Contact")
-    st.write("You can reach me at harrychang.work@gmail.com")
-    st.write("[LinkedIn](https://linkedin.com/in/harrychangjr) | [Github](https://github.com/harrychangjr) | [Linktree](https://linktr.ee/harrychangjr)")
+    with st.container():
+        text_column, image_column = st.columns((1,1.5))
+        with text_column:
+            st.write("Let's connect! You can reach me at harrychang.work@gmail.com")
+            st.write("[LinkedIn](https://linkedin.com/in/harrychangjr) | [Github](https://github.com/harrychangjr) | [Linktree](https://linktr.ee/harrychangjr)")
+        with image_column:
+            st_lottie(lottie_coding, height=500, key="coding")
 #st.write("##")
