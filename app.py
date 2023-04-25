@@ -6,6 +6,9 @@ from PIL import Image
 # Set page title
 st.set_page_config(page_title="Harry Chang", page_icon = "desktop_computer", layout = "wide")
 
+# Use the following line to include your style.css file
+st.markdown('<style>' + open('style.css').read() + '</style>', unsafe_allow_html=True)
+
 # Use local CSS
 def local_css(file_name):
     with open(file_name) as f:
@@ -19,6 +22,50 @@ img_utown = Image.open("images/utown.JPG")
 img_quest = Image.open("images/quest.jpg")
 img_ifg = Image.open("images/ifg.jpg")
 
+#####################
+# Custom function for printing text
+def txt(a, b):
+  col1, col2 = st.columns([4,1])
+  with col1:
+    st.markdown(a)
+  with col2:
+    st.markdown(b)
+
+def txt2(a, b):
+  col1, col2 = st.columns([1,4])
+  with col1:
+    st.markdown(f'`{a}`')
+  with col2:
+    st.markdown(b)
+
+#def txt3(a, b):
+  #col1, col2 = st.columns([1,2])
+  #with col1:
+    #st.markdown(f'<p style="font-size: 20px;">{a}</p>', unsafe_allow_html=True)
+  #with col2:
+    # Split the text at the comma and wrap each part in backticks separately
+    #b_parts = b.split(',')
+    #b_formatted = '`' + ''.join(b_parts) + '`'
+    #st.markdown(f'<p style="font-size: 20px; font-family: monospace;">{b_formatted}</p>', unsafe_allow_html=True)
+    #st.markdown(f'<p style="font-size: 20px; color: red;"></code>{b}</code></p>', unsafe_allow_html=True)
+
+def txt3(a, b):
+  col1, col2 = st.columns([1,3])
+  with col1:
+    st.markdown(f'<p style="font-size: 20px;">{a}</p>', unsafe_allow_html=True)
+  with col2:
+    b_no_commas = b.replace(',', '')
+    st.markdown(b_no_commas)
+
+def txt4(a, b):
+  col1, col2 = st.columns([1.5,2])
+  with col1:
+    st.markdown(f'<p style="font-size: 25px; color: white;">{a}</p>', unsafe_allow_html=True)
+  with col2: #can't seem to change color besides green
+    st.markdown(f'<p style="font-size: 25px; color: red;"><code>{b}</code></p>', unsafe_allow_html=True)
+
+#####################
+
 # Create header
 with st.container():
     left_column, right_column = st.columns(2)
@@ -26,7 +73,7 @@ with st.container():
         st.title("Harry Chang")
         st.subheader("Aspiring Data Analyst/Data Scientist")
         st.write("Hi, I'm Harry! I'm a data science and analytics undergraduate based in Singapore. Having prior relevant experiences in tech, reinsurance and consulting sectors, I am constantly seeking unique internships to broaden my horizons before embarking on my data career upon graduation.")
-        st.write("With the COVID-19 pandemic behind us, I believe there is potential for data science to be applied in the retail industry. In response to the increasing demand for data analytics from both online and brick-and-mortar sales, I am thus aiming to branch into this industry for my first full-time job.")
+        st.write("With the COVID-19 pandemic behind us, I believe there is potential for data science to be applied in the retail industry. In response to the increasing demand for data analytics from both online and brick-and-mortar sales, I am thus aiming to enter this industry for my first full-time job.")
         st.write("In addition, I like to exercise in the gym, write and play video games in my free time.")
         st.write("[Resume (1 page)](https://drive.google.com/file/d/13CHoDfb-mYr9F8YSA4ZDV3tZPpNF6eck/view?usp=sharing) | [CV (2 pages)](https://drive.google.com/file/d/1-aubNVEKkgmHdeCtlp_O1M99tVChXfYs/view?usp=sharing)")
     with right_column:
@@ -34,6 +81,25 @@ with st.container():
         spacer_column, image_column = right_column.columns([1, 1])
         # Place the image in the last nested column
         image_column.image(img_utown, width=300)  # Adjust the width as needed
+        
+        #st.image(img_utown, width=300, output_format='JPEG')
+        #st.write(
+            #f"""
+            #<style>
+            #.reportview-container .main .block-container{{
+                #max-width: 100%;
+                #padding-top: 0rem;
+                #padding-right: 0rem;
+                #padding-left: 0rem;
+                #padding-bottom: 0rem;
+            #}}
+            #.reportview-container .main .block-container div {{
+                #text-align: center;
+            #}}
+            #</style>
+            #,
+            #unsafe_allow_html=True,
+        #)
 
 # Create section for About Me
 #st.write("---")
@@ -88,18 +154,38 @@ st.markdown('''
 # Create section for Technical Skills
 st.write("---")
 st.header("Technical Skills")
-st.subheader("Programming Languages")
-st.write("R, Python, SQL, Java, Stata, HTML, CSS")
-st.subheader("Academic Interests")
-st.write("Data Visualization, Market Basket Analysis, Recommendation Systems, Natural Language Processing")
-st.subheader("Data Visualization")
-st.write("ggplot2, matplotlib, seaborn, Gephi, Tableau, Power BI, Looker (Google Data) Studio, Domo, Google Analytics")
-st.subheader("Database and Cloud Systems")
-st.write("MySQL, PostgreSQL, BigQuery, Cloud Firestore, Google Cloud Platform, Amazon Web Services")
-st.subheader("Data Science Techniques")
-st.write("Regression, Clustering, Association Rules Mining, Random Forest, Decison Trees, Principal Components Analysis, Natural Language Processing, Matrix Factorisation, Collaborative Filtering")
-st.subheader("Miscellaneous")
-st.write("Canva, Figma, Google Firebase, Microsoft Office, Retool, Asana, Notion, ClickUp, Slack, Wordpress, Google Ads")
+txt3("Programming Languages","`R`, `Python`, `SQL`, `Java`, `Stata`")
+txt3("Academic Interests","`Data Visualization`, `Market Basket Analysis`, `Recommendation Systems`, `Natural Language Processing`")
+txt3("Data Visualization", "`ggplot2`, `matplotlib`, `seaborn`, `Gephi`, `Tableau`, `Power BI`, `Looker (Google Data) Studio`, `Domo`, `Google Analytics`")
+txt3("Database and Cloud Systems", "`MySQL`, `PostgreSQL`, `BigQuery`, `Cloud Firestore`, `Google Cloud Platform`, `Amazon Web Services`")
+txt3("Version Control", "`Git`, `Docker`")
+txt3("Design and Front-end Development", "`Canva`, `Figma`, `HTML`, `CSS`, `Streamlit`, `Wordpress`")
+txt3("Data Science Techniques", "`Regression`, `Clustering`, `Association Rules Mining`, `Random Forest`, `Decison Trees`, `Principal Components Analysis`, `Natural Language Processing`, `Matrix Factorisation`, `Collaborative Filtering`")
+txt3("Machine Learning Frameworks", "`TensorFlow`, `Keras`, `JAX`, `NLTK`")
+txt3("Task Management Tools", "`Asana`, `Notion`, `ClickUp`, `Slack`")
+txt3("Miscellaneous", "`Google Firebase`, `Microsoft Office`, `Retool`, `Google Ads`")
+
+#st.subheader("Programming Languages")
+#st.write("R, Python, SQL, Java, Stata")
+#st.subheader("Academic Interests")
+#st.write("Data Visualization, Market Basket Analysis, Recommendation Systems, Natural Language Processing")
+#st.subheader("Data Visualization")
+#st.write("ggplot2, matplotlib, seaborn, Gephi, Tableau, Power BI, Looker (Google Data) Studio, Domo, Google Analytics")
+#st.subheader("Database and Cloud Systems")
+#st.write("MySQL, PostgreSQL, BigQuery, Cloud Firestore, Google Cloud Platform, Amazon Web Services")
+#st.subheader("Version Control")
+#st.write("Git, Docker")
+#st.subheader("Design and Front-end Development")
+#st.write("Canva, Figma, HTML, CSS, Streamlit, Wordpress")
+#st.subheader("Data Science Techniques")
+#st.write("Regression, Clustering, Association Rules Mining, Random Forest, Decison Trees, Principal Components Analysis, Natural Language Processing, Matrix Factorisation, Collaborative Filtering")
+#st.subheader("Machine Learning Frameworks")
+#st.write("TensorFlow, Keras, JAX, NLTK")
+#st.subheader("Task Management Tools")
+#st.write("Asana, Notion, ClickUp, Slack")
+#st.subheader("Miscellaneous")
+#st.write("Google Firebase, Microsoft Office, Retool, Google Ads")
+
 #st.write("##")
 
 # Create section for Education

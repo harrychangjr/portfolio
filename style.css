@@ -32,6 +32,16 @@ input[type=submit]:hover {
     padding: 20px;
   }
 
+.custom-text {
+    font-size: 20px;
+    color: red;
+}
+
+code {
+    font-size: 20px;
+    color: orange;
+}
+
 /* Hide Streamlit branding */
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
