@@ -1,5 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
+import requests
 #from streamlit_lottie import st_lottie
 from PIL import Image
 
@@ -213,7 +214,7 @@ txt3("Database and Cloud Systems", "`MySQL`, `PostgreSQL`, `BigQuery`, `Cloud Fi
 txt3("Version Control", "`Git`, `Docker`")
 txt3("Design and Front-end Development", "`Canva`, `Figma`, `HTML`, `CSS`, `Streamlit`, `Wordpress`")
 txt3("Data Science Techniques", "`Regression`, `Clustering`, `Association Rules Mining`, `Random Forest`, `Decison Trees`, `Principal Components Analysis`, `Natural Language Processing`, `Matrix Factorisation`, `Collaborative Filtering`")
-txt3("Machine Learning Frameworks", "`TensorFlow`, `Keras`, `JAX`, `NLTK`")
+txt3("Machine Learning Frameworks", "`Numpy`, `Pandas`, `Scikit-Learn`, `TensorFlow`, `Keras`, `JAX`, `NLTK`")
 txt3("Task Management Tools", "`Asana`, `Notion`, `ClickUp`, `Slack`")
 txt3("Miscellaneous", "`Google Firebase`, `Microsoft Office`, `Retool`, `Google Ads`")
 
@@ -375,19 +376,25 @@ with st.container():
     st.write("---")
     st.header("Let's connect!")
     st.write("##")
-    
-    contact_form = """
-    <form action="https://formsubmit.co/harrychang.work@gmail.com method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="text" name="email" placeholder="Your email" required>
-        <textarea name="message" placeholder="Your message here" required></textarea>
-        <button type="submit">Send</button>
-    </form>
-    """
-    left_column, right_column = st.columns(2)
-    with left_column:
-        st.markdown(contact_form, unsafe_allow_html=True)
-    with right_column:
-        st.empty()
+
+    with st.form(key="contact-form"):
+        # Create form fields
+        name = st.text_input("Enter your name", key="name")
+        email = st.text_input("Enter your email", key="email")
+        message = st.text_area("Enter your message", key="message")
+
+        # Submit button
+        if st.form_submit_button("Send"):
+            payload = {
+                "_captcha": "false",
+                "name": name,
+                "email": email,
+                "message": message
+            }
+            response = requests.post("https://formsubmit.co/harrychang.work@gmail.com", data=payload)
+            if response.status_code == 200:
+                st.success("Your message has been sent!")
+            else:
+                st.error("There was an error sending your message. Please try again.")
+
     
