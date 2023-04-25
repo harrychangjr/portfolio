@@ -47,7 +47,7 @@ img_spotify = Image.open("images/spotify.jpg")
 img_videogames = Image.open("images/videogames.jpg")
 img_word2vec = Image.open("images/word2vec.jpg")
 img_outlier = Image.open("images/outlier.png")
-img_dac = Image.open("Images/dac.png")
+img_dac = Image.open("images/dac.png")
 #img_lottie_animation = Image.open("images/lottie_animation.gif")
 lottie_coding = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_abqysclq.json")
 
