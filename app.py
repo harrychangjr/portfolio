@@ -273,7 +273,7 @@ elif choose == "Experience":
 elif choose == "Technical Skills":
     #st.write("---")
     st.header("Technical Skills")
-    txt3("Programming Languages","`R`, `Python`, `SQL`, `Java`, `Stata`")
+    txt3("Programming Languages","`R`, `Python`, `SQL`, `Java`, `Stata`, `MATLAB`")
     txt3("Academic Interests","`Data Visualization`, `Market Basket Analysis`, `Recommendation Systems`, `Natural Language Processing`")
     txt3("Data Visualization", "`ggplot2`, `matplotlib`, `seaborn`, `Gephi`, `Tableau`, `Power BI`, `Looker (Google Data) Studio`, `Domo`, `Google Analytics`")
     txt3("Database and Cloud Systems", "`MySQL`, `PostgreSQL`, `BigQuery`, `Cloud Firestore`, `Google Cloud Platform`, `Amazon Web Services`")
