@@ -34,6 +34,12 @@ img_scor = Image.open("images/scor.jpg")
 img_sephora = Image.open("images/sephora.jpg")
 img_iasg = Image.open("images/iasg.jpg")
 img_sshsph = Image.open("images/sshsph.jpg")
+img_anime = Image.open("images/anime.jpg")
+img_biopics = Image.open("images/biopics.jpg")
+img_cellphone = Image.open("images/cellphone.jpg")
+img_spotify = Image.open("images/spotify.jpg")
+img_videogames = Image.open("images/videogames.jpg")
+img_word2vec = Image.open("images/word2vec.jpg")
 
 #####################
 # Custom function for printing text
@@ -273,57 +279,86 @@ with st.container():
 # Create section for Projects
 st.write("---")
 st.header("Projects")
-st.subheader("Statistical Learning: Analysis on Video Game Sales")
-st.write("Completed project within 48 hours for module ST4248: Statistical Learning II in Academic Year 2022/23 Semester 2")
-st.write("Methods performed on [Kaggle dataset](https://www.kaggle.com/rush4ratio/video-game-sales-with-ratings):")
-st.markdown("""
-- Initial data cleaning and exploratory data analysis (EDA)
-- Multiple regression to investigate impact of publishers on global sales by regression coefficient, including performing one-hot encoding on 'Publisher' categorical variable
-- Compared performances of multiple linear regression, random forest and XGBoost to predict global sales using critic scores and user scores from Metacritic
-- Trained Linear Mixed-Effects Model to investigate impact of publishers, platform and genres in global sales
-""")
-st.write("[Term Paper](https://github.com/harrychangjr/st4248-termpaper/blob/main/ST4248%20Term%20Paper%20(A0201825N)%20v5.pdf) | [Github Repo](https://github.com/harrychangjr/st4248-termpaper)")
-st.subheader("Data Science Project on Biopics Dataset from Kaggle")
-st.write("Self-initiated project using various machine learning methods on [Kaggle dataset](https://www.kaggle.com/datasets/fivethirtyeight/fivethirtyeight-biopics-dataset)")
-st.markdown("""
-- Performed data preprocessing and drafted visualizations to understand more about the dataset
-- Ran regression models to predict box office revenue (linear regression, random forest, support vector machines)
-- Used k-means clustering with principal components analysis to identify similar types of movies
-- Built content-based recommendation system using cosine similarity to recommend similar movies based on input title
-""")
-st.write("[RPubs](https://rpubs.com/harrychangjr/biopics) | [Github Repo](https://github.com/harrychangjr/biopics)")
-st.subheader("Optimisation for Large-Scale Data-Driven Inference: Anime Recommendation System")
-st.write("Completed assignment for module DSA4212: Optimisation for Large-Scale Data-Driven Inference in Academic Year 2022/23 Semester 2")
-st.markdown("""
-- Built recommendation system using various non-factor models, including content-based collaborative filtering and clustering
-- Utilised matrix factorisation (single value decomposition) to optimise performance of recommendation system with lower test MSE
-- Provided optional recommendations to further optimise performance e.g scraping additional data, using deep learning methods
-""")
-st.write("[Github Repo](https://github.com/harrychangjr/dsa4212) | [Report](https://github.com/harrychangjr/dsa4212/blob/main/DSA4212%20Assignment%202%20Group%2039%20Report.pdf)")
-st.subheader("Optimisation for Large-Scale Data-Driven Inference: Word Embedding")
-st.write("Completed assigmment for module DSA4212: Optimisation for Large-Scale Data-Driven Inference in Academic Year 2022/23 Semester 2")
-st.markdown("""
-- Trained Word2Vec model on 20 Newsgroups dataset from scikit-learn package in Python, which provides a number of similar words based on input word
-- Evaluated usefulness of model by applying model to text classification (46% accuracy) and sentiment analysis (86.4% accuracy)
-""")
-st.write("[Report](https://github.com/harrychangjr/dsa4212/blob/main/DSA4212%20Assignment%203%20Group%2039%20Report.pdf) | [Github Code](https://github.com/harrychangjr/dsa4212/blob/main/DSA4212%20Assignment%203%20Group%2039.ipynb)")
-st.subheader("Data-Driven Marketing: Exploration on 3 datasets related to cellphone billing and subscriber data")
-st.write("Self-initiated project based on past assignment from module BT4211: Data-Driven Marketing")
-st.markdown("""
-- Performed preliminary churn analysis, customer segmentation and descriptive analysis to understand more about dataset
-- Trained logit and probit models, as well as providing model estimations for duration models
-- Utilised random forest classifier to predict customer churn
-""")
-st.write("[RPubs](https://rpubs.com/harrychangjr/cellphone) | [Github Repo](https://github.com/harrychangjr/cellphone-billing)")
-st.subheader("Data Visualization: Analysis on Spotify Dataset from [tidytuesday](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-01-21)")
-st.write("Completed group project for module DSA2101: Essential Data Analytics Tools: Data Visualization in Academic Year 2021/22 Semester 2")
-st.markdown("""
-- Investigated variables that differentiates songs of different genres, which could be useful in designing recommendation systems
-- Explored how do the four seasons affect number of songs produced in each period
-- Visualizations used: ridgeline faceted density plot, boxplot, line chart, faceted donut chart
-""")
-st.write("[Github Code](https://github.com/harrychangjr/dsa2101/blob/main/DSA2101_Group%20B.Rmd) | [RPubs](https://rpubs.com/harrychangjr/dsa2101-groupb)")
-#st.write("##")
+with st.container():
+    text_column, image_column = st.columns((3,1))
+    with text_column:
+        st.subheader("Statistical Learning: Analysis on Video Game Sales")
+        st.write("Completed project within 48 hours for module ST4248: Statistical Learning II in Academic Year 2022/23 Semester 2")
+        st.write("Methods performed on [Kaggle dataset](https://www.kaggle.com/rush4ratio/video-game-sales-with-ratings):")
+        st.markdown("""
+        - Initial data cleaning and exploratory data analysis (EDA)
+        - Multiple regression to investigate impact of publishers on global sales by regression coefficient, including performing one-hot encoding on 'Publisher' categorical variable
+        - Compared performances of multiple linear regression, random forest and XGBoost to predict global sales using critic scores and user scores from Metacritic
+        - Trained Linear Mixed-Effects Model to investigate impact of publishers, platform and genres in global sales
+        """)
+        st.write("[Term Paper](https://github.com/harrychangjr/st4248-termpaper/blob/main/ST4248%20Term%20Paper%20(A0201825N)%20v5.pdf) | [Github Repo](https://github.com/harrychangjr/st4248-termpaper)")
+    with image_column:
+        st.image(img_videogames)
+with st.container():
+    text_column, image_column = st.columns((3,1))
+    with text_column:
+        st.subheader("Data Science Project on Biopics Dataset from Kaggle")
+        st.write("Self-initiated project using various machine learning methods on [Kaggle dataset](https://www.kaggle.com/datasets/fivethirtyeight/fivethirtyeight-biopics-dataset)")
+        st.markdown("""
+        - Performed data preprocessing and drafted visualizations to understand more about the dataset
+        - Ran regression models to predict box office revenue (linear regression, random forest, support vector machines)
+        - Used k-means clustering with principal components analysis to identify similar types of movies
+        - Built content-based recommendation system using cosine similarity to recommend similar movies based on input title
+        """)
+        st.write("[RPubs](https://rpubs.com/harrychangjr/biopics) | [Github Repo](https://github.com/harrychangjr/biopics)")
+    with image_column:
+        st.image(img_biopics)
+with st.container():
+    text_column, image_column = st.columns((3,1))
+    with text_column:
+        st.subheader("Optimisation for Large-Scale Data-Driven Inference: Anime Recommendation System")
+        st.write("Completed assignment for module DSA4212: Optimisation for Large-Scale Data-Driven Inference in Academic Year 2022/23 Semester 2")
+        st.markdown("""
+        - Built recommendation system using various non-factor models, including content-based collaborative filtering and clustering
+        - Utilised matrix factorisation (single value decomposition) to optimise performance of recommendation system with lower test MSE
+        - Provided optional recommendations to further optimise performance e.g scraping additional data, using deep learning methods
+        """)
+        st.write("[Github Repo](https://github.com/harrychangjr/dsa4212) | [Report](https://github.com/harrychangjr/dsa4212/blob/main/DSA4212%20Assignment%202%20Group%2039%20Report.pdf)")
+    with image_column:
+        st.image(img_anime)
+with st.container():
+    text_column, image_column = st.columns((3,1))
+    with text_column:
+        st.subheader("Optimisation for Large-Scale Data-Driven Inference: Word Embedding")
+        st.write("Completed assigmment for module DSA4212: Optimisation for Large-Scale Data-Driven Inference in Academic Year 2022/23 Semester 2")
+        st.markdown("""
+        - Trained Word2Vec model on 20 Newsgroups dataset from scikit-learn package in Python, which provides a number of similar words based on input word
+        - Evaluated usefulness of model by applying model to text classification (46% accuracy) and sentiment analysis (86.4% accuracy)
+        """)
+        st.write("[Report](https://github.com/harrychangjr/dsa4212/blob/main/DSA4212%20Assignment%203%20Group%2039%20Report.pdf) | [Github Code](https://github.com/harrychangjr/dsa4212/blob/main/DSA4212%20Assignment%203%20Group%2039.ipynb)")
+    with image_column:
+        st.image(img_word2vec)
+with st.container():
+    text_column, image_column = st.columns((3,1))
+    with text_column:
+        st.subheader("Data-Driven Marketing: Exploration on 3 datasets related to cellphone billing and subscriber data")
+        st.write("Self-initiated project based on past assignment from module BT4211: Data-Driven Marketing")
+        st.markdown("""
+        - Performed preliminary churn analysis, customer segmentation and descriptive analysis to understand more about dataset
+        - Trained logit and probit models, as well as providing model estimations for duration models
+        - Utilised random forest classifier to predict customer churn
+        """)
+        st.write("[RPubs](https://rpubs.com/harrychangjr/cellphone) | [Github Repo](https://github.com/harrychangjr/cellphone-billing)")
+    with image_column:
+        st.image(img_cellphone)
+with st.container():
+    text_column, image_column = st.columns((3,1))
+    with text_column:
+        st.subheader("Data Visualization: Analysis on Spotify Dataset from [tidytuesday](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-01-21)")
+        st.write("Completed group project for module DSA2101: Essential Data Analytics Tools: Data Visualization in Academic Year 2021/22 Semester 2")
+        st.markdown("""
+        - Investigated variables that differentiates songs of different genres, which could be useful in designing recommendation systems
+        - Explored how do the four seasons affect number of songs produced in each period
+        - Visualizations used: ridgeline faceted density plot, boxplot, line chart, faceted donut chart
+        """)
+        st.write("[Github Code](https://github.com/harrychangjr/dsa2101/blob/main/DSA2101_Group%20B.Rmd) | [RPubs](https://rpubs.com/harrychangjr/dsa2101-groupb)")
+    with image_column:
+        st.image(img_spotify)
 
 # Create section for Competitions
 st.write("---")
