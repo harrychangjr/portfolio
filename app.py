@@ -253,7 +253,7 @@ elif choose == "Experience":
             st.write("January 2017 to January 2019 | [Testimonial](https://drive.google.com/file/d/1O6Yu0P65dU8LCSDuXkf9BvlQJoz_5mRW/view?usp=sharing)")
             st.markdown("""
             - Assisted in organising division-level In-Camp Trainings, conferences and welfare events
-            - Handled daily administration of Operations Branch, inclding indentation of office equipment, budget management and food rations
+            - Handled daily administration of Operations Branch, including indentation of office equipment, budget management and food rations
             - Promoted to Corporal First Class (CFC) for outstanding efforts
             """)
             #st.write("[Testimonial](https://drive.google.com/file/d/1O6Yu0P65dU8LCSDuXkf9BvlQJoz_5mRW/view?usp=sharing)")
