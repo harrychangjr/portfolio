@@ -40,6 +40,8 @@ img_scor = Image.open("images/scor.jpg")
 img_sephora = Image.open("images/sephora.jpg")
 img_iasg = Image.open("images/iasg.jpg")
 img_sshsph = Image.open("images/sshsph.jpg")
+img_yll = Image.open("images/yll.jpg")
+img_saf = Image.open("images/saf.jpg")
 img_anime = Image.open("images/anime.jpg")
 img_biopics = Image.open("images/biopics.jpg")
 img_cellphone = Image.open("images/cellphone.jpg")
@@ -183,12 +185,13 @@ elif choose == "Experience":
             st.image(img_scor)
         with text_column:
             st.subheader("Actuarial Intern, [SCOR](https://scor.com)")
-            st.write("May to August 2022")
+            st.write("May to August 2022 | [Testimonial](https://drive.google.com/file/d/1seUP5OcXV5irA1Y1qt0cKnd7uQnLJLzw/view?usp=share_link)")
             st.markdown("""
             - Performed actuarial analysis of reinsurance treaties in various APAC markets, including entry of client portfolio and loss data into xAct (treaty pricing system)
             - Regularly updated and analysed risk profiles and claims databases for insurance markets in Pakistan, Thailand and Vietnam
             - Trained machine learning models (logistic regression, random forest) to predict insurance claims, with an average accuracy of 80% for each model
             """)
+            #st.write("[Testimonial](https://drive.google.com/file/d/1seUP5OcXV5irA1Y1qt0cKnd7uQnLJLzw/view?usp=share_link)")
     with st.container():
         image_column, text_column = st.columns((1,5))
         with image_column:
@@ -219,13 +222,38 @@ elif choose == "Experience":
             st.image(img_iasg)
         with text_column:
             st.subheader("Data Migration Intern, [Immigration@SG LLP](https://iasg.com.sg/)")
-            st.write("October 2020 to January 2021")
+            st.write("October 2020 to January 2021 | [Testimonial](https://drive.google.com/file/d/11qFI-9TMfjOk1OxuyQ9ho9A7D6KuIsXp/view?usp=sharing)")
             st.markdown("""
             - Cleaned over 30,000 records using Pandas to facilitate smooth data migration into new CRM system
             - Derived customer segmentation models using regression models and market basket analysis (association rule mining) to improve company’s marketing strategies
             - Completed time series analysis using past sales data to forecast future monthly revenue
             """)
-
+            #st.write("[Testimonial](https://drive.google.com/file/d/11qFI-9TMfjOk1OxuyQ9ho9A7D6KuIsXp/view?usp=sharing)")
+    with st.container():
+        image_column, text_column = st.columns((1,5))
+        with image_column:
+            st.image(img_yll)
+        with text_column:
+            st.subheader("Temporary Management Support Staff, [Yong Loo Lin School of Medicine](https://medicine.nus.edu.sg/)")
+            st.write("February to June 2019")
+            st.markdown("""
+            - Answered up to 100 different queries daily regarding undergraduate admissions
+            - Managed venue preparations for admissions interviews involving over 1,000 candidates over the span of 2 weeks
+            - Supported set-up of faculty booth for NUS Open House, with an estimated attendance of 30,000 visitors in one day
+            """)
+    with st.container():
+        image_column, text_column = st.columns((1,5))
+        with image_column:
+            st.image(img_saf)
+        with text_column:
+            st.subheader("Adminisrative Support Assistant, [Singapore Armed Forces](https://www.mindef.gov.sg/web/portal/mindef/home)")
+            st.write("January 2017 to January 2019 | [Testimonial](https://drive.google.com/file/d/1O6Yu0P65dU8LCSDuXkf9BvlQJoz_5mRW/view?usp=sharing)")
+            st.markdown("""
+            - Assisted in organising division-level In-Camp Trainings, conferences and welfare events
+            - Handled daily administration of Operations Branch, inclding indentation of office equipment, budget management and food rations
+            - Promoted to Corporal First Class (CFC) for outstanding efforts
+            """)
+            #st.write("[Testimonial](https://drive.google.com/file/d/1O6Yu0P65dU8LCSDuXkf9BvlQJoz_5mRW/view?usp=sharing)")
     st.markdown('''
     <style>
     [data-testid="stMarkdownContainer"] ul{
