@@ -21,6 +21,13 @@ local_css("style/style.css")
 img_utown = Image.open("images/utown.JPG")
 img_quest = Image.open("images/quest.jpg")
 img_ifg = Image.open("images/ifg.jpg")
+img_he4d = Image.open("images/he4d.jpg")
+img_lifehack = Image.open("images/lifehack.jpg")
+img_shopee = Image.open("images/shopee.png")
+img_sbcc = Image.open("images/sbcc.png")
+img_sji = Image.open("images/sji.jpg")
+img_tpjc = Image.open("images/tpjc.jpg")
+img_nus = Image.open("images/nus.jpeg")
 
 #####################
 # Custom function for printing text
@@ -72,9 +79,9 @@ with st.container():
     with left_column:
         st.title("Harry Chang")
         st.subheader("Aspiring Data Analyst/Data Scientist")
-        st.write("Hi, I'm Harry! I'm a data science and analytics undergraduate based in Singapore. Having prior relevant experiences in tech, reinsurance and consulting sectors, I am constantly seeking unique internships to broaden my horizons before embarking on my data career upon graduation.")
-        st.write("With the COVID-19 pandemic behind us, I believe there is potential for data science to be applied in the retail industry. In response to the increasing demand for data analytics from both online and brick-and-mortar sales, I am thus aiming to enter this industry for my first full-time job.")
-        st.write("In addition, I like to exercise in the gym, write and play video games in my free time.")
+        st.write("👋🏻 Hi, I'm Harry! I'm a data science and analytics undergraduate based in Singapore. Having prior relevant experiences in tech, reinsurance and consulting sectors, I am constantly seeking unique internships to broaden my horizons before embarking on my data career upon graduation.")
+        st.write("💼 With the COVID-19 pandemic behind us, I believe there is potential for data science to be applied in the retail industry. In response to the increasing demand for data analytics from both online and brick-and-mortar sales, I am thus aiming to enter this industry for my first full-time job.")
+        st.write("🏋🏻 In addition, I like to exercise in the gym, write and play video games in my free time.")
         st.write("[Resume (1 page)](https://drive.google.com/file/d/13CHoDfb-mYr9F8YSA4ZDV3tZPpNF6eck/view?usp=sharing) | [CV (2 pages)](https://drive.google.com/file/d/1-aubNVEKkgmHdeCtlp_O1M99tVChXfYs/view?usp=sharing)")
     with right_column:
         # Create nested columns in the right column
@@ -201,15 +208,30 @@ txt3("Miscellaneous", "`Google Firebase`, `Microsoft Office`, `Retool`, `Google 
 # Create section for Education
 st.write("---")
 st.header("Education")
-st.subheader("Bachelor of Science - [Data Science and Analytics](https://www.stat.nus.edu.sg/wp-content/uploads/sites/8/2022/12/NUS-CHS-DSA-Print-FA.pdf), [National University of Singapore](https://nus.edu.sg) (2020-2024)")
-st.write("Relevant Coursework: Computers and the Humanities, Convex Optimization, Data Science in Practice, Data Structures and Algorithms, Data Visualization, Database Technology and Management, Linear Algebra, Multivariable Calculus, Optimization for Large-Scale Data-Driven Inference, Probability, Programming Tools for Economics, Regression Analysis, Statistical Learning")
-st.write("Notable Student Activities: [NUS Statistics and Data Science Society](https://sites.google.com/view/nussds/home) - President (2022); Marketing Director (2021-22), [Google Developer Student Clubs NUS](https://dsc.comp.nus.edu.sg/) - Deputy Head of Finance (2021-22), [NUS Inter-Faculty Games](https://ifg.nussportsclub.org/) - Track and Field (Science) Captain (2022)")
-st.subheader("GCE A Level - [Tampines Junior College](https://www.tmjc.moe.edu.sg/our-heritage/tampines-jc/) (2015 - 2016)")
-st.write("Coursework: H2 Chemistry, H2 Economics, H2 Mathematics, H1 Project Work, H1 Chinese, H1 History")
-st.write("Notable Student Activities: Track and Field - 100m (2016 A Division Semi-finalist), 200m, 4x100m")
-st.subheader("GCE O Level - [Saint Joseph's Institution](https://www.sji.edu.sg/) (2011 - 2014)")
-st.write("Coursework: English, Elementary Mathematics, Additional Mathematics, Physics, Chemistry, History, Geography Elective, Chinese")
-st.write("Notable Student Activities: Track and Field (Long Jump, 100m), [Business Design Thinking](https://www.sp.edu.sg/sp/news/sp/Secondary-students-learn-to-innovate), Josephian International Experience Programme (Siem Reap, Cambodia)")
+with st.container():
+    image_column, text_column = st.columns((1,3))
+    with image_column:
+        st.image(img_nus)
+    with text_column:
+        st.subheader("Bachelor of Science - [Data Science and Analytics](https://www.stat.nus.edu.sg/wp-content/uploads/sites/8/2022/12/NUS-CHS-DSA-Print-FA.pdf), [National University of Singapore](https://nus.edu.sg) (2020-2024)")
+        st.write("Relevant Coursework: Computers and the Humanities, Convex Optimization, Data Science in Practice, Data Structures and Algorithms, Data Visualization, Database Technology and Management, Linear Algebra, Multivariable Calculus, Optimization for Large-Scale Data-Driven Inference, Probability, Programming Tools for Economics, Regression Analysis, Statistical Learning")
+        st.write("Notable Student Activities: [NUS Statistics and Data Science Society](https://sites.google.com/view/nussds/home) - President (2022); Marketing Director (2021-22), [Google Developer Student Clubs NUS](https://dsc.comp.nus.edu.sg/) - Deputy Head of Finance (2021-22), [NUS Inter-Faculty Games](https://ifg.nussportsclub.org/) - Track and Field (Science) Captain (2022)")
+with st.container():
+    image_column, text_column = st.columns((1,3))
+    with image_column:
+        st.image(img_tpjc)
+    with text_column:
+        st.subheader("GCE A Level - [Tampines Junior College](https://www.tmjc.moe.edu.sg/our-heritage/tampines-jc/) (2015 - 2016)")
+        st.write("Coursework: H2 Chemistry, H2 Economics, H2 Mathematics, H1 Project Work, H1 Chinese, H1 History")
+        st.write("Notable Student Activities: Track and Field - 100m (2016 A Division Semi-finalist), 200m, 4x100m")
+with st.container():
+    image_column, text_column = st.columns((1,3))
+    with image_column:
+        st.image(img_sji)
+    with text_column:
+        st.subheader("GCE O Level - [Saint Joseph's Institution](https://www.sji.edu.sg/) (2011 - 2014)")
+        st.write("Coursework: English, Elementary Mathematics, Additional Mathematics, Physics, Chemistry, History, Geography Elective, Chinese")
+        st.write("Notable Student Activities: Track and Field (Long Jump, 100m), [Business Design Thinking](https://www.sp.edu.sg/sp/news/sp/Secondary-students-learn-to-innovate), Josephian International Experience Programme (Siem Reap, Cambodia)")
 #st.write("##")
 
 # Create section for Projects
@@ -229,7 +251,7 @@ st.subheader("Data Science Project on Biopics Dataset from Kaggle")
 st.write("Self-initiated project using various machine learning methods on [Kaggle dataset](https://www.kaggle.com/datasets/fivethirtyeight/fivethirtyeight-biopics-dataset)")
 st.markdown("""
 - Performed data preprocessing and drafted visualizations to understand more about the dataset
-- Ran regression models to predict box office revenue (linear regression, random forest, support vector machines
+- Ran regression models to predict box office revenue (linear regression, random forest, support vector machines)
 - Used k-means clustering with principal components analysis to identify similar types of movies
 - Built content-based recommendation system using cosine similarity to recommend similar movies based on input title
 """)
@@ -270,20 +292,40 @@ st.write("[Github Code](https://github.com/harrychangjr/dsa2101/blob/main/DSA210
 # Create section for Competitions
 st.write("---")
 st.header("Competitions")
-st.subheader("[NUS LifeHack 2022](https://lifehack-2022.vercel.app/) - Hosted by [NUS Students' Computing Club](https://nuscomputing.com/)")
-st.write("Awarded Theme Best - Safety and Overall 2nd Place out of 117 team submissions")
-st.write("Ideated and developed Drive Woke! - a Flutter-based mobile application that aims to keep drivers awake by simulating conversations")
-st.write("[Devpost](https://devpost.com/software/quest-busters) | [Github Repo](https://github.com/yuechen2001/LifeHack2022) | [Pitch Deck](https://www.canva.com/design/DAFGF_nbyZ8/noJnq3IGDdX6nvu7M_2pXQ/view?utm_content=DAFGF_nbyZ8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink) | [Demo Video](https://www.youtube.com/watch?v=su3_Y3yzeh8)")
-st.subheader("NUS Fintech Month Hackathon 2021 - Hosted by [NUS Fintech Society](https://fintechsociety.comp.nus.edu.sg/)")
-st.write("Awarded Overall 2nd Place")
-st.write("Ideated a multi-pronged approach using blockchain and machine learning methods to improve fraud detection amongst complex entities in a digital or hybrid (digital and manual) operating environment")
-st.write("[Pitch Deck](https://www.linkedin.com/feed/update/urn:li:ugcPost:6761489595420037120/)")
-st.subheader("[Shopee Product and Design Challenge 2021](https://careers.shopee.sg/event-detail/396)")
-st.write("Redesigned user interface of Shopee mobile app using Figma to reduce clutter and increase user utilization of in-app rewards")
-st.write("[Pitch Deck](https://drive.google.com/file/d/12qnveB-SMjG_gF_gwNj3Nr-JsKeyKd6g/view) | [Figma Prototype](https://www.figma.com/proto/3UXT29N1RgVGDUlSBeWcPN/UI-Prototype-1?node-id=18-3&viewport=-675%2C231%2C0.32458001375198364&scaling=scale-down)")
-st.subheader("Singapore Business Case Competition 2020 - Hosted by [NTU Business Solutions Club](https://clubs.ntu.edu.sg/businesssolutions/)")
-st.write("Proposed solutions to help increase competitiveness of BreadTalk after performing market research and analysis on the F&B industry")
-st.write("[Pitch Deck](https://drive.google.com/file/d/1kLgbBVuth4KvfhjaK00n30xlr4bmn-iM/view)")
+with st.container():
+    image_column, text_column = st.columns((1,3))
+    with image_column:
+        st.image(img_lifehack)
+    with text_column:
+        st.subheader("[NUS LifeHack 2022](https://lifehack-2022.vercel.app/) - Hosted by [NUS Students' Computing Club](https://nuscomputing.com/)")
+        st.write("Awarded Theme Best - Safety and Overall 2nd Place out of 117 team submissions")
+        st.write("Ideated and developed Drive Woke! - a Flutter-based mobile application that aims to keep drivers awake by simulating conversations")
+        st.write("[Devpost](https://devpost.com/software/quest-busters) | [Github Repo](https://github.com/yuechen2001/LifeHack2022) | [Pitch Deck](https://www.canva.com/design/DAFGF_nbyZ8/noJnq3IGDdX6nvu7M_2pXQ/view?utm_content=DAFGF_nbyZ8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink) | [Demo Video](https://www.youtube.com/watch?v=su3_Y3yzeh8)")
+with st.container():
+    image_column, text_column = st.columns((1,3))
+    with image_column:
+        st.image(img_he4d)
+    with text_column:
+        st.subheader("NUS Fintech Month Hackathon 2021 - Hosted by [NUS Fintech Society](https://fintechsociety.comp.nus.edu.sg/)")
+        st.write("Awarded Overall 2nd Place")
+        st.write("Ideated a multi-pronged approach using blockchain and machine learning methods to improve fraud detection amongst complex entities in a digital or hybrid (digital and manual) operating environment")
+        st.write("[Pitch Deck](https://www.linkedin.com/feed/update/urn:li:ugcPost:6761489595420037120/)")
+with st.container():
+    image_column, text_column = st.columns((1,3))
+    with image_column:
+        st.image(img_shopee)
+    with text_column:
+        st.subheader("[Shopee Product and Design Challenge 2021](https://careers.shopee.sg/event-detail/396)")
+        st.write("Redesigned user interface of Shopee mobile app using Figma to reduce clutter and increase user utilization of in-app rewards")
+        st.write("[Pitch Deck](https://drive.google.com/file/d/12qnveB-SMjG_gF_gwNj3Nr-JsKeyKd6g/view) | [Figma Prototype](https://www.figma.com/proto/3UXT29N1RgVGDUlSBeWcPN/UI-Prototype-1?node-id=18-3&viewport=-675%2C231%2C0.32458001375198364&scaling=scale-down)")
+with st.container():
+    image_column, text_column = st.columns((1,3))
+    with image_column:
+        st.image(img_sbcc)
+    with text_column:
+        st.subheader("Singapore Business Case Competition 2020 - Hosted by [NTU Business Solutions Club](https://clubs.ntu.edu.sg/businesssolutions/)")
+        st.write("Proposed solutions to help increase competitiveness of BreadTalk after performing market research and analysis on the F&B industry")
+        st.write("[Pitch Deck](https://drive.google.com/file/d/1kLgbBVuth4KvfhjaK00n30xlr4bmn-iM/view)")
 #st.write("##")
 
 # Create section for Contact
