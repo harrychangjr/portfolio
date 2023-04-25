@@ -371,6 +371,17 @@ st.write("You can reach me at harrychang.work@gmail.com")
 st.write("[LinkedIn](https://linkedin.com/in/harrychangjr) | [Github](https://github.com/harrychangjr) | [Linktree](https://linktr.ee/harrychangjr)")
 #st.write("##")
 
+# Custom CSS to style the text area
+custom_css = """
+<style>
+    .css-10t7hia-TextInput:nth-child(3) {
+        border: 1px solid #d3d3d3 !important;
+        border-radius: 3px !important;
+    }
+</style>
+"""
+st.markdown(custom_css, unsafe_allow_html=True)
+
 # Contact form
 with st.container():
     st.write("---")
@@ -381,7 +392,11 @@ with st.container():
         # Create form fields
         name = st.text_input("Enter your name", key="name")
         email = st.text_input("Enter your email", key="email")
-        message = st.text_area("Enter your message", key="message")
+        
+        # Wrap the text area in a div with a custom class
+        with st.markdown('<div class="styled-textarea">', unsafe_allow_html=True):
+            message = st.text_area("Enter your message", key="message")
+        st.markdown('</div>', unsafe_allow_html=True)
 
         # Submit button
         if st.form_submit_button("Send"):
@@ -396,5 +411,3 @@ with st.container():
                 st.success("Your message has been sent!")
             else:
                 st.error("There was an error sending your message. Please try again.")
-
-    
