@@ -371,6 +371,7 @@ st.write("You can reach me at harrychang.work@gmail.com")
 st.write("[LinkedIn](https://linkedin.com/in/harrychangjr) | [Github](https://github.com/harrychangjr) | [Linktree](https://linktr.ee/harrychangjr)")
 #st.write("##")
 
+'''
 # Custom CSS to style the text area
 custom_css = """
 <style>
@@ -381,6 +382,7 @@ custom_css = """
 </style>
 """
 st.markdown(custom_css, unsafe_allow_html=True)
+
 
 # Contact form
 with st.container():
@@ -411,3 +413,4 @@ with st.container():
                 st.success("Your message has been sent!")
             else:
                 st.error("There was an error sending your message. Please try again.")
+'''
