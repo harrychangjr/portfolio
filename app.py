@@ -5,7 +5,7 @@ from streamlit_lottie import st_lottie
 from PIL import Image
 
 # Set page title
-st.set_page_config(page_title="Harry Chang", page_icon = "desktop_computer", layout = "wide", initial_sidebar_state = "collapsed")
+st.set_page_config(page_title="Harry Chang", page_icon = "desktop_computer", layout = "wide", initial_sidebar_state = "auto")
 
 # Use the following line to include your style.css file
 st.markdown('<style>' + open('style.css').read() + '</style>', unsafe_allow_html=True)
@@ -50,6 +50,9 @@ img_videogames = Image.open("images/videogames.jpg")
 img_word2vec = Image.open("images/word2vec.jpg")
 img_outlier = Image.open("images/outlier.png")
 img_dac = Image.open("images/dac.png")
+img_raffles = Image.open("images/raffles.jpg")
+img_gender = Image.open("images/gender.jpg")
+img_hci = Image.open("images/hci.jpg")
 #img_lottie_animation = Image.open("images/lottie_animation.gif")
 lottie_coding = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_abqysclq.json")
 
@@ -476,22 +479,54 @@ elif choose == "Featured Articles":
         image_column, text_column = st.columns((1,3))
         with text_column:
             st.subheader("Finding success as an outlier")
-            st.write("April 12, 2023")
+            st.write("April 12, 2023 | [Article](https://antcabbage.wordpress.com/2023/04/12/finding-success-as-an-outlier/)")
             st.write("A personal reflection of my tumultous undergraduate journey so far - and how I finally found my resolve")
-            st.write("[Article](https://antcabbage.wordpress.com/2023/04/12/finding-success-as-an-outlier/)")
+            #st.write("[Article](https://antcabbage.wordpress.com/2023/04/12/finding-success-as-an-outlier/)")
         with image_column:
             st.image(img_outlier)
     with st.container():
         image_column, text_column = st.columns((1,3))
         with text_column:
             st.subheader("Reflections on Organising an 850-participant Data Analytics Competition")
-            st.write("February 18, 2022")
+            st.write("February 18, 2022 | [Article](https://sites.google.com/view/nussds/articles/reflections-about-dac?authuser=0&pli=1)")
             st.markdown("""
             A personal reflection of organising a large-scale online competition over the course of 6 months - co-written with [Axel Lau](https://www.linkedin.com/in/axel-lau/)
             """)
-            st.write("[Article](https://sites.google.com/view/nussds/articles/reflections-about-dac?authuser=0&pli=1)")
+            #st.write("[Article](https://sites.google.com/view/nussds/articles/reflections-about-dac?authuser=0&pli=1)")
         with image_column:
             st.image(img_dac)
+    with st.container():
+        image_column, text_column = st.columns((1,3))
+        with text_column:
+            st.subheader("Essays for Final Test - GES1037: A History of Singapore in Ten Objects")
+            st.write("April 29, 2022 | [Essays](https://github.com/harrychangjr/ges1037/blob/main/GES1037%20Take%20Home%20Test.pdf)")
+            st.markdown("""
+            Essays written within 24-hour window in Academic Year 2021/22 Semester 2:
+            - Q4: Should the statue of Sir Stamford Raffles disappear for good?
+            - Q6: Should the Women's Charter replace one of the existing ten objects in the module? 
+            """)
+        with image_column:
+            st.image(img_raffles)
+    with st.container():
+        image_column, text_column = st.columns((1,3))
+        with text_column:
+            st.subheader("Does gender inequality still have a place in Singapore's society today?")
+            st.write("April 29, 2022 | [Term Paper](https://github.com/harrychangjr/ges1037/blob/main/GES1037%20Term%20Paper.pdf)")
+            st.markdown("""
+            Term paper submitted for the module GES1037: A History of Singapore in Ten Objects in Academic Year 2021/22 Semester 2
+            """)
+        with image_column:
+            st.image(img_gender)
+    with st.container():
+        image_column, text_column = st.columns((1,3))
+        with text_column:
+            st.subheader("Evaluating 'Chinese Privilege' in Singapore - Special Assisted Plan Schools")
+            st.write("April 29, 2021 | [Final Essay](https://github.com/harrychangjr/ges1010/blob/main/GES1010%20Final%20Essay%20A0201825N.pdf)")
+            st.markdown("""
+            Final essay submitted for the module GES1010: Nation-building in Singapore in Academic Year 2020/21 Semester 2
+            """)
+        with image_column:
+            st.image(img_hci)
 
 
 elif choose == "Contact":
