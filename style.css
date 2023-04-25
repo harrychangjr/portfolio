@@ -39,10 +39,10 @@ input[type=submit]:hover {
 
 code {
     background-color: #f5f5f5 !important;
-    font-family: 'serif'!important;
-    font-size: 20px !important;
-    color: #800000 !important;
-    padding: 10px !important;
+    /*font-family: 'sans serif'!important;*/
+    font-size: 16px !important;
+    color: darkorange !important;
+    padding: 8px !important;
     border-radius: 3px !important;
 }
 
