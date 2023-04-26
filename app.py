@@ -43,6 +43,7 @@ img_iasg = Image.open("images/iasg.jpg")
 img_sshsph = Image.open("images/sshsph.jpg")
 img_yll = Image.open("images/yll.jpg")
 img_saf = Image.open("images/saf.jpg")
+img_chatgpt = Image.open("images/chatgpt.jpg")
 img_anime = Image.open("images/anime.jpg")
 img_biopics = Image.open("images/biopics.jpg")
 img_cellphone = Image.open("images/cellphone.jpg")
@@ -363,6 +364,17 @@ elif choose == "Projects":
     # Create section for Projects
     #st.write("---")
     st.header("Projects")
+    with st.container():
+        text_column, image_column = st.columns((3,1))
+        with text_column:
+            st.subheader("Optimising and comparing articles with usage of ChatGPT and NLP methods")
+            st.write("Self-initiated project using past articles written for module SP1541: Exploring Science Communication in Popular Science")
+            st.markdown("""
+            In progress
+            """)
+            st.write("[Streamlit](https://harrychangjr-sp1541-nlp-app-5qfo55.streamlit.app/) | [Github Repo](https://github.com/harrychangjr/sp1541-nlp)")
+        with image_column:
+            st.image(img_chatgpt)
     with st.container():
         text_column, image_column = st.columns((3,1))
         with text_column:
