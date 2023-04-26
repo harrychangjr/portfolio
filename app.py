@@ -59,6 +59,8 @@ img_covid = Image.open("images/covid.jpg")
 img_gender = Image.open("images/gender.jpg")
 img_hci = Image.open("images/hci.jpg")
 img_wordcloud = Image.open("images/wordcloud.jpg")
+img_taste = Image.open("images/taste.jpg")
+img_measles = Image.open("images/measles.jpeg")
 img_runes = Image.open("images/runes.png")
 #img_lottie_animation = Image.open("images/lottie_animation.gif")
 lottie_coding = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_abqysclq.json")
@@ -606,6 +608,24 @@ elif choose == "Articles & Essays":
             """)
         with image_column:
             st.image(img_wordcloud)
+    with st.container():
+        image_column, text_column = st.columns((1,3))
+        with text_column:
+            st.subheader("Investigating the relationship between culture and sweet-sour taste interactions")
+            st.write("October 31, 2020 | [Article](https://github.com/harrychangjr/sp1541-nlp/blob/main/Originals/SP1541%20NA2.pdf)")
+            st.write("Are we correct to stereotype taste perceptions and preferences based on different cultures?")
+            st.write("Science news article submitted for the module SP1541: Exploring Science Communication through Popular Science in Academic Year 2020/21 Semester 1")
+        with image_column:
+            st.image(img_taste)
+    with st.container():
+        image_column, text_column = st.columns((1,3))
+        with text_column:
+            st.subheader("Timing vaccination campaign to reduce measles infections")
+            st.write("September 30, 2020 | [Article](https://github.com/harrychangjr/sp1541-nlp/blob/main/Originals/SP1541%20NA1.pdf)")
+            st.write("Despite having a vaccine that is readily accessible, measles cases and deaths are still surging worldwide, especially in recent years. Why is this so and are there any long-term solutions to resolve this?")
+            st.write("Science news article submitted for the module SP1541: Exploring Science Communication through Popular Science in Academic Year 2020/21 Semester 1")
+        with image_column:
+            st.image(img_measles)
 
 elif choose == "Site Analytics":
     st.header("Site Analytics")
