@@ -3,6 +3,7 @@ from streamlit_option_menu import option_menu
 import requests
 from streamlit_lottie import st_lottie
 from PIL import Image
+import streamlit_analytics
 
 # Set page title
 st.set_page_config(page_title="Harry Chang", page_icon = "desktop_computer", layout = "wide", initial_sidebar_state = "auto")
@@ -102,9 +103,9 @@ def txt4(a, b):
 #####################
 
 with st.sidebar:
-    choose = option_menu("Harry Chang", ["About Me", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Featured Articles", "Contact"],
-                         icons=['person fill', 'clock history', 'tools', 'book half', 'clipboard', 'trophy fill', 'pencil square', 'envelope'],
-                         menu_icon="file-bar-graph", default_index=0,
+    choose = option_menu("Harry Chang", ["About Me", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Featured Articles", "Site Analytics", "Contact"],
+                         icons=['person fill', 'clock history', 'tools', 'book half', 'clipboard', 'trophy fill', 'pencil square', 'kanban', 'envelope'],
+                         menu_icon="mortarboard", default_index=0,
                          styles={
         "container": {"padding": "5!important", "background-color": "#fafafa"},
         "icon": {"color": "darkorange", "font-size": "20px"}, 
@@ -540,6 +541,13 @@ elif choose == "Featured Articles":
         with image_column:
             st.image(img_hci)
 
+elif choose == "Site Analytics":
+    st.header("Site Analytics")
+    with st.container():
+      with streamlit_analytics.track():
+            st.text_input("Write something")
+            st.button("Click me")
+            st.write("...and now add `?analytics=on` to the URL to see the analytics dashboard 👀")  
 
 elif choose == "Contact":
 # Create section for Contact
