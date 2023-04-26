@@ -370,9 +370,11 @@ elif choose == "Projects":
             st.subheader("Optimising and comparing articles with usage of ChatGPT and NLP methods")
             st.write("Self-initiated project using past articles written for module SP1541: Exploring Science Communication in Popular Science")
             st.markdown("""
-            In progress
+            - Preliminary analysis - comparing word counts, readability scores and sentiment (compound) scores of all 6 article variants using NLTK and Textstat
+            - Generated word clouds to highlight frequently used words in each article variant
+            - Identified top 10 most commonly used words between variants of the same article to assess suitability of ChatGPT in enhancing article quality
             """)
-            st.write("[Streamlit](https://harrychangjr-sp1541-nlp-app-5qfo55.streamlit.app/) | [Github Repo](https://github.com/harrychangjr/sp1541-nlp)")
+            st.write("[Streamlit](https://harrychangjr-sp1541-nlp-app-5qfo55.streamlit.app/) | [Github Repo](https://github.com/harrychangjr/sp1541-nlp) | [Github Code (Backend)](https://github.com/harrychangjr/sp1541-nlp/blob/main/backend.ipynb)")
         with image_column:
             st.image(img_chatgpt)
     with st.container():
