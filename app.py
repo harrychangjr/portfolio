@@ -55,6 +55,7 @@ img_gephi = Image.open("images/gephi.png")
 img_outlier = Image.open("images/outlier.png")
 img_dac = Image.open("images/dac.png")
 img_raffles = Image.open("images/raffles.jpg")
+img_covid = Image.open("images/covid.jpg")
 img_gender = Image.open("images/gender.jpg")
 img_hci = Image.open("images/hci.jpg")
 img_wordcloud = Image.open("images/wordcloud.jpg")
@@ -572,6 +573,19 @@ elif choose == "Articles & Essays":
             """)
         with image_column:
             st.image(img_gender)
+    with st.container():
+        image_column, text_column = st.columns((1,3))
+        with text_column:
+            st.subheader("Essays for Final Assignment - GEH1049: Public Health in Action")
+            st.write("November 12, 2021 | [Essays](https://github.com/harrychangjr/geh1049/blob/main/GEH1049%20Final%20Assignment.pdf)")
+            st.markdown("""
+            Essays written in Academic Year 2021/22 Semester 1:
+            - Q1: Worsened health disparities based on ethnicity and gender due to COVID-19
+            - Q3: Obstacles in promoting healthy eating habits
+            - Q4: Role of healthcare data analytics in managing COVID-19
+            """)
+        with image_column:
+            st.image(img_covid)
     with st.container():
         image_column, text_column = st.columns((1,3))
         with text_column:
