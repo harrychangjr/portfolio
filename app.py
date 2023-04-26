@@ -49,11 +49,15 @@ img_cellphone = Image.open("images/cellphone.jpg")
 img_spotify = Image.open("images/spotify.jpg")
 img_videogames = Image.open("images/videogames.jpg")
 img_word2vec = Image.open("images/word2vec.jpg")
+img_fob = Image.open("images/fob.jpg")
+img_map = Image.open("images/map.png")
+img_gephi = Image.open("images/gephi.png")
 img_outlier = Image.open("images/outlier.png")
 img_dac = Image.open("images/dac.png")
 img_raffles = Image.open("images/raffles.jpg")
 img_gender = Image.open("images/gender.jpg")
 img_hci = Image.open("images/hci.jpg")
+img_wordcloud = Image.open("images/wordcloud.jpg")
 img_runes = Image.open("images/runes.png")
 #img_lottie_animation = Image.open("images/lottie_animation.gif")
 lottie_coding = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_abqysclq.json")
@@ -103,7 +107,7 @@ def txt4(a, b):
 #####################
 
 with st.sidebar:
-    choose = option_menu("Harry Chang", ["About Me", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Featured Articles", "Site Analytics", "Contact"],
+    choose = option_menu("Harry Chang", ["About Me", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Articles & Essays", "Site Analytics", "Contact"],
                          icons=['person fill', 'clock history', 'tools', 'book half', 'clipboard', 'trophy fill', 'pencil square', 'kanban', 'envelope'],
                          menu_icon="mortarboard", default_index=0,
                          styles={
@@ -276,7 +280,7 @@ elif choose == "Technical Skills":
     st.header("Technical Skills")
     txt3("Programming Languages","`R`, `Python`, `SQL`, `Java`, `Stata`, `MATLAB`")
     txt3("Academic Interests","`Data Visualization`, `Market Basket Analysis`, `Recommendation Systems`, `Natural Language Processing`")
-    txt3("Data Visualization", "`ggplot2`, `matplotlib`, `seaborn`, `Gephi`, `Tableau`, `Power BI`, `Looker (Google Data) Studio`, `Domo`, `Google Analytics`")
+    txt3("Data Visualization", "`ggplot2`, `matplotlib`, `seaborn`, `Folium`, `Gephi`, `Tableau`, `Power BI`, `Looker (Google Data) Studio`, `Domo`, `Google Analytics`")
     txt3("Database and Cloud Systems", "`MySQL`, `PostgreSQL`, `BigQuery`, `Cloud Firestore`, `Google Cloud Platform`, `Amazon Web Services`")
     txt3("Version Control", "`Git`, `Docker`")
     txt3("Design and Front-end Development", "`Canva`, `Figma`, `HTML`, `CSS`, `Streamlit`, `Wordpress`")
@@ -436,7 +440,45 @@ elif choose == "Projects":
             st.write("[Github Code](https://github.com/harrychangjr/dsa2101/blob/main/DSA2101_Group%20B.Rmd) | [RPubs](https://rpubs.com/harrychangjr/dsa2101-groupb)")
         with image_column:
             st.image(img_spotify)
-
+    with st.container():
+        text_column, image_column = st.columns((3,1))
+        with text_column:
+            st.subheader("Computers and the Humanities: Chloropleths using Google Sheets and Folium in Python")
+            st.write("Completed assignment for module GET1030: Computers and the Humanities in Academic Year 2020/21 Semester 2")
+            st.markdown("""
+            - Visualized the total number of performances of A Doll's House by country, using a chloropleth from Google Sheets
+            - Drafted scatterplots and boxplots using seaborn to investigate relationship between number of events per country and number of years these plays have been performed
+            - Created chloropleth using Folium to compare total performance counts in China, categorised by province
+            """)
+            st.write("[Google Sheets](https://docs.google.com/spreadsheets/d/1NBlGM7Sjcybbpl1Esa55qLRJw-Seti1LhC93EhV_68w/edit?usp=sharing) | [Google Colab](https://colab.research.google.com/drive/1RHqtb5XC7PkJDpNEb-BY3tO-8mI2j32E?usp=sharing)")
+        with image_column:
+            st.image(img_map)
+    with st.container():
+        text_column, image_column = st.columns((3,1))
+        with text_column:
+            st.subheader("Computers and the Humanities: Network Analysis on Harry Potter Film Database")
+            st.write("Completed assignment for module GET1030: Computers and the Humanities in Academic Year 2020/21 Semester 2")
+            st.markdown("""
+            - Utilised custom Python file based on NetworkX and Glob to create networks using Harry Potter film database
+            - Drafted visualizations using matplotlib and seaborn to compare densities and weighted degree values of nodes from generated networks
+            - Customised network visualization using Gephi to investigate relationship between various Harry Potter film directors
+            """)
+            st.write("[Github Code](https://github.com/harrychangjr/get1030/blob/main/A0201825N_GET1030_Tutorial_4.ipynb)")
+        with image_column:
+            st.image(img_gephi)
+    with st.container():
+        text_column, image_column = st.columns((3,1))
+        with text_column:
+            st.subheader("Computers and the Humanities: Text Processing and Analysis on Song Lyrics")
+            st.write("Completed assignment for module GET1030: Computers and the Humanities in Academic Year 2020/21 Semester 2")
+            st.markdown("""
+            - Utilised NLTK to process 10 sets of song lyrics from Fall Out Boy across 2 albums (Folie à Deux, Save Rock and Roll)
+            - Drafted visualizations using matplotlib and seaborn to compare proportions of nouns and verbs between different songs
+            - Analysed type/token ratios of songs from both albums to evaluate which album produced better quality songs based on words used
+            """)
+            st.write("[Github Code](https://github.com/harrychangjr/get1030/blob/main/A0201825N%20-%20GET1030%20Tutorial%203.ipynb)")
+        with image_column:
+            st.image(img_fob)
 elif choose == "Competitions":
     # Create section for Competitions
     #st.write("---")
@@ -486,8 +528,8 @@ elif choose == "Competitions":
             st.write("[Github Repo](https://github.com/harrychangjr/runes)")
 #st.write("##")
 
-elif choose == "Featured Articles":
-    st.header("Featured Articles")
+elif choose == "Articles & Essays":
+    st.header("Articles & Essays")
     with st.container():
         image_column, text_column = st.columns((1,3))
         with text_column:
@@ -540,6 +582,16 @@ elif choose == "Featured Articles":
             """)
         with image_column:
             st.image(img_hci)
+    with st.container():
+        image_column, text_column = st.columns((1,3))
+        with text_column:
+            st.subheader("Analysing usefulness of word clouds in mental health studies")
+            st.write("March 5, 2021 | [Essay](https://github.com/harrychangjr/get1030/blob/main/A0201825N%20GET1030%20Individual%20Assignment%20Final.pdf)")
+            st.markdown("""
+            Individual assignment submitted for the module GET1030: Computers and the Humanities in Academic Year 2020/21 Semester 2
+            """)
+        with image_column:
+            st.image(img_wordcloud)
 
 elif choose == "Site Analytics":
     st.header("Site Analytics")
