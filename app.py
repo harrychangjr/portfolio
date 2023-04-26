@@ -367,8 +367,8 @@ elif choose == "Projects":
     with st.container():
         text_column, image_column = st.columns((3,1))
         with text_column:
-            st.subheader("Optimising and comparing articles with usage of ChatGPT and NLP methods")
-            st.write("Self-initiated project using past articles written for module SP1541: Exploring Science Communication in Popular Science")
+            st.subheader("Optimising article quality using ChatGPT and NLP")
+            st.write("Self-initiated project using past articles written for module SP1541: Exploring Science Communication in Popular Science in Academic Year 2020/21 Semester 1")
             st.markdown("""
             - Preliminary analysis - comparing word counts, readability scores and sentiment (compound) scores of all 6 article variants using NLTK and Textstat
             - Generated word clouds to highlight frequently used words in each article variant
@@ -559,17 +559,6 @@ elif choose == "Articles & Essays":
     with st.container():
         image_column, text_column = st.columns((1,3))
         with text_column:
-            st.subheader("Reflections on Organising an 850-participant Data Analytics Competition")
-            st.write("February 18, 2022 | [Article](https://sites.google.com/view/nussds/articles/reflections-about-dac?authuser=0&pli=1)")
-            st.markdown("""
-            A personal reflection of organising a large-scale online competition over the course of 6 months - co-written with [Axel Lau](https://www.linkedin.com/in/axel-lau/)
-            """)
-            #st.write("[Article](https://sites.google.com/view/nussds/articles/reflections-about-dac?authuser=0&pli=1)")
-        with image_column:
-            st.image(img_dac)
-    with st.container():
-        image_column, text_column = st.columns((1,3))
-        with text_column:
             st.subheader("Essays for Final Test - GES1037: A History of Singapore in Ten Objects")
             st.write("April 29, 2022 | [Essays](https://github.com/harrychangjr/ges1037/blob/main/GES1037%20Take%20Home%20Test.pdf)")
             st.markdown("""
@@ -583,12 +572,23 @@ elif choose == "Articles & Essays":
         image_column, text_column = st.columns((1,3))
         with text_column:
             st.subheader("Does gender inequality still have a place in Singapore's society today?")
-            st.write("April 29, 2022 | [Term Paper](https://github.com/harrychangjr/ges1037/blob/main/GES1037%20Term%20Paper.pdf)")
+            st.write("April 2, 2022 | [Term Paper](https://github.com/harrychangjr/ges1037/blob/main/GES1037%20Term%20Paper.pdf)")
             st.markdown("""
             Term paper submitted for the module GES1037: A History of Singapore in Ten Objects in Academic Year 2021/22 Semester 2
             """)
         with image_column:
             st.image(img_gender)
+    with st.container():
+        image_column, text_column = st.columns((1,3))
+        with text_column:
+            st.subheader("Reflections on Organising an 850-participant Data Analytics Competition")
+            st.write("February 18, 2022 | [Article](https://sites.google.com/view/nussds/articles/reflections-about-dac?authuser=0&pli=1)")
+            st.markdown("""
+            A personal reflection of organising a large-scale online competition over the course of 6 months - co-written with [Axel Lau](https://www.linkedin.com/in/axel-lau/)
+            """)
+            #st.write("[Article](https://sites.google.com/view/nussds/articles/reflections-about-dac?authuser=0&pli=1)")
+        with image_column:
+            st.image(img_dac)
     with st.container():
         image_column, text_column = st.columns((1,3))
         with text_column:
@@ -627,7 +627,7 @@ elif choose == "Articles & Essays":
         with text_column:
             st.subheader("Investigating the relationship between culture and sweet-sour taste interactions")
             st.write("October 31, 2020 | [Article](https://github.com/harrychangjr/sp1541-nlp/blob/main/Originals/SP1541%20NA2.pdf)")
-            st.write("Are we correct to stereotype taste perceptions and preferences based on different cultures?")
+            st.write("*Are we correct to stereotype taste perceptions and preferences based on different cultures?*")
             st.write("Science news article submitted for the module SP1541: Exploring Science Communication through Popular Science in Academic Year 2020/21 Semester 1")
         with image_column:
             st.image(img_taste)
@@ -636,7 +636,7 @@ elif choose == "Articles & Essays":
         with text_column:
             st.subheader("Timing vaccination campaign to reduce measles infections")
             st.write("September 30, 2020 | [Article](https://github.com/harrychangjr/sp1541-nlp/blob/main/Originals/SP1541%20NA1.pdf)")
-            st.write("Despite having a vaccine that is readily accessible, measles cases and deaths are still surging worldwide, especially in recent years. Why is this so and are there any long-term solutions to resolve this?")
+            st.write("*Despite having a vaccine that is readily accessible, measles cases and deaths are still surging worldwide, especially in recent years. Why is this so and are there any long-term solutions to resolve this?*")
             st.write("Science news article submitted for the module SP1541: Exploring Science Communication through Popular Science in Academic Year 2020/21 Semester 1")
         with image_column:
             st.image(img_measles)
