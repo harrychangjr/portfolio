@@ -407,10 +407,9 @@ elif choose == "Projects":
         with text_column:
             st.subheader("Statistical Learning: Analysis on Video Game Sales")
             st.write("Completed project within 48 hours for module ST4248: Statistical Learning II in Academic Year 2022/23 Semester 2")
-            st.write("Methods performed on [Kaggle dataset](https://www.kaggle.com/rush4ratio/video-game-sales-with-ratings):")
+            #st.write("Methods performed on [Kaggle dataset](https://www.kaggle.com/rush4ratio/video-game-sales-with-ratings):")
             st.markdown("""
-            - Initial data cleaning and exploratory data analysis (EDA)
-            - Multiple regression to investigate impact of publishers on global sales by regression coefficient, including performing one-hot encoding on 'Publisher' categorical variable
+            - Utilised multiple regression to investigate impact of publishers on global sales by regression coefficient, including performing one-hot encoding on 'Publisher' categorical variable
             - Compared performances of multiple linear regression, random forest and XGBoost to predict global sales using critic scores and user scores from Metacritic
             - Trained linear mixed-effects model to investigate impact of publishers, platform and genres in global sales
             """)
@@ -421,9 +420,8 @@ elif choose == "Projects":
         text_column, image_column = st.columns((3,1))
         with text_column:
             st.subheader("Data Science Project on Biopics Dataset from Kaggle")
-            st.write("Self-initiated project using various machine learning methods on [Kaggle dataset](https://www.kaggle.com/datasets/fivethirtyeight/fivethirtyeight-biopics-dataset)")
+            st.write("Self-initiated project using various machine learning methods on [biopics dataset](https://www.kaggle.com/datasets/fivethirtyeight/fivethirtyeight-biopics-dataset)")
             st.markdown("""
-            - Performed data preprocessing and drafted visualizations to understand more about the dataset
             - Ran regression models to predict box office revenue (linear regression, random forest, support vector machines)
             - Used k-means clustering with principal components analysis to identify similar types of movies
             - Built content-based recommendation system using cosine similarity to recommend similar movies based on input title
@@ -573,16 +571,18 @@ elif choose == "Competitions":
 elif choose == "Articles & Essays":
     st.header("Articles & Essays")
     with st.container():
-        image_column, text_column = st.columns((1,3))
+        text_column, image_column = st.columns((3,1))
+        with image_column:
+            st.image(img_outlier)
         with text_column:
             st.subheader("Finding success as an outlier")
             st.write("April 12, 2023 | [Article](https://antcabbage.wordpress.com/2023/04/12/finding-success-as-an-outlier/)")
             st.write("A personal reflection of my tumultous undergraduate journey so far - and how I finally found my resolve")
-            #st.write("[Article](https://antcabbage.wordpress.com/2023/04/12/finding-success-as-an-outlier/)")
-        with image_column:
-            st.image(img_outlier)
+            #st.write("[Article](https://antcabbage.wordpress.com/2023/04/12/finding-success-as-an-outlier/)")       
     with st.container():
-        image_column, text_column = st.columns((1,3))
+        text_column, image_column = st.columns((3,1))
+        with image_column:
+            st.image(img_raffles)
         with text_column:
             st.subheader("Essays for Final Test - GES1037: A History of Singapore in Ten Objects")
             st.write("April 29, 2022 | [Essays](https://github.com/harrychangjr/ges1037/blob/main/GES1037%20Take%20Home%20Test.pdf)")
@@ -590,21 +590,21 @@ elif choose == "Articles & Essays":
             Essays written within 24-hour window in Academic Year 2021/22 Semester 2:
             - Q4: Should the statue of Sir Stamford Raffles disappear for good?
             - Q6: Should the Women's Charter replace one of the existing ten objects in the module? 
-            """)
-        with image_column:
-            st.image(img_raffles)
+            """)       
     with st.container():
-        image_column, text_column = st.columns((1,3))
+        text_column, image_column = st.columns((3,1))
+        with image_column:
+            st.image(img_gender)
         with text_column:
             st.subheader("Does gender inequality still have a place in Singapore's society today?")
             st.write("April 2, 2022 | [Term Paper](https://github.com/harrychangjr/ges1037/blob/main/GES1037%20Term%20Paper.pdf)")
             st.markdown("""
             Term paper submitted for the module GES1037: A History of Singapore in Ten Objects in Academic Year 2021/22 Semester 2
-            """)
-        with image_column:
-            st.image(img_gender)
+            """)       
     with st.container():
-        image_column, text_column = st.columns((1,3))
+        text_column, image_column = st.columns((3,1))
+        with image_column:
+            st.image(img_dac)
         with text_column:
             st.subheader("Reflections on Organising an 850-participant Data Analytics Competition")
             st.write("February 18, 2022 | [Article](https://sites.google.com/view/nussds/articles/reflections-about-dac?authuser=0&pli=1)")
@@ -612,10 +612,10 @@ elif choose == "Articles & Essays":
             A personal reflection of organising a large-scale online competition over the course of 6 months - co-written with [Axel Lau](https://www.linkedin.com/in/axel-lau/)
             """)
             #st.write("[Article](https://sites.google.com/view/nussds/articles/reflections-about-dac?authuser=0&pli=1)")
-        with image_column:
-            st.image(img_dac)
     with st.container():
-        image_column, text_column = st.columns((1,3))
+        text_column, image_column = st.columns((3,1))
+        with image_column:
+            st.image(img_covid)
         with text_column:
             st.subheader("Essays for Final Assignment - GEH1049: Public Health in Action")
             st.write("November 12, 2021 | [Essays](https://github.com/harrychangjr/geh1049/blob/main/GEH1049%20Final%20Assignment.pdf)")
@@ -625,46 +625,44 @@ elif choose == "Articles & Essays":
             - Q3: Obstacles in promoting healthy eating habits
             - Q4: Role of healthcare data analytics in managing COVID-19
             """)
-        with image_column:
-            st.image(img_covid)
     with st.container():
-        image_column, text_column = st.columns((1,3))
+        text_column, image_column = st.columns((3,1))
+        with image_column:
+            st.image(img_hci)
         with text_column:
             st.subheader("Evaluating 'Chinese Privilege' in Singapore - Special Assisted Plan Schools")
             st.write("April 29, 2021 | [Final Essay](https://github.com/harrychangjr/ges1010/blob/main/GES1010%20Final%20Essay%20A0201825N.pdf)")
             st.markdown("""
             Final essay submitted for the module GES1010: Nation-building in Singapore in Academic Year 2020/21 Semester 2
-            """)
-        with image_column:
-            st.image(img_hci)
+            """)      
     with st.container():
-        image_column, text_column = st.columns((1,3))
+        text_column, image_column = st.columns((3,1))
+        with image_column:
+            st.image(img_wordcloud)
         with text_column:
             st.subheader("Analysing usefulness of word clouds in mental health studies")
             st.write("March 5, 2021 | [Essay](https://github.com/harrychangjr/get1030/blob/main/A0201825N%20GET1030%20Individual%20Assignment%20Final.pdf)")
             st.markdown("""
             Individual assignment submitted for the module GET1030: Computers and the Humanities in Academic Year 2020/21 Semester 2
             """)
-        with image_column:
-            st.image(img_wordcloud)
     with st.container():
-        image_column, text_column = st.columns((1,3))
+        text_column, image_column = st.columns((3,1))
+        with image_column:
+            st.image(img_taste)
         with text_column:
             st.subheader("Investigating the relationship between culture and sweet-sour taste interactions")
             st.write("October 31, 2020 | [Article](https://github.com/harrychangjr/sp1541-nlp/blob/main/Originals/SP1541%20NA2.pdf)")
             st.write("*Are we correct to stereotype taste perceptions and preferences based on different cultures?*")
-            st.write("Science news article submitted for the module SP1541: Exploring Science Communication through Popular Science in Academic Year 2020/21 Semester 1")
-        with image_column:
-            st.image(img_taste)
+            st.write("Science news article submitted for the module SP1541: Exploring Science Communication through Popular Science in Academic Year 2020/21 Semester 1")      
     with st.container():
-        image_column, text_column = st.columns((1,3))
+        text_column, image_column = st.columns((3,1))
+        with image_column:
+            st.image(img_measles)
         with text_column:
             st.subheader("Timing vaccination campaign to reduce measles infections")
             st.write("September 30, 2020 | [Article](https://github.com/harrychangjr/sp1541-nlp/blob/main/Originals/SP1541%20NA1.pdf)")
             st.write("*Despite having a vaccine that is readily accessible, measles cases and deaths are still surging worldwide, especially in recent years. Why is this so and are there any long-term solutions to resolve this?*")
             st.write("Science news article submitted for the module SP1541: Exploring Science Communication through Popular Science in Academic Year 2020/21 Semester 1")
-        with image_column:
-            st.image(img_measles)
 
 elif choose == "Site Analytics":
     st.header("Site Analytics")
