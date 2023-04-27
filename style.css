@@ -38,12 +38,12 @@ input[type=submit]:hover {
 }
 
 code {
-    background-color: #f5f5f5 !important;
+    background-color: #f6f6f6 !important;
     /*font-family: 'sans serif'!important;*/
     font-size: 20px !important;
     color: darkorange !important;
-    padding: 2px !important;
-    border-radius: 3px !important;
+    padding: 1.5px !important;
+    border-radius: 4px !important;
 }
 
 /*section[data-testid='stSidebar'] {
