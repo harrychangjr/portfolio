@@ -71,7 +71,61 @@ img_hci = Image.open("images/hci.jpg")
 img_wordcloud = Image.open("images/wordcloud.jpg")
 img_taste = Image.open("images/taste.jpg")
 img_measles = Image.open("images/measles.jpeg")
-
+# Assets for gallery
+# 2019
+img_2019_1 = Image.open("gallery/2019_1.jpg")
+img_2019_2 = Image.open("gallery/2019_2.jpg")
+img_2019_3 = Image.open("gallery/2019_3.jpg")
+img_2019_4 = Image.open("gallery/2019_4.jpg")
+img_2019_5 = Image.open("gallery/2019_5.jpg")
+img_2019_6 = Image.open("gallery/2019_6.jpg")
+img_2019_7 = Image.open("gallery/2019_7.jpg")
+img_2019_8 = Image.open("gallery/2019_8.jpg")
+img_2019_9 = Image.open("gallery/2019_9.jpg")
+#2020
+img_2020_1 = Image.open("gallery/2020_1.jpg")
+#2021
+img_2021_1 = Image.open("gallery/2021_1.jpg")
+img_2021_2 = Image.open("gallery/2021_2.jpg")
+img_2021_3 = Image.open("gallery/2021_3.jpg")
+img_2021_4 = Image.open("gallery/2021_4.jpg")
+img_2021_5 = Image.open("gallery/2021_5.jpg")
+img_2021_6 = Image.open("gallery/2021_6.jpg")
+img_2021_7 = Image.open("gallery/2021_7.jpg")
+img_2021_8 = Image.open("gallery/2021_8.jpg")
+img_2021_9 = Image.open("gallery/2021_9.jpg")
+img_2021_10 = Image.open("gallery/2021_10.jpg")
+img_2021_11 = Image.open("gallery/2021_11.jpg")
+img_2021_12 = Image.open("gallery/2021_12.jpg")
+#2022
+img_2022_1 = Image.open("gallery/2022_1.jpg")
+img_2022_2 = Image.open("gallery/2022_2.jpg")
+img_2022_3 = Image.open("gallery/2022_3.jpg")
+img_2022_4 = Image.open("gallery/2022_4.jpg")
+img_2022_5 = Image.open("gallery/2022_5.jpg")
+img_2022_6 = Image.open("gallery/2022_6.jpg")
+img_2022_7 = Image.open("gallery/2022_7.jpg")
+img_2022_8 = Image.open("gallery/2022_8.jpg")
+img_2022_9 = Image.open("gallery/2022_9.jpg")
+img_2022_10 = Image.open("gallery/2022_10.jpg")
+img_2022_11 = Image.open("gallery/2022_11.jpg")
+img_2022_12 = Image.open("gallery/2022_12.jpg")
+img_2022_13 = Image.open("gallery/2022_13.jpg")
+img_2022_14 = Image.open("gallery/2022_14.jpg")
+img_2022_15 = Image.open("gallery/2022_15.jpg")
+img_2022_16 = Image.open("gallery/2022_16.jpg")
+img_2022_17 = Image.open("gallery/2022_17.jpg")
+img_2022_18 = Image.open("gallery/2022_18.jpg")
+img_2022_19 = Image.open("gallery/2022_19.jpg")
+img_2022_20 = Image.open("gallery/2022_20.jpg")
+img_2022_21 = Image.open("gallery/2022_21.jpg")
+img_2022_22 = Image.open("gallery/2022_22.jpg")
+img_2022_23 = Image.open("gallery/2022_23.jpg")
+img_2022_24 = Image.open("gallery/2022_24.jpg")
+#2023
+img_2023_1 = Image.open("gallery/2023_1.jpg")
+img_2023_2 = Image.open("gallery/2023_2.jpg")
+img_2023_3 = Image.open("gallery/2023_3.jpg")
 #img_lottie_animation = Image.open("images/lottie_animation.gif")
 # Assets for contact
 lottie_coding = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_abqysclq.json")
@@ -140,8 +194,8 @@ add_bg_from_local('bg.png')
 with st.sidebar:
     choose = option_menu(
                         "Harry Chang", 
-                        ["About Me", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Articles & Essays", "Site Analytics", "Contact"],
-                         icons=['person fill', 'clock history', 'tools', 'book half', 'clipboard', 'trophy fill', 'pencil square', 'globe', 'envelope'],
+                        ["About Me", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Articles & Essays", "Gallery", "Site Analytics", "Contact"],
+                         icons=['person fill', 'clock history', 'tools', 'book half', 'clipboard', 'trophy fill', 'pencil square', 'image', 'globe', 'envelope'],
                          menu_icon="mortarboard", 
                          default_index=0,
                          styles={
@@ -688,7 +742,176 @@ elif choose == "Articles & Essays":
             st.write("September 30, 2020 | [Article](https://github.com/harrychangjr/sp1541-nlp/blob/main/Originals/SP1541%20NA1.pdf)")
             st.write("*Despite having a vaccine that is readily accessible, measles cases and deaths are still surging worldwide, especially in recent years. Why is this so and are there any long-term solutions to resolve this?*")
             st.write("Science news article submitted for the module SP1541: Exploring Science Communication through Popular Science in Academic Year 2020/21 Semester 1")
+elif choose == "Gallery":
+    st.header("Gallery")
+    st.subheader("Some of my highlights throughout university!")
+    selected_options = ["2019", "2020", "2021", "2022", "2023"]
+    selected = st.selectbox("Which year would you like to explore?", options = selected_options)
+    st.write("Current selection:", selected)
+    if selected == "2019":
+        st.subheader("2019")
+        st.write("*So many things to explore, yet so little time*")
+        # Define the list of image files
+        images_2019 = [img_2019_1, img_2019_2, img_2019_3, img_2019_4, img_2019_5, img_2019_6, img_2019_7, img_2019_8, img_2019_9]
+        # Display the images in a grid
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.image(images_2019[0], use_column_width=True)
+        with col2:
+            st.image(images_2019[1], use_column_width=True)
+        with col3:
+            st.image(images_2019[2], use_column_width=True)
+        
+        col4, col5, col6 = st.columns(3)
+        with col4:
+            st.image(images_2019[3], use_column_width=True)
+        with col5:
+            st.image(images_2019[4], use_column_width=True)
+        with col6:
+            st.image(images_2019[5], use_column_width=True)
+        
+        col7, col8, col9 = st.columns(3)
+        with col7:
+            st.image(images_2019[6], use_column_width=True)
+        with col8:
+            st.image(images_2019[7], use_column_width=True)
+        with col9:
+            st.image(images_2019[8], use_column_width=True)
 
+    elif selected == "2020":
+        st.subheader("2020")
+        st.write("*Intro to Zoom University*")
+        # Create a container for the image
+        container = st.container()
+        # Display the image in the container
+        with container:
+            st.image(img_2020_1, width = 500)
+    elif selected == "2021":
+        st.subheader("2021")
+        st.write("*Boomer in a zoomer's body*")
+        # Define the list of image files
+        images_2021 = [img_2021_1, img_2021_2, img_2021_3, img_2021_4, img_2021_5, img_2021_6, img_2021_7, img_2021_8, img_2021_9, img_2021_10, img_2021_11, img_2021_12]
+        # Display the images in a grid
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.image(images_2021[0], use_column_width=True)
+        with col2:
+            st.image(images_2021[1], use_column_width=True)
+        with col3:
+            st.image(images_2021[2], use_column_width=True)
+        
+        col4, col5, col6 = st.columns(3)
+        with col4:
+            st.image(images_2021[3], use_column_width=True)
+        with col5:
+            st.image(images_2021[4], use_column_width=True)
+        with col6:
+            st.image(images_2021[5], use_column_width=True)
+        
+        col7, col8, col9 = st.columns(3)
+        with col7:
+            st.image(images_2021[6], use_column_width=True)
+        with col8:
+            st.image(images_2021[7], use_column_width=True)
+        with col9:
+            st.image(images_2021[8], use_column_width=True)
+
+        col10, col11, col12 = st.columns(3)
+        with col10:
+            st.image(images_2021[9], use_column_width=True)
+        with col11:
+            st.image(images_2021[10], use_column_width=True)
+        with col12:
+            st.image(images_2021[11], use_column_width=True)
+    elif selected == "2022":
+        st.subheader("2022")
+        st.write("*Highlights, lowlights, learnings, help needed, and kudos to everyone*")
+        # Define the list of image files
+        images_2022 = [img_2022_1, img_2022_2, img_2022_3, 
+        img_2022_4, img_2022_5, img_2022_6, 
+        img_2022_7, img_2022_8, img_2022_9, 
+        img_2022_10, img_2022_11, img_2022_12,
+        img_2022_13, img_2022_14, img_2022_15,
+        img_2022_16, img_2022_17, img_2022_18,
+        img_2022_19, img_2022_20, img_2022_21,
+        img_2022_22, img_2022_23, img_2022_24
+        ]
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.image(images_2022[0], use_column_width=True)
+        with col2:
+            st.image(images_2022[1], use_column_width=True)
+        with col3:
+            st.image(images_2022[2], use_column_width=True)
+        
+        col4, col5, col6 = st.columns(3)
+        with col4:
+            st.image(images_2022[3], use_column_width=True)
+        with col5:
+            st.image(images_2022[4], use_column_width=True)
+        with col6:
+            st.image(images_2022[5], use_column_width=True)
+        
+        col7, col8, col9 = st.columns(3)
+        with col7:
+            st.image(images_2022[6], use_column_width=True)
+        with col8:
+            st.image(images_2022[7], use_column_width=True)
+        with col9:
+            st.image(images_2022[8], use_column_width=True)
+
+        col10, col11, col12 = st.columns(3)
+        with col10:
+            st.image(images_2022[9], use_column_width=True)
+        with col11:
+            st.image(images_2022[10], use_column_width=True)
+        with col12:
+            st.image(images_2022[11], use_column_width=True)
+
+        col13, col14, col15 = st.columns(3)
+        with col13:
+            st.image(images_2022[12], use_column_width=True)
+        with col14:
+            st.image(images_2022[13], use_column_width=True)
+        with col15:
+            st.image(images_2022[14].rotate(180), use_column_width=True)
+        
+        col16, col17, col18 = st.columns(3)
+        with col16:
+            st.image(images_2022[15], use_column_width=True)
+        with col17:
+            st.image(images_2022[16], use_column_width=True)
+        with col18:
+            st.image(images_2022[17].rotate(180), use_column_width=True)
+        
+        col19, col20, col21 = st.columns(3)
+        with col19:
+            st.image(images_2022[18], use_column_width=True)
+        with col20:
+            st.image(images_2022[19], use_column_width=True)
+        with col21:
+            st.image(images_2022[20], use_column_width=True)
+
+        col22, col23, col24 = st.columns(3)
+        with col22:
+            st.image(images_2022[21], use_column_width=True)
+        with col23:
+            st.image(images_2022[22], use_column_width=True)
+        with col24:
+            st.image(images_2022[23], use_column_width=True)
+    elif selected == "2023":
+        st.subheader("2023")
+        st.write("*Success - being content at the present moment*")
+        # Define the list of image files
+        images_2023 = [img_2023_1, img_2023_2, img_2023_3, 
+        ]
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.image(images_2023[0], use_column_width=True)
+        with col2:
+            st.image(images_2023[1], use_column_width=True)
+        with col3:
+            st.image(images_2023[2], use_column_width=True)
 elif choose == "Site Analytics":
     st.header("Site Analytics")
     with st.container():
