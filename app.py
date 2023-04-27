@@ -203,8 +203,8 @@ add_bg_from_local('bg.png')
 with st.sidebar:
     choose = option_menu(
                         "Harry Chang", 
-                        ["About Me", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Articles & Essays", "Gallery", "Site Analytics", "Contact"],
-                         icons=['person fill', 'clock history', 'tools', 'book half', 'clipboard', 'trophy fill', 'pencil square', 'image', 'globe', 'envelope'],
+                        ["About Me", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Articles & Essays", "Gallery", "Site Analytics", "Resume & CV", "Contact"],
+                         icons=['person fill', 'clock history', 'tools', 'book half', 'clipboard', 'trophy fill', 'pencil square', 'image', 'globe', 'paperclip', 'envelope'],
                          menu_icon="mortarboard", 
                          default_index=0,
                          styles={
@@ -1010,6 +1010,17 @@ elif choose == "Site Analytics":
             """, unsafe_allow_html=True)
             st.button("Click me!")
             st.write("...and now add `?analytics=on` to the URL to see the analytics dashboard 👀")  
+elif choose == "Resume & CV":
+    st.header("Resume & CV")
+    def show_pdf(file_path):
+        with open(file_path,"rb") as f:
+            base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+        pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="800" height="800" type="application/pdf"></iframe>'
+        st.markdown(pdf_display, unsafe_allow_html=True)
+    st.subheader("Resume (1 page)")
+    show_pdf("Harry Chang Resume2024.pdf")
+    st.subheader("CV (2 pages)")
+    show_pdf("Harry Chang CV2023.pdf")
 
 elif choose == "Contact":
 # Create section for Contact
