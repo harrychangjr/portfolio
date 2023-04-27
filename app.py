@@ -311,7 +311,7 @@ elif choose == "Experience":
         with image_column:
             st.image(img_saf)
         with text_column:
-            st.subheader("Adminisrative Support Assistant, [Singapore Armed Forces](https://www.mindef.gov.sg/web/portal/mindef/home)")
+            st.subheader("Administrative Support Assistant, [Singapore Armed Forces](https://www.mindef.gov.sg/web/portal/mindef/home)")
             st.write("January 2017 to January 2019 | [Testimonial](https://drive.google.com/file/d/1O6Yu0P65dU8LCSDuXkf9BvlQJoz_5mRW/view?usp=sharing)")
             st.markdown("""
             - Assisted in organising division-level In-Camp Trainings, conferences and welfare events
