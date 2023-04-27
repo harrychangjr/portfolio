@@ -750,11 +750,28 @@ elif choose == "Articles & Essays":
             st.write("Science news article submitted for the module SP1541: Exploring Science Communication through Popular Science in Academic Year 2020/21 Semester 1")
 elif choose == "Gallery":
     st.header("Gallery")
-    st.subheader("Some of my highlights throughout university!")
-    selected_options = ["2019", "2020", "2021", "2022", "2023"]
+    st.subheader("Some of my highlights throughout my educational years!")
+    selected_options = ["Overview", "2023", "2022", "2021", "2020", "2019"]
     selected = st.selectbox("Which year would you like to explore?", options = selected_options)
     st.write("Current selection:", selected)
-    if selected == "2019":
+    if selected == "Overview":
+        st.subheader("Overview")
+        st.markdown("""
+        > "Photos are always the greatest gifts, because the memories from them will remain forever."
+        
+        My sister said this to me when I was in primary school. Having an immature and materialistic mindset back then, I was disappointed when I did not receive a present from her back then.
+
+        The quote that she shared that day - was something that I failed to appreciate only until recently. Over the course of these past few years, I have made many memories - both good and bad - which I will fondly remember.
+
+        Thus, this section is a compilation of highlights from my educational years, starting from primary school (7 years old), until the recent day (*in progress*). These images are not only meant to remind myself of the good times that I once had with long lost friends who I hardly keep in touch with nowadays due to our busy schedules, but also serve to show potential viewers a glimpse of what my life was like beyond academics.
+
+        In particular, I hope to be able to refer to this time and time again, especially upon graduating from university and when I formally commence my full-time career.
+
+        To those viewing my website and this section in particular, enjoy the pictures!
+
+        *Note: Photos filed under each year are not necessarily posted in any particular order, as I may have forgotten the exact dates of some photos that were taken.*
+        """)
+    elif selected == "2019":
         st.subheader("2019")
         st.write("*So many things to explore, yet so little time*")
         # Define the list of image files
@@ -831,7 +848,7 @@ elif choose == "Gallery":
             st.image(images_2021[11], use_column_width=True)
     elif selected == "2022":
         st.subheader("2022")
-        st.write("*Highlights, lowlights, learnings, help needed, and kudos to everyone*")
+        st.write("*Highlights, lowlights, learnings, help sought, and kudos to everyone!*")
         # Define the list of image files
         images_2022 = [img_2022_1, img_2022_2, img_2022_3, 
         img_2022_4, img_2022_5, img_2022_6, 
@@ -936,6 +953,7 @@ elif choose == "Gallery":
             st.image(images_2023[1], use_column_width=True)
         with col3:
             st.image(images_2023[2], use_column_width=True)
+        st.write("...and more to come!")
 elif choose == "Site Analytics":
     st.header("Site Analytics")
     with st.container():
