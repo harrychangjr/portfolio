@@ -42,6 +42,9 @@ img_runes = Image.open("images/runes.png")
 img_sji = Image.open("images/sji.jpg")
 img_tpjc = Image.open("images/tpjc.jpg")
 img_nus = Image.open("images/nus.jpeg")
+img_poc = Image.open("images/poc.jpg")
+img_gmss = Image.open("images/gmss.jpg")
+img_sjij = Image.open("images/sjij.jpg")
 # Assets for experiences
 img_questlogo = Image.open("images/questlogo.jpg")
 img_scor = Image.open("images/scor.jpg")
@@ -438,10 +441,21 @@ elif choose == "Education":
             st.subheader("Bachelor of Science - [Data Science and Analytics](https://www.stat.nus.edu.sg/wp-content/uploads/sites/8/2022/12/NUS-CHS-DSA-Print-FA.pdf), [National University of Singapore](https://nus.edu.sg) (2020-2024)")
             st.write("Relevant Coursework: Computers and the Humanities, Convex Optimization, Data Science in Practice, Data Structures and Algorithms, Data Visualization, Database Technology and Management, Linear Algebra, Multivariable Calculus, Optimization for Large-Scale Data-Driven Inference, Probability, Programming Tools for Economics, Regression Analysis, Statistical Learning")
             st.markdown("""
-            Notable Student Activities:
-            - [NUS Statistics and Data Science Society](https://sites.google.com/view/nussds/home) - President (2022); Marketing Director (2021-22)
+            - [NUS Statistics and Data Science Society](https://sites.google.com/view/nussds/home) - President (2022), Marketing Director (2021-22)
             - [Google Developer Student Clubs NUS](https://dsc.comp.nus.edu.sg/) - Deputy Head of Finance (2021-22)
             - [NUS Inter-Faculty Games](https://ifg.nussportsclub.org/) - Track and Field (Science) Captain (2022)
+            """)
+    with st.container():
+        image_column, text_column = st.columns((1,2.5))
+        with image_column:
+            st.image(img_poc)
+        with text_column:
+            st.subheader("Bachelor of Science - Pharmaceutical Science, [National University of Singapore](https://nus.edu.sg) (2019)")
+            st.write("Coursework: Foundations of Medicinal Chemistry, Pharmaceutical Biochemistry, Statistics for Life Sciences, Human Anatomy and Physiology, Quantitative Reasoning")
+            st.markdown("""
+            Withdrew from course in 2020, before performing a clean slate transfer to pursue a Bachelor's Degree in Data Science and Analytics
+            - [NUS Students' Science Club](https://www.nussciencelife.com/) - Marketing Executive, Welfare Subcommittee
+            - Pharmaceutical Science (Class of 2023) - Assistance Class Representative
             """)
     with st.container():
         image_column, text_column = st.columns((1,2.5))
@@ -450,8 +464,7 @@ elif choose == "Education":
         with text_column:
             st.subheader("GCE A Level - [Tampines Junior College](https://www.tmjc.moe.edu.sg/our-heritage/tampines-jc/) (2015 - 2016)")
             st.write("Coursework: H2 Chemistry, H2 Economics, H2 Mathematics, H1 Project Work, H1 Chinese, H1 History")
-            st.markdown("""
-            Notable Student Activities: 
+            st.markdown(""" 
             - Track and Field - 100m (2016 A Division Semi-finalist), 200m, 4x100m
             - TPJC Economics and Financial Literacy Fair 2015 - Games Facilitator
             """)
@@ -460,13 +473,32 @@ elif choose == "Education":
         with image_column:
             st.image(img_sji)
         with text_column:
-            st.subheader("GCE O Level - [Saint Joseph's Institution](https://www.sji.edu.sg/) (2011 - 2014)")
+            st.subheader("GCE O Level - [Saint Joseph's Institution](https://www.sji.edu.sg/) (2012 - 2014)")
             st.write("Coursework: English, Mathematics, Additional Mathematics, Physics, Chemistry, History, Geography Elective, Chinese")
-            st.markdown("""
-            Notable Student Activities: 
-            - Track and Field (Long Jump, 100m) 
+            st.markdown(""" 
+            - Track and Field (Long Jump, 100m)
             - [Business Design Thinking](https://www.sp.edu.sg/sp/news/sp/Secondary-students-learn-to-innovate)
             - Josephian International Experience Programme (Siem Reap, Cambodia)
+            """)
+    with st.container():
+        image_column, text_column = st.columns((1,2.5))
+        with image_column:
+            st.image(img_gmss)
+        with text_column:
+            st.subheader("Secondary One - [Geylang Methodist School (Secondary)](https://www.geylangmethodistsec.moe.edu.sg/) (2011)")
+            st.write("Coursework: English, Mathematics, Science, History, Geography, Literature, Chinese, Design & Technology, Home Economics")
+            st.markdown(""" 
+            - Volleyball
+            """)
+    with st.container():
+        image_column, text_column = st.columns((1,2.5))
+        with image_column:
+            st.image(img_sjij)
+        with text_column:
+            st.subheader("Primary School Leaving Examination - [Saint Joseph's Institution Junior](https://www.sjijunior.moe.edu.sg/) (2005 - 2010)")
+            st.write("Coursework: English, Mathematics, Science, Chinese, Higher Chinese")
+            st.markdown(""" 
+            - Art Club
             """)
 #st.write("##")
 
