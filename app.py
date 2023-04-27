@@ -114,6 +114,9 @@ img_2019_6 = Image.open("gallery/2019_6.jpg")
 img_2019_7 = Image.open("gallery/2019_7.jpg")
 img_2019_8 = Image.open("gallery/2019_8.jpg")
 img_2019_9 = Image.open("gallery/2019_9.jpg")
+img_2019_10 = Image.open("gallery/2019_10.jpg")
+img_2019_11 = Image.open("gallery/2019_11.jpg")
+img_2019_12 = Image.open("gallery/2019_12.jpg")
 #2020
 img_2020_1 = Image.open("gallery/2020_1.jpg")
 #2021
@@ -816,7 +819,8 @@ elif choose == "Gallery":
         st.subheader("2019")
         st.write("*So many things to explore, yet so little time*")
         # Define the list of image files
-        images_2019 = [img_2019_1, img_2019_2, img_2019_3, img_2019_4, img_2019_5, img_2019_6, img_2019_7, img_2019_8, img_2019_9]
+        images_2019 = [img_2019_1, img_2019_2, img_2019_3, img_2019_4, img_2019_5, img_2019_6, 
+                        img_2019_7, img_2019_8, img_2019_9, img_2019_10, img_2019_11, img_2019_12]
         # Display the images in a grid
         col1, col2, col3 = st.columns(3)
         with col1:
@@ -841,6 +845,14 @@ elif choose == "Gallery":
             st.image(images_2019[7], use_column_width=True)
         with col9:
             st.image(images_2019[8], use_column_width=True)
+        
+        col10, col11, col12 = st.columns(3)
+        with col10:
+            st.image(images_2019[9], use_column_width=True)
+        with col11:
+            st.image(images_2019[10], use_column_width=True)
+        with col12:
+            st.image(images_2019[11], use_column_width=True)
 
     elif selected == "2020":
         st.subheader("2020")
