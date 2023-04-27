@@ -28,16 +28,21 @@ local_css("style/style.css")
 
 # Load assets
 #lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
+# Assets for about me
 img_utown = Image.open("images/utown.JPG")
-img_quest = Image.open("images/quest.jpg")
-img_ifg = Image.open("images/ifg.jpg")
-img_he4d = Image.open("images/he4d.jpg")
+img_quest = Image.open("images/quest.jpg") #unused
+img_ifg = Image.open("images/ifg.jpg") #unused
+#Assets for competitions
 img_lifehack = Image.open("images/lifehack.jpg")
+img_he4d = Image.open("images/he4d.jpg")
 img_shopee = Image.open("images/shopee.png")
 img_sbcc = Image.open("images/sbcc.png")
+img_runes = Image.open("images/runes.png")
+# Assets for education
 img_sji = Image.open("images/sji.jpg")
 img_tpjc = Image.open("images/tpjc.jpg")
 img_nus = Image.open("images/nus.jpeg")
+# Assets for experiences
 img_questlogo = Image.open("images/questlogo.jpg")
 img_scor = Image.open("images/scor.jpg")
 img_sephora = Image.open("images/sephora.jpg")
@@ -45,6 +50,7 @@ img_iasg = Image.open("images/iasg.jpg")
 img_sshsph = Image.open("images/sshsph.jpg")
 img_yll = Image.open("images/yll.jpg")
 img_saf = Image.open("images/saf.jpg")
+# Assets for projects
 img_chatgpt = Image.open("images/chatgpt.jpg")
 img_anime = Image.open("images/anime.jpg")
 img_biopics = Image.open("images/biopics.jpg")
@@ -55,6 +61,7 @@ img_word2vec = Image.open("images/word2vec.jpg")
 img_fob = Image.open("images/fob.jpg")
 img_map = Image.open("images/map.png")
 img_gephi = Image.open("images/gephi.png")
+# Assets for articles and essays
 img_outlier = Image.open("images/outlier.png")
 img_dac = Image.open("images/dac.png")
 img_raffles = Image.open("images/raffles.jpg")
@@ -64,8 +71,9 @@ img_hci = Image.open("images/hci.jpg")
 img_wordcloud = Image.open("images/wordcloud.jpg")
 img_taste = Image.open("images/taste.jpg")
 img_measles = Image.open("images/measles.jpeg")
-img_runes = Image.open("images/runes.png")
+
 #img_lottie_animation = Image.open("images/lottie_animation.gif")
+# Assets for contact
 lottie_coding = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_abqysclq.json")
 
 #####################
