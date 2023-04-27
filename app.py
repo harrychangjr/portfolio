@@ -685,7 +685,24 @@ elif choose == "Site Analytics":
     st.header("Site Analytics")
     with st.container():
       with streamlit_analytics.track():
-            st.text_input("Write something below if you want")
+            st.text_input("Enter something below if you'd like!", key="name_input", 
+                      help="Enter your full name", 
+                      value="Type something here!", 
+                      max_chars=100, 
+                      type="default",
+                      )
+            st.markdown("""
+            <style>
+                /* Add custom CSS styles for the text input */
+                #name_input input[type=text] {
+                    background-color: #f2f2f2;
+                    border: none;
+                    padding: 8px;
+                    font-size: 16px;
+                    width: 100%;
+                }
+            </style>
+            """, unsafe_allow_html=True)
             st.button("Click me!")
             st.write("...and now add `?analytics=on` to the URL to see the analytics dashboard 👀")  
 
