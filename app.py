@@ -1,5 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
+from streamlit.components.v1 import html
 from st_on_hover_tabs import on_hover_tabs
 import requests
 from streamlit_lottie import st_lottie
@@ -19,6 +20,34 @@ def load_lottieurl(url):
         return None
     return r.json()
 
+def render_lottie(url, width, height):
+    lottie_html = f"""
+    <html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.14/lottie.min.js"></script>
+    </head>
+    <body>
+        <div id="lottie-container" style="width: {width}; height: {height};"></div>
+        <script>
+            var animation = lottie.loadAnimation({{
+                container: document.getElementById('lottie-container'),
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: '{url}'
+            }});
+            animation.setRendererSettings({{
+                preserveAspectRatio: 'xMidYMid slice',
+                clearCanvas: true,
+                progressiveLoad: false,
+                hideOnTransparent: true
+            }});
+        </script>
+    </body>
+    </html>
+    """
+    return lottie_html
+
 # Use local CSS
 def local_css(file_name):
     with open(file_name) as f:
@@ -31,7 +60,7 @@ local_css("style/style.css")
 # Assets for about me
 img_utown = Image.open("images/utown.JPG")
 img_quest = Image.open("images/quest.jpg") #unused
-img_ifg = Image.open("images/ifg.jpg") #unused
+img_ifg = Image.open("images/ifg.jpg")
 #Assets for competitions
 img_lifehack = Image.open("images/lifehack.jpg")
 img_he4d = Image.open("images/he4d.jpg")
@@ -1006,11 +1035,39 @@ elif choose == "Contact":
 # Create section for Contact
     #st.write("---")
     st.header("Contact")
+    def social_icons(width=24, height=24, **kwargs):
+        icon_template = '''
+        <a href="{url}" target="_blank" style="margin-right: 10px;">
+            <img src="{icon_src}" alt="{alt_text}" width="{width}" height="{height}">
+        </a>
+        '''
+
+        icons_html = ""
+        for name, url in kwargs.items():
+            icon_src = {
+                "linkedin": "https://cdn-icons-png.flaticon.com/512/174/174857.png",
+                "github": "https://cdn-icons-png.flaticon.com/512/25/25231.png",
+                "email": "https://cdn-icons-png.flaticon.com/512/561/561127.png"
+            }.get(name.lower())
+
+            if icon_src:
+                icons_html += icon_template.format(url=url, icon_src=icon_src, alt_text=name.capitalize(), width=width, height=height)
+
+        return icons_html
     with st.container():
-        text_column, image_column = st.columns((1,1.5))
+        text_column, image_column = st.columns((1,0.55))
         with text_column:
-            st.write("Let's connect! You can reach me at harrychang.work@gmail.com")
-            st.write("[LinkedIn](https://linkedin.com/in/harrychangjr) | [Github](https://github.com/harrychangjr) | [Linktree](https://linktr.ee/harrychangjr)")
+            st.write("Let's connect! You may reach out to me at harrychang.work@gmail.com")
+            st.write("Alternatively, feel free to contact me using any of the social media icons below!")
+            linkedin_url = "https://www.linkedin.com/in/harrychangjr/"
+            github_url = "https://github.com/harrychangjr"
+            email_url = "mailto:harrychang.work@gmail.com"
+            st.markdown(
+                social_icons(32, 32, LinkedIn=linkedin_url, GitHub=github_url, Email=email_url),
+                unsafe_allow_html=True)
+            st.markdown("")
+            st.write("© 2023 Harry Chang")
+            #st.write("[LinkedIn](https://linkedin.com/in/harrychangjr) | [Github](https://github.com/harrychangjr) | [Linktree](https://linktr.ee/harrychangjr)")
         with image_column:
-            st_lottie(lottie_coding, height=500, key="coding")
+            st.image(img_ifg)
 #st.write("##")
