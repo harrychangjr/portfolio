@@ -28,7 +28,7 @@ input[type=submit]:hover {
 /* Add a background color and some padding around the form */
 .container {
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: #f5f5dc;
     padding: 20px;
   }
 
@@ -46,7 +46,7 @@ code {
     border-radius: 3px !important;
 }
 
-section[data-testid='stSidebar'] {
+/*section[data-testid='stSidebar'] {
   background-color: #111;
   min-width:unset !important;
   width: unset !important;
@@ -61,12 +61,12 @@ button[kind="header"] {
 
 @media(hover){
   /* header element to be removed */
-  header[data-testid="stHeader"] {
+  /*header[data-testid="stHeader"] {
       display:none;
   }
 
   /* The navigation menu specs and size */
-  section[data-testid='stSidebar'] > div {
+  /*section[data-testid='stSidebar'] > div {
       height: 100%;
       width: 95px;
       position: relative;
@@ -87,12 +87,12 @@ button[kind="header"] {
   /* } 
 
   /* ON HOVER */
-  section[data-testid='stSidebar'] > div:hover{
+  /*section[data-testid='stSidebar'] > div:hover{
   width: 300px;
   }
 
   /* The button on the streamlit navigation menu - hidden */
-  button[kind="header"] {
+  /*button[kind="header"] {
       display: none;
   }
 }
@@ -102,7 +102,7 @@ button[kind="header"] {
   section[data-testid='stSidebar'] > div {
       width:15rem;
   }
-}
+} */
 
 
 /* Hide Streamlit branding */
