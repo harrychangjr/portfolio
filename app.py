@@ -5,6 +5,7 @@ import requests
 from streamlit_lottie import st_lottie
 from PIL import Image
 import streamlit_analytics
+import base64
 
 # Set page title
 st.set_page_config(page_title="Harry Chang", page_icon = "desktop_computer", layout = "wide", initial_sidebar_state = "auto")
@@ -110,6 +111,22 @@ def txt4(a, b):
     st.markdown(f'<p style="font-size: 25px; color: red;"><code>{b}</code></p>', unsafe_allow_html=True)
 
 #####################
+
+def add_bg_from_local(image_file):
+    with open(image_file, "rb") as image_file:
+        encoded_string = base64.b64encode(image_file.read())
+    st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background-image: url(data:image/{"png"};base64,{encoded_string.decode()});
+        background-size: cover
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+    )
+add_bg_from_local('bg.png')   
 
 # Sidebar: If using streamlit_option_menu
 with st.sidebar:
@@ -668,8 +685,8 @@ elif choose == "Site Analytics":
     st.header("Site Analytics")
     with st.container():
       with streamlit_analytics.track():
-            st.text_input("Write something")
-            st.button("Click me")
+            st.text_input("Write something below if you want")
+            st.button("Click me!")
             st.write("...and now add `?analytics=on` to the URL to see the analytics dashboard 👀")  
 
 elif choose == "Contact":
