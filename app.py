@@ -103,6 +103,9 @@ img_hci = Image.open("images/hci.jpg")
 img_wordcloud = Image.open("images/wordcloud.jpg")
 img_taste = Image.open("images/taste.jpg")
 img_measles = Image.open("images/measles.jpeg")
+img_bmsaew = Image.open("images/bmsaew.png")
+img_dac1 = Image.open("images/dac1.png")
+img_dac2 = Image.open("images/dac2.png")
 # Assets for gallery
 # 2019
 img_2019_1 = Image.open("gallery/2019_1.jpg")
@@ -849,12 +852,29 @@ elif choose == "Articles & Essays":
 
         > “I hope every one of you — behind the screen and in this arena — can feel this level of happiness, just one time in your life. But guess what, you will never feel this level of happiness if you don’t go for something in your own life. When they knock you down, when they try and sh*t on you… and try and put their foot on your neck. If you stay down, you will never ever get that resolve. Fortify your mind!”
 
-        > **Israel Adesanya**
-
+        > **Israel Adesanya**""")
+        with st.container():
+            col1, col2, col3 = st.columns((1.2,3,1))
+            with col1:
+                st.empty()
+            with col2:
+                st.video("https://www.youtube.com/watch?v=ZNoODFgTq3c")
+            with col3:
+                st.empty()
+        st.markdown("""
         Likewise, I have learnt not to harp on my mistakes for too long, otherwise this would impede me in the long run, and I would never be able to bounce back from what I have done. It is indeed important to forgive yourself and try to strive for the better, even though others may doubt so.
 
         So who am I – really? To answer this, I would compare myself to 2 characters that I have enjoyed following on television. The first would be Alex Moran, the protagonist of sitcom Blue Mountain State. His character is that of a second-string quarterback for the majority of the show, only aiming to be an “Average Joe” after he graduates from college. The second would be Orange Cassidy, a professional wrestler whose gimmick is based on being the “King of Sloth Style”, otherwise only trying to win when necessary, but doesn’t bother otherwise.
-
+        """)
+        with st.container():
+            col1, col2, col3 = st.columns((1.2,3,1))
+            with col1:
+                st.empty()
+            with col2:
+                st.image(img_bmsaew, caption = "From left to right: Alex Moran (played by Darin Brooks in Blue Mountain State), Orange Cassidy", width=600, )
+            with col3:
+                st.empty()
+        st.markdown("""
         Drawing inspiration from these two characters, I would say I have now lowered the expectations that I have set for myself, and have learnt to be more appreciative for the opportunities that I have instead. It’s not wrong to be surrounded by driven and passionate people in your circle, but at the end of the day, I feel it’s not worth putting in exceptional efforts if that means sacrificing your own personal well-being.
 
         And back to my self-reflection this semester: even though I’m not graduating within the next few weeks, it was still satisfying to live as though I was – with minimal commitments, barely dropping by physical lessons, and even finishing a final paper within one-third of the allocated duration before leaving early. It was indeed a breath of fresh air that I needed to rebuild myself for the better in the long run. It felt lonely at times, but when you can find happiness and contentment in being alone, what’s there to stop you from enjoying yourself in better scenarios?
@@ -1156,7 +1176,16 @@ elif choose == "Articles & Essays":
         **Background**
 
         With the success of last year’s Data Science Competition hosted by the previous organising team, we wanted to ensure that this year’s competition was similarly successful to reach a wider audience base. When we initially started planning the competition back in August 2021, we wanted to find a reputable sponsor for the event. Thanks to the Career Advisors at NUS Centre for Future-Ready Graduates (CFG), we were given the chance to pitch to Grab the idea of collaborating for our annual datathon event. Given the impromptu opportunity, we swiftly customised a pitch deck for Grab to explain the benefits of working with us for DAC 2022 such as raising awareness of Grab’s job/internship opportunities for students in NUS. It is not often that we get the opportunity to put our personal presentation skills to good use and convince an external party to host an event that would be beneficial for both parties.
-
+        """)
+        with st.container():
+            col1, col2, col3 = st.columns((1.2,3,1))
+            with col1:
+                st.empty()
+            with col2:
+                st.image(img_dac1, caption = "A screenshot of our Opening Ceremony, featuring the introduction video of the dataset by Grab", width=600, )
+            with col3:
+                st.empty()
+        st.markdown("""
         **Learnings**
 
         1. A smooth sea has never made a skilled sailor
@@ -1192,7 +1221,16 @@ elif choose == "Articles & Essays":
         With multiple waves of attempts however, we managed to secure enough sponsors to support our event. Furthermore, we even exceeded our own sponsorship target in the end, leading to an overall increase in the prize pool compared to last year’s competition. The addition of having sponsored t-shirts from an external company was also a nice touch, given that this would entice participants to send in a valid submission to us for the competition.
 
         In summary, pursuing sponsorships was indeed an eye-opening experience for our team. This has taught us to be resilient when facing hardships or dejections, which would only make us mentally stronger over time. Without experiencing prior failures, achieving small successes like these would not be as enjoyable as one would expect. 
-
+        """)
+        with st.container():
+            col1, col2, col3 = st.columns((1.2,3,1))
+            with col1:
+                st.empty()
+            with col2:
+                st.image(img_dac2, caption = "Jet New, President of NUS SDS, making his Closing Speech to thank all parties involved in DAC2022 during our Closing Ceremony", width=600, )
+            with col3:
+                st.empty()
+        st.markdown("""
         4. Playing to each other's strengths
 
         Managing DAC 2022 was more than just handling a dataset, as there were a lot of tasks that we needed to complete to make it seem enticing for participants to join. The success of this event would not have been possible without the help and guidance from our fellow members in NUSSDS who excelled at their different roles:
@@ -1206,7 +1244,16 @@ elif choose == "Articles & Essays":
         - Stephen and Rui En, along with their Workshops Team members Keith, Javier and Wei Liang, for helping us to better understand the dataset and were integral in helping us to word the problem statement for the competition. Having them around to work on understanding the dataset really helped to lighten the load on the Events Team. During the actual competition, they assisted to get participants started on the provided dataset by hosting an introductory workshop.
 
         - Ethan and his Publicity Team members Briana, Tze Lynn and Yi Xuan, for helping to design cool slides and social media posts to make DAC 2022 look appealing! Their efforts in contributing appealing visuals and increasing social media outreach were also a major contributing factor to the success of this event.
-
+        """)
+        with st.container():
+            col1, col2, col3 = st.columns((1.2,3,1))
+            with col1:
+                st.empty()
+            with col2:
+                st.image(img_dac, caption = "A screenshot from our Closing Ceremony, featuring our organising team, judges and participants", width=600, )
+            with col3:
+                st.empty()
+        st.markdown("""
         **Conclusion**
 
         All in all, while organising DAC 2022 was a pretty stressful experience, we felt that this has helped us to achieve some form of personal growth and develop our leadership skills. We would both agree that this was indeed one of our toughest experiences in university so far. 
@@ -1233,6 +1280,23 @@ elif choose == "Articles & Essays":
 
         If this post has inspired you and you are keen to take on the challenge of hosting the next iteration of our flagship datathon event, do look out for our next recruitment cycle over the summer holidays.
 
+        To find out more about Data Analytics Competition 2022, do check out the recordings of the following online events and workshops from the competition below:
+        """)
+        st.subheader("Opening and Closing Ceremonies")
+        with st.container():
+            col1, col2 = st.columns((2,2))
+            with col1:
+                st.video("https://www.youtube.com/watch?v=j0yvVP5XvTk")
+            with col2:
+                st.video("https://www.youtube.com/watch?v=goSAydRaOjY")
+        st.subheader("Beginner and Advanced Workshops")
+        with st.container():
+            col1, col2 = st.columns((2,2))
+            with col1:
+                st.video("https://www.youtube.com/watch?v=6n3uQFZdN9g")
+            with col2:
+                st.video("https://www.youtube.com/watch?v=UlUU_WW3H_0")
+        st.markdown("""
         *Axel Lau is the Events Director of the NUS Statistics and Data Science Society (AY21/22)*
 
         *Harry Chang is the Marketing Director of the NUS Statistics and Data Science Society (AY21/22)*       
