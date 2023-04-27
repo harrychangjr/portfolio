@@ -1,5 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
+from st_on_hover_tabs import on_hover_tabs
 import requests
 from streamlit_lottie import st_lottie
 from PIL import Image
@@ -110,17 +111,38 @@ def txt4(a, b):
 
 #####################
 
+# Sidebar: If using streamlit_option_menu
+#with st.sidebar:
+#    choose = option_menu("Harry Chang", ["About Me", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Articles & Essays", "Site Analytics", "Contact"],
+#                         icons=['person fill', 'clock history', 'tools', 'book half', 'clipboard', 'trophy fill', 'pencil square', 'kanban', 'envelope'],
+#                         menu_icon="mortarboard", default_index=0,
+#                         styles={
+#        "container": {"padding": "5!important", "background-color": "#fafafa"},
+#        "icon": {"color": "darkorange", "font-size": "20px"}, 
+#        "nav-link": {"font-size": "16px", "text-align": "left", "margin":"0px", "--hover-color": "#eee"},
+#        "nav-link-selected": {"background-color": "#02ab21"},
+#    }
+#    )
+
+# Sidebar: If using streamlit_on_hover_tabs
 with st.sidebar:
-    choose = option_menu("Harry Chang", ["About Me", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Articles & Essays", "Site Analytics", "Contact"],
-                         icons=['person fill', 'clock history', 'tools', 'book half', 'clipboard', 'trophy fill', 'pencil square', 'kanban', 'envelope'],
-                         menu_icon="mortarboard", default_index=0,
-                         styles={
-        "container": {"padding": "5!important", "background-color": "#fafafa"},
-        "icon": {"color": "darkorange", "font-size": "20px"}, 
-        "nav-link": {"font-size": "16px", "text-align": "left", "margin":"0px", "--hover-color": "#eee"},
-        "nav-link-selected": {"background-color": "#02ab21"},
-    }
-    )
+    choose = on_hover_tabs(tabName=["About Me", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Articles & Essays", "Site Analytics", "Contact"], 
+                         iconName=['person', 'schedule', 'construction', 'book', 'assignment', 'work', 'edit', 'dashboard', 'mail'], default_choice=0,
+                         styles = {'navtab': {'background-color':'#5a5a5a',
+                                                  'color': 'beige',
+                                                  'font-size': '18px',
+                                                  'transition': '.2s',
+                                                  'white-space': 'nowrap',
+                                                  'text-transform': 'uppercase'},
+                                       'tabOptionsStyle': {':hover :hover': {'color': 'darkorange',
+                                                                      'cursor': 'pointer'}},
+                                       'iconStyle':{'position':'fixed',
+                                                    'left':'7.5px',
+                                                    'text-align': 'left'},
+                                       'tabStyle' : {'list-style-type': 'none',
+                                                     'margin-bottom': '30px',
+                                                     'padding-left': '30px'}},
+                             key="1")
 
 # Create header
 if choose == "About Me":
