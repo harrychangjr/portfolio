@@ -122,6 +122,12 @@ img_2022_21 = Image.open("gallery/2022_21.jpg")
 img_2022_22 = Image.open("gallery/2022_22.jpg")
 img_2022_23 = Image.open("gallery/2022_23.jpg")
 img_2022_24 = Image.open("gallery/2022_24.jpg")
+img_2022_25 = Image.open("gallery/2022_25.jpg")
+img_2022_26 = Image.open("gallery/2022_26.jpg")
+img_2022_27 = Image.open("gallery/2022_27.jpg")
+img_2022_28 = Image.open("gallery/2022_28.jpg")
+img_2022_29 = Image.open("gallery/2022_29.jpg")
+img_2022_30 = Image.open("gallery/2022_30.jpg")
 #2023
 img_2023_1 = Image.open("gallery/2023_1.jpg")
 img_2023_2 = Image.open("gallery/2023_2.jpg")
@@ -834,7 +840,9 @@ elif choose == "Gallery":
         img_2022_13, img_2022_14, img_2022_15,
         img_2022_16, img_2022_17, img_2022_18,
         img_2022_19, img_2022_20, img_2022_21,
-        img_2022_22, img_2022_23, img_2022_24
+        img_2022_22, img_2022_23, img_2022_24,
+        img_2022_25, img_2022_26, img_2022_27,
+        img_2022_28, img_2022_29, img_2022_30
         ]
         col1, col2, col3 = st.columns(3)
         with col1:
@@ -899,6 +907,22 @@ elif choose == "Gallery":
             st.image(images_2022[22], use_column_width=True)
         with col24:
             st.image(images_2022[23], use_column_width=True)
+        
+        col25, col26, col27 = st.columns(3)
+        with col25:
+            st.image(images_2022[24], use_column_width=True)
+        with col26:
+            st.image(images_2022[25], use_column_width=True)
+        with col27:
+            st.image(images_2022[26], use_column_width=True)
+        
+        col28, col29, col30 = st.columns(3)
+        with col28:
+            st.image(images_2022[27], use_column_width=True)
+        with col29:
+            st.image(images_2022[28], use_column_width=True)
+        with col30:
+            st.image(images_2022[29], use_column_width=True)
     elif selected == "2023":
         st.subheader("2023")
         st.write("*Success - being content at the present moment*")
