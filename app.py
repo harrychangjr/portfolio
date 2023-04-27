@@ -116,7 +116,7 @@ with st.sidebar:
     choose = option_menu(
                         "Harry Chang", 
                         ["About Me", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Articles & Essays", "Site Analytics", "Contact"],
-                         icons=['person fill', 'clock history', 'tools', 'book half', 'clipboard', 'trophy fill', 'pencil square', 'kanban', 'envelope'],
+                         icons=['person fill', 'clock history', 'tools', 'book half', 'clipboard', 'trophy fill', 'pencil square', 'globe', 'envelope'],
                          menu_icon="mortarboard", 
                          default_index=0,
                          styles={
