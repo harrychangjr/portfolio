@@ -203,8 +203,8 @@ add_bg_from_local('bg.png')
 with st.sidebar:
     choose = option_menu(
                         "Harry Chang", 
-                        ["About Me", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Articles & Essays", "Gallery", "Site Analytics", "Resume & CV", "Contact"],
-                         icons=['person fill', 'clock history', 'tools', 'book half', 'clipboard', 'trophy fill', 'pencil square', 'image', 'globe', 'paperclip', 'envelope'],
+                        ["About Me", "Site Overview", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Articles & Essays", "Gallery", "Site Analytics", "Resume & CV", "Contact"],
+                         icons=['person fill', 'globe', 'clock history', 'tools', 'book half', 'clipboard', 'trophy fill', 'pencil square', 'image', 'activity', 'paperclip', 'envelope'],
                          menu_icon="mortarboard", 
                          default_index=0,
                          styles={
@@ -250,37 +250,17 @@ if choose == "About Me":
             st.write("📄 [Resume (1 page)](https://drive.google.com/file/d/13CHoDfb-mYr9F8YSA4ZDV3tZPpNF6eck/view?usp=sharing) | [CV (2 pages)](https://drive.google.com/file/d/1-aubNVEKkgmHdeCtlp_O1M99tVChXfYs/view?usp=sharing)")
         with right_column:
             st.image(img_utown)
-            # Create nested columns in the right column
-            #spacer_column, image_column = right_column.columns([1, 1])
-            # Place the image in the last nested column
-            #image_column.image(img_utown, width=300)  # Adjust the width as needed
-        
-        #st.image(img_utown, width=300, output_format='JPEG')
-        #st.write(
-            #f"""
-            #<style>
-            #.reportview-container .main .block-container{{
-                #max-width: 100%;
-                #padding-top: 0rem;
-                #padding-right: 0rem;
-                #padding-left: 0rem;
-                #padding-bottom: 0rem;
-            #}}
-            #.reportview-container .main .block-container div {{
-                #text-align: center;
-            #}}
-            #</style>
-            #,
-            #unsafe_allow_html=True,
-        #)
+elif choose == "Site Overview":
+    st.header("Site Overview")
+    st.markdown("""
+    Initally creating this as a portfolio website in the form of an extended resume, I came to discover the uniqueness of Streamlit as compared to typical front-end frameworks such as Angular and Bootstrap. Even though Streamlit is primarily used as a web application for dashboarding, its extensive features make it more aesthetically appealing to explore with as compared to alternatives such as Plotly and Shiny.
+    
+    With the convenience of using Python as a beginner-friendly programming language, I have now decided to evolve this personal project into a time capsule - documenting key moments and achievements that I have attained since commencing my formal education at 7 years old. In addition, should I be successful in completing this project, I intend to provide my codes as open-source, so that other students can document their educational journey in a similar manner.
 
-# Create section for About Me
-#st.write("---")
-#st.header("About Me")
-#st.write("Hi, I'm Harry! I'm a data science and analytics undergraduate based in Singapore. Having prior relevant experiences in tech, reinsurance and consulting sectors, I am constantly seeking unique internships to broaden my horizons before embarking on my data career upon graduation. With the COVID-19 pandemic behind us, I believe there is potential for data science to be applied in the retail industry. With the increase in need for data analytics from both online and brick-and-mortar sales, I am thus aiming to branch into this industry for my first full-time job.")
-#st.write("[Resume (1 page)](https://drive.google.com/file/d/13CHoDfb-mYr9F8YSA4ZDV3tZPpNF6eck/view?usp=sharing) | [CV (2 pages)](https://drive.google.com/file/d/1-aubNVEKkgmHdeCtlp_O1M99tVChXfYs/view?usp=sharing)")
-#st.write("##")
+    A video will also be embedded in this section to provide a detailed tour of this entire web application and its features.
 
+    *Video to be released*
+    """)
 # Create section for Work Experience
 elif choose == "Experience":
     #st.write("---")
