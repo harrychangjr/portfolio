@@ -55,6 +55,17 @@ def local_css(file_name):
 
 local_css("style/style.css")
 
+# PDF functions
+def show_pdf(file_path):
+        with open(file_path,"rb") as f:
+            base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+        pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="800" height="800" type="application/pdf"></iframe>'
+        st.markdown(pdf_display, unsafe_allow_html=True)
+
+def pdf_link(pdf_url, link_text="Click here to view PDF"):
+    href = f'<a href="{pdf_url}" target="_blank">{link_text}</a>'
+    return href
+
 # Load assets
 #lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
 # Assets for about me
@@ -238,8 +249,8 @@ add_bg_from_local('bg.png')
 with st.sidebar:
     choose = option_menu(
                         "Harry Chang", 
-                        ["About Me", "Site Overview", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Articles & Essays", "Gallery", "Site Analytics", "Resume & CV", "Contact"],
-                         icons=['person fill', 'globe', 'clock history', 'tools', 'book half', 'clipboard', 'trophy fill', 'pencil square', 'image', 'activity', 'paperclip', 'envelope'],
+                        ["About Me", "Site Overview", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Articles & Essays", "Gallery", "Site Analytics", "Resume & CV", "Testimonials", "Contact"],
+                         icons=['person fill', 'globe', 'clock history', 'tools', 'book half', 'clipboard', 'trophy fill', 'pencil square', 'image', 'activity', 'paperclip', 'star fill', 'envelope'],
                          menu_icon="mortarboard", 
                          default_index=0,
                          styles={
@@ -422,29 +433,6 @@ elif choose == "Technical Skills":
     txt3("Machine Learning Frameworks", "`Numpy`, `Pandas`, `Scikit-Learn`, `TensorFlow`, `Keras`, `JAX`, `NLTK`")
     txt3("Task Management Tools", "`Asana`, `Notion`, `ClickUp`, `Slack`")
     txt3("Miscellaneous", "`Google Firebase`, `Microsoft Office`, `Retool`, `Google Ads`")
-
-#st.subheader("Programming Languages")
-#st.write("R, Python, SQL, Java, Stata")
-#st.subheader("Academic Interests")
-#st.write("Data Visualization, Market Basket Analysis, Recommendation Systems, Natural Language Processing")
-#st.subheader("Data Visualization")
-#st.write("ggplot2, matplotlib, seaborn, Gephi, Tableau, Power BI, Looker (Google Data) Studio, Domo, Google Analytics")
-#st.subheader("Database and Cloud Systems")
-#st.write("MySQL, PostgreSQL, BigQuery, Cloud Firestore, Google Cloud Platform, Amazon Web Services")
-#st.subheader("Version Control")
-#st.write("Git, Docker")
-#st.subheader("Design and Front-end Development")
-#st.write("Canva, Figma, HTML, CSS, Streamlit, Wordpress")
-#st.subheader("Data Science Techniques")
-#st.write("Regression, Clustering, Association Rules Mining, Random Forest, Decison Trees, Principal Components Analysis, Natural Language Processing, Matrix Factorisation, Collaborative Filtering")
-#st.subheader("Machine Learning Frameworks")
-#st.write("TensorFlow, Keras, JAX, NLTK")
-#st.subheader("Task Management Tools")
-#st.write("Asana, Notion, ClickUp, Slack")
-#st.subheader("Miscellaneous")
-#st.write("Google Firebase, Microsoft Office, Retool, Google Ads")
-
-#st.write("##")
 
 # Create section for Education
 #st.write("---")
@@ -700,7 +688,6 @@ elif choose == "Competitions":
             st.write("Awarded 1st Place for 2D Runes category out of over 600 students enrolled in the module for Academic Year 2020/21 Semester 1")
             st.write("2D pixel art created using Pillow (PIL) Library in Python")
             st.write("[Github Repo](https://github.com/harrychangjr/runes)")
-#st.write("##")
 
 elif choose == "Articles & Essays":
     st.header("Articles & Essays")
@@ -854,7 +841,7 @@ elif choose == "Articles & Essays":
 
         > **Israel Adesanya**""")
         with st.container():
-            col1, col2, col3 = st.columns((1.2,3,1))
+            col1, col2, col3 = st.columns((1,3,1))
             with col1:
                 st.empty()
             with col2:
@@ -867,7 +854,7 @@ elif choose == "Articles & Essays":
         So who am I – really? To answer this, I would compare myself to 2 characters that I have enjoyed following on television. The first would be Alex Moran, the protagonist of sitcom Blue Mountain State. His character is that of a second-string quarterback for the majority of the show, only aiming to be an “Average Joe” after he graduates from college. The second would be Orange Cassidy, a professional wrestler whose gimmick is based on being the “King of Sloth Style”, otherwise only trying to win when necessary, but doesn’t bother otherwise.
         """)
         with st.container():
-            col1, col2, col3 = st.columns((1.2,3,1))
+            col1, col2, col3 = st.columns((1,3,1))
             with col1:
                 st.empty()
             with col2:
@@ -1178,7 +1165,7 @@ elif choose == "Articles & Essays":
         With the success of last year’s Data Science Competition hosted by the previous organising team, we wanted to ensure that this year’s competition was similarly successful to reach a wider audience base. When we initially started planning the competition back in August 2021, we wanted to find a reputable sponsor for the event. Thanks to the Career Advisors at NUS Centre for Future-Ready Graduates (CFG), we were given the chance to pitch to Grab the idea of collaborating for our annual datathon event. Given the impromptu opportunity, we swiftly customised a pitch deck for Grab to explain the benefits of working with us for DAC 2022 such as raising awareness of Grab’s job/internship opportunities for students in NUS. It is not often that we get the opportunity to put our personal presentation skills to good use and convince an external party to host an event that would be beneficial for both parties.
         """)
         with st.container():
-            col1, col2, col3 = st.columns((1.2,3,1))
+            col1, col2, col3 = st.columns((1,3,1))
             with col1:
                 st.empty()
             with col2:
@@ -1223,7 +1210,7 @@ elif choose == "Articles & Essays":
         In summary, pursuing sponsorships was indeed an eye-opening experience for our team. This has taught us to be resilient when facing hardships or dejections, which would only make us mentally stronger over time. Without experiencing prior failures, achieving small successes like these would not be as enjoyable as one would expect. 
         """)
         with st.container():
-            col1, col2, col3 = st.columns((1.2,3,1))
+            col1, col2, col3 = st.columns((1,3,1))
             with col1:
                 st.empty()
             with col2:
@@ -1246,7 +1233,7 @@ elif choose == "Articles & Essays":
         - Ethan and his Publicity Team members Briana, Tze Lynn and Yi Xuan, for helping to design cool slides and social media posts to make DAC 2022 look appealing! Their efforts in contributing appealing visuals and increasing social media outreach were also a major contributing factor to the success of this event.
         """)
         with st.container():
-            col1, col2, col3 = st.columns((1.2,3,1))
+            col1, col2, col3 = st.columns((1,3,1))
             with col1:
                 st.empty()
             with col2:
@@ -1810,7 +1797,7 @@ elif choose == "Site Analytics":
     with st.container():
       with streamlit_analytics.track():
             st.text_input("Enter something below if you'd like!", key="name_input", 
-                      help="Enter your full name", 
+                      help="Just type something!", 
                       value="Type something here!", 
                       max_chars=100, 
                       type="default",
@@ -1830,18 +1817,35 @@ elif choose == "Site Analytics":
             st.button("Click me!")
             st.write("...and now add `?analytics=on` to the URL to see the analytics dashboard 👀")
 
-elif choose == "Resume & CV":
-    st.header("Resume & CV")
-    def show_pdf(file_path):
-        with open(file_path,"rb") as f:
-            base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-        pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="800" height="800" type="application/pdf"></iframe>'
-        st.markdown(pdf_display, unsafe_allow_html=True)
-    st.subheader("Resume (1 page)")
-    show_pdf("Harry Chang Resume2024.pdf")
-    st.subheader("CV (2 pages)")
-    show_pdf("Harry Chang CV2023.pdf")
-
+elif choose == "Resume & CV":   
+    resume_url = "https://drive.google.com/file/d/13CHoDfb-mYr9F8YSA4ZDV3tZPpNF6eck/view?usp=sharing"
+    cv_url = "https://drive.google.com/file/d/1-aubNVEKkgmHdeCtlp_O1M99tVChXfYs/view?usp=sharing"
+    with st.container():
+            col1, col2, col3 = st.columns((1,3,1))
+            with col1:
+                st.empty()
+            with col2:
+                st.header("Resume & CV")
+                st.subheader("In case your current browser cannot display the PDF documents, do refer to either the hyperlinks below or at the 'About Me' section to access the relevant files!")
+                st.markdown(pdf_link(resume_url, "**Resume (1 page)**"), unsafe_allow_html=True)
+                show_pdf("Harry Chang Resume2024.pdf")
+                st.markdown(pdf_link(cv_url, "**CV (2 pages)**"), unsafe_allow_html=True)
+                show_pdf("Harry Chang CV2023.pdf")
+            with col3:
+                st.empty()
+elif choose == "Testimonials":    
+    test_url = "https://drive.google.com/file/d/13CHoDfb-mYr9F8YSA4ZDV3tZPpNF6eck/view?usp=sharing"
+    with st.container():
+        col1, col2, col3 = st.columns((1,3,1))
+        with col1:
+            st.empty()
+        with col2:
+            st.header("Testimonials")
+            st.subheader("Some feedback from my past employers!")
+            st.markdown(pdf_link(test_url, "**Compiled Testimonials**"), unsafe_allow_html=True)
+            show_pdf("Compiled Testimonials.pdf")
+        with col3:
+            st.empty()
 elif choose == "Contact":
 # Create section for Contact
     #st.write("---")
@@ -1868,7 +1872,18 @@ elif choose == "Contact":
     with st.container():
         text_column, image_column = st.columns((1,0.55))
         with text_column:
-            st.write("Let's connect! You may reach out to me at harrychang.work@gmail.com")
+            st.write("Let's connect! You may either reach out to me at harrychang.work@gmail.com or use the form below!")
+            with st.form(key='columns_in_form2',clear_on_submit=True): #set clear_on_submit=True so that the form will be reset/cleared once it's submitted
+                #st.write('Please help us improve!')
+                Name=st.text_input(label='Your Name',
+                                    max_chars=100, type="default") #Collect user feedback
+                Email=st.text_input(label='Your Email', 
+                                    max_chars=100,type="default") #Collect user feedback
+                Message=st.text_input(label='Your Message',
+                                        max_chars=500, type="default") #Collect user feedback
+                submitted = st.form_submit_button('Submit')
+                if submitted:
+                    st.write('Thanks for your contacting us. We will respond to your questions or inquiries as soon as possible!')
             st.write("Alternatively, feel free to contact me using any of the social media icons below!")
             linkedin_url = "https://www.linkedin.com/in/harrychangjr/"
             github_url = "https://github.com/harrychangjr"
@@ -1881,4 +1896,4 @@ elif choose == "Contact":
             #st.write("[LinkedIn](https://linkedin.com/in/harrychangjr) | [Github](https://github.com/harrychangjr) | [Linktree](https://linktr.ee/harrychangjr)")
         with image_column:
             st.image(img_ifg)
-#st.write("##")
+
