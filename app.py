@@ -593,7 +593,7 @@ elif choose == "Projects":
     with st.container():
         text_column, image_column = st.columns((3,1))
         with text_column:
-            st.subheader("Data-Driven Marketing: Exploration on 3 datasets related to cellphone billing and subscriber data")
+            st.subheader("Data-Driven Marketing: Exploration of cellphone billing and subscriber data")
             st.write("Self-initiated project based on past assignment from module BT4211: Data-Driven Marketing")
             st.markdown("""
             - Performed preliminary churn analysis, customer segmentation and descriptive analysis to understand more about dataset
