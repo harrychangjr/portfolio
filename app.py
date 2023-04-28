@@ -1919,11 +1919,23 @@ elif choose == "Gallery":
     elif selected == "2020":
         st.subheader("2020")
         st.write("*Intro to Zoom University*")
-        # Create a container for the image
-        container = st.container()
-        # Display the image in the container
-        with container:
-            st.image(img_2020_1, width = 500)
+        # Load the images
+        num_images = 2
+        images_2020 = [Image.open(f"gallery/2020_{i}.jpg") for i in range(1, num_images + 1)]
+
+        # Display the images in a grid
+        num_columns = 2
+        num_rows = num_images // num_columns
+
+        for row in range(num_rows):
+            # Create a row of columns
+            columns = st.columns(num_columns)
+    
+            # Display the images in the columns
+            for col in range(num_columns):
+                index = row * num_columns + col
+                with columns[col]:
+                    st.image(images_2020[index], use_column_width=True)
 
     elif selected == "2021":
         st.subheader("2021")
