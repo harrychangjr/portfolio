@@ -8,6 +8,8 @@ Portfolio website developed using Python, HTML and CSS - Deployed using Streamli
 
 *For an optimal experience, do browse [this web application](https://harrychangjr-portfolio-app-eh84yv.streamlit.app/) on desktop!*
 
+Website Demo Video: [YouTube](https://youtu.be/HDpG17IyvT8)
+
 References:
 - https://github.com/Sven-Bo/personal-website-streamlit 
 - https://github.com/Sven-Bo/streamlit-navigation-menu
