@@ -104,6 +104,7 @@ img_word2vec = Image.open("images/word2vec.jpg")
 img_fob = Image.open("images/fob.jpg")
 img_map = Image.open("images/map.png")
 img_gephi = Image.open("images/gephi.png")
+img_health = Image.open("images/health.png")
 # Assets for articles and essays
 img_outlier = Image.open("images/outlier.png")
 img_dac = Image.open("images/dac.png")
@@ -538,6 +539,19 @@ elif choose == "Projects":
             st.write("[Term Paper](https://github.com/harrychangjr/st4248-termpaper/blob/main/ST4248%20Term%20Paper%20(A0201825N)%20v5.pdf) | [Github Repo](https://github.com/harrychangjr/st4248-termpaper)")
         with image_column:
             st.image(img_videogames)
+    with st.container():
+        text_column, image_column = st.columns((3,1))
+        with text_column:
+            st.subheader("Statistical Learning: Nourish Your Body with Data")
+            st.write("Completed group project for module ST4248: Statistical Learning II in Academic Year 2022/23 Semester 2")
+            st.markdown("""
+            - Adapted [previous project](https://drive.google.com/file/d/10ZOdQ8Q7UnevXxODAQs1YOstNSsiKh7G/view?usp=sharing) from DSA3101: Data Science in Practice, with the usage of statistical learning methods instead
+            - Performed random forest classification and clustering methods to identify different consumer segments of grocery shoppers in supermarkets
+            - Built recommendation system using matrix factorisation to recommend healthier food alternatives for grocery shoppers from different backgrounds
+            """)
+            st.write("[Final Report](https://drive.google.com/file/d/1YuYxSTuDstSvyUa-bn782sLE5kCfbyH8/view?usp=sharing) | [Pitch Deck](https://www.canva.com/design/DAFeSnJeqgM/uXpz0kw8e7If4T1PG2tpaQ/view?utm_content=DAFeSnJeqgM&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink) | [Product Demo](https://www.youtube.com/watch?v=XMlt-kfdC7g)")
+        with image_column:
+            st.image(img_health)
     with st.container():
         text_column, image_column = st.columns((3,1))
         with text_column:
@@ -1552,7 +1566,7 @@ elif choose == "Articles & Essays":
 
         The researchers came up with a mathematical model which uses linear regression to predict the severity of future outbreaks. Using case data from Pakistan that contains the number of new measles cases per month, they predicted the number of cases of subsequent months within the next three years. This data was also categorised by province level to compare the severity of the measles outbreak between different regions in Pakistan. 
 
-        To understand how linear regression works, let us think of this example. If you spent $10 on a Monday, $20 on a Tuesday, $30 on a Wednesday, how much would you win on Thursday? If your answer is $40, you’ve just performed linear regression - this method thus makes use of available information to constantly make predictions.
+        To understand how linear regression works, let us think of this example. If you spent \$10 on a Monday, \$20 on a Tuesday, \$30 on a Wednesday, how much would you win on Thursday? If your answer is $40, you’ve just performed linear regression - this method thus makes use of available information to constantly make predictions.
 
         This model assisted researchers in understanding when and where the vaccine should be distributed within the country. Their results show that holding a vaccination campaign in November has the greatest impact, with an estimated 440,000 more infections that could be prevented in comparison to a January campaign. These results were later used by the Pakistani government in vaccination planning, which led to the implementation of the campaign in November 2018.
 
@@ -1575,7 +1589,9 @@ elif choose == "Articles & Essays":
 elif choose == "Gallery":
     st.header("Gallery")
     st.subheader("Some of my highlights throughout my educational years!")
-    selected_options = ["Overview", "2023", "2022", "2021", "2020", "2019"]
+    selected_options = ["Overview", "2023", "2022", "2021", "2020", "2019", "2018", "2017", 
+                        "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009",
+                        "2008", "2007", "2006", "2005"]
     selected = st.selectbox("Which year would you like to explore?", options = selected_options)
     st.write("Current selection:", selected)
     if selected == "Overview":
