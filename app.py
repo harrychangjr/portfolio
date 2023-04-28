@@ -2137,7 +2137,7 @@ elif choose == "Resume & CV":
             with col3:
                 st.empty()
 elif choose == "Testimonials":    
-    test_url = "https://drive.google.com/file/d/13CHoDfb-mYr9F8YSA4ZDV3tZPpNF6eck/view?usp=sharing"
+    test_url = "https://drive.google.com/file/d/1ZyTmg_r18sUuuU5JOJBqUb2EP8MnjvJU/view?usp=sharing"
     with st.container():
         col1, col2, col3 = st.columns((1,3,1))
         with col1:
