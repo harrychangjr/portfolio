@@ -359,8 +359,16 @@ elif choose == "Site Overview":
 
     A video will also be embedded in this section to provide a detailed tour of this entire web application and its features.
 
-    *Video to be released*
-
+    """)
+    with st.container():
+            col1, col2, col3 = st.columns((1,3,1))
+            with col1:
+                st.empty()
+            with col2:
+                st.video("https://www.youtube.com/watch?v=HDpG17IyvT8")
+            with col3:
+                st.empty()
+    st.markdown("""
     *For an optimal experience, do browse this site on desktop!*
     """)
 # Create section for Work Experience
