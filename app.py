@@ -128,47 +128,57 @@ img_2005_2 = Image.open("gallery/2005_2.jpg")
 # 2009
 img_2009_1 = Image.open("gallery/2009_1.jpg")
 # 2011
-img_2011_1 = Image.open("gallery/2011_1.jpg")
-# 2012 
 image_dict = {}
 num_images = 4
+for i in range(1, num_images + 1):
+    image_key = f"img_2011_{i}"
+    image_path = f"gallery/2011_{i}.jpg"
+    image_dict[image_key] = Image.open(image_path)
+# 2012 
+image_dict = {}
+num_images = 7
 for i in range(1, num_images + 1):
     image_key = f"img_2012_{i}"
     image_path = f"gallery/2012_{i}.jpg"
     image_dict[image_key] = Image.open(image_path)
 # 2013
 image_dict = {}
-num_images = 9
+num_images = 11
 for i in range(1, num_images + 1):
     image_key = f"img_2013_{i}"
     image_path = f"gallery/2013_{i}.jpg"
     image_dict[image_key] = Image.open(image_path)
 # 2014
 image_dict = {}
-num_images = 10
+num_images = 13
 for i in range(1, num_images + 1):
     image_key = f"img_2014_{i}"
     image_path = f"gallery/2014_{i}.jpg"
     image_dict[image_key] = Image.open(image_path)
 # 2015
 image_dict = {}
-num_images = 42
+num_images = 48
 for i in range(1, num_images + 1):
     image_key = f"img_2015_{i}"
     image_path = f"gallery/2015_{i}.jpg"
     image_dict[image_key] = Image.open(image_path)
 # 2016
-img_2016_1 = Image.open("gallery/2016_1.jpg")
+image_dict = {}
+num_images = 24
+for i in range(1, num_images + 1):
+    image_key = f"img_2016_{i}"
+    image_path = f"gallery/2016_{i}.jpg"
+    image_dict[image_key] = Image.open(image_path)
 # 2017
 image_dict = {}
-num_images = 3
+num_images = 4
 for i in range(1, num_images + 1):
     image_key = f"img_2017_{i}"
     image_path = f"gallery/2017_{i}.jpg"
     image_dict[image_key] = Image.open(image_path)
 # 2018
 image_dict = {}
-num_images = 8
+num_images = 9
 for i in range(1, num_images + 1):
     image_key = f"img_2018_{i}"
     image_path = f"gallery/2018_{i}.jpg"
@@ -181,8 +191,12 @@ for i in range(1, num_images + 1):
     image_path = f"gallery/2019_{i}.jpg"
     image_dict[image_key] = Image.open(image_path)
 #2020
-img_2020_1 = Image.open("gallery/2020_1.jpg")
-img_2020_2 = Image.open("gallery/2020_2.jpg")
+image_dict = {}
+num_images = 2
+for i in range(1, num_images + 1):
+    image_key = f"img_2020_{i}"
+    image_path = f"gallery/2020_{i}.jpg"
+    image_dict[image_key] = Image.open(image_path)
 #2021
 image_dict = {}
 num_images = 12
@@ -1730,11 +1744,11 @@ elif choose == "Gallery":
         st.subheader("2011")
         st.write("*To grow in friendship, body and mind*")
         # Load the images
-        num_images = 1
+        num_images = 8
         images_2011 = [Image.open(f"gallery/2011_{i}.jpg") for i in range(1, num_images + 1)]
 
         # Display the images in a grid
-        num_columns = 1
+        num_columns = 4
         num_rows = num_images // num_columns
 
         for row in range(num_rows):
@@ -1750,11 +1764,11 @@ elif choose == "Gallery":
         st.subheader("2012")
         st.write("*Back to the family*")
         # Load the images
-        num_images = 4
+        num_images = 7
         images_2012 = [Image.open(f"gallery/2012_{i}.jpg") for i in range(1, num_images + 1)]
 
         # Display the images in a grid
-        num_columns = 2
+        num_columns = 3
         num_rows = num_images // num_columns
 
         for row in range(num_rows):
@@ -1790,11 +1804,11 @@ elif choose == "Gallery":
         st.subheader("2014")
         st.write("*Hail hail alma mater*")
         # Load the images
-        num_images = 10
+        num_images = 13
         images_2014 = [Image.open(f"gallery/2014_{i}.jpg") for i in range(1, num_images + 1)]
 
         # Display the images in a grid
-        num_columns = 2
+        num_columns = 3
         num_rows = num_images // num_columns
 
         for row in range(num_rows):
@@ -1810,7 +1824,7 @@ elif choose == "Gallery":
         st.subheader("2015")
         st.write("*A leader in every student*")
         # Load the images
-        num_images = 42
+        num_images = 48
         images_2015 = [Image.open(f"gallery/2015_{i}.jpg") for i in range(1, num_images + 1)]
 
         # Display the images in a grid
@@ -1830,29 +1844,8 @@ elif choose == "Gallery":
         st.subheader("2016")
         st.write("*Big fish in a small pond*")
         # Load the images
-        num_images = 1
+        num_images = 24
         images_2016 = [Image.open(f"gallery/2016_{i}.jpg") for i in range(1, num_images + 1)]
-
-        # Display the images in a grid
-        num_columns = 1
-        num_rows = num_images // num_columns
-
-        for row in range(num_rows):
-            # Create a row of columns
-            columns = st.columns(num_columns)
-    
-            # Display the images in the columns
-            for col in range(num_columns):
-                index = row * num_columns + col
-                with columns[col]:
-                    st.image(images_2016[index], use_column_width=True)
-        st.write("*...to be updated!*")
-    elif selected == "2017":
-        st.subheader("2017")
-        st.write("*First real break from school*")
-        # Load the images
-        num_images = 3
-        images_2017 = [Image.open(f"gallery/2017_{i}.jpg") for i in range(1, num_images + 1)]
 
         # Display the images in a grid
         num_columns = 3
@@ -1866,16 +1859,43 @@ elif choose == "Gallery":
             for col in range(num_columns):
                 index = row * num_columns + col
                 with columns[col]:
+                    st.image(images_2016[index], use_column_width=True)
+    elif selected == "2017":
+        st.subheader("2017")
+        st.write("*First real break from school*")
+        # Load the images
+        num_images = 5
+        images_2017 = [Image.open(f"gallery/2017_{i}.jpg") for i in range(1, num_images + 1)]
+
+        # Display the images in a grid
+        num_columns = 2
+        num_rows = num_images // num_columns
+        remaining_images = num_images % num_columns
+
+        for row in range(num_rows + 1):  # Add 1 to include the last row
+            # Create a row of columns
+            columns = st.columns(num_columns)
+
+            # Calculate the number of columns for the current row
+            if row == num_rows:
+                num_cols_in_row = remaining_images
+            else:
+                num_cols_in_row = num_columns
+
+            # Display the images in the columns
+            for col in range(num_cols_in_row):
+                index = row * num_columns + col
+                with columns[col]:
                     st.image(images_2017[index], use_column_width=True)
     elif selected == "2018":
         st.subheader("2018")
         st.write("*Steadfast we stand*")
         # Load the images
-        num_images = 8
+        num_images = 17
         images_2018 = [Image.open(f"gallery/2018_{i}.jpg") for i in range(1, num_images + 1)]
 
         # Display the images in a grid
-        num_columns = 2
+        num_columns = 3
         num_rows = num_images // num_columns
 
         for row in range(num_rows):
@@ -1891,7 +1911,7 @@ elif choose == "Gallery":
         st.subheader("2019")
         st.write("*So many things to explore, yet so little time*")
         # Load the images
-        num_images = 13
+        num_images = 17
         images_2019 = [Image.open(f"gallery/2019_{i}.jpg") for i in range(1, num_images + 1)]
 
         # Display the images in a grid
@@ -1919,11 +1939,11 @@ elif choose == "Gallery":
         st.subheader("2020")
         st.write("*Intro to Zoom University*")
         # Load the images
-        num_images = 2
+        num_images = 3
         images_2020 = [Image.open(f"gallery/2020_{i}.jpg") for i in range(1, num_images + 1)]
 
         # Display the images in a grid
-        num_columns = 2
+        num_columns = 3
         num_rows = num_images // num_columns
 
         for row in range(num_rows):
