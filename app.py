@@ -108,6 +108,11 @@ image_names_projects = ["ecom", "chatgpt", "videogames", "health",
                          "biopics", "anime", "word2vec", "cellphone", 
                          "spotify", "map", "gephi", "fob"]
 images_projects = [Image.open(f"images/{name}.{'jpg' if name not in ('map', 'gephi', 'health') else 'png'}") for name in image_names_projects]
+# Assets for volunteering
+image_names_vol = ["sdslogo", "sportslogo", "gdsclogo", "csclogo", 
+                         "nussulogo", "sklogo", "simlogo", "tpjclogo", 
+                         "sjilogo"]
+images_vol = [Image.open(f"images/{name}.{'jpg' if name not in ('map', 'gephi', 'health') else 'png'}") for name in image_names_vol]
 # Assets for blog
 img_outlier = Image.open("images/outlier.png")
 img_dac = Image.open("images/dac.png")
@@ -286,8 +291,8 @@ add_bg_from_local('bg.png')
 with st.sidebar:
     choose = option_menu(
                         "Harry Chang", 
-                        ["About Me", "Site Overview", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Blog", "Gallery", "Site Analytics", "Resume & CV", "Testimonials", "Contact"],
-                         icons=['person fill', 'globe', 'clock history', 'tools', 'book half', 'clipboard', 'trophy fill', 'pencil square', 'image', 'activity', 'paperclip', 'star fill', 'envelope'],
+                        ["About Me", "Site Overview", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Volunteering", "Blog", "Gallery", "Site Analytics", "Resume & CV", "Testimonials", "Contact"],
+                         icons=['person fill', 'globe', 'clock history', 'tools', 'book half', 'clipboard', 'trophy fill', 'heart', 'pencil square', 'image', 'activity', 'paperclip', 'star fill', 'envelope'],
                          menu_icon="mortarboard", 
                          default_index=0,
                          styles={
@@ -369,7 +374,7 @@ elif choose == "Experience":
             st.image(img_sephora)
         with text_column:
             st.subheader("Product Data Analyst Intern, [Sephora](https://sephora.sg)")
-            st.write("June to December 2023 (Upcoming)")
+            st.write("*June to December 2023 (Upcoming)*")
             st.markdown("""
             - Built, documented and hosted SQL queries and processes to enable reproducible and effective pipelines, analysis and dashboards using BigQuery
             - Utilised Domo to create dataflows and visualizations that provide quick insights into product health and performance of e-commerce features (web and mobile)
@@ -384,7 +389,7 @@ elif choose == "Experience":
             st.image(img_questlogo)
         with text_column:
             st.subheader("Marketing Intern, [Quest](https://quest-inc.co)")
-            st.write("April to June 2023 (Ongoing)")
+            st.write("*April to June 2023 (Ongoing)*")
             st.markdown("""
             - Launched marketing ad campaigns using Google Ads to target businesses to visit company's landing page
             - Drafted content articles on Wordpress for search engine optimisation (SEO)
@@ -398,7 +403,7 @@ elif choose == "Experience":
             st.image(img_scor)
         with text_column:
             st.subheader("Actuarial Intern, [SCOR](https://scor.com)")
-            st.write("May to August 2022 | [Testimonial](https://drive.google.com/file/d/1seUP5OcXV5irA1Y1qt0cKnd7uQnLJLzw/view?usp=share_link)")
+            st.write("*May to August 2022* | [*Testimonial*](https://drive.google.com/file/d/1seUP5OcXV5irA1Y1qt0cKnd7uQnLJLzw/view?usp=share_link)")
             st.markdown("""
             - Performed actuarial analysis of reinsurance treaties in various APAC markets, including entry of client portfolio and loss data into xAct (treaty pricing system)
             - Regularly updated and analysed risk profiles and claims databases for insurance markets in Pakistan, Thailand and Vietnam
@@ -413,7 +418,7 @@ elif choose == "Experience":
             st.image(img_questlogo)
         with text_column:
             st.subheader("Data Analytics Intern, [Quest](https://quest-inc.co)")
-            st.write("February to May 2022")
+            st.write("*February to May 2022*")
             st.markdown("""
             - Conducted cohort analysis to optimise user acquisition and retention rates
             - Collected, analysed and interpreted trends within user data to improve company’s growth and marketing strategies
@@ -427,7 +432,7 @@ elif choose == "Experience":
             st.image(img_sshsph)
         with text_column:
             st.subheader("Public Health Intern, [Saw Swee Hock School of Public Health](https://sph.nus.edu.sg/)")
-            st.write("January to May 2021")
+            st.write("*January to May 2021*")
             st.markdown("""
             - Conducted literature reviews and summarized papers related to public health
             - Drafted case study report on British population health system, including impacts from COVID-19
@@ -439,7 +444,7 @@ elif choose == "Experience":
             st.image(img_iasg)
         with text_column:
             st.subheader("Data Migration Intern, [Immigration@SG LLP](https://iasg.com.sg/)")
-            st.write("October 2020 to January 2021 | [Testimonial](https://drive.google.com/file/d/11qFI-9TMfjOk1OxuyQ9ho9A7D6KuIsXp/view?usp=sharing)")
+            st.write("*October 2020 to January 2021* | [*Testimonial*](https://drive.google.com/file/d/11qFI-9TMfjOk1OxuyQ9ho9A7D6KuIsXp/view?usp=sharing)")
             st.markdown("""
             - Cleaned over 30,000 records using Pandas to facilitate smooth data migration into new CRM system
             - Derived customer segmentation models using regression models and market basket analysis (association rule mining) to improve company’s marketing strategies
@@ -454,7 +459,7 @@ elif choose == "Experience":
             st.image(img_yll)
         with text_column:
             st.subheader("Temporary Management Support Staff, [Yong Loo Lin School of Medicine](https://medicine.nus.edu.sg/)")
-            st.write("February to June 2019")
+            st.write("*February to June 2019*")
             st.markdown("""
             - Answered up to 100 different queries daily regarding undergraduate admissions
             - Managed venue preparations for admissions interviews involving over 1,000 candidates over the span of 2 weeks
@@ -466,7 +471,7 @@ elif choose == "Experience":
             st.image(img_saf)
         with text_column:
             st.subheader("Administrative Support Assistant, [Singapore Armed Forces](https://www.mindef.gov.sg/web/portal/mindef/home)")
-            st.write("January 2017 to January 2019 | [Testimonial](https://drive.google.com/file/d/1O6Yu0P65dU8LCSDuXkf9BvlQJoz_5mRW/view?usp=sharing)")
+            st.write("*January 2017 to January 2019* | [*Testimonial*](https://drive.google.com/file/d/1O6Yu0P65dU8LCSDuXkf9BvlQJoz_5mRW/view?usp=sharing)")
             st.markdown("""
             - Assisted in organising division-level In-Camp Trainings, conferences and welfare events
             - Handled daily administration of Operations Branch, including indentation of office equipment, budget management and food rations
@@ -779,7 +784,123 @@ elif choose == "Competitions":
             st.write("Awarded 1st Place for 2D Runes category out of over 600 students enrolled in the module for Academic Year 2020/21 Semester 1")
             st.write("2D pixel art created using Pillow (PIL) Library in Python")
             st.write("[Github Repo](https://github.com/harrychangjr/runes)")
+elif choose == "Volunteering":
+    st.header("Volunteering")
+    with st.container():
+        text_column, image_column = st.columns((3,1))
+        with text_column:
+            st.subheader("NUS Statistics and Data Science Society")
+            st.write("*May 2021 to November 2022*")
+            st.markdown("""
+            - President (2022) - Increased recruitment of student club by 50% while overseeing execution of career-related events and technical workshops organised by 70 members
+            - Marketing Director (2021-22) - Led 10 students to secure over $19,000 worth of sponsorships for 850 participants in annual Data Analytics Competition and increase society's merchandise sales revenue by over 50% compared to previous year
+            """)
+        with image_column:
+            st.image(images_vol[0])
+    with st.container():
+        text_column, image_column = st.columns((3,1))
+        with text_column:
+            st.subheader("NUS Students' Sports Club")
+            st.write("*February to August 2022*")
+            st.markdown("""
+            Publicity Executive, NUS Inter-Faculty Games
 
+            - Designed storyboard for publicity videos to hype up school-wide event
+            - Increased publicity of event through extended outreach to over 5,000 students in various Telegram groups
+            """)
+        with image_column:
+            st.image(images_vol[1])
+    with st.container():
+        text_column, image_column = st.columns((3,1))
+        with text_column:
+            st.subheader("Google Developer Student Clubs NUS")
+            st.write("*September 2021 to April 2022*")
+            st.markdown("""
+            Deputy Head of Finance
+
+            - Managed budget of student club alongside Core Team to ensure sufficient funds for technical workshops, hackathon and external projects
+            - Liaised with staff advisors and administrative staff to seek funding approvals and process financial claims for other student members
+            """)
+        with image_column:
+            st.image(images_vol[2])
+    with st.container():
+        text_column, image_column = st.columns((3,1))
+        with text_column:
+            st.subheader("NUS Students' Community Service Club")
+            st.write("*March to July 2021*")
+            st.markdown("""
+            Organising Committee, Project Safe Space
+
+            - Organised weekly sessions to empower individuals from Anglican Care Centre (Yishun) with important life skills (e.g Zumba, cooking)
+            - Drafted write-ups on psychiatric conditions to raise awareness on debunked mental health myths and promote mental welness
+            """)
+        with image_column:
+            st.image(images_vol[3])
+    with st.container():
+        text_column, image_column = st.columns((3,1))
+        with text_column:
+            st.subheader("NUS Students' Union")
+            st.write("*January to March 2021*")
+            st.markdown("""
+            Public Relations Executive, Open Day Student Village
+
+            - Liaised with participating student residences and clubs to increase awareness of event to prospective students
+            - Enforced rules and regulations imposed by school administrative staff to ensure smooth execution of event
+            """)
+        with image_column:
+            st.image(images_vol[4])
+    with st.container():
+        text_column, image_column = st.columns((3,1))
+        with text_column:
+            st.subheader("Saturday Kids")
+            st.write("*October 2020 to December 2021 - Seasonal*")
+            st.markdown("""
+            Python Instructor, Code in the Community
+
+            - Conducted weekly lessons for classes of 3-4 secondary school students on Python programming 
+            - Customised curriculum structure to suit the learning needs of students
+            """)
+        with image_column:
+            st.image(images_vol[5])
+    with st.container():
+        text_column, image_column = st.columns((3,1))
+        with text_column:
+            st.subheader("Singapore Institiute of Management - University of London")
+            st.write("*November 2017*")
+            st.markdown("""
+            Fundraising Volunteer, SIM-UOL Transformers
+
+            - Collected unwanted items from residents in heartland areas
+            - Successfully raised $8000 from sale of items to refurbish the homes of the less fortunate
+            """)
+            with image_column:
+                st.image(images_vol[6])
+    with st.container():
+        text_column, image_column = st.columns((3,1))
+        with text_column:
+            st.subheader("Tampines Junior College")
+            st.write("*March 2015 to January 2016 - Seasonal*")
+            st.markdown("""
+            Values in Action (VIA) Projects
+
+            - Climb for A Cause - Organised and participated in games and activities with members of Singapore Disability Sports Council
+            - Project Ohana - Collaborated with Kwong Wai Shiu Hospital to engage patients in handicraft and games
+            """)
+        with image_column:
+            st.image(images_vol[7])
+    with st.container():
+        text_column, image_column = st.columns((3,1))
+        with text_column:
+            st.subheader("Saint Joseph's Institution")
+            st.write("*June 2012 to June 2013 - Seasonal*")
+            st.markdown("""
+            Values in Action (VIA) Projects
+
+            - Josephian International Experience Programme - Conducted English lessons and assisted in site refurbishments at orphanage in Siem Reap, Cambodia
+            - SJIJ Primary 4 Chinese Language Camp - Acted as group facilitator to orientate primary four students in Chinese lessons
+            """)
+        with image_column:
+            st.image(images_vol[8])
 elif choose == "Blog":
     st.header("Blog")
     selected_options = ["Overview", "Article & Essay List", 
@@ -815,7 +936,7 @@ elif choose == "Blog":
                 st.image(img_outlier)
             with text_column:
                 st.subheader("Finding success as an outlier")
-                st.write("April 12, 2023 | [Article](https://antcabbage.wordpress.com/2023/04/12/finding-success-as-an-outlier/)")
+                st.write("*April 12, 2023* | [*Article*](https://antcabbage.wordpress.com/2023/04/12/finding-success-as-an-outlier/)")
                 st.write("A personal reflection of my tumultous undergraduate journey so far - and how I finally found my resolve")
                 #st.write("[Article](https://antcabbage.wordpress.com/2023/04/12/finding-success-as-an-outlier/)")       
         with st.container():
@@ -824,7 +945,7 @@ elif choose == "Blog":
                 st.image(img_raffles)
             with text_column:
                 st.subheader("Essays for Final Test - GES1037: A History of Singapore in Ten Objects")
-                st.write("April 29, 2022 | [Essays](https://github.com/harrychangjr/ges1037/blob/main/GES1037%20Take%20Home%20Test.pdf)")
+                st.write("*April 29, 2022* | [*Essays*](https://github.com/harrychangjr/ges1037/blob/main/GES1037%20Take%20Home%20Test.pdf)")
                 st.markdown("""
                 Essays written within 24-hour window in Academic Year 2021/22 Semester 2:
                 - Q4: Should the statue of Sir Stamford Raffles disappear for good?
@@ -836,7 +957,7 @@ elif choose == "Blog":
                 st.image(img_gender)
             with text_column:
                 st.subheader("Does gender inequality still have a place in Singapore's society today?")
-                st.write("April 2, 2022 | [Term Paper](https://github.com/harrychangjr/ges1037/blob/main/GES1037%20Term%20Paper.pdf)")
+                st.write("*April 2, 2022* | [*Term Paper*](https://github.com/harrychangjr/ges1037/blob/main/GES1037%20Term%20Paper.pdf)")
                 st.markdown("""
                 Term paper submitted for the module GES1037: A History of Singapore in Ten Objects in Academic Year 2021/22 Semester 2
                 """)       
@@ -846,7 +967,7 @@ elif choose == "Blog":
                 st.image(img_dac)
             with text_column:
                 st.subheader("Reflections on Organising an 850-participant Data Analytics Competition")
-                st.write("February 18, 2022 | [Article](https://sites.google.com/view/nussds/articles/reflections-about-dac?authuser=0&pli=1)")
+                st.write("*February 18, 2022* | [*Article*](https://sites.google.com/view/nussds/articles/reflections-about-dac?authuser=0&pli=1)")
                 st.markdown("""
                 A personal reflection of organising a large-scale online competition over the course of 6 months - co-written with [Axel Lau](https://www.linkedin.com/in/axel-lau/)
                 """)
@@ -857,7 +978,7 @@ elif choose == "Blog":
                 st.image(img_covid)
             with text_column:
                 st.subheader("Essays for Final Assignment - GEH1049: Public Health in Action")
-                st.write("November 12, 2021 | [Essays](https://github.com/harrychangjr/geh1049/blob/main/GEH1049%20Final%20Assignment.pdf)")
+                st.write("*November 12, 2021* | [*Essays*](https://github.com/harrychangjr/geh1049/blob/main/GEH1049%20Final%20Assignment.pdf)")
                 st.markdown("""
                 Essays written in Academic Year 2021/22 Semester 1:
                 - Q1: Worsened health disparities based on ethnicity and gender due to COVID-19
@@ -870,7 +991,7 @@ elif choose == "Blog":
                 st.image(img_hci)
             with text_column:
                 st.subheader("Evaluating 'Chinese Privilege' in Singapore - Special Assisted Plan Schools")
-                st.write("April 29, 2021 | [Final Essay](https://github.com/harrychangjr/ges1010/blob/main/GES1010%20Final%20Essay%20A0201825N.pdf)")
+                st.write("*April 29, 2021* | [*Final Essay*](https://github.com/harrychangjr/ges1010/blob/main/GES1010%20Final%20Essay%20A0201825N.pdf)")
                 st.markdown("""
                 Final essay submitted for the module GES1010: Nation-building in Singapore in Academic Year 2020/21 Semester 2
                 """)      
@@ -880,7 +1001,7 @@ elif choose == "Blog":
                 st.image(img_wordcloud)
             with text_column:
                 st.subheader("Analysing usefulness of word clouds in mental health studies")
-                st.write("March 5, 2021 | [Essay](https://github.com/harrychangjr/get1030/blob/main/A0201825N%20GET1030%20Individual%20Assignment%20Final.pdf)")
+                st.write("*March 5, 2021* | [*Essay*](https://github.com/harrychangjr/get1030/blob/main/A0201825N%20GET1030%20Individual%20Assignment%20Final.pdf)")
                 st.markdown("""
                 Individual assignment submitted for the module GET1030: Computers and the Humanities in Academic Year 2020/21 Semester 2
                 """)
@@ -890,7 +1011,7 @@ elif choose == "Blog":
                 st.image(img_taste)
             with text_column:
                 st.subheader("Investigating the relationship between culture and sweet-sour taste interactions")
-                st.write("October 31, 2020 | [Article](https://github.com/harrychangjr/sp1541-nlp/blob/main/Originals/SP1541%20NA2.pdf)")
+                st.write("*October 31, 2020* | [*Article*](https://github.com/harrychangjr/sp1541-nlp/blob/main/Originals/SP1541%20NA2.pdf)")
                 st.write("*Are we correct to stereotype taste perceptions and preferences based on different cultures?*")
                 st.write("Science news article submitted for the module SP1541: Exploring Science Communication through Popular Science in Academic Year 2020/21 Semester 1")      
         with st.container():
@@ -899,7 +1020,7 @@ elif choose == "Blog":
                 st.image(img_measles)
             with text_column:
                 st.subheader("Timing vaccination campaign to reduce measles infections")
-                st.write("September 30, 2020 | [Article](https://github.com/harrychangjr/sp1541-nlp/blob/main/Originals/SP1541%20NA1.pdf)")
+                st.write("*September 30, 2020* | [*Article*](https://github.com/harrychangjr/sp1541-nlp/blob/main/Originals/SP1541%20NA1.pdf)")
                 st.write("*Despite having a vaccine that is readily accessible, measles cases and deaths are still surging worldwide, especially in recent years. Why is this so and are there any long-term solutions to resolve this?*")
                 st.write("Science news article submitted for the module SP1541: Exploring Science Communication through Popular Science in Academic Year 2020/21 Semester 1")
     elif selected == "Finding success as an outlier":
