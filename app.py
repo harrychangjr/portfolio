@@ -55,6 +55,16 @@ def local_css(file_name):
 
 local_css("style/style.css")
 
+footer = """
+footer{
+    visibility:visible;
+}
+footer:after{
+    content:'Copyright © 2023 Harry Chang';
+    position:relative;
+    color:black;
+}
+"""
 # PDF functions
 def show_pdf(file_path):
         with open(file_path,"rb") as f:
@@ -294,12 +304,13 @@ with st.sidebar:
 #                                                     'padding-left': '30px'}},
 #                             key="1")
 
+st.title("Harry Chang")
 # Create header
 if choose == "About Me":
     with st.container():
         left_column, right_column = st.columns((1,0.55))
         with left_column:
-            st.title("Harry Chang")
+            st.header("About Me")
             st.subheader("Aspiring Data Analyst/Data Scientist")
             st.write("👋🏻 Hi, I'm Harry! I'm a data science and analytics undergraduate based in Singapore. Having prior relevant experiences in tech, reinsurance and consulting sectors, I am constantly seeking unique internships to broaden my horizons before embarking on my data career upon graduation.")
             st.write("💼 With the COVID-19 pandemic behind us, I believe there is potential for data science to be applied in the retail industry. In response to the increasing demand for data analytics from both online and brick-and-mortar sales, I am thus aiming to enter this industry for my first full-time job.")
@@ -343,9 +354,14 @@ elif choose == "Experience":
         with text_column:
             st.subheader("Product Data Analyst Intern, [Sephora](https://sephora.sg)")
             st.write("June to December 2023 (Upcoming)")
-            #st.markdown("- Built, documented and hosted SQL queries and processes to enable reproducible and effective pipelines, analysis and dashboards using BigQuery")
-            #st.markdown("- Utilised Domo to create dataflows and visualizations that provide quick insights into product health and performance of e-commerce features (web and mobile)")
-            #st.markdown("- Implemented A/B testing to measure potency of new e-commerce features before reporting results")
+            st.markdown("""
+            - Built, documented and hosted SQL queries and processes to enable reproducible and effective pipelines, analysis and dashboards using BigQuery
+            - Utilised Domo to create dataflows and visualizations that provide quick insights into product health and performance of e-commerce features (web and mobile)
+            - Implemented A/B testing to measure potency of new e-commerce features before reporting results
+            
+            `Domo` `Git` `Google Bigquery` `GCP` `PostgreSQL` `Python` `SQL` 
+            """)
+
     with st.container():
         image_column, text_column = st.columns((1,5))
         with image_column:
@@ -357,6 +373,8 @@ elif choose == "Experience":
             - Launched marketing ad campaigns using Google Ads to target businesses to visit company's landing page
             - Drafted content articles on Wordpress for search engine optimisation (SEO)
             - Performed weekly reporting of user acquisition metrics from various marketing channels, including [TikTok](https://www.tiktok.com/@questhireahero?lang=en) and [Instagram](https://www.instagram.com/questhireahero/)
+
+            `Canva` `Google Ads` `Google Analytics` `Wordpress` `SEM` `SEO`
             """)
     with st.container():
         image_column, text_column = st.columns((1,5))
@@ -369,6 +387,8 @@ elif choose == "Experience":
             - Performed actuarial analysis of reinsurance treaties in various APAC markets, including entry of client portfolio and loss data into xAct (treaty pricing system)
             - Regularly updated and analysed risk profiles and claims databases for insurance markets in Pakistan, Thailand and Vietnam
             - Trained machine learning models (logistic regression, random forest) to predict insurance claims, with an average accuracy of 80% for each model
+
+            `Excel` `R` `Python` `xAct` `VBA`
             """)
             #st.write("[Testimonial](https://drive.google.com/file/d/1seUP5OcXV5irA1Y1qt0cKnd7uQnLJLzw/view?usp=share_link)")
     with st.container():
@@ -382,6 +402,8 @@ elif choose == "Experience":
             - Conducted cohort analysis to optimise user acquisition and retention rates
             - Collected, analysed and interpreted trends within user data to improve company’s growth and marketing strategies
             - Built visualizations and dashboards using RStudio and Tableau to report monthly key metrics of company’s mobile application
+            
+            `Asana` `ClickUp` `Cloud Firestore` `Excel` `Figma` `Firebase` `GCP` `ggplot2` `Google Analytics` `Google BigQuery` `NoSQL` `Python` `R` `Retool` `Slack` `SQL` `Tableau`
             """)
     with st.container():
         image_column, text_column = st.columns((1,5))
@@ -406,6 +428,8 @@ elif choose == "Experience":
             - Cleaned over 30,000 records using Pandas to facilitate smooth data migration into new CRM system
             - Derived customer segmentation models using regression models and market basket analysis (association rule mining) to improve company’s marketing strategies
             - Completed time series analysis using past sales data to forecast future monthly revenue
+
+            `Excel` `ggplot2` `Python` `pandas` `R`
             """)
             #st.write("[Testimonial](https://drive.google.com/file/d/11qFI-9TMfjOk1OxuyQ9ho9A7D6KuIsXp/view?usp=sharing)")
     with st.container():
@@ -431,6 +455,8 @@ elif choose == "Experience":
             - Assisted in organising division-level In-Camp Trainings, conferences and welfare events
             - Handled daily administration of Operations Branch, including indentation of office equipment, budget management and food rations
             - Promoted to Corporal First Class (CFC) for outstanding efforts
+            
+            `Excel` `GeBiz` `GIS` `Outlook` `PowerPoint` `Word`
             """)
             #st.write("[Testimonial](https://drive.google.com/file/d/1O6Yu0P65dU8LCSDuXkf9BvlQJoz_5mRW/view?usp=sharing)")
     st.markdown('''
@@ -448,8 +474,8 @@ elif choose == "Technical Skills":
     st.header("Technical Skills")
     txt3("Programming Languages","`R`, `Python`, `SQL`, `Java`, `Stata`, `MATLAB`")
     txt3("Academic Interests","`Data Visualization`, `Market Basket Analysis`, `Recommendation Systems`, `Natural Language Processing`")
-    txt3("Data Visualization", "`ggplot2`, `matplotlib`, `seaborn`, `Folium`, `Gephi`, `Tableau`, `Power BI`, `Google Data Studio`, `Domo`, `Google Analytics`")
-    txt3("Database and Cloud Systems", "`MySQL`, `PostgreSQL`, `BigQuery`, `Cloud Firestore`, `Google Cloud Platform`, `Amazon Web Services`")
+    txt3("Data Visualization", "`ggplot2`, `matplotlib`, `seaborn`, `Folium`, `Gephi`, `GIS`, `Tableau`, `Power BI`, `Google Data Studio`, `Domo`, `Google Analytics`")
+    txt3("Database and Cloud Systems", "`MySQL`, `PostgreSQL`, `NoSQL`, `Google BigQuery`, `Cloud Firestore`, `Google Cloud Platform`, `Amazon Web Services`")
     txt3("Version Control", "`Git`, `Docker`")
     txt3("Design and Front-end Development", "`Canva`, `Figma`, `HTML`, `CSS`, `Streamlit`, `Wordpress`")
     txt3("Data Science Techniques", "`Regression`, `Clustering`, `Association Rules Mining`, `Random Forest`, `Decison Trees`, `Principal Components Analysis`, `Text Classification`, `Sentiment Analysis`, `Matrix Factorisation`, `Collaborative Filtering`")
@@ -719,7 +745,7 @@ elif choose == "Competitions":
         with text_column:
             st.subheader("[Shopee Product and Design Challenge 2021](https://careers.shopee.sg/event-detail/396)")
             st.write("Redesigned user interface of Shopee mobile app using Figma to reduce clutter and increase user utilization of in-app rewards")
-            st.write("[Pitch Deck](https://drive.google.com/file/d/12qnveB-SMjG_gF_gwNj3Nr-JsKeyKd6g/view) | [Figma Prototype](https://www.figma.com/proto/3UXT29N1RgVGDUlSBeWcPN/UI-Prototype-1?node-id=18-3&viewport=-675%2C231%2C0.32458001375198364&scaling=scale-down)")
+            st.write("[Figma Prototype](https://www.figma.com/proto/3UXT29N1RgVGDUlSBeWcPN/UI-Prototype-1?node-id=18-3&viewport=-675%2C231%2C0.32458001375198364&scaling=scale-down) | [Pitch Deck](https://drive.google.com/file/d/12qnveB-SMjG_gF_gwNj3Nr-JsKeyKd6g/view)")
     with st.container():
         image_column, text_column = st.columns((1,3))
         with image_column:
@@ -2093,8 +2119,9 @@ elif choose == "Contact":
                 social_icons(32, 32, LinkedIn=linkedin_url, GitHub=github_url, Email=email_url),
                 unsafe_allow_html=True)
             st.markdown("")
-            st.write("© 2023 Harry Chang")
+            #st.write("© 2023 Harry Chang")
             #st.write("[LinkedIn](https://linkedin.com/in/harrychangjr) | [Github](https://github.com/harrychangjr) | [Linktree](https://linktr.ee/harrychangjr)")
         with image_column:
             st.image(img_ifg)
+st.markdown("*Copyright © 2023 Harry Chang*")
 
