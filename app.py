@@ -173,7 +173,7 @@ for i in range(1, num_images + 1):
     image_dict[image_key] = Image.open(image_path)
 # 2016
 image_dict = {}
-num_images = 24
+num_images = 25
 for i in range(1, num_images + 1):
     image_key = f"img_2016_{i}"
     image_path = f"gallery/2016_{i}.jpg"
@@ -187,7 +187,7 @@ for i in range(1, num_images + 1):
     image_dict[image_key] = Image.open(image_path)
 # 2018
 image_dict = {}
-num_images = 9
+num_images = 16
 for i in range(1, num_images + 1):
     image_key = f"img_2018_{i}"
     image_path = f"gallery/2018_{i}.jpg"
@@ -413,7 +413,7 @@ elif choose == "Experience":
             - Regularly updated and analysed risk profiles and claims databases for insurance markets in Pakistan, Thailand and Vietnam
             - Trained machine learning models (logistic regression, random forest) to predict insurance claims, with an average accuracy of 80% for each model
 
-            `Excel` `R` `Python` `xAct` `VBA`
+            `Excel` `Python` `R` `xAct` `VBA`
             """)
             #st.write("[Testimonial](https://drive.google.com/file/d/1seUP5OcXV5irA1Y1qt0cKnd7uQnLJLzw/view?usp=share_link)")
     with st.container():
@@ -2021,7 +2021,7 @@ elif choose == "Gallery":
         st.subheader("2016")
         st.write("*Big fish in a small pond*")
         # Load the images
-        num_images = 24
+        num_images = 25
         images_2016 = [Image.open(f"gallery/2016_{i}.jpg") for i in range(1, num_images + 1)]
 
         # Display the images in a grid
@@ -2068,19 +2068,27 @@ elif choose == "Gallery":
         st.subheader("2018")
         st.write("*Steadfast we stand*")
         # Load the images
-        num_images = 17
+        # Load the images
+        num_images = 16
         images_2018 = [Image.open(f"gallery/2018_{i}.jpg") for i in range(1, num_images + 1)]
 
         # Display the images in a grid
         num_columns = 3
         num_rows = num_images // num_columns
+        remaining_images = num_images % num_columns
 
-        for row in range(num_rows):
+        for row in range(num_rows + 1):  # Add 1 to include the last row
             # Create a row of columns
             columns = st.columns(num_columns)
-    
+
+            # Calculate the number of columns for the current row
+            if row == num_rows:
+                num_cols_in_row = remaining_images
+            else:
+                num_cols_in_row = num_columns
+
             # Display the images in the columns
-            for col in range(num_columns):
+            for col in range(num_cols_in_row):
                 index = row * num_columns + col
                 with columns[col]:
                     st.image(images_2018[index], use_column_width=True)
@@ -2122,11 +2130,18 @@ elif choose == "Gallery":
         # Display the images in a grid
         num_columns = 3
         num_rows = num_images // num_columns
+        remaining_images = num_images % num_columns
 
-        for row in range(num_rows):
+        for row in range(num_rows + 1):
             # Create a row of columns
             columns = st.columns(num_columns)
-    
+
+            # Calculate the number of columns for the current row
+            if row == num_rows:
+                num_cols_in_row = remaining_images
+            else:
+                num_cols_in_row = num_columns
+                
             # Display the images in the columns
             for col in range(num_columns):
                 index = row * num_columns + col
