@@ -69,7 +69,7 @@ footer:after{
 def show_pdf(file_path):
         with open(file_path,"rb") as f:
             base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-        pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="400" height="400" type="application/pdf"></iframe>'
+        pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="400" height="600" type="application/pdf"></iframe>'
         st.markdown(pdf_display, unsafe_allow_html=True)
 
 def pdf_link(pdf_url, link_text="Click here to view PDF"):
@@ -130,6 +130,10 @@ img_dac2 = Image.open("images/dac2.png")
 # 2005
 img_2005_1 = Image.open("gallery/2005_1.jpg")
 img_2005_2 = Image.open("gallery/2005_2.jpg")
+# 2006
+img_2006_1 = Image.open("gallery/2006_1.jpg")
+# 2008
+img_2008_1 = Image.open("gallery/2008_1.jpg")
 # 2009
 img_2009_1 = Image.open("gallery/2009_1.jpg")
 # 2011
@@ -190,7 +194,7 @@ for i in range(1, num_images + 1):
     image_dict[image_key] = Image.open(image_path)
 # 2019
 image_dict = {}
-num_images = 13
+num_images = 20
 for i in range(1, num_images + 1):
     image_key = f"img_2019_{i}"
     image_path = f"gallery/2019_{i}.jpg"
@@ -204,7 +208,7 @@ for i in range(1, num_images + 1):
     image_dict[image_key] = Image.open(image_path)
 #2021
 image_dict = {}
-num_images = 12
+num_images = 14
 for i in range(1, num_images + 1):
     image_key = f"img_2021_{i}"
     image_path = f"gallery/2021_{i}.jpg"
@@ -380,7 +384,7 @@ elif choose == "Experience":
             - Utilised Domo to create dataflows and visualizations that provide quick insights into product health and performance of e-commerce features (web and mobile)
             - Implemented A/B testing to measure potency of new e-commerce features before reporting results
             
-            `Domo` `Git` `Google Bigquery` `GCP` `PostgreSQL` `Python` `SQL` 
+            `Domo` `Git` `Google BigQuery` `GCP` `PostgreSQL` `Python` `SQL` 
             """)
 
     with st.container():
@@ -584,7 +588,7 @@ elif choose == "Projects":
     with st.container():
         text_column, image_column = st.columns((3,1))
         with text_column:
-            st.subheader("Creating a sales volume prediction model using regression methods")
+            st.subheader("Creating Sales Volume Prediction Model with Regression Methods")
             st.write("Self-initiated project based on e-commerce case study")
             st.markdown("""
             - Conducted exploratory data analysis (EDA) to identify relationships between variables using correlation heatmaps and histograms
@@ -597,7 +601,7 @@ elif choose == "Projects":
     with st.container():
         text_column, image_column = st.columns((3,1))
         with text_column:
-            st.subheader("Optimising article quality using ChatGPT and NLP")
+            st.subheader("Optimising Article Quality with ChatGPT and NLP")
             st.write("Self-initiated project using past articles written for module SP1541: Exploring Science Communication in Popular Science in Academic Year 2020/21 Semester 1")
             st.markdown("""
             - Preliminary analysis - comparing word counts, readability scores and sentiment (compound) scores of all 6 article variants using NLTK and Textstat
@@ -1849,13 +1853,47 @@ elif choose == "Gallery":
                     st.image(images_2005[index], use_column_width=True)
     elif selected == "2006":
         st.subheader("2006")
-        st.write("To be updated!")
+        st.write("*Settling down*")
+        # Load the images
+        num_images = 1
+        images_2006 = [Image.open(f"gallery/2006_{i}.jpg") for i in range(1, num_images + 1)]
+
+        # Display the images in a grid
+        num_columns = 1
+        num_rows = num_images // num_columns
+
+        for row in range(num_rows):
+            # Create a row of columns
+            columns = st.columns(num_columns)
+    
+            # Display the images in the columns
+            for col in range(num_columns):
+                index = row * num_columns + col
+                with columns[col]:
+                    st.image(images_2006[index], use_column_width=True)
     elif selected == "2007":
         st.subheader("2007")
         st.write("To be updated!")
     elif selected == "2008":
         st.subheader("2008")
-        st.write("To be updated!")
+        st.write("*First pivot*")
+        # Load the images
+        num_images = 1
+        images_2008 = [Image.open(f"gallery/2008_{i}.jpg") for i in range(1, num_images + 1)]
+
+        # Display the images in a grid
+        num_columns = 1
+        num_rows = num_images // num_columns
+
+        for row in range(num_rows):
+            # Create a row of columns
+            columns = st.columns(num_columns)
+    
+            # Display the images in the columns
+            for col in range(num_columns):
+                index = row * num_columns + col
+                with columns[col]:
+                    st.image(images_2008[index], use_column_width=True)
     elif selected == "2009":
         st.subheader("2009")
         st.write("*Exploring myself*")
@@ -2050,7 +2088,7 @@ elif choose == "Gallery":
         st.subheader("2019")
         st.write("*So many things to explore, yet so little time*")
         # Load the images
-        num_images = 17
+        num_images = 20
         images_2019 = [Image.open(f"gallery/2019_{i}.jpg") for i in range(1, num_images + 1)]
 
         # Display the images in a grid
@@ -2099,7 +2137,7 @@ elif choose == "Gallery":
         st.subheader("2021")
         st.write("*Boomer in a zoomer's body*")
         # Load the images
-        num_images = 12
+        num_images = 14
         images_2021 = [Image.open(f"gallery/2021_{i}.jpg") for i in range(1, num_images + 1)]
 
         # Display the images in a grid
@@ -2224,7 +2262,7 @@ elif choose == "Resume & CV":
 elif choose == "Testimonials": 
     test_url = "https://drive.google.com/file/d/1ZyTmg_r18sUuuU5JOJBqUb2EP8MnjvJU/view?usp=sharing"  
     st.header("Testimonials")
-    st.subheader("Some feedback from my past referees!")
+    st.subheader("Some appraisals from my past referees!")
     st.markdown(pdf_link(test_url, "**Compiled Testimonials**"), unsafe_allow_html=True)  
     with st.container():  
         col1, col2, col3 = st.columns((1,1,1))
