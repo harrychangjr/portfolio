@@ -787,7 +787,7 @@ elif choose == "Competitions":
 elif choose == "Volunteering":
     st.header("Volunteering")
     with st.container():
-        text_column, image_column = st.columns((3,1))
+        text_column, mid, image_column = st.columns((3,0.4,1))
         with text_column:
             st.subheader("NUS Statistics and Data Science Society")
             st.write("*May 2021 to November 2022*")
@@ -795,10 +795,12 @@ elif choose == "Volunteering":
             - President (2022) - Increased recruitment of student club by 50% while overseeing execution of career-related events and technical workshops organised by 70 members
             - Marketing Director (2021-22) - Led 10 students to secure over $19,000 worth of sponsorships for 850 participants in annual Data Analytics Competition and increase society's merchandise sales revenue by over 50% compared to previous year
             """)
+        with mid:
+            st.empty()
         with image_column:
             st.image(images_vol[0])
     with st.container():
-        text_column, image_column = st.columns((3,1))
+        text_column, mid, image_column = st.columns((3,0.4,1))
         with text_column:
             st.subheader("NUS Students' Sports Club")
             st.write("*February to August 2022*")
@@ -808,10 +810,12 @@ elif choose == "Volunteering":
             - Designed storyboard for publicity videos to hype up school-wide event
             - Increased publicity of event through extended outreach to over 5,000 students in various Telegram groups
             """)
+        with mid:
+            st.empty()
         with image_column:
             st.image(images_vol[1])
     with st.container():
-        text_column, image_column = st.columns((3,1))
+        text_column, mid, image_column = st.columns((3,0.4,1))
         with text_column:
             st.subheader("Google Developer Student Clubs NUS")
             st.write("*September 2021 to April 2022*")
@@ -821,10 +825,12 @@ elif choose == "Volunteering":
             - Managed budget of student club alongside Core Team to ensure sufficient funds for technical workshops, hackathon and external projects
             - Liaised with staff advisors and administrative staff to seek funding approvals and process financial claims for other student members
             """)
+        with mid:
+            st.empty()
         with image_column:
             st.image(images_vol[2])
     with st.container():
-        text_column, image_column = st.columns((3,1))
+        text_column, mid, image_column = st.columns((3,0.4,1))
         with text_column:
             st.subheader("NUS Students' Community Service Club")
             st.write("*March to July 2021*")
@@ -834,10 +840,12 @@ elif choose == "Volunteering":
             - Organised weekly sessions to empower individuals from Anglican Care Centre (Yishun) with important life skills (e.g Zumba, cooking)
             - Drafted write-ups on psychiatric conditions to raise awareness on debunked mental health myths and promote mental welness
             """)
+        with mid:
+            st.empty()
         with image_column:
             st.image(images_vol[3])
     with st.container():
-        text_column, image_column = st.columns((3,1))
+        text_column, mid, image_column = st.columns((3,0.4,1))
         with text_column:
             st.subheader("NUS Students' Union")
             st.write("*January to March 2021*")
@@ -847,10 +855,12 @@ elif choose == "Volunteering":
             - Liaised with participating student residences and clubs to increase awareness of event to prospective students
             - Enforced rules and regulations imposed by school administrative staff to ensure smooth execution of event
             """)
+        with mid:
+            st.empty()
         with image_column:
             st.image(images_vol[4])
     with st.container():
-        text_column, image_column = st.columns((3,1))
+        text_column, mid, image_column = st.columns((3,0.4,1))
         with text_column:
             st.subheader("Saturday Kids")
             st.write("*October 2020 to December 2021 - Seasonal*")
@@ -860,10 +870,12 @@ elif choose == "Volunteering":
             - Conducted weekly lessons for classes of 3-4 secondary school students on Python programming 
             - Customised curriculum structure to suit the learning needs of students
             """)
+        with mid:
+            st.empty()
         with image_column:
             st.image(images_vol[5])
     with st.container():
-        text_column, image_column = st.columns((3,1))
+        text_column, mid, image_column = st.columns((3,0.4,1))
         with text_column:
             st.subheader("Singapore Institiute of Management - University of London")
             st.write("*November 2017*")
@@ -873,10 +885,12 @@ elif choose == "Volunteering":
             - Collected unwanted items from residents in heartland areas
             - Successfully raised $8000 from sale of items to refurbish the homes of the less fortunate
             """)
-            with image_column:
-                st.image(images_vol[6])
+        with mid:
+            st.empty()
+        with image_column:
+            st.image(images_vol[6])
     with st.container():
-        text_column, image_column = st.columns((3,1))
+        text_column, mid, image_column = st.columns((3,0.4,1))
         with text_column:
             st.subheader("Tampines Junior College")
             st.write("*March 2015 to January 2016 - Seasonal*")
@@ -886,10 +900,12 @@ elif choose == "Volunteering":
             - Climb for A Cause - Organised and participated in games and activities with members of Singapore Disability Sports Council
             - Project Ohana - Collaborated with Kwong Wai Shiu Hospital to engage patients in handicraft and games
             """)
+        with mid:
+            st.empty()
         with image_column:
             st.image(images_vol[7])
     with st.container():
-        text_column, image_column = st.columns((3,1))
+        text_column, mid, image_column = st.columns((3,0.4,1))
         with text_column:
             st.subheader("Saint Joseph's Institution")
             st.write("*June 2012 to June 2013 - Seasonal*")
@@ -899,6 +915,8 @@ elif choose == "Volunteering":
             - Josephian International Experience Programme - Conducted English lessons at orphanage in Siem Reap, Cambodia
             - SJIJ Primary 4 Chinese Language Camp - Acted as group facilitator to orientate primary four students in Chinese lessons
             """)
+        with mid:
+            st.empty()
         with image_column:
             st.image(images_vol[8])
 elif choose == "Blog":
