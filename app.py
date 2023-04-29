@@ -94,18 +94,11 @@ img_sshsph = Image.open("images/sshsph.jpg")
 img_yll = Image.open("images/yll.jpg")
 img_saf = Image.open("images/saf.jpg")
 # Assets for projects
-img_chatgpt = Image.open("images/chatgpt.jpg")
-img_anime = Image.open("images/anime.jpg")
-img_biopics = Image.open("images/biopics.jpg")
-img_cellphone = Image.open("images/cellphone.jpg")
-img_spotify = Image.open("images/spotify.jpg")
-img_videogames = Image.open("images/videogames.jpg")
-img_word2vec = Image.open("images/word2vec.jpg")
-img_fob = Image.open("images/fob.jpg")
-img_map = Image.open("images/map.png")
-img_gephi = Image.open("images/gephi.png")
-img_health = Image.open("images/health.png")
-# Assets for articles and essays
+image_names_projects = ["ecom", "chatgpt", "videogames", "health", 
+                         "biopics", "anime", "word2vec", "cellphone", 
+                         "spotify", "map", "gephi", "fob"]
+images_projects = [Image.open(f"images/{name}.{'jpg' if name not in ('map', 'gephi', 'health') else 'png'}") for name in image_names_projects]
+# Assets for blog
 img_outlier = Image.open("images/outlier.png")
 img_dac = Image.open("images/dac.png")
 img_raffles = Image.open("images/raffles.jpg")
@@ -171,70 +164,36 @@ for i in range(1, num_images + 1):
     image_path = f"gallery/2018_{i}.jpg"
     image_dict[image_key] = Image.open(image_path)
 # 2019
-img_2019_1 = Image.open("gallery/2019_1.jpg")
-img_2019_2 = Image.open("gallery/2019_2.jpg")
-img_2019_3 = Image.open("gallery/2019_3.jpg")
-img_2019_4 = Image.open("gallery/2019_4.jpg")
-img_2019_5 = Image.open("gallery/2019_5.jpg")
-img_2019_6 = Image.open("gallery/2019_6.jpg")
-img_2019_7 = Image.open("gallery/2019_7.jpg")
-img_2019_8 = Image.open("gallery/2019_8.jpg")
-img_2019_9 = Image.open("gallery/2019_9.jpg")
-img_2019_10 = Image.open("gallery/2019_10.jpg")
-img_2019_11 = Image.open("gallery/2019_11.jpg")
-img_2019_12 = Image.open("gallery/2019_12.jpg")
-img_2019_13 = Image.open("gallery/2019_13.jpg")
+image_dict = {}
+num_images = 13
+for i in range(1, num_images + 1):
+    image_key = f"img_2019_{i}"
+    image_path = f"gallery/2019_{i}.jpg"
+    image_dict[image_key] = Image.open(image_path)
 #2020
 img_2020_1 = Image.open("gallery/2020_1.jpg")
 img_2020_2 = Image.open("gallery/2020_2.jpg")
 #2021
-img_2021_1 = Image.open("gallery/2021_1.jpg")
-img_2021_2 = Image.open("gallery/2021_2.jpg")
-img_2021_3 = Image.open("gallery/2021_3.jpg")
-img_2021_4 = Image.open("gallery/2021_4.jpg")
-img_2021_5 = Image.open("gallery/2021_5.jpg")
-img_2021_6 = Image.open("gallery/2021_6.jpg")
-img_2021_7 = Image.open("gallery/2021_7.jpg")
-img_2021_8 = Image.open("gallery/2021_8.jpg")
-img_2021_9 = Image.open("gallery/2021_9.jpg")
-img_2021_10 = Image.open("gallery/2021_10.jpg")
-img_2021_11 = Image.open("gallery/2021_11.jpg")
-img_2021_12 = Image.open("gallery/2021_12.jpg")
+image_dict = {}
+num_images = 12
+for i in range(1, num_images + 1):
+    image_key = f"img_2021_{i}"
+    image_path = f"gallery/2021_{i}.jpg"
+    image_dict[image_key] = Image.open(image_path)
 #2022
-img_2022_1 = Image.open("gallery/2022_1.jpg")
-img_2022_2 = Image.open("gallery/2022_2.jpg")
-img_2022_3 = Image.open("gallery/2022_3.jpg")
-img_2022_4 = Image.open("gallery/2022_4.jpg")
-img_2022_5 = Image.open("gallery/2022_5.jpg")
-img_2022_6 = Image.open("gallery/2022_6.jpg")
-img_2022_7 = Image.open("gallery/2022_7.jpg")
-img_2022_8 = Image.open("gallery/2022_8.jpg")
-img_2022_9 = Image.open("gallery/2022_9.jpg")
-img_2022_10 = Image.open("gallery/2022_10.jpg")
-img_2022_11 = Image.open("gallery/2022_11.jpg")
-img_2022_12 = Image.open("gallery/2022_12.jpg")
-img_2022_13 = Image.open("gallery/2022_13.jpg")
-img_2022_14 = Image.open("gallery/2022_14.jpg")
-img_2022_15 = Image.open("gallery/2022_15.jpg")
-img_2022_16 = Image.open("gallery/2022_16.jpg")
-img_2022_17 = Image.open("gallery/2022_17.jpg")
-img_2022_18 = Image.open("gallery/2022_18.jpg")
-img_2022_19 = Image.open("gallery/2022_19.jpg")
-img_2022_20 = Image.open("gallery/2022_20.jpg")
-img_2022_21 = Image.open("gallery/2022_21.jpg")
-img_2022_22 = Image.open("gallery/2022_22.jpg")
-img_2022_23 = Image.open("gallery/2022_23.jpg")
-img_2022_24 = Image.open("gallery/2022_24.jpg")
-img_2022_25 = Image.open("gallery/2022_25.jpg")
-img_2022_26 = Image.open("gallery/2022_26.jpg")
-img_2022_27 = Image.open("gallery/2022_27.jpg")
-img_2022_28 = Image.open("gallery/2022_28.jpg")
-img_2022_29 = Image.open("gallery/2022_29.jpg")
-img_2022_30 = Image.open("gallery/2022_30.jpg")
+image_dict = {}
+num_images = 30
+for i in range(1, num_images + 1):
+    image_key = f"img_2022_{i}"
+    image_path = f"gallery/2022_{i}.jpg"
+    image_dict[image_key] = Image.open(image_path)
 #2023
-img_2023_1 = Image.open("gallery/2023_1.jpg")
-img_2023_2 = Image.open("gallery/2023_2.jpg")
-img_2023_3 = Image.open("gallery/2023_3.jpg")
+image_dict = {}
+num_images = 3
+for i in range(1, num_images + 1):
+    image_key = f"img_2023_{i}"
+    image_path = f"gallery/2023_{i}.jpg"
+    image_dict[image_key] = Image.open(image_path)
 #img_lottie_animation = Image.open("images/lottie_animation.gif")
 # Assets for contact
 lottie_coding = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_abqysclq.json")
@@ -303,7 +262,7 @@ add_bg_from_local('bg.png')
 with st.sidebar:
     choose = option_menu(
                         "Harry Chang", 
-                        ["About Me", "Site Overview", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Articles & Essays", "Gallery", "Site Analytics", "Resume & CV", "Testimonials", "Contact"],
+                        ["About Me", "Site Overview", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Blog", "Gallery", "Site Analytics", "Resume & CV", "Testimonials", "Contact"],
                          icons=['person fill', 'globe', 'clock history', 'tools', 'book half', 'clipboard', 'trophy fill', 'pencil square', 'image', 'activity', 'paperclip', 'star fill', 'envelope'],
                          menu_icon="mortarboard", 
                          default_index=0,
@@ -344,7 +303,7 @@ if choose == "About Me":
             st.subheader("Aspiring Data Analyst/Data Scientist")
             st.write("👋🏻 Hi, I'm Harry! I'm a data science and analytics undergraduate based in Singapore. Having prior relevant experiences in tech, reinsurance and consulting sectors, I am constantly seeking unique internships to broaden my horizons before embarking on my data career upon graduation.")
             st.write("💼 With the COVID-19 pandemic behind us, I believe there is potential for data science to be applied in the retail industry. In response to the increasing demand for data analytics from both online and brick-and-mortar sales, I am thus aiming to enter this industry for my first full-time job.")
-            st.write("🏋🏻 In addition, I like to exercise in the gym, run, write, play video games and... eat good food in my free time.")
+            st.write("🏋🏻 In addition, I like to exercise in the gym, run, write, play video games and... enjoy eating good food in my free time!")
             st.write("👨🏼‍💻 Academic interests: Data Visualization, Market Basket Analysis, Recommendation Systems, Natural Language Processing")
             st.write("💭 Ideal Career Prospects: Data Analyst, Data Scientist, Data Engineer, Business Intelligence Analyst, Product Manager")
             st.write("📄 [Resume (1 page)](https://drive.google.com/file/d/13CHoDfb-mYr9F8YSA4ZDV3tZPpNF6eck/view?usp=sharing) | [CV (2 pages)](https://drive.google.com/file/d/1-aubNVEKkgmHdeCtlp_O1M99tVChXfYs/view?usp=sharing)")
@@ -578,6 +537,19 @@ elif choose == "Projects":
     with st.container():
         text_column, image_column = st.columns((3,1))
         with text_column:
+            st.subheader("Creating a sales volume prediction model using regression methods")
+            st.write("Self-initiated project based on e-commerce case study")
+            st.markdown("""
+            - Conducted exploratory data analysis (EDA) to identify relationships between variables using correlation heatmaps and histograms
+            - Trained and compared multiple regression, random forest and XGBoost to build optimal model for sales volume prediction
+            - Performed randomized search with cross-validation to increase performance of random forest regressor and reduce MSE
+            """)
+            st.write("[Github Repo](https://github.com/harrychangjr/sales-prediction)")
+        with image_column:
+            st.image(images_projects[0])
+    with st.container():
+        text_column, image_column = st.columns((3,1))
+        with text_column:
             st.subheader("Optimising article quality using ChatGPT and NLP")
             st.write("Self-initiated project using past articles written for module SP1541: Exploring Science Communication in Popular Science in Academic Year 2020/21 Semester 1")
             st.markdown("""
@@ -585,9 +557,9 @@ elif choose == "Projects":
             - Generated word clouds to highlight frequently used words in each article variant
             - Identified top 10 most commonly used words between variants of the same article to assess suitability of ChatGPT in enhancing article quality
             """)
-            st.write("[Github Repo](https://github.com/harrychangjr/sp1541-nlp) | [Github Code (Backend)](https://github.com/harrychangjr/sp1541-nlp/blob/main/backend.ipynb)")
+            st.write("[Github Repo](https://github.com/harrychangjr/sp1541-nlp)")
         with image_column:
-            st.image(img_chatgpt)
+            st.image(images_projects[1])
     with st.container():
         text_column, image_column = st.columns((3,1))
         with text_column:
@@ -599,9 +571,9 @@ elif choose == "Projects":
             - Compared performances of multiple linear regression, random forest and XGBoost to predict global sales using critic scores and user scores from Metacritic
             - Trained linear mixed-effects model to investigate impact of publishers, platform and genres in global sales
             """)
-            st.write("[Term Paper](https://github.com/harrychangjr/st4248-termpaper/blob/main/ST4248%20Term%20Paper%20(A0201825N)%20v5.pdf) | [Github Repo](https://github.com/harrychangjr/st4248-termpaper)")
+            st.write("[Github Repo](https://github.com/harrychangjr/st4248-termpaper) | [Term Paper](https://github.com/harrychangjr/st4248-termpaper/blob/main/ST4248%20Term%20Paper%20(A0201825N)%20v5.pdf)")
         with image_column:
-            st.image(img_videogames)
+            st.image(images_projects[2])
     with st.container():
         text_column, image_column = st.columns((3,1))
         with text_column:
@@ -614,7 +586,7 @@ elif choose == "Projects":
             """)
             st.write("[Final Report](https://drive.google.com/file/d/1YuYxSTuDstSvyUa-bn782sLE5kCfbyH8/view?usp=sharing) | [Pitch Deck](https://www.canva.com/design/DAFeSnJeqgM/uXpz0kw8e7If4T1PG2tpaQ/view?utm_content=DAFeSnJeqgM&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink) | [Product Demo](https://www.youtube.com/watch?v=XMlt-kfdC7g)")
         with image_column:
-            st.image(img_health)
+            st.image(images_projects[3])
     with st.container():
         text_column, image_column = st.columns((3,1))
         with text_column:
@@ -625,9 +597,9 @@ elif choose == "Projects":
             - Used k-means clustering with principal components analysis to identify similar types of movies
             - Built content-based recommendation system using cosine similarity to recommend similar movies based on input title
             """)
-            st.write("[RPubs](https://rpubs.com/harrychangjr/biopics) | [Github Repo](https://github.com/harrychangjr/biopics)")
+            st.write("[Github Repo](https://github.com/harrychangjr/biopics) | [RPubs](https://rpubs.com/harrychangjr/biopics)")
         with image_column:
-            st.image(img_biopics)
+            st.image(images_projects[4])
     with st.container():
         text_column, image_column = st.columns((3,1))
         with text_column:
@@ -640,7 +612,7 @@ elif choose == "Projects":
             """)
             st.write("[Github Repo](https://github.com/harrychangjr/dsa4212) | [Report](https://github.com/harrychangjr/dsa4212/blob/main/DSA4212%20Assignment%202%20Group%2039%20Report.pdf)")
         with image_column:
-            st.image(img_anime)
+            st.image(images_projects[5])
     with st.container():
         text_column, image_column = st.columns((3,1))
         with text_column:
@@ -650,9 +622,9 @@ elif choose == "Projects":
             - Trained Word2Vec model on 20 Newsgroups dataset from scikit-learn package in Python, which provides a number of similar words based on input word
             - Evaluated usefulness of model by applying model to text classification (46% accuracy) and sentiment analysis (86.4% accuracy)
             """)
-            st.write("[Report](https://github.com/harrychangjr/dsa4212/blob/main/DSA4212%20Assignment%203%20Group%2039%20Report.pdf) | [Github Code](https://github.com/harrychangjr/dsa4212/blob/main/DSA4212%20Assignment%203%20Group%2039.ipynb)")
+            st.write("[Github Code](https://github.com/harrychangjr/dsa4212/blob/main/DSA4212%20Assignment%203%20Group%2039.ipynb) | [Report](https://github.com/harrychangjr/dsa4212/blob/main/DSA4212%20Assignment%203%20Group%2039%20Report.pdf)")
         with image_column:
-            st.image(img_word2vec)
+            st.image(images_projects[6])
     with st.container():
         text_column, image_column = st.columns((3,1))
         with text_column:
@@ -663,9 +635,9 @@ elif choose == "Projects":
             - Trained logit and probit models, as well as providing model estimations for duration models
             - Utilised random forest classifier to predict customer churn
             """)
-            st.write("[RPubs](https://rpubs.com/harrychangjr/cellphone) | [Github Repo](https://github.com/harrychangjr/cellphone-billing)")
+            st.write("[Github Repo](https://github.com/harrychangjr/cellphone-billing) | [RPubs](https://rpubs.com/harrychangjr/cellphone)")
         with image_column:
-            st.image(img_cellphone)
+            st.image(images_projects[7])
     with st.container():
         text_column, image_column = st.columns((3,1))
         with text_column:
@@ -678,7 +650,7 @@ elif choose == "Projects":
             """)
             st.write("[Github Code](https://github.com/harrychangjr/dsa2101/blob/main/DSA2101_Group%20B.Rmd) | [RPubs](https://rpubs.com/harrychangjr/dsa2101-groupb)")
         with image_column:
-            st.image(img_spotify)
+            st.image(images_projects[8])
     with st.container():
         text_column, image_column = st.columns((3,1))
         with text_column:
@@ -691,7 +663,7 @@ elif choose == "Projects":
             """)
             st.write("[Google Sheets](https://docs.google.com/spreadsheets/d/1NBlGM7Sjcybbpl1Esa55qLRJw-Seti1LhC93EhV_68w/edit?usp=sharing) | [Google Colab](https://colab.research.google.com/drive/1RHqtb5XC7PkJDpNEb-BY3tO-8mI2j32E?usp=sharing)")
         with image_column:
-            st.image(img_map)
+            st.image(images_projects[9])
     with st.container():
         text_column, image_column = st.columns((3,1))
         with text_column:
@@ -704,7 +676,7 @@ elif choose == "Projects":
             """)
             st.write("[Github Code](https://github.com/harrychangjr/get1030/blob/main/A0201825N_GET1030_Tutorial_4.ipynb)")
         with image_column:
-            st.image(img_gephi)
+            st.image(images_projects[10])
     with st.container():
         text_column, image_column = st.columns((3,1))
         with text_column:
@@ -717,7 +689,7 @@ elif choose == "Projects":
             """)
             st.write("[Github Code](https://github.com/harrychangjr/get1030/blob/main/A0201825N%20-%20GET1030%20Tutorial%203.ipynb)")
         with image_column:
-            st.image(img_fob)
+            st.image(images_projects[11])
 elif choose == "Competitions":
     # Create section for Competitions
     #st.write("---")
@@ -766,23 +738,23 @@ elif choose == "Competitions":
             st.write("2D pixel art created using Pillow (PIL) Library in Python")
             st.write("[Github Repo](https://github.com/harrychangjr/runes)")
 
-elif choose == "Articles & Essays":
-    st.header("Articles & Essays")
+elif choose == "Blog":
+    st.header("Blog")
     selected_options = ["Overview", "Article & Essay List", 
-                        "Article - Finding success as an outlier", 
-                        "Essay - Should the statue of Sir Stamford Raffles disappear for good?",
-                        "Essay - Should the Women's Charter replace one of the existing ten objects in the module?", 
-                        "Essay - Does gender inequality still have a place in Singapore's society today?", 
-                        "Article - Reflections on Organising an 850-participant Data Analytics Competition",
-                        "Essay - Worsened health disparities based on ethnicity and gender due to COVID-19",
-                        "Essay - Obstacles in promoting healthy eating habits",
-                        "Essay - Role of healthcare data analytics in managing COVID-19",
-                        "Essay - Evaluating 'Chinese Privilege' in Singapore: Special Assisted Plan Schools",
-                        "Essay - Analysing usefulness of word clouds in mental health studies",
-                        "Article - Investigating the relationship between culture and sweet-sour taste interactions",
-                        "Article - Timing vaccination campaign to reduce measles infections"
+                        "Finding success as an outlier", 
+                        "Should the statue of Sir Stamford Raffles disappear for good?",
+                        "Should the Women's Charter replace one of the existing ten objects in the module?", 
+                        "Does gender inequality still have a place in Singapore's society today?", 
+                        "Reflections on Organising an 850-participant Data Analytics Competition",
+                        "Worsened health disparities based on ethnicity and gender due to COVID-19",
+                        "Obstacles in promoting healthy eating habits",
+                        "Role of healthcare data analytics in managing COVID-19",
+                        "Evaluating 'Chinese Privilege' in Singapore: Special Assisted Plan Schools",
+                        "Analysing usefulness of word clouds in mental health studies",
+                        "Investigating the relationship between culture and sweet-sour taste interactions",
+                        "Timing vaccination campaign to reduce measles infections"
                         ]
-    selected = st.selectbox("Which section or article would you like to read?", options = selected_options)
+    selected = st.selectbox("Which section or write-up would you like to read?", options = selected_options)
     st.write("Current selection:", selected)
     if selected == "Overview":
         st.subheader("Overview")
@@ -888,7 +860,7 @@ elif choose == "Articles & Essays":
                 st.write("September 30, 2020 | [Article](https://github.com/harrychangjr/sp1541-nlp/blob/main/Originals/SP1541%20NA1.pdf)")
                 st.write("*Despite having a vaccine that is readily accessible, measles cases and deaths are still surging worldwide, especially in recent years. Why is this so and are there any long-term solutions to resolve this?*")
                 st.write("Science news article submitted for the module SP1541: Exploring Science Communication through Popular Science in Academic Year 2020/21 Semester 1")
-    elif selected == "Article - Finding success as an outlier":
+    elif selected == "Finding success as an outlier":
         st.subheader("Finding success as an outlier")
         st.write("April 12, 2023 | [Article](https://antcabbage.wordpress.com/2023/04/12/finding-success-as-an-outlier/)")
         st.markdown("""
@@ -953,7 +925,7 @@ elif choose == "Articles & Essays":
 
         To end off, I’d like to dedicate this write-up to those graduating soon, as well as others like myself, who had an unconventional journey during university for one reason or another. Even with multiple mishaps along the way, I believe that everyone can eventually find their own success as an outlier.
         """)
-    elif selected == "Essay - Should the statue of Sir Stamford Raffles disappear for good?":
+    elif selected == "Should the statue of Sir Stamford Raffles disappear for good?":
         st.subheader("Should the statue of Sir Stamford Raffles disappear for good?")
         st.write("April 29, 2022 | [Essays](https://github.com/harrychangjr/ges1037/blob/main/GES1037%20Take%20Home%20Test.pdf)")
         st.markdown("""
@@ -1019,7 +991,7 @@ elif choose == "Articles & Essays":
         from being recognised as merely a former British colony and write the next chapter in our
         history as a growing economic power.
         """)
-    elif selected == "Essay - Should the Women's Charter replace one of the existing ten objects in the module?":
+    elif selected == "Should the Women's Charter replace one of the existing ten objects in the module?":
         st.subheader("Should the Women's Charter replace one of the existing ten objects in the module?")
         st.write("April 29, 2022 | [Essays](https://github.com/harrychangjr/ges1037/blob/main/GES1037%20Take%20Home%20Test.pdf)")
         st.markdown("""
@@ -1110,7 +1082,7 @@ elif choose == "Articles & Essays":
         9. Sound Blaster
         10. I Not Stupid
         """)
-    elif selected == "Essay - Does gender inequality still have a place in Singapore's society today?":
+    elif selected == "Does gender inequality still have a place in Singapore's society today?":
         st.subheader("Does gender inequality still have a place in Singapore's society today?")
         st.write("April 2, 2022 | [Term Paper](https://github.com/harrychangjr/ges1037/blob/main/GES1037%20Term%20Paper.pdf)")
         st.markdown("""
@@ -1225,7 +1197,7 @@ elif choose == "Articles & Essays":
         from https://www.straitstimes.com/singapore/politics/men-wanted-all-need-toplay-
         a-part-in-pushing-for-gender-equality-says-shanmugam
         """)
-    elif selected == "Article - Reflections on Organising an 850-participant Data Analytics Competition":
+    elif selected == "Reflections on Organising an 850-participant Data Analytics Competition":
         st.subheader("Reflections on Organising an 850-participant Data Analytics Competition")
         st.write("February 18, 2022 | [Article](https://sites.google.com/view/nussds/articles/reflections-about-dac?authuser=0&pli=1)")
         st.markdown("""
@@ -1366,7 +1338,7 @@ elif choose == "Articles & Essays":
         *Harry Chang is the Marketing Director of the NUS Statistics and Data Science Society (AY21/22)*       
         """)
 
-    elif selected == "Essay - Worsened health disparities based on ethnicity and gender due to COVID-19":
+    elif selected == "Worsened health disparities based on ethnicity and gender due to COVID-19":
         st.subheader("Worsened health disparities based on ethnicity and gender due to COVID-19")
         st.write("November 12, 2021 | [Essays](https://github.com/harrychangjr/geh1049/blob/main/GEH1049%20Final%20Assignment.pdf)")
         st.markdown("""
@@ -1387,7 +1359,7 @@ elif choose == "Articles & Essays":
         7. Salles, A. (2021). COVID has worsened gender disparities, especially for women of color. The Clayman Institute for Gender Research. https://gender.stanford.edu/news-publications/gender-news/covid-has-worsened-gender-disparities-especially-women-color-heres 
         """)
     
-    elif selected == "Essay - Obstacles in promoting healthy eating habits":
+    elif selected == "Obstacles in promoting healthy eating habits":
         st.subheader("Obstacles in promoting healthy eating habits")
         st.write("November 12, 2021 | [Essays](https://github.com/harrychangjr/geh1049/blob/main/GEH1049%20Final%20Assignment.pdf)")
         st.markdown("""
@@ -1405,7 +1377,7 @@ elif choose == "Articles & Essays":
         4. Fleming-Milici, F. & Harris, J. (2020). Food marketing to children in the United States: Can industry voluntarily do the right thing for children's health?. Physiology & Behavior. 227. 113139. https://doi.org/10.1016/j.physbeh.2020.113139   
         """)
 
-    elif selected == "Essay - Role of healthcare data analytics in managing COVID-19":
+    elif selected == "Role of healthcare data analytics in managing COVID-19":
         st.subheader("Role of healthcare data analytics in managing COVID-19")
         st.write("November 12, 2021 | [Essays](https://github.com/harrychangjr/geh1049/blob/main/GEH1049%20Final%20Assignment.pdf)")   
         st.markdown("""
@@ -1425,7 +1397,7 @@ elif choose == "Articles & Essays":
         7. Feng, E. (2021). China Is Imposing Strict Lockdowns To Contain New COVID Outbreaks. But There’s A Cost. NPR. https://choice.npr.org/index.html?origin=https://www.npr.org/sections/goatsandsoda/2021/09/02/1033396323/china-is-imposing-strict-lockdowns-to-contain-new-covid-outbreaks-but-theres-a-c 
         8. Ning, Y., Ren, R., & Nkengurutse, G. (2020). China's model to combat the COVID-19 epidemic: a public health emergency governance approach. Global health research and policy, 5, 34. https://doi.org/10.1186/s41256-020-00161-4 
         """)
-    elif selected == "Essay - Evaluating 'Chinese Privilege' in Singapore: Special Assisted Plan Schools":
+    elif selected == "Evaluating 'Chinese Privilege' in Singapore: Special Assisted Plan Schools":
         st.subheader("Evaluating 'Chinese Privilege' in Singapore - Special Assisted Plan Schools")
         st.write("April 29, 2021 | [Final Essay](https://github.com/harrychangjr/ges1010/blob/main/GES1010%20Final%20Essay%20A0201825N.pdf)")
         st.markdown("""
@@ -1454,7 +1426,7 @@ elif choose == "Articles & Essays":
         9.	Bourdieu, Pierre (1986). “The Forms of Capital.” Pp. 241-258 in Handbook of Theory and Research for the Sociology of Education, edited by J. G. Richarson. New York: Greenwood Press
 
         """)
-    elif selected == "Essay - Analysing usefulness of word clouds in mental health studies":
+    elif selected == "Analysing usefulness of word clouds in mental health studies":
         st.subheader("Analysing usefulness of word clouds in mental health studies")
         st.write("March 5, 2021 | [Essay](https://github.com/harrychangjr/get1030/blob/main/A0201825N%20GET1030%20Individual%20Assignment%20Final.pdf)")
         st.markdown("""
@@ -1558,7 +1530,7 @@ elif choose == "Articles & Essays":
         2. Viégas, F. B., & Wattenberg, M. “Timelines tag clouds and the case for vernacular
         visualization.” Interactions, 15(4), 49-52. 2008.
         """)
-    elif selected == "Article - Investigating the relationship between culture and sweet-sour taste interactions":
+    elif selected == "Investigating the relationship between culture and sweet-sour taste interactions":
         st.subheader("Investigating the relationship between culture and sweet-sour taste interactions")
         st.write("October 31, 2020 | [Article](https://github.com/harrychangjr/sp1541-nlp/blob/main/Originals/SP1541%20NA2.pdf)")
         st.write("*Are we correct to stereotype taste perceptions and preferences based on different cultures?*")
@@ -1610,7 +1582,7 @@ elif choose == "Articles & Essays":
         4. Junge, J.Y.; Bertelsen, A.S.; Mielby, L.A.; Zeng, Y.; Sun, Y.-X.; Byrne, D.V.; Kidmose, U. Taste Interactions between Sweetness of Sucrose and Sourness of Citric and Tartaric Acid among Chinese and Danish Consumers. Foods 2020, 9, 1425. Also available from https://www.mdpi.com/2304-8158/9/10/1425 
         5. Williams, J. A., Bartoshuk, L. M., Fillingim, R. B., & Dotson, C. D. (2016). Exploring ethnic differences in taste perception. Chemical senses, 41(5), 449-456. Also available from https://academic.oup.com/chemse/article/41/5/449/2366044 
         """)
-    elif selected == "Article - Timing vaccination campaign to reduce measles infections":
+    elif selected == "Timing vaccination campaign to reduce measles infections":
         st.subheader("Timing vaccination campaign to reduce measles infections")
         st.write("September 30, 2020 | [Article](https://github.com/harrychangjr/sp1541-nlp/blob/main/Originals/SP1541%20NA1.pdf)")
         st.write("*Despite having a vaccine that is readily accessible, measles cases and deaths are still surging worldwide, especially in recent years. Why is this so and are there any long-term solutions to resolve this?*")
@@ -1890,41 +1862,30 @@ elif choose == "Gallery":
     elif selected == "2019":
         st.subheader("2019")
         st.write("*So many things to explore, yet so little time*")
-        # Define the list of image files
-        images_2019 = [img_2019_1, img_2019_2, img_2019_3, img_2019_4, img_2019_5, img_2019_6, 
-                        img_2019_7, img_2019_8, img_2019_9, img_2019_10, img_2019_11, img_2019_12]
+        # Load the images
+        num_images = 13
+        images_2019 = [Image.open(f"gallery/2019_{i}.jpg") for i in range(1, num_images + 1)]
+
         # Display the images in a grid
-        col1, col2, col3 = st.columns(3)
-        with col1:
-            st.image(images_2019[0], use_column_width=True)
-        with col2:
-            st.image(images_2019[1], use_column_width=True)
-        with col3:
-            st.image(images_2019[2], use_column_width=True)
-        
-        col4, col5, col6 = st.columns(3)
-        with col4:
-            st.image(images_2019[3], use_column_width=True)
-        with col5:
-            st.image(images_2019[4], use_column_width=True)
-        with col6:
-            st.image(images_2019[5], use_column_width=True)
-        
-        col7, col8, col9 = st.columns(3)
-        with col7:
-            st.image(images_2019[6], use_column_width=True)
-        with col8:
-            st.image(images_2019[7], use_column_width=True)
-        with col9:
-            st.image(images_2019[8], use_column_width=True)
-        
-        col10, col11, col12 = st.columns(3)
-        with col10:
-            st.image(images_2019[9], use_column_width=True)
-        with col11:
-            st.image(images_2019[10], use_column_width=True)
-        with col12:
-            st.image(images_2019[11], use_column_width=True)
+        num_columns = 3
+        num_rows = num_images // num_columns
+        remaining_images = num_images % num_columns
+
+        for row in range(num_rows + 1):  # Add 1 to include the last row
+            # Create a row of columns
+            columns = st.columns(num_columns)
+
+            # Calculate the number of columns for the current row
+            if row == num_rows:
+                num_cols_in_row = remaining_images
+            else:
+                num_cols_in_row = num_columns
+
+            # Display the images in the columns
+            for col in range(num_cols_in_row):
+                index = row * num_columns + col
+                with columns[col]:
+                    st.image(images_2019[index], use_column_width=True)
 
     elif selected == "2020":
         st.subheader("2020")
@@ -1950,149 +1911,86 @@ elif choose == "Gallery":
     elif selected == "2021":
         st.subheader("2021")
         st.write("*Boomer in a zoomer's body*")
-        # Define the list of image files
-        images_2021 = [img_2021_1, img_2021_2, img_2021_3, img_2021_4, img_2021_5, img_2021_6, img_2021_7, img_2021_8, img_2021_9, img_2021_10, img_2021_11, img_2021_12]
-        # Display the images in a grid
-        col1, col2, col3 = st.columns(3)
-        with col1:
-            st.image(images_2021[0], use_column_width=True)
-        with col2:
-            st.image(images_2021[1], use_column_width=True)
-        with col3:
-            st.image(images_2021[2], use_column_width=True)
-        
-        col4, col5, col6 = st.columns(3)
-        with col4:
-            st.image(images_2021[3], use_column_width=True)
-        with col5:
-            st.image(images_2021[4], use_column_width=True)
-        with col6:
-            st.image(images_2021[5], use_column_width=True)
-        
-        col7, col8, col9 = st.columns(3)
-        with col7:
-            st.image(images_2021[6], use_column_width=True)
-        with col8:
-            st.image(images_2021[7], use_column_width=True)
-        with col9:
-            st.image(images_2021[8], use_column_width=True)
+        # Load the images
+        num_images = 12
+        images_2021 = [Image.open(f"gallery/2021_{i}.jpg") for i in range(1, num_images + 1)]
 
-        col10, col11, col12 = st.columns(3)
-        with col10:
-            st.image(images_2021[9], use_column_width=True)
-        with col11:
-            st.image(images_2021[10], use_column_width=True)
-        with col12:
-            st.image(images_2021[11], use_column_width=True)
+        # Display the images in a grid
+        num_columns = 3
+        num_rows = num_images // num_columns
+        remaining_images = num_images % num_columns
+
+        for row in range(num_rows + 1):  # Add 1 to include the last row
+            # Create a row of columns
+            columns = st.columns(num_columns)
+
+            # Calculate the number of columns for the current row
+            if row == num_rows:
+                num_cols_in_row = remaining_images
+            else:
+                num_cols_in_row = num_columns
+
+            # Display the images in the columns
+            for col in range(num_cols_in_row):
+                index = row * num_columns + col
+                with columns[col]:
+                    st.image(images_2021[index], use_column_width=True)
 
     elif selected == "2022":
         st.subheader("2022")
         st.write("*Highlights, lowlights, learnings, help sought, and kudos to everyone!*")
-        # Define the list of image files
-        images_2022 = [img_2022_1, img_2022_2, img_2022_3, 
-        img_2022_4, img_2022_5, img_2022_6, 
-        img_2022_7, img_2022_8, img_2022_9, 
-        img_2022_10, img_2022_11, img_2022_12,
-        img_2022_13, img_2022_14, img_2022_15,
-        img_2022_16, img_2022_17, img_2022_18,
-        img_2022_19, img_2022_20, img_2022_21,
-        img_2022_22, img_2022_23, img_2022_24,
-        img_2022_25, img_2022_26, img_2022_27,
-        img_2022_28, img_2022_29, img_2022_30
-        ]
-        col1, col2, col3 = st.columns(3)
-        with col1:
-            st.image(images_2022[0], use_column_width=True)
-        with col2:
-            st.image(images_2022[1], use_column_width=True)
-        with col3:
-            st.image(images_2022[2], use_column_width=True)
-        
-        col4, col5, col6 = st.columns(3)
-        with col4:
-            st.image(images_2022[3], use_column_width=True)
-        with col5:
-            st.image(images_2022[4], use_column_width=True)
-        with col6:
-            st.image(images_2022[5], use_column_width=True)
-        
-        col7, col8, col9 = st.columns(3)
-        with col7:
-            st.image(images_2022[6], use_column_width=True)
-        with col8:
-            st.image(images_2022[7], use_column_width=True)
-        with col9:
-            st.image(images_2022[8], use_column_width=True)
+        # Load the images
+        num_images = 30
+        images_2022 = [Image.open(f"gallery/2022_{i}.jpg") for i in range(1, num_images + 1)]
 
-        col10, col11, col12 = st.columns(3)
-        with col10:
-            st.image(images_2022[9], use_column_width=True)
-        with col11:
-            st.image(images_2022[10], use_column_width=True)
-        with col12:
-            st.image(images_2022[11], use_column_width=True)
+        # Display the images in a grid
+        num_columns = 3
+        num_rows = num_images // num_columns
+        remaining_images = num_images % num_columns
 
-        col13, col14, col15 = st.columns(3)
-        with col13:
-            st.image(images_2022[12], use_column_width=True)
-        with col14:
-            st.image(images_2022[13], use_column_width=True)
-        with col15:
-            st.image(images_2022[14].rotate(180), use_column_width=True)
-        
-        col16, col17, col18 = st.columns(3)
-        with col16:
-            st.image(images_2022[15], use_column_width=True)
-        with col17:
-            st.image(images_2022[16], use_column_width=True)
-        with col18:
-            st.image(images_2022[17].rotate(180), use_column_width=True)
-        
-        col19, col20, col21 = st.columns(3)
-        with col19:
-            st.image(images_2022[18], use_column_width=True)
-        with col20:
-            st.image(images_2022[19], use_column_width=True)
-        with col21:
-            st.image(images_2022[20], use_column_width=True)
+        for row in range(num_rows + 1):  # Add 1 to include the last row
+            # Create a row of columns
+            columns = st.columns(num_columns)
 
-        col22, col23, col24 = st.columns(3)
-        with col22:
-            st.image(images_2022[21], use_column_width=True)
-        with col23:
-            st.image(images_2022[22], use_column_width=True)
-        with col24:
-            st.image(images_2022[23], use_column_width=True)
-        
-        col25, col26, col27 = st.columns(3)
-        with col25:
-            st.image(images_2022[24], use_column_width=True)
-        with col26:
-            st.image(images_2022[25], use_column_width=True)
-        with col27:
-            st.image(images_2022[26], use_column_width=True)
-        
-        col28, col29, col30 = st.columns(3)
-        with col28:
-            st.image(images_2022[27], use_column_width=True)
-        with col29:
-            st.image(images_2022[28], use_column_width=True)
-        with col30:
-            st.image(images_2022[29], use_column_width=True)
+            # Calculate the number of columns for the current row
+            if row == num_rows:
+                num_cols_in_row = remaining_images
+            else:
+                num_cols_in_row = num_columns
+
+            # Display the images in the columns
+            for col in range(num_cols_in_row):
+                index = row * num_columns + col
+                with columns[col]:
+                    st.image(images_2022[index], use_column_width=True)
 
     elif selected == "2023":
         st.subheader("2023")
         st.write("*Success - being content at the present moment*")
-        # Define the list of image files
-        images_2023 = [img_2023_1, img_2023_2, img_2023_3, 
-        ]
-        col1, col2, col3 = st.columns(3)
-        with col1:
-            st.image(images_2023[0], use_column_width=True)
-        with col2:
-            st.image(images_2023[1], use_column_width=True)
-        with col3:
-            st.image(images_2023[2], use_column_width=True)
+        # Load the images
+        num_images = 3
+        images_2023 = [Image.open(f"gallery/2023_{i}.jpg") for i in range(1, num_images + 1)]
+
+        # Display the images in a grid
+        num_columns = 3
+        num_rows = num_images // num_columns
+        remaining_images = num_images % num_columns
+
+        for row in range(num_rows + 1):  # Add 1 to include the last row
+            # Create a row of columns
+            columns = st.columns(num_columns)
+
+            # Calculate the number of columns for the current row
+            if row == num_rows:
+                num_cols_in_row = remaining_images
+            else:
+                num_cols_in_row = num_columns
+
+            # Display the images in the columns
+            for col in range(num_cols_in_row):
+                index = row * num_columns + col
+                with columns[col]:
+                    st.image(images_2023[index], use_column_width=True)
         st.write("...and more to come!")
 
 elif choose == "Site Analytics":
