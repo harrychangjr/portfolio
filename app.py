@@ -896,7 +896,7 @@ elif choose == "Volunteering":
             st.markdown("""
             Values in Action (VIA) Projects
 
-            - Josephian International Experience Programme - Conducted English lessons and assisted in site refurbishments at orphanage in Siem Reap, Cambodia
+            - Josephian International Experience Programme - Conducted English lessons at orphanage in Siem Reap, Cambodia
             - SJIJ Primary 4 Chinese Language Camp - Acted as group facilitator to orientate primary four students in Chinese lessons
             """)
         with image_column:
