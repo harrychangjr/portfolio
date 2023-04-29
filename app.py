@@ -69,7 +69,7 @@ footer:after{
 def show_pdf(file_path):
         with open(file_path,"rb") as f:
             base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-        pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="800" height="800" type="application/pdf"></iframe>'
+        pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="400" height="400" type="application/pdf"></iframe>'
         st.markdown(pdf_display, unsafe_allow_html=True)
 
 def pdf_link(pdf_url, link_text="Click here to view PDF"):
@@ -2221,19 +2221,33 @@ elif choose == "Resume & CV":
                 show_pdf("Harry Chang CV2023.pdf")
             with col3:
                 st.empty()
-elif choose == "Testimonials":    
-    test_url = "https://drive.google.com/file/d/1ZyTmg_r18sUuuU5JOJBqUb2EP8MnjvJU/view?usp=sharing"
-    with st.container():
-        col1, col2, col3 = st.columns((1,3,1))
+elif choose == "Testimonials": 
+    test_url = "https://drive.google.com/file/d/1ZyTmg_r18sUuuU5JOJBqUb2EP8MnjvJU/view?usp=sharing"  
+    st.header("Testimonials")
+    st.subheader("Some feedback from my past referees!")
+    st.markdown(pdf_link(test_url, "**Compiled Testimonials**"), unsafe_allow_html=True)  
+    with st.container():  
+        col1, col2, col3 = st.columns((1,1,1))
         with col1:
-            st.empty()
+            st.subheader("SCOR")
+            show_pdf("1. SCOR.pdf")
         with col2:
-            st.header("Testimonials")
-            st.subheader("Some feedback from my past employers!")
-            st.markdown(pdf_link(test_url, "**Compiled Testimonials**"), unsafe_allow_html=True)
-            show_pdf("Compiled Testimonials.pdf")
+            st.subheader("DSDS, NUS")
+            show_pdf("2. DSDS.pdf")
         with col3:
-            st.empty()
+            st.subheader("IASG")
+            show_pdf("3. IASG.pdf")
+    with st.container():  
+        col4, col5, col6 = st.columns((1,1,1))
+        with col1:
+            st.subheader("SAF")
+            show_pdf("4. SAF.pdf")
+        with col2:
+            st.subheader("TPJC")
+            show_pdf("5. JC.pdf")
+        with col3:
+            st.subheader("SJI")
+            show_pdf("6. SJI.pdf")
 elif choose == "Contact":
 # Create section for Contact
     #st.write("---")
