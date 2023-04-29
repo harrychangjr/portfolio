@@ -308,7 +308,7 @@ st.title("Harry Chang")
 # Create header
 if choose == "About Me":
     with st.container():
-        left_column, right_column = st.columns((1,0.55))
+        left_column, middle_column, right_column = st.columns((1,0.2,0.5))
         with left_column:
             st.header("About Me")
             st.subheader("Aspiring Data Analyst/Data Scientist")
@@ -318,6 +318,8 @@ if choose == "About Me":
             st.write("👨🏼‍💻 Academic interests: Data Visualization, Market Basket Analysis, Recommendation Systems, Natural Language Processing")
             st.write("💭 Ideal Career Prospects: Data Analyst, Data Scientist, Data Engineer, Business Intelligence Analyst, Product Manager")
             st.write("📄 [Resume (1 page)](https://drive.google.com/file/d/13CHoDfb-mYr9F8YSA4ZDV3tZPpNF6eck/view?usp=sharing) | [CV (2 pages)](https://drive.google.com/file/d/1-aubNVEKkgmHdeCtlp_O1M99tVChXfYs/view?usp=sharing)")
+        with middle_column:
+            st.empty()
         with right_column:
             st.image(img_utown)
 elif choose == "Site Overview":
@@ -2097,7 +2099,7 @@ elif choose == "Contact":
 
         return icons_html
     with st.container():
-        text_column, image_column = st.columns((1,0.55))
+        text_column, mid, image_column = st.columns((1,0.2,0.5))
         with text_column:
             st.write("Let's connect! You may either reach out to me at harrychang.work@gmail.com or use the form below!")
             with st.form(key='columns_in_form2',clear_on_submit=True): #set clear_on_submit=True so that the form will be reset/cleared once it's submitted
@@ -2121,6 +2123,8 @@ elif choose == "Contact":
             st.markdown("")
             #st.write("© 2023 Harry Chang")
             #st.write("[LinkedIn](https://linkedin.com/in/harrychangjr) | [Github](https://github.com/harrychangjr) | [Linktree](https://linktr.ee/harrychangjr)")
+        with mid:
+            st.empty()
         with image_column:
             st.image(img_ifg)
 st.markdown("*Copyright © 2023 Harry Chang*")
