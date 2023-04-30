@@ -11,6 +11,7 @@ from streamlit_extras.mention import mention
 from streamlit_extras.app_logo import add_logo
 
 
+
 # Set page title
 st.set_page_config(page_title="Harry Chang", page_icon = "desktop_computer", layout = "wide", initial_sidebar_state = "auto")
 
@@ -303,12 +304,12 @@ add_bg_from_local('bg.png')
 with st.sidebar:
     choose = option_menu(
                         "Harry Chang", 
-                        ["About Me", "Site Overview", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Volunteering", "Blog", "Gallery", "Site Analytics", "Resume & CV", "Testimonials", "Contact"],
-                         icons=['person fill', 'globe', 'clock history', 'tools', 'book half', 'clipboard', 'trophy fill', 'heart', 'pencil square', 'image', 'activity', 'paperclip', 'star fill', 'envelope'],
+                        ["About Me", "Site Overview", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Volunteering", "Blog", "Gallery", "Resume & CV", "Testimonials", "Contact"],
+                         icons=['person fill', 'globe', 'clock history', 'tools', 'book half', 'clipboard', 'trophy fill', 'heart', 'pencil square', 'image', 'paperclip', 'star fill', 'envelope'],
                          menu_icon="mortarboard", 
                          default_index=0,
                          styles={
-        "container": {"padding": "5!important", "background-color": "#f5f5dc"},
+        "container": {"padding": "0!important", "background-color": "#f5f5dc"},
         "icon": {"color": "darkorange", "font-size": "20px"}, 
         "nav-link": {"font-size": "17px", "text-align": "left", "margin":"0px", "--hover-color": "#eee"},
         "nav-link-selected": {"background-color": "#cfcfb4"},
@@ -334,8 +335,8 @@ with st.sidebar:
 #                                                     'margin-bottom': '30px',
 #                                                     'padding-left': '30px'}},
 #                             key="1")
-
-#st.title("Harry Chang")
+st.write('<style>div.block-container{padding-top:0rem;}</style>', unsafe_allow_html=True)
+st.title("Harry Chang")
 # Create header
 if choose == "About Me":
     #aboutme.createPage()
@@ -709,7 +710,7 @@ elif choose == "Education":
                 st.markdown("""
                 |Code|Module Title                       |Workload|
                 |--------|--------------------------------------|---------|
-                |CFG1003|Essential Data Analytics Tools: Numerical Computation|0 MCs|
+                |CFG1003|Financial Wellbeing - Introduction|0 MCs|
                 |CS3244|Machine Learning|4 MCs|
                 |DSA3101|Data Science in Practice|4 MCs|
                 |DSA3102|Essential Data Analytics Tools: Convex Optimization|4 MCs|
@@ -768,6 +769,7 @@ elif choose == "Education":
             with left:
                 st.empty()
             with mid:
+                st.write("**Graduation Requirements**")
                 st.image(img_dsa)
             with right:
                 st.empty()
@@ -2454,30 +2456,30 @@ elif choose == "Gallery":
                     st.image(images_2023[index], use_column_width=True)
         st.write("...and more to come!")
 
-elif choose == "Site Analytics":
-    st.header("Site Analytics")
-    with st.container():
-      with streamlit_analytics.track():
-            st.text_input("Enter something below if you'd like!", key="name_input", 
-                      help="Just type something!", 
-                      value="Type something here!", 
-                      max_chars=100, 
-                      type="default",
-                      )
-            st.markdown("""
-            <style>
-                /* Add custom CSS styles for the text input */
-                #name_input input[type=text] {
-                    background-color: #f2f2f2;
-                    border: none;
-                    padding: 8px;
-                    font-size: 16px;
-                    width: 100%;
-                }
-            </style>
-            """, unsafe_allow_html=True)
-            st.button("Click me!")
-            st.write("...and now add `?analytics=on` to the URL to see the analytics dashboard 👀")
+#elif choose == "Site Analytics":
+    #st.header("Site Analytics")
+    #with st.container():
+      #with streamlit_analytics.track():
+            #st.text_input("Enter something below if you'd like!", key="name_input", 
+                      #help="Just type something!", 
+                      #value="Type something here!", 
+                      #max_chars=100, 
+                      #type="default",
+                      #)
+            #st.markdown("""
+            #<style>
+                #/* Add custom CSS styles for the text input */
+                ##name_input input[type=text] {
+                    #background-color: #f2f2f2;
+                    #border: none;
+                    #padding: 8px;
+                    #font-size: 16px;
+                    #width: 100%;
+                #}
+            #</style>
+            #""", unsafe_allow_html=True)
+            #st.button("Click me!")
+            #st.write("...and now add `?analytics=on` to the URL to see the analytics dashboard 👀")
 
 elif choose == "Resume & CV":   
     resume_url = "https://drive.google.com/file/d/13CHoDfb-mYr9F8YSA4ZDV3tZPpNF6eck/view?usp=sharing"
@@ -2489,9 +2491,23 @@ elif choose == "Resume & CV":
             with col1:
                 st.markdown(pdf_link(resume_url, "**Resume (1 page)**"), unsafe_allow_html=True)
                 show_pdf("Harry Chang Resume2024.pdf")
+                with open("Harry Chang Resume2024.pdf", "rb") as file:
+                    btn = st.download_button(
+                        label="Download Resume (1 page)",
+                        data=file,
+                        file_name="Harry Chang Resume2024.pdf",
+                        mime="application/pdf"
+                    )
             with col2:
                 st.markdown(pdf_link(cv_url, "**CV (2 pages)**"), unsafe_allow_html=True)
                 show_pdf("Harry Chang CV2023.pdf")
+                with open("Harry Chang CV2023.pdf", "rb") as file:
+                    btn = st.download_button(
+                        label="Download CV (2 pages)",
+                        data=file,
+                        file_name="Harry Chang CV2023.pdf",
+                        mime="application/pdf"
+                    )
 elif choose == "Testimonials": 
     test_url = "https://drive.google.com/file/d/1ZyTmg_r18sUuuU5JOJBqUb2EP8MnjvJU/view?usp=sharing"  
     st.header("Testimonials")
