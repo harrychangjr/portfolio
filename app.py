@@ -2534,7 +2534,7 @@ elif choose == "Contact":
                 submitted = st.form_submit_button('Submit')
                 if submitted:
                     st.write('Thanks for your contacting us. We will respond to your questions or inquiries as soon as possible!')
-            st.write("Alternatively, feel free to contact me using any of the social media icons below!")
+            st.write("Alternatively, feel free to check out my social accounts below!")
             linkedin_url = "https://www.linkedin.com/in/harrychangjr/"
             github_url = "https://github.com/harrychangjr"
             email_url = "mailto:harrychang.work@gmail.com"
