@@ -96,6 +96,7 @@ img_nus = Image.open("images/nus.jpeg")
 img_poc = Image.open("images/poc.jpg")
 img_gmss = Image.open("images/gmss.jpg")
 img_sjij = Image.open("images/sjij.jpg")
+img_dsa = Image.open("images/dsa.jpg")
 # Assets for experiences
 img_questlogo = Image.open("images/questlogo.jpg")
 img_scor = Image.open("images/scor.jpg")
@@ -202,7 +203,7 @@ for i in range(1, num_images + 1):
     image_dict[image_key] = Image.open(image_path)
 #2020
 image_dict = {}
-num_images = 2
+num_images = 3
 for i in range(1, num_images + 1):
     image_key = f"img_2020_{i}"
     image_path = f"gallery/2020_{i}.jpg"
@@ -513,74 +514,259 @@ elif choose == "Technical Skills":
 #st.write("---")
 elif choose == "Education":
     st.header("Education")
-    with st.container():
-        image_column, text_column = st.columns((1,2.5))
-        with image_column:
-            st.image(img_nus)
-        with text_column:
-            st.subheader("Bachelor of Science - [Data Science and Analytics](https://www.stat.nus.edu.sg/wp-content/uploads/sites/8/2022/12/NUS-CHS-DSA-Print-FA.pdf), [National University of Singapore](https://nus.edu.sg) (2020-2024)")
-            st.write("Relevant Coursework: Computers and the Humanities, Convex Optimization, Data Science in Practice, Data Structures and Algorithms, Data Visualization, Database Technology and Management, Linear Algebra, Multivariable Calculus, Optimization for Large-Scale Data-Driven Inference, Probability, Programming Tools for Economics, Regression Analysis, Statistical Learning")
-            st.markdown("""
-            - [NUS Statistics and Data Science Society](https://sites.google.com/view/nussds/home) - President (2022), Marketing Director (2021-22)
-            - [Google Developer Student Clubs NUS](https://dsc.comp.nus.edu.sg/) - Deputy Head of Finance (2021-22)
-            - [NUS Inter-Faculty Games](https://ifg.nussportsclub.org/) - Track and Field (Science) Captain (2022)
-            """)
-    with st.container():
-        image_column, text_column = st.columns((1,2.5))
-        with image_column:
-            st.image(img_poc)
-        with text_column:
-            st.subheader("Bachelor of Science - Pharmaceutical Science, [National University of Singapore](https://nus.edu.sg) (2019)")
-            st.write("Coursework: Foundations of Medicinal Chemistry, Pharmaceutical Biochemistry, Statistics for Life Sciences, Human Anatomy and Physiology, Quantitative Reasoning")
-            st.markdown("""
-            Withdrew from course in 2020, before performing a clean slate transfer to pursue a Bachelor's Degree in Data Science and Analytics
-            - [NUS Students' Science Club](https://www.nussciencelife.com/) - Marketing Executive, Welfare Subcommittee
-            - Pharmaceutical Science (Class of 2023) - Assistance Class Representative
-            """)
-    with st.container():
-        image_column, text_column = st.columns((1,2.5))
-        with image_column:
-            st.image(img_tpjc)
-        with text_column:
-            st.subheader("GCE A Level - [Tampines Junior College](https://www.tmjc.moe.edu.sg/our-heritage/tampines-jc/) (2015 - 2016)")
-            st.write("Coursework: H2 Chemistry, H2 Economics, H2 Mathematics, H1 Project Work, H1 Chinese, H1 History")
-            st.markdown(""" 
-            - Track and Field - 100m (2016 A Division Semi-finalist), 200m, 4x100m
-            - TPJC Economics and Financial Literacy Fair 2015 - Games Facilitator
-            """)
-    with st.container():
-        image_column, text_column = st.columns((1,2.5))
-        with image_column:
-            st.image(img_sji)
-        with text_column:
-            st.subheader("GCE O Level - [Saint Joseph's Institution](https://www.sji.edu.sg/) (2012 - 2014)")
-            st.write("Coursework: English, Mathematics, Additional Mathematics, Physics, Chemistry, History, Geography Elective, Chinese")
-            st.markdown(""" 
-            - Track and Field (Long Jump, 100m)
-            - [Business Design Thinking](https://www.sp.edu.sg/sp/news/sp/Secondary-students-learn-to-innovate)
-            - Josephian International Experience Programme (Siem Reap, Cambodia)
-            """)
-    with st.container():
-        image_column, text_column = st.columns((1,2.5))
-        with image_column:
-            st.image(img_gmss)
-        with text_column:
-            st.subheader("Secondary One - [Geylang Methodist School (Secondary)](https://www.geylangmethodistsec.moe.edu.sg/) (2011)")
-            st.write("Coursework: English, Mathematics, Science, History, Geography, Literature, Chinese, Design & Technology, Home Economics")
-            st.markdown(""" 
-            - Volleyball
-            """)
-    with st.container():
-        image_column, text_column = st.columns((1,2.5))
-        with image_column:
-            st.image(img_sjij)
-        with text_column:
-            st.subheader("Primary School Leaving Examination - [Saint Joseph's Institution Junior](https://www.sjijunior.moe.edu.sg/) (2005 - 2010)")
-            st.write("Coursework: English, Mathematics, Science, Chinese, Higher Chinese")
-            st.markdown(""" 
-            - Art Club
-            """)
-#st.write("##")
+    selected_options = ["Summary", "Modules"
+                        ]
+    selected = st.selectbox("Which section would you like to read?", options = selected_options)
+    st.write("Current selection:", selected)
+    if selected == "Summary":
+        st.subheader("Summary")
+        st.write("*Summary of education from primary school till university*")
+        with st.container():
+            image_column, text_column = st.columns((1,2.5))
+            with image_column:
+                st.image(img_nus)
+            with text_column:
+                st.subheader("Bachelor of Science - [Data Science and Analytics](https://www.stat.nus.edu.sg/wp-content/uploads/sites/8/2022/12/NUS-CHS-DSA-Print-FA.pdf), [National University of Singapore](https://nus.edu.sg) (2020-2024)")
+                st.write("Relevant Coursework: Computers and the Humanities, Convex Optimization, Data Science in Practice, Data Structures and Algorithms, Data Visualization, Database Technology and Management, Linear Algebra, Multivariable Calculus, Optimization for Large-Scale Data-Driven Inference, Probability, Programming Tools for Economics, Regression Analysis, Statistical Learning")
+                st.markdown("""
+                - [NUS Statistics and Data Science Society](https://sites.google.com/view/nussds/home) - President (2022), Marketing Director (2021-22)
+                - [Google Developer Student Clubs NUS](https://dsc.comp.nus.edu.sg/) - Deputy Head of Finance (2021-22)
+                - [NUS Inter-Faculty Games](https://ifg.nussportsclub.org/) - Track and Field (Science) Captain (2022)
+                """)
+        with st.container():
+            image_column, text_column = st.columns((1,2.5))
+            with image_column:
+                st.image(img_poc)
+            with text_column:
+                st.subheader("Bachelor of Science - Pharmaceutical Science, [National University of Singapore](https://nus.edu.sg) (2019)")
+                st.write("Coursework: Foundations of Medicinal Chemistry, Pharmaceutical Biochemistry, Statistics for Life Sciences, Human Anatomy and Physiology, Quantitative Reasoning")
+                st.markdown("""
+                Withdrew from course in 2020, before performing a clean slate transfer to pursue a Bachelor's Degree in Data Science and Analytics
+                - [NUS Students' Science Club](https://www.nussciencelife.com/) - Marketing Executive, Welfare Subcommittee
+                - Pharmaceutical Science (Class of 2023) - Assistance Class Representative
+                """)
+        with st.container():
+            image_column, text_column = st.columns((1,2.5))
+            with image_column:
+                st.image(img_tpjc)
+            with text_column:
+                st.subheader("GCE A Level - [Tampines Junior College](https://www.tmjc.moe.edu.sg/our-heritage/tampines-jc/) (2015 - 2016)")
+                st.write("Coursework: H2 Chemistry, H2 Economics, H2 Mathematics, H1 Project Work, H1 Chinese, H1 History")
+                st.markdown(""" 
+                - Track and Field - 100m (2016 A Division Semi-finalist), 200m, 4x100m
+                - TPJC Economics and Financial Literacy Fair 2015 - Games Facilitator
+                """)
+        with st.container():
+            image_column, text_column = st.columns((1,2.5))
+            with image_column:
+                st.image(img_sji)
+            with text_column:
+                st.subheader("GCE O Level - [Saint Joseph's Institution](https://www.sji.edu.sg/) (2012 - 2014)")
+                st.write("Coursework: English, Mathematics, Additional Mathematics, Physics, Chemistry, History, Geography Elective, Chinese")
+                st.markdown(""" 
+                - Track and Field (Long Jump, 100m)
+                - [Business Design Thinking](https://www.sp.edu.sg/sp/news/sp/Secondary-students-learn-to-innovate)
+                - Josephian International Experience Programme (Siem Reap, Cambodia)
+                """)
+        with st.container():
+            image_column, text_column = st.columns((1,2.5))
+            with image_column:
+                st.image(img_gmss)
+            with text_column:
+                st.subheader("Secondary One - [Geylang Methodist School (Secondary)](https://www.geylangmethodistsec.moe.edu.sg/) (2011)")
+                st.write("Coursework: English, Mathematics, Science, History, Geography, Literature, Chinese, Design & Technology, Home Economics")
+                st.markdown(""" 
+                - Volleyball
+                """)
+        with st.container():
+            image_column, text_column = st.columns((1,2.5))
+            with image_column:
+                st.image(img_sjij)
+            with text_column:
+                st.subheader("Primary School Leaving Examination - [Saint Joseph's Institution Junior](https://www.sjijunior.moe.edu.sg/) (2005 - 2010)")
+                st.write("Coursework: English, Mathematics, Science, Chinese, Higher Chinese")
+                st.markdown(""" 
+                - Art Club
+                """)
+    elif selected == "Modules":
+        st.subheader("Modules")
+        st.write("*List of modules taken at National University of Singapore*")
+        with st.container():
+            sem1, mid, sem2 = st.columns((1,0.1,1))
+            with sem1:
+                st.write("**Academic Year 2019/20 Semester 1**")
+                st.markdown("""
+                |Code|Module Title                       |Workload|
+                |--------|--------------------------------------|---------|
+                |AY1130| Human Anatomy and Physiology I       |4 MCs|
+                |GER1000| Quantitative Reasoning              |4 MCs|
+                |PR1110A| Foundations for Medicinal Chemistry |4 MCs|
+                |PR1111A|Pharmaceutical Biochemistry          |4 MCs|
+                |ST1232| Statistics for Life Sciences         |4 MCs|
+                """)
+                st.write("")
+                st.markdown("""
+                Total Workload for Semester: **20 Modular Credits (MCs)**
+                """)
+            with mid:
+                st.empty()
+            with sem2:
+                st.write("**Academic Year 2020/21 Semester 1**")
+                st.markdown("""
+                |Code|Module Title                       |Workload|
+                |--------|--------------------------------------|---------|
+                |CS1010S|Programming Methodology|4 MCs|
+                |DSA1101|Introduction to Data Science|4 MCs|
+                |GER1000|Quantitative Reasoning|4 MCs|
+                |MA1102R|Calculus|4 MCs|
+                |SP1541|Exploring Science Communication Through Popular Science|4 MCs|
+                """)
+                st.write("")
+                st.markdown("""
+                Total Workload for Semester: **20 Modular Credits (MCs)**
+                """)
+        with st.container():
+            sem1, mid, sem2 = st.columns((1,0.1,1))
+            with sem1:
+                st.write("**Academic Year 2020/21 Semester 2**")
+                st.markdown("""
+                |Code|Module Title                       |Workload|
+                |--------|--------------------------------------|---------|
+                |CFG1002|Career Catalyst|2 MCs|
+                |EC1301|Principles of Economics|4 MCs|
+                |GEQ1000|Asking Questions|4 MCs|
+                |GES1010|Nation-Building in Singapore|4 MCs|
+                |GET1030|Computers and the Humanities|4 MCs|
+                |MA1101R|Linear Algebra I|4 MCs|
+                |ST2131|Probability|4 MCs|
+                """)
+                st.write("")
+                st.markdown("""
+                Total Workload for Semester: **26 Modular Credits (MCs)**
+                """)
+            with mid:
+                st.empty()
+            with sem2:
+                st.write("**Academic Year 2020/21 Special Term (Part II)**")
+                st.markdown("""
+                |Code|Module Title                       |Workload|
+                |--------|--------------------------------------|---------|
+                |CS2040|Data Structures and Algorithms|4 MCs|
+                """)
+                st.write("")
+                st.markdown("""
+                Total Workload for Semester: **4 Modular Credits (MCs)**
+                """)
+        with st.container():
+            sem1, mid, sem2 = st.columns((1,0.1,1))
+            with sem1:
+                st.write("**Academic Year 2021/22 Semester 1**")
+                st.markdown("""
+                |Code|Module Title                       |Workload|
+                |--------|--------------------------------------|---------|
+                |DSA2102|Essential Data Analytics Tools: Numerical Computation|4 MCs|
+                |EC2101|Microeconomic Analysis I|4 MCs|
+                |EC2102|Macroeconomic Analysis I|4 MCs|
+                |EC2204|Financial Accounting for Economists|4 MCs|
+                |EC3305|Programming Tools for Economics|4 MCs|
+                |GEH1049|Public Health in Action|4 MCs|
+                """)
+                st.write("")
+                st.markdown("""
+                Total Workload for Semester: **24 Modular Credits (MCs)**
+                """)
+            with mid:
+                st.empty()
+            with sem2:
+                st.write("**Academic Year 2021/22 Semester 2**")
+                st.markdown("""
+                |Code|Module Title                       |Workload|
+                |--------|--------------------------------------|---------|
+                |ALS1010|Learning to Learn Better|2 MCs|
+                |DSA2101|Essential Data Analytcis Tools: Data Visualization|4 MCs|
+                |GES1037|A History of Singapore in Ten Objects|4 MCs|
+                |IS1103|Ethics in Computing|4 MCs|
+                |IT2002|Database Technology and Management|4 MCs|
+                |MA2104|Multivariable Calculus|4 MCs|
+                |ST2132|Mathematical Statistics|4 MCs|
+                """)
+                st.write("")
+                st.markdown("""
+                Total Workload for Semester: **26 Modular Credits (MCs)**
+                """)
+        with st.container():
+            sem1, mid, sem2 = st.columns((1,0.1,1))
+            with sem1:
+                st.write("**Academic Year 2022/23 Semester 1**")
+                st.markdown("""
+                |Code|Module Title                       |Workload|
+                |--------|--------------------------------------|---------|
+                |CFG1003|Essential Data Analytics Tools: Numerical Computation|0 MCs|
+                |CS3244|Machine Learning|4 MCs|
+                |DSA3101|Data Science in Practice|4 MCs|
+                |DSA3102|Essential Data Analytics Tools: Convex Optimization|4 MCs|
+                |ST3131|Regression Analysis|4 MCs|
+                |ST3248|Statistical Learning I|4 MCs|
+                """)
+                st.write("")
+                st.markdown("""
+                Total Workload for Semester: **20 Modular Credits (MCs)**
+                """)
+            with mid:
+                st.empty()
+            with sem2:
+                st.write("**Academic Year 2022/23 Semester 2**")
+                st.markdown("""
+                |Code|Module Title                       |Workload|
+                |--------|--------------------------------------|---------|
+                |DSA4212|Optimization for Large-Scale Data-Driven Inference|4 MCs|
+                |LSM1301|General Biology|4 MCs|
+                |ST4248|Statistical Learning II|4 MCs|
+                """)
+                st.write("")
+                st.markdown("""
+                Total Workload for Semester: **12 Modular Credits (MCs)**
+                """)
+        with st.container():
+            sem1, mid, sem2 = st.columns((1,0.1,1))
+            with sem1:
+                st.write("**Academic Year 2023/24 Semester 1 (Expected)**")
+                st.markdown("""
+                |Code|Module Title                       |Workload|
+                |--------|--------------------------------------|---------|
+                |CS4225|Big Data Systems for Data Science|4 MCs|
+                |DSA4299|Applied Project in Data Science and Analytics|16 MCs|
+                """)
+                st.write("")
+                st.markdown("""
+                Total Workload for Semester: **20 Modular Credits (MCs)**
+                """)
+            with mid:
+                st.empty()
+            with sem2:
+                st.write("**Academic Year 2022/23 Semester 2 (Expected)**")
+                st.markdown("""
+                |Code|Module Title                       |Workload|
+                |--------|--------------------------------------|---------|
+                |DSA426X|Sense-Making Case Analysis|4 MCs|
+                |ST4234|Bayesian Statistics|4 MCs|
+                """)
+                st.write("")
+                st.markdown("""
+                Total Workload for Semester: **8 Modular Credits (MCs)**
+                """)
+        with st.container():
+            left, mid, right = st.columns((0.1,1,0.1))
+            with left:
+                st.empty()
+            with mid:
+                st.image(img_dsa)
+            with right:
+                st.empty()
+    #elif selected == "Module Reviews":
+        #st.subheader("Module Reviews")
+        #st.write("*Reviews for selected modules taken in university*")
+
 
 elif choose == "Projects":
     # Create section for Projects
@@ -2152,7 +2338,7 @@ elif choose == "Gallery":
                 num_cols_in_row = num_columns
 
             # Display the images in the columns
-            for col in range(num_columns):
+            for col in range(num_cols_in_row):
                 index = row * num_columns + col
                 with columns[col]:
                     st.image(images_2020[index], use_column_width=True)
