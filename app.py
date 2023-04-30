@@ -85,6 +85,7 @@ img_ifg = Image.open("images/ifg.jpg")
 #Assets for competitions
 img_lifehack = Image.open("images/lifehack.jpg")
 img_he4d = Image.open("images/he4d.jpg")
+img_ecc = Image.open("images/ecc.jpg")
 img_shopee = Image.open("images/shopee.png")
 img_sbcc = Image.open("images/sbcc.png")
 img_runes = Image.open("images/runes.png")
@@ -763,6 +764,14 @@ elif choose == "Competitions":
             st.write("Awarded Overall 2nd Place")
             st.write("Ideated a multi-pronged approach using blockchain and machine learning methods to improve fraud detection amongst complex entities in a digital or hybrid (digital and manual) operating environment")
             st.write("[Pitch Deck](https://www.linkedin.com/feed/update/urn:li:ugcPost:6761489595420037120/)")
+    with st.container():
+        image_column, text_column = st.columns((1,3))
+        with image_column:
+            st.image(img_ecc)
+        with text_column:
+            st.subheader("NUS Economics Case Competition - Hosted by [NUS Economics Society](https://www.nuseconsoc.com/)")
+            st.write("Performed financial modelling and market research to suggest methods for brick-and-mortar retailers to compete against e-commerce stores")
+            st.write("[Report](https://drive.google.com/drive/u/4/folders/1NfsRr1P3xAkuJq3HEJ9LQU1uCo6TZIFK)")
     with st.container():
         image_column, text_column = st.columns((1,3))
         with image_column:
@@ -2141,7 +2150,7 @@ elif choose == "Gallery":
                 num_cols_in_row = remaining_images
             else:
                 num_cols_in_row = num_columns
-                
+
             # Display the images in the columns
             for col in range(num_columns):
                 index = row * num_columns + col
