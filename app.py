@@ -11,7 +11,6 @@ from streamlit_extras.mention import mention
 from streamlit_extras.app_logo import add_logo
 
 
-
 # Set page title
 st.set_page_config(page_title="Harry Chang", page_icon = "desktop_computer", layout = "wide", initial_sidebar_state = "auto")
 
@@ -299,6 +298,7 @@ def add_bg_from_local(image_file):
     )
 add_bg_from_local('bg.png')   
 
+
 # Sidebar: If using streamlit_option_menu
 with st.sidebar:
     choose = option_menu(
@@ -335,9 +335,10 @@ with st.sidebar:
 #                                                     'padding-left': '30px'}},
 #                             key="1")
 
-st.title("Harry Chang")
+#st.title("Harry Chang")
 # Create header
 if choose == "About Me":
+    #aboutme.createPage()
     with st.container():
         left_column, middle_column, right_column = st.columns((1,0.2,0.5))
         with left_column:
@@ -353,7 +354,8 @@ if choose == "About Me":
             st.empty()
         with right_column:
             st.image(img_utown)
-elif choose == "Site Overview":
+elif choose == "Site Overview":   
+    #overview.createPage()
     st.header("Site Overview")
     st.markdown("""
     Initally creating this as a portfolio website in the form of an extended resume, I came to discover the uniqueness of Streamlit as compared to typical front-end frameworks such as Angular and Bootstrap. Even though Streamlit is primarily used as a web application for dashboarding, its extensive features make it more aesthetically appealing to explore with as compared to alternatives such as Plotly and Shiny.
