@@ -2456,19 +2456,16 @@ elif choose == "Site Analytics":
 elif choose == "Resume & CV":   
     resume_url = "https://drive.google.com/file/d/13CHoDfb-mYr9F8YSA4ZDV3tZPpNF6eck/view?usp=sharing"
     cv_url = "https://drive.google.com/file/d/1-aubNVEKkgmHdeCtlp_O1M99tVChXfYs/view?usp=sharing"
+    st.header("Resume & CV")
+    st.write("*In case your current browser cannot display the PDF documents, do refer to either the hyperlinks below or the 'About Me' section to access the relevant files!*")
     with st.container():
-            col1, col2, col3 = st.columns((1,3,1))
+            col1, col2 = st.columns((1,1))
             with col1:
-                st.empty()
-            with col2:
-                st.header("Resume & CV")
-                st.subheader("In case your current browser cannot display the PDF documents, do refer to either the hyperlinks below or at the 'About Me' section to access the relevant files!")
                 st.markdown(pdf_link(resume_url, "**Resume (1 page)**"), unsafe_allow_html=True)
                 show_pdf("Harry Chang Resume2024.pdf")
+            with col2:
                 st.markdown(pdf_link(cv_url, "**CV (2 pages)**"), unsafe_allow_html=True)
                 show_pdf("Harry Chang CV2023.pdf")
-            with col3:
-                st.empty()
 elif choose == "Testimonials": 
     test_url = "https://drive.google.com/file/d/1ZyTmg_r18sUuuU5JOJBqUb2EP8MnjvJU/view?usp=sharing"  
     st.header("Testimonials")
