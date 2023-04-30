@@ -7,6 +7,10 @@ from streamlit_lottie import st_lottie
 from PIL import Image
 import streamlit_analytics
 import base64
+from streamlit_extras.mention import mention
+from streamlit_extras.app_logo import add_logo
+
+
 
 # Set page title
 st.set_page_config(page_title="Harry Chang", page_icon = "desktop_computer", layout = "wide", initial_sidebar_state = "auto")
@@ -232,6 +236,8 @@ for i in range(1, num_images + 1):
 #img_lottie_animation = Image.open("images/lottie_animation.gif")
 # Assets for contact
 lottie_coding = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_abqysclq.json")
+
+
 
 #####################
 # Custom function for printing text
@@ -776,156 +782,168 @@ elif choose == "Projects":
         text_column, image_column = st.columns((3,1))
         with text_column:
             st.subheader("Creating Sales Volume Prediction Model with Regression Methods")
-            st.write("Self-initiated project based on e-commerce case study")
+            st.write("*Self-initiated project based on e-commerce case study*")
             st.markdown("""
             - Conducted exploratory data analysis (EDA) to identify relationships between variables using correlation heatmaps and histograms
             - Trained and compared multiple regression, random forest and XGBoost to build optimal model for sales volume prediction
             - Performed randomized search with cross-validation to increase performance of random forest regressor and reduce MSE
             """)
-            st.write("[Github Repo](https://github.com/harrychangjr/sales-prediction)")
+            # st.write("[Github Repo](https://github.com/harrychangjr/sales-prediction)")
+            mention(label="Github Repo", icon="github", url="https://github.com/harrychangjr/sales-prediction",)
         with image_column:
             st.image(images_projects[0])
     with st.container():
         text_column, image_column = st.columns((3,1))
         with text_column:
             st.subheader("Optimising Article Quality with ChatGPT and NLP")
-            st.write("Self-initiated project using past articles written for module SP1541: Exploring Science Communication in Popular Science in Academic Year 2020/21 Semester 1")
+            st.write("*Self-initiated project using past articles written for module SP1541: Exploring Science Communication in Popular Science in Academic Year 2020/21 Semester 1*")
             st.markdown("""
             - Preliminary analysis - comparing word counts, readability scores and sentiment (compound) scores of all 6 article variants using NLTK and Textstat
             - Generated word clouds to highlight frequently used words in each article variant
             - Identified top 10 most commonly used words between variants of the same article to assess suitability of ChatGPT in enhancing article quality
             """)
-            st.write("[Github Repo](https://github.com/harrychangjr/sp1541-nlp)")
+            #st.write("[Github Repo](https://github.com/harrychangjr/sp1541-nlp)")
+            mention(label="Github Repo", icon="github", url="https://github.com/harrychangjr/sp1541-nlp",)
         with image_column:
             st.image(images_projects[1])
     with st.container():
         text_column, image_column = st.columns((3,1))
         with text_column:
             st.subheader("Statistical Learning: Analysis on Video Game Sales")
-            st.write("Completed project within 48 hours for module ST4248: Statistical Learning II in Academic Year 2022/23 Semester 2")
+            st.write("*Completed project within 48 hours for module ST4248: Statistical Learning II in Academic Year 2022/23 Semester 2*")
             #st.write("Methods performed on [Kaggle dataset](https://www.kaggle.com/rush4ratio/video-game-sales-with-ratings):")
             st.markdown("""
             - Utilised multiple regression to investigate impact of publishers on global sales by regression coefficient, including performing one-hot encoding on 'Publisher' categorical variable
             - Compared performances of multiple linear regression, random forest and XGBoost to predict global sales using critic scores and user scores from Metacritic
             - Trained linear mixed-effects model to investigate impact of publishers, platform and genres in global sales
             """)
-            st.write("[Github Repo](https://github.com/harrychangjr/st4248-termpaper) | [Term Paper](https://github.com/harrychangjr/st4248-termpaper/blob/main/ST4248%20Term%20Paper%20(A0201825N)%20v5.pdf)")
+            #st.write("[Github Repo](https://github.com/harrychangjr/st4248-termpaper) | [Term Paper](https://github.com/harrychangjr/st4248-termpaper/blob/main/ST4248%20Term%20Paper%20(A0201825N)%20v5.pdf)")
+            mention(label="Github Repo", icon="github", url="https://github.com/harrychangjr/st4248-termpaper",)
         with image_column:
             st.image(images_projects[2])
     with st.container():
         text_column, image_column = st.columns((3,1))
         with text_column:
             st.subheader("Statistical Learning: Nourish Your Body with Data")
-            st.write("Completed group project for module ST4248: Statistical Learning II in Academic Year 2022/23 Semester 2")
+            st.write("*Completed group project for module ST4248: Statistical Learning II in Academic Year 2022/23 Semester 2*")
             st.markdown("""
             - Adapted [previous project](https://drive.google.com/file/d/10ZOdQ8Q7UnevXxODAQs1YOstNSsiKh7G/view?usp=sharing) from DSA3101: Data Science in Practice, with the usage of statistical learning methods instead
             - Performed random forest classification and clustering methods to identify different consumer segments of grocery shoppers in supermarkets
             - Built recommendation system using matrix factorisation to recommend healthier food alternatives for grocery shoppers from different backgrounds
             """)
-            st.write("[Final Report](https://drive.google.com/file/d/1YuYxSTuDstSvyUa-bn782sLE5kCfbyH8/view?usp=sharing) | [Pitch Deck](https://www.canva.com/design/DAFeSnJeqgM/uXpz0kw8e7If4T1PG2tpaQ/view?utm_content=DAFeSnJeqgM&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink) | [Product Demo](https://www.youtube.com/watch?v=XMlt-kfdC7g)")
+            #st.write("[Final Report](https://drive.google.com/file/d/1YuYxSTuDstSvyUa-bn782sLE5kCfbyH8/view?usp=sharing) | [Pitch Deck](https://www.canva.com/design/DAFeSnJeqgM/uXpz0kw8e7If4T1PG2tpaQ/view?utm_content=DAFeSnJeqgM&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink) | [Product Demo](https://www.youtube.com/watch?v=XMlt-kfdC7g)")
+            mention(label="Final Report", icon="📄", url="https://drive.google.com/file/d/1YuYxSTuDstSvyUa-bn782sLE5kCfbyH8/view?usp=sharing",)
         with image_column:
             st.image(images_projects[3])
     with st.container():
         text_column, image_column = st.columns((3,1))
         with text_column:
             st.subheader("Data Science Project on Biopics Dataset from Kaggle")
-            st.write("Self-initiated project using various machine learning methods on [biopics dataset](https://www.kaggle.com/datasets/fivethirtyeight/fivethirtyeight-biopics-dataset)")
+            st.write("*Self-initiated project using various machine learning methods on [biopics dataset](https://www.kaggle.com/datasets/fivethirtyeight/fivethirtyeight-biopics-dataset)*")
             st.markdown("""
             - Ran regression models to predict box office revenue (linear regression, random forest, support vector machines)
             - Used k-means clustering with principal components analysis to identify similar types of movies
             - Built content-based recommendation system using cosine similarity to recommend similar movies based on input title
             """)
-            st.write("[Github Repo](https://github.com/harrychangjr/biopics) | [RPubs](https://rpubs.com/harrychangjr/biopics)")
+            #st.write("[Github Repo](https://github.com/harrychangjr/biopics) | [RPubs](https://rpubs.com/harrychangjr/biopics)")
+            mention(label="Github Repo", icon="github", url="https://github.com/harrychangjr/biopics)",)
         with image_column:
             st.image(images_projects[4])
     with st.container():
         text_column, image_column = st.columns((3,1))
         with text_column:
             st.subheader("Optimisation for Large-Scale Data-Driven Inference: Anime Recommendation System")
-            st.write("Completed assignment for module DSA4212: Optimisation for Large-Scale Data-Driven Inference in Academic Year 2022/23 Semester 2")
+            st.write("*Completed assignment for module DSA4212: Optimisation for Large-Scale Data-Driven Inference in Academic Year 2022/23 Semester 2*")
             st.markdown("""
             - Built recommendation system using various non-factor models, including content-based collaborative filtering and clustering
             - Utilised matrix factorisation (single value decomposition) to optimise performance of recommendation system with lower test MSE
             - Provided optional recommendations to further optimise performance e.g scraping additional data, using deep learning methods
             """)
-            st.write("[Github Repo](https://github.com/harrychangjr/dsa4212) | [Report](https://github.com/harrychangjr/dsa4212/blob/main/DSA4212%20Assignment%202%20Group%2039%20Report.pdf)")
+            #st.write("[Github Repo](https://github.com/harrychangjr/dsa4212) | [Report](https://github.com/harrychangjr/dsa4212/blob/main/DSA4212%20Assignment%202%20Group%2039%20Report.pdf)")
+            mention(label="Github Repo", icon="github", url="https://github.com/harrychangjr/dsa4212)",)
         with image_column:
             st.image(images_projects[5])
     with st.container():
         text_column, image_column = st.columns((3,1))
         with text_column:
             st.subheader("Optimisation for Large-Scale Data-Driven Inference: Word Embedding")
-            st.write("Completed assigmment for module DSA4212: Optimisation for Large-Scale Data-Driven Inference in Academic Year 2022/23 Semester 2")
+            st.write("*Completed assigmment for module DSA4212: Optimisation for Large-Scale Data-Driven Inference in Academic Year 2022/23 Semester 2*")
             st.markdown("""
             - Trained Word2Vec model on 20 Newsgroups dataset from scikit-learn package in Python, which provides a number of similar words based on input word
             - Evaluated usefulness of model by applying model to text classification (46% accuracy) and sentiment analysis (86.4% accuracy)
             """)
-            st.write("[Github Code](https://github.com/harrychangjr/dsa4212/blob/main/DSA4212%20Assignment%203%20Group%2039.ipynb) | [Report](https://github.com/harrychangjr/dsa4212/blob/main/DSA4212%20Assignment%203%20Group%2039%20Report.pdf)")
+            #st.write("[Github Code](https://github.com/harrychangjr/dsa4212/blob/main/DSA4212%20Assignment%203%20Group%2039.ipynb) | [Report](https://github.com/harrychangjr/dsa4212/blob/main/DSA4212%20Assignment%203%20Group%2039%20Report.pdf)")
+            mention(label="Github Code", icon="github", url="https://github.com/harrychangjr/dsa4212/blob/main/DSA4212%20Assignment%203%20Group%2039.ipynb",)
         with image_column:
             st.image(images_projects[6])
     with st.container():
         text_column, image_column = st.columns((3,1))
         with text_column:
             st.subheader("Data-Driven Marketing: Exploration of cellphone billing and subscriber data")
-            st.write("Self-initiated project based on past assignment from module BT4211: Data-Driven Marketing")
+            st.write("*Self-initiated project based on past assignment from module BT4211: Data-Driven Marketing*")
             st.markdown("""
             - Performed preliminary churn analysis, customer segmentation and descriptive analysis to understand more about dataset
             - Trained logit and probit models, as well as providing model estimations for duration models
             - Utilised random forest classifier to predict customer churn
             """)
-            st.write("[Github Repo](https://github.com/harrychangjr/cellphone-billing) | [RPubs](https://rpubs.com/harrychangjr/cellphone)")
+            #st.write("[Github Repo](https://github.com/harrychangjr/cellphone-billing) | [RPubs](https://rpubs.com/harrychangjr/cellphone)")
+            mention(label="Github Repo", icon="github", url="https://github.com/harrychangjr/cellphone-billing",)
         with image_column:
             st.image(images_projects[7])
     with st.container():
         text_column, image_column = st.columns((3,1))
         with text_column:
             st.subheader("Data Visualization: Analysis on Spotify Dataset from [tidytuesday](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-01-21)")
-            st.write("Completed group project for module DSA2101: Essential Data Analytics Tools: Data Visualization in Academic Year 2021/22 Semester 2")
+            st.write("*Completed group project for module DSA2101: Essential Data Analytics Tools: Data Visualization in Academic Year 2021/22 Semester 2*")
             st.markdown("""
             - Investigated variables that differentiates songs of different genres, which could be useful in designing recommendation systems
             - Explored how do the four seasons affect number of songs produced in each period
             - Visualizations used: ridgeline faceted density plot, boxplot, line chart, faceted donut chart
             """)
-            st.write("[Github Code](https://github.com/harrychangjr/dsa2101/blob/main/DSA2101_Group%20B.Rmd) | [RPubs](https://rpubs.com/harrychangjr/dsa2101-groupb)")
+            #st.write("[Github Code](https://github.com/harrychangjr/dsa2101/blob/main/DSA2101_Group%20B.Rmd) | [RPubs](https://rpubs.com/harrychangjr/dsa2101-groupb)")
+            mention(label="Github Code", icon="github", url="https://github.com/harrychangjr/dsa2101/blob/main/DSA2101_Group%20B.Rmd",)
         with image_column:
             st.image(images_projects[8])
     with st.container():
         text_column, image_column = st.columns((3,1))
         with text_column:
             st.subheader("Computers and the Humanities: Chloropleths using Google Sheets and Folium in Python")
-            st.write("Completed assignment for module GET1030: Computers and the Humanities in Academic Year 2020/21 Semester 2")
+            st.write("*Completed assignment for module GET1030: Computers and the Humanities in Academic Year 2020/21 Semester 2*")
             st.markdown("""
             - Visualized the total number of performances of A Doll's House by country, using a chloropleth from Google Sheets
             - Drafted scatterplots and boxplots using seaborn to investigate relationship between number of events per country and number of years these plays have been performed
-            - Created chloropleth using Folium to compare total performance counts in China, categorised by province
+            - Created chloropleth using Folium in Google Colab to compare total performance counts in China, categorised by province
             """)
-            st.write("[Google Sheets](https://docs.google.com/spreadsheets/d/1NBlGM7Sjcybbpl1Esa55qLRJw-Seti1LhC93EhV_68w/edit?usp=sharing) | [Google Colab](https://colab.research.google.com/drive/1RHqtb5XC7PkJDpNEb-BY3tO-8mI2j32E?usp=sharing)")
+            #st.write("[Google Sheets](https://docs.google.com/spreadsheets/d/1NBlGM7Sjcybbpl1Esa55qLRJw-Seti1LhC93EhV_68w/edit?usp=sharing) | [Google Colab](https://colab.research.google.com/drive/1RHqtb5XC7PkJDpNEb-BY3tO-8mI2j32E?usp=sharing)")
+            mention(label="Google Drive", icon="🗂️", url="https://drive.google.com/drive/folders/1Iva0oLZim6zJlAndoSzR63pUq4NCznim?usp=share_link",)
         with image_column:
             st.image(images_projects[9])
     with st.container():
         text_column, image_column = st.columns((3,1))
         with text_column:
             st.subheader("Computers and the Humanities: Network Analysis on Harry Potter Film Database")
-            st.write("Completed assignment for module GET1030: Computers and the Humanities in Academic Year 2020/21 Semester 2")
+            st.write("*Completed assignment for module GET1030: Computers and the Humanities in Academic Year 2020/21 Semester 2*")
             st.markdown("""
             - Utilised custom Python file based on NetworkX and Glob to create networks using Harry Potter film database
             - Drafted visualizations using matplotlib and seaborn to compare densities and weighted degree values of nodes from generated networks
             - Customised network visualization using Gephi to investigate relationship between various Harry Potter film directors
             """)
-            st.write("[Github Code](https://github.com/harrychangjr/get1030/blob/main/A0201825N_GET1030_Tutorial_4.ipynb)")
+            #st.write("[Github Code](https://github.com/harrychangjr/get1030/blob/main/A0201825N_GET1030_Tutorial_4.ipynb)")
+            mention(label="Github Code", icon="github", url="https://github.com/harrychangjr/get1030/blob/main/A0201825N_GET1030_Tutorial_4.ipynb",)
         with image_column:
             st.image(images_projects[10])
     with st.container():
         text_column, image_column = st.columns((3,1))
         with text_column:
             st.subheader("Computers and the Humanities: Text Processing and Analysis on Song Lyrics")
-            st.write("Completed assignment for module GET1030: Computers and the Humanities in Academic Year 2020/21 Semester 2")
+            st.write("*Completed assignment for module GET1030: Computers and the Humanities in Academic Year 2020/21 Semester 2*")
             st.markdown("""
             - Utilised NLTK to process 10 sets of song lyrics from Fall Out Boy across 2 albums (Folie à Deux, Save Rock and Roll)
             - Drafted visualizations using matplotlib and seaborn to compare proportions of nouns and verbs between different songs
             - Analysed type/token ratios of songs from both albums to evaluate which album produced better quality songs based on words used
             """)
-            st.write("[Github Code](https://github.com/harrychangjr/get1030/blob/main/A0201825N%20-%20GET1030%20Tutorial%203.ipynb)")
+            #st.write("[Github Code](https://github.com/harrychangjr/get1030/blob/main/A0201825N%20-%20GET1030%20Tutorial%203.ipynb)")
+            mention(label="Github Code", icon="github", url="https://github.com/harrychangjr/get1030/blob/main/A0201825N%20-%20GET1030%20Tutorial%203.ipynb",)
         with image_column:
             st.image(images_projects[11])
 elif choose == "Competitions":
@@ -940,7 +958,8 @@ elif choose == "Competitions":
             st.subheader("[NUS LifeHack 2022](https://lifehack-2022.vercel.app/) - Hosted by [NUS Students' Computing Club](https://nuscomputing.com/)")
             st.write("Awarded Theme Best - Safety and Overall 2nd Place out of 117 team submissions")
             st.write("Ideated and developed Drive Woke! - a Flutter-based mobile application that aims to keep drivers awake by simulating conversations")
-            st.write("[Devpost](https://devpost.com/software/quest-busters) | [Github Repo](https://github.com/yuechen2001/LifeHack2022) | [Pitch Deck](https://www.canva.com/design/DAFGF_nbyZ8/noJnq3IGDdX6nvu7M_2pXQ/view?utm_content=DAFGF_nbyZ8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink) | [Demo Video](https://www.youtube.com/watch?v=su3_Y3yzeh8)")
+            #st.write("[Devpost](https://devpost.com/software/quest-busters) | [Github Repo](https://github.com/yuechen2001/LifeHack2022) | [Pitch Deck](https://www.canva.com/design/DAFGF_nbyZ8/noJnq3IGDdX6nvu7M_2pXQ/view?utm_content=DAFGF_nbyZ8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink) | [Demo Video](https://www.youtube.com/watch?v=su3_Y3yzeh8)")
+            mention(label="Github Repo", icon="github", url="https://github.com/yuechen2001/LifeHack2022",)
     with st.container():
         image_column, text_column = st.columns((1,3))
         with image_column:
@@ -949,7 +968,8 @@ elif choose == "Competitions":
             st.subheader("NUS Fintech Month Hackathon 2021 - Hosted by [NUS Fintech Society](https://fintechsociety.comp.nus.edu.sg/)")
             st.write("Awarded Overall 2nd Place")
             st.write("Ideated a multi-pronged approach using blockchain and machine learning methods to improve fraud detection amongst complex entities in a digital or hybrid (digital and manual) operating environment")
-            st.write("[Pitch Deck](https://www.linkedin.com/feed/update/urn:li:ugcPost:6761489595420037120/)")
+            #st.write("[Pitch Deck](https://www.linkedin.com/feed/update/urn:li:ugcPost:6761489595420037120/)")
+            mention(label="Pitch Deck", icon="🪧", url="https://www.linkedin.com/feed/update/urn:li:ugcPost:6761489595420037120/)",)
     with st.container():
         image_column, text_column = st.columns((1,3))
         with image_column:
@@ -957,7 +977,8 @@ elif choose == "Competitions":
         with text_column:
             st.subheader("NUS Economics Case Competition - Hosted by [NUS Economics Society](https://www.nuseconsoc.com/)")
             st.write("Performed financial modelling and market research to suggest methods for brick-and-mortar retailers to compete against e-commerce stores")
-            st.write("[Report](https://drive.google.com/drive/u/4/folders/1NfsRr1P3xAkuJq3HEJ9LQU1uCo6TZIFK)")
+            #st.write("[Report](https://drive.google.com/drive/u/4/folders/1NfsRr1P3xAkuJq3HEJ9LQU1uCo6TZIFK)")
+            mention(label="Report", icon="📄", url="https://drive.google.com/drive/u/4/folders/1NfsRr1P3xAkuJq3HEJ9LQU1uCo6TZIFK",)
     with st.container():
         image_column, text_column = st.columns((1,3))
         with image_column:
@@ -965,7 +986,8 @@ elif choose == "Competitions":
         with text_column:
             st.subheader("[Shopee Product and Design Challenge 2021](https://careers.shopee.sg/event-detail/396)")
             st.write("Redesigned user interface of Shopee mobile app using Figma to reduce clutter and increase user utilization of in-app rewards")
-            st.write("[Figma Prototype](https://www.figma.com/proto/3UXT29N1RgVGDUlSBeWcPN/UI-Prototype-1?node-id=18-3&viewport=-675%2C231%2C0.32458001375198364&scaling=scale-down) | [Pitch Deck](https://drive.google.com/file/d/12qnveB-SMjG_gF_gwNj3Nr-JsKeyKd6g/view)")
+            #st.write("[Figma Prototype](https://www.figma.com/proto/3UXT29N1RgVGDUlSBeWcPN/UI-Prototype-1?node-id=18-3&viewport=-675%2C231%2C0.32458001375198364&scaling=scale-down) | [Pitch Deck](https://drive.google.com/file/d/12qnveB-SMjG_gF_gwNj3Nr-JsKeyKd6g/view)")
+            mention(label="Figma", icon="📱", url="https://www.figma.com/proto/3UXT29N1RgVGDUlSBeWcPN/UI-Prototype-1?node-id=18-3&viewport=-675%2C231%2C0.32458001375198364&scaling=scale-down",)
     with st.container():
         image_column, text_column = st.columns((1,3))
         with image_column:
@@ -973,7 +995,8 @@ elif choose == "Competitions":
         with text_column:
             st.subheader("Singapore Business Case Competition 2020 - Hosted by [NTU Business Solutions Club](https://clubs.ntu.edu.sg/businesssolutions/)")
             st.write("Proposed solutions to help increase competitiveness of BreadTalk after performing market research and analysis on the F&B industry")
-            st.write("[Pitch Deck](https://drive.google.com/file/d/1kLgbBVuth4KvfhjaK00n30xlr4bmn-iM/view)")
+            #st.write("[Pitch Deck](https://drive.google.com/file/d/1kLgbBVuth4KvfhjaK00n30xlr4bmn-iM/view)")
+            mention(label="Pitch Deck", icon="🪧", url="https://drive.google.com/file/d/1kLgbBVuth4KvfhjaK00n30xlr4bmn-iM/view",)
     with st.container():
         image_column, text_column = st.columns((1,3))
         with image_column:
@@ -982,7 +1005,8 @@ elif choose == "Competitions":
             st.subheader("Contest 2.2 Beautiful Runes - CS1010S Programming Methodology")
             st.write("Awarded 1st Place for 2D Runes category out of over 600 students enrolled in the module for Academic Year 2020/21 Semester 1")
             st.write("2D pixel art created using Pillow (PIL) Library in Python")
-            st.write("[Github Repo](https://github.com/harrychangjr/runes)")
+            #st.write("[Github Repo](https://github.com/harrychangjr/runes)")
+            mention(label="Github Repo", icon="github", url="https://github.com/harrychangjr/runes",)
 elif choose == "Volunteering":
     st.header("Volunteering")
     with st.container():
