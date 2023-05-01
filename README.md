@@ -6,7 +6,7 @@ With the convenience of using Python as a beginner-friendly programming language
 
 Portfolio website developed using Python, HTML and CSS - Deployed using Streamlit Cloud
 
-*For an optimal experience, do browse [this web application](https://harrychangjr-portfolio-app-eh84yv.streamlit.app/) on desktop!*
+*For an optimal experience, do browse [this web application](https://harrychangjr.streamlit.app/) on desktop!*
 
 Website Demo Video: [YouTube](https://youtu.be/HDpG17IyvT8)
 
