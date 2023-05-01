@@ -10,6 +10,8 @@ import base64
 from streamlit_extras.mention import mention
 from streamlit_extras.app_logo import add_logo
 import sqlite3
+from bs4 import BeautifulSoup
+from streamlit_extras.echo_expander import echo_expander
 
 
 
@@ -1150,11 +1152,13 @@ elif choose == "Volunteering":
 elif choose == "Blog":
     st.header("Blog")
     selected_options = ["Overview", "Article & Essay List", 
-                        "Finding success as an outlier", 
+                        "Finding success as an outlier (Extracted Using Wordpress REST API)",
+                        "Finding success as an outlier (Formatted Version)", 
                         "Should the statue of Sir Stamford Raffles disappear for good?",
                         "Should the Women's Charter replace one of the existing ten objects in the module?", 
                         "Does gender inequality still have a place in Singapore's society today?", 
-                        "Reflections on Organising an 850-participant Data Analytics Competition",
+                        "Reflections on Organising an 850-participant Data Analytics Competition (Extracted Using Google Sites REST API)",
+                        "Reflections on Organising an 850-participant Data Analytics Competition (Formatted Version)",
                         "Worsened health disparities based on ethnicity and gender due to COVID-19",
                         "Obstacles in promoting healthy eating habits",
                         "Role of healthcare data analytics in managing COVID-19",
@@ -1174,6 +1178,7 @@ elif choose == "Blog":
 
         In this section, you will be able to read some of my finest write-ups from my university experiences, based on topics varying from science to politics. For those looking forward to a good read, enjoy!
         """)
+
     elif selected == "Article & Essay List":
         st.subheader("Article & Essay List")
         with st.container():
@@ -1269,9 +1274,65 @@ elif choose == "Blog":
                 st.write("*September 30, 2020* | [*Article*](https://github.com/harrychangjr/sp1541-nlp/blob/main/Originals/SP1541%20NA1.pdf)")
                 st.write("*Despite having a vaccine that is readily accessible, measles cases and deaths are still surging worldwide, especially in recent years. Why is this so and are there any long-term solutions to resolve this?*")
                 st.write("Science news article submitted for the module SP1541: Exploring Science Communication through Popular Science in Academic Year 2020/21 Semester 1")
-    elif selected == "Finding success as an outlier":
-        st.subheader("Finding success as an outlier")
+    elif selected == "Finding success as an outlier (Extracted Using Wordpress REST API)":
+        with st.echo(code_location="below"):
+            import streamlit as st
+            import requests
+            from bs4 import BeautifulSoup
+
+            def arrange_images_side_by_side(html_content):
+                soup = BeautifulSoup(html_content, "html.parser")
+                images = soup.find_all("img")
+
+                i = 0
+                while i < len(images) - 1:
+                    current_image = images[i]
+                    next_image = images[i + 1]
+
+                    current_figure = current_image.find_parent("figure")
+                    next_figure = next_image.find_parent("figure")
+
+                    # Check if the next image is an immediate sibling
+                    if current_figure and next_figure and current_figure.find_next_sibling() == next_figure:
+                        container = soup.new_tag("div", style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; align-items: center;")
+                        current_figure.wrap(container)
+                        next_figure.wrap(container)
+
+                        # Set the same height for both images and add a little margin for better centering
+                        current_image['style'] = "height: 400px; margin: auto;"
+                        next_image['style'] = "height: 400px; margin: auto;"
+
+                        # Update the images list
+                        images = soup.find_all("img")
+                    i += 1
+
+                return str(soup)
+
+            def get_post_by_id(url, post_id):
+                site_url = url.replace("https://", "").replace("http://", "")
+                response = requests.get(f"https://public-api.wordpress.com/wp/v2/sites/{site_url}/posts/{post_id}?_embed")
+                response.raise_for_status()
+                return response.json()
+
+            url = "https://antcabbage.wordpress.com"
+            post_id = 72
+            post = get_post_by_id(url, post_id)
+
+            post_title = post["title"]["rendered"]
+            post_content = post["content"]["rendered"]
+            soup = BeautifulSoup(post_content, "html.parser")
+            clean_post_content = soup.get_text()
+            st.subheader(post_title)
+            st.write("April 12, 2023 | [Article](https://antcabbage.wordpress.com/2023/04/12/finding-success-as-an-outlier/)")
+            st.write("*The content of this article was extracted using `requests` and `BeautifulSoup`, along with the Worpress REST API. Thus, there may be some formatting and alignment issues, especially for the images and/or video featured. A code block will also be shown at the bottom of this article to demonstrate how the REST API was used with the respective libraries to extract the content from the Wordpress site*")
+            modified_content = arrange_images_side_by_side(post_content)
+            st.markdown(modified_content, unsafe_allow_html=True)
+        
+        
+    elif selected == "Finding success as an outlier (Formatted Version)":
+        st.subheader("Finding success as an outlier (Formatted Version)")
         st.write("April 12, 2023 | [Article](https://antcabbage.wordpress.com/2023/04/12/finding-success-as-an-outlier/)")
+        st.write("*The content of this article was manually copied and pasted from the original site, along with manually embeedded media and captions for formatting purposes*")
         st.markdown("""
         > Outlier – a person or thing differing from all other members of a particular group or set.
 
@@ -1606,9 +1667,49 @@ elif choose == "Blog":
         from https://www.straitstimes.com/singapore/politics/men-wanted-all-need-toplay-
         a-part-in-pushing-for-gender-equality-says-shanmugam
         """)
-    elif selected == "Reflections on Organising an 850-participant Data Analytics Competition":
-        st.subheader("Reflections on Organising an 850-participant Data Analytics Competition")
+    elif selected == "Reflections on Organising an 850-participant Data Analytics Competition (Extracted Using Google Sites REST API)":
+        with st.echo(code_location="below"):
+            def fetch_google_site_article(url):
+                response = requests.get(url)
+                response.raise_for_status()
+
+                soup = BeautifulSoup(response.text, "html.parser")
+                content = soup.find('div', class_='UtePc RCETm')  # You may need to inspect the Google Site source and adjust the class name
+
+                return str(content)
+            def arrange_images_side_by_side(html_content):
+                soup = BeautifulSoup(html_content, "html.parser")
+                images = soup.find_all("img")
+
+                i = 0
+                while i < len(images) - 1:
+                    current_image = images[i]
+                    next_image = images[i + 1]
+
+                    # Check if the next image is an immediate sibling
+                    if current_image.find_next_sibling() == next_image:
+                        container = soup.new_tag("div", style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; align-items: center;")
+                        current_image.wrap(container)
+                        next_image.wrap(container)
+
+                        # Set the same height for both images and add a little margin for better centering
+                        current_image['style'] = "height: 200px; margin: auto;"
+                        next_image['style'] = "height: 200px; margin: auto;"
+
+                        # Update the images list
+                        images = soup.find_all("img")
+                    i += 1
+
+                return str(soup)
+            url = "https://sites.google.com/view/nussds/articles/reflections-about-dac?authuser=0"
+            content = fetch_google_site_article(url)
+            modified_content = arrange_images_side_by_side(content)
+            st.write("*The content of this article was extracted using `requests` and `BeautifulSoup`, along with the Google Sites REST API. Thus, there may be some formatting and alignment issues, especially for the images and/or video featured. A code block will also be shown at the bottom of this article to demonstrate how the REST API was used with the respective libraries to extract the content from the Google Sites webpage*")
+            st.markdown(modified_content, unsafe_allow_html=True)
+    elif selected == "Reflections on Organising an 850-participant Data Analytics Competition (Formatted Version)":
+        st.subheader("Reflections on Organising an 850-participant Data Analytics Competition (Formatted Version)")
         st.write("February 18, 2022 | [Article](https://sites.google.com/view/nussds/articles/reflections-about-dac?authuser=0&pli=1)")
+        st.write("*The content of this article was manually copied and pasted from the original site, along with manually embeedded media and captions for formatting purposes*")
         st.markdown("""
         **Overview**
 
