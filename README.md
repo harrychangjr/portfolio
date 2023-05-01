@@ -1,4 +1,4 @@
-# portfolio
+# portfolio [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://harrychangjr.streamlit.app)
 ## Overview
 Initally creating this as a portfolio website in the form of an extended resume, I came to discover the uniqueness of Streamlit as compared to typical front-end frameworks such as Angular and Bootstrap. Even though Streamlit is primarily used as a web application for dashboarding, its extensive features make it more aesthetically appealing to explore with as compared to alternatives such as Plotly and Shiny.
 
@@ -6,9 +6,9 @@ With the convenience of using Python as a beginner-friendly programming language
 
 Portfolio website developed using Python, HTML and CSS - Deployed using Streamlit Cloud
 
-*For an optimal experience, do browse [this web application](https://harrychangjr-portfolio-app-eh84yv.streamlit.app/) on desktop!*
+*For an optimal experience, do browse [this web application](https://harrychangjr.streamlit.app/) on desktop!*
 
-Website Demo Video: [YouTube](https://youtu.be/HDpG17IyvT8)
+Website Demo Video: [YouTube](https://youtu.be/1QlgizeKg44)
 
 References:
 - https://github.com/Sven-Bo/personal-website-streamlit 
