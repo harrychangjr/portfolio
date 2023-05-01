@@ -9,6 +9,7 @@ import streamlit_analytics
 import base64
 from streamlit_extras.mention import mention
 from streamlit_extras.app_logo import add_logo
+import sqlite3
 
 
 
@@ -511,7 +512,7 @@ elif choose == "Technical Skills":
     txt3("Programming Languages","`R`, `Python`, `SQL`, `Java`, `Stata`, `MATLAB`")
     txt3("Academic Interests","`Data Visualization`, `Market Basket Analysis`, `Recommendation Systems`, `Natural Language Processing`")
     txt3("Data Visualization", "`ggplot2`, `matplotlib`, `seaborn`, `Folium`, `Gephi`, `GIS`, `Tableau`, `Power BI`, `Google Data Studio`, `Domo`, `Google Analytics`")
-    txt3("Database and Cloud Systems", "`MySQL`, `PostgreSQL`, `NoSQL`, `Google BigQuery`, `Cloud Firestore`, `Google Cloud Platform`, `Amazon Web Services`")
+    txt3("Database and Cloud Systems", "`MySQL`, `PostgreSQL`, `SQLite`, `NoSQL`, `Google BigQuery`, `Cloud Firestore`, `Google Cloud Platform`, `Amazon Web Services`")
     txt3("Version Control", "`Git`, `Docker`")
     txt3("Design and Front-end Development", "`Canva`, `Figma`, `HTML`, `CSS`, `Streamlit`, `Wordpress`")
     txt3("Data Science Techniques", "`Regression`, `Clustering`, `Association Rules Mining`, `Random Forest`, `Decison Trees`, `Principal Components Analysis`, `Text Classification`, `Sentiment Analysis`, `Matrix Factorisation`, `Collaborative Filtering`")
@@ -2562,17 +2563,75 @@ elif choose == "Contact":
         text_column, mid, image_column = st.columns((1,0.2,0.5))
         with text_column:
             st.write("Let's connect! You may either reach out to me at harrychang.work@gmail.com or use the form below!")
-            with st.form(key='columns_in_form2',clear_on_submit=True): #set clear_on_submit=True so that the form will be reset/cleared once it's submitted
+            #with st.form(key='columns_in_form2',clear_on_submit=True): #set clear_on_submit=True so that the form will be reset/cleared once it's submitted
                 #st.write('Please help us improve!')
-                Name=st.text_input(label='Your Name',
-                                    max_chars=100, type="default") #Collect user feedback
-                Email=st.text_input(label='Your Email', 
-                                    max_chars=100,type="default") #Collect user feedback
-                Message=st.text_input(label='Your Message',
-                                        max_chars=500, type="default") #Collect user feedback
-                submitted = st.form_submit_button('Submit')
-                if submitted:
-                    st.write('Thanks for your contacting us. We will respond to your questions or inquiries as soon as possible!')
+                #Name=st.text_input(label='Your Name',
+                                    #max_chars=100, type="default") #Collect user feedback
+                #Email=st.text_input(label='Your Email', 
+                                    #max_chars=100,type="default") #Collect user feedback
+                #Message=st.text_input(label='Your Message',
+                                        #max_chars=500, type="default") #Collect user feedback
+                #submitted = st.form_submit_button('Submit')
+                #if submitted:
+                    #st.write('Thanks for your contacting us. We will respond to your questions or inquiries as soon as possible!')
+            def create_database_and_table():
+                conn = sqlite3.connect('contact_form.db')
+                c = conn.cursor()
+                c.execute('''CREATE TABLE IF NOT EXISTS contacts
+                            (name TEXT, email TEXT, message TEXT)''')
+                conn.commit()
+                conn.close()
+            create_database_and_table()
+
+            st.subheader("Contact Form")
+            if "name" not in st.session_state:
+                st.session_state["name"] = ""
+            if "email" not in st.session_state:
+                st.session_state["email"] = ""
+            if "message" not in st.session_state:
+                st.session_state["message"] = ""
+            st.session_state["name"] = st.text_input("Name", st.session_state["name"])
+            st.session_state["email"] = st.text_input("Email", st.session_state["email"])
+            st.session_state["message"] = st.text_area("Message", st.session_state["message"])
+
+
+            column1, column2= st.columns([1,5])
+            if column1.button("Submit"):
+                conn = sqlite3.connect('contact_form.db')
+                c = conn.cursor()
+                c.execute("INSERT INTO contacts (name, email, message) VALUES (?, ?, ?)",
+                        (st.session_state["name"], st.session_state["email"], st.session_state["message"]))
+                conn.commit()
+                conn.close()
+                st.success("Your message has been sent!")
+                # Clear the input fields
+                st.session_state["name"] = ""
+                st.session_state["email"] = ""
+                st.session_state["message"] = ""
+            def fetch_all_contacts():
+                conn = sqlite3.connect('contact_form.db')
+                c = conn.cursor()
+                c.execute("SELECT * FROM contacts")
+                rows = c.fetchall()
+                conn.close()
+                return rows
+            
+            if "show_contacts" not in st.session_state:
+                st.session_state["show_contacts"] = False
+            if column2.button("View Submitted Forms"):
+                st.session_state["show_contacts"] = not st.session_state["show_contacts"]
+            
+            if st.session_state["show_contacts"]:
+                all_contacts = fetch_all_contacts()
+                if len(all_contacts) > 0:
+                    table_header = "| Name | Email | Message |\n| --- | --- | --- |\n"
+                    table_rows = "".join([f"| {contact[0]} | {contact[1]} | {contact[2]} |\n" for contact in all_contacts])
+                    markdown_table = f"**All Contact Form Details:**\n\n{table_header}{table_rows}"
+                    st.markdown(markdown_table)
+                else:
+                    st.write("No contacts found.")
+
+
             st.write("Alternatively, feel free to check out my social accounts below!")
             linkedin_url = "https://www.linkedin.com/in/harrychangjr/"
             github_url = "https://github.com/harrychangjr"
