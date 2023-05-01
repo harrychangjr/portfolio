@@ -692,7 +692,7 @@ elif choose == "Education":
                 |Code|Module Title                       |Workload|
                 |--------|--------------------------------------|---------|
                 |ALS1010|Learning to Learn Better|2 MCs|
-                |DSA2101|Essential Data Analytcis Tools: Data Visualization|4 MCs|
+                |DSA2101|Essential Data Analytics Tools: Data Visualization|4 MCs|
                 |GES1037|A History of Singapore in Ten Objects|4 MCs|
                 |IS1103|Ethics in Computing|4 MCs|
                 |IT2002|Database Technology and Management|4 MCs|
