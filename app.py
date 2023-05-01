@@ -378,7 +378,7 @@ elif choose == "Site Overview":
     st.markdown("""
     *For an optimal experience, do browse this site on desktop!*
 
-    Updated April 28, 2023
+    Updated May 1, 2023
     """)
 # Create section for Work Experience
 elif choose == "Experience":
