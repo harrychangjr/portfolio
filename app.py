@@ -371,7 +371,7 @@ elif choose == "Site Overview":
             with col1:
                 st.empty()
             with col2:
-                st.video("https://www.youtube.com/watch?v=HDpG17IyvT8")
+                st.video("https://youtu.be/1QlgizeKg44")
             with col3:
                 st.empty()
     st.markdown("""
