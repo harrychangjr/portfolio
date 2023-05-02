@@ -115,7 +115,7 @@ img_saf = Image.open("images/saf.jpg")
 # Assets for projects
 image_names_projects = ["ecom", "chatgpt", "videogames", "health", 
                          "biopics", "anime", "word2vec", "cellphone", 
-                         "spotify", "map", "gephi", "fob"]
+                         "spotify", "map", "gephi", "fob", "get"]
 images_projects = [Image.open(f"images/{name}.{'jpg' if name not in ('map', 'gephi', 'health') else 'png'}") for name in image_names_projects]
 # Assets for volunteering
 image_names_vol = ["sdslogo", "sportslogo", "gdsclogo", "csclogo", 
@@ -224,7 +224,7 @@ for i in range(1, num_images + 1):
     image_dict[image_key] = Image.open(image_path)
 #2022
 image_dict = {}
-num_images = 30
+num_images = 34
 for i in range(1, num_images + 1):
     image_key = f"img_2022_{i}"
     image_path = f"gallery/2022_{i}.jpg"
@@ -994,7 +994,7 @@ elif choose == "Projects":
             st.subheader("Computers and the Humanities: Text Processing and Analysis on Song Lyrics")
             st.write("*Completed assignment for module GET1030: Computers and the Humanities in Academic Year 2020/21 Semester 2*")
             st.markdown("""
-            - Utilised NLTK to process 10 sets of song lyrics from Fall Out Boy across 2 albums (Folie à Deux, Save Rock and Roll)
+            - Utilised custom Python file based on NetworkX and Glob to create networks using Harry Potter film database
             - Drafted visualizations using matplotlib and seaborn to compare proportions of nouns and verbs between different songs
             - Analysed type/token ratios of songs from both albums to evaluate which album produced better quality songs based on words used
             """)
@@ -1002,6 +1002,21 @@ elif choose == "Projects":
             mention(label="Github Code", icon="github", url="https://github.com/harrychangjr/get1030/blob/main/A0201825N%20-%20GET1030%20Tutorial%203.ipynb",)
         with image_column:
             st.image(images_projects[11])
+    with st.container():
+        text_column, image_column = st.columns((3,1))
+        with text_column:
+            st.subheader("Computers and the Humanities: Spotify in the Covid-19 Era")
+            st.write("*Completed group project for module GET1030: Computers and the Humanities in Academic Year 2020/21 Semester 2*")
+            st.markdown("""
+            - Compiled and scraped Spotify data from [Spotify](https://www.spotifycharts.com), [Kaggle](https://www.kaggle.com/yamaerenay/spotify-dataset-19212020-160k-tracks), and [OWID](https://ourworldindata.org/coronavirus/country/singapore) to analyse top songs played in Singapore during Covid-19
+            - Drafted Tableau dashboard to showcase correlation between various features of top songs, including tempo, acousticness and popularity
+            - Embedded 30-second snippet of featured song on dashboard for increased interactiveness
+            """)
+            #st.write("[Github Code](https://github.com/harrychangjr/get1030/blob/main/A0201825N%20-%20GET1030%20Tutorial%203.ipynb)")
+            mention(label="Final Report", icon="📄", url="https://github.com/harrychangjr/get1030/blob/main/GET1030%20Final%20Project.pdf",)
+        with image_column:
+            st.image(images_projects[12])
+    
 elif choose == "Competitions":
     # Create section for Competitions
     #st.write("---")
@@ -2554,7 +2569,7 @@ elif choose == "Gallery":
         st.subheader("2022")
         st.write("*Highlights, lowlights, learnings, help sought, and kudos to everyone!*")
         # Load the images
-        num_images = 30
+        num_images = 34
         images_2022 = [Image.open(f"gallery/2022_{i}.jpg") for i in range(1, num_images + 1)]
 
         # Display the images in a grid
