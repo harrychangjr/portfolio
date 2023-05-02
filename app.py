@@ -240,8 +240,31 @@ for i in range(1, num_images + 1):
 # Assets for contact
 lottie_coding = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_abqysclq.json")
 
+img_linkedin = Image.open("images/linkedin.png")
+img_github = Image.open("images/github.png")
+img_email = Image.open("images/email.png")
 
+def social_icons(width=24, height=24, **kwargs):
+        icon_template = '''
+        <a href="{url}" target="_blank" style="margin-right: 20px;">
+            <img src="{icon_src}" alt="{alt_text}" width="{width}" height="{height}">
+        </a>
+        '''
 
+        icons_html = ""
+        for name, url in kwargs.items():
+            icon_src = {
+                "youtube": "https://img.icons8.com/ios-filled/100/ff8c00/youtube-play.png",
+                "linkedin": "https://img.icons8.com/ios-filled/100/ff8c00/linkedin.png",
+                "github": "https://img.icons8.com/ios-filled/100/ff8c00/github--v2.png",
+                "wordpress": "https://img.icons8.com/ios-filled/100/ff8c00/wordpress--v1.png",
+                "email": "https://img.icons8.com/ios-filled/100/ff8c00/filled-message.png"
+            }.get(name.lower())
+
+            if icon_src:
+                icons_html += icon_template.format(url=url, icon_src=icon_src, alt_text=name.capitalize(), width=width, height=height)
+
+        return icons_html
 #####################
 # Custom function for printing text
 def txt(a, b):
@@ -327,7 +350,21 @@ with st.sidebar:
         "nav-link-selected": {"background-color": "#cfcfb4"},
     }
     )
-
+    youtube_url = "https://www.youtube.com/@harrychangjr"
+    linkedin_url = "https://www.linkedin.com/in/harrychangjr/"
+    github_url = "https://github.com/harrychangjr"
+    wordpress_url = "https://antcabbage.wordpress.com"
+    email_url = "mailto:harrychang.work@gmail.com"
+    with st.container():
+        l, m, r = st.columns((0.11,2,0.1))
+        with l:
+            st.empty()
+        with m:
+            st.markdown(
+                social_icons(30, 30, Youtube=youtube_url, LinkedIn=linkedin_url, GitHub=github_url, Wordpress=wordpress_url, Email=email_url),
+                unsafe_allow_html=True)
+        with r:
+            st.empty()
 # Sidebar: If using streamlit_on_hover_tabs - not mobile friendly
 #with st.sidebar:
 #    choose = on_hover_tabs(tabName=["About Me", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Articles & Essays", "Site Analytics", "Contact"], 
@@ -347,6 +384,7 @@ with st.sidebar:
 #                                                     'margin-bottom': '30px',
 #                                                     'padding-left': '30px'}},
 #                             key="1")
+
 st.write('<style>div.block-container{padding-top:0rem;}</style>', unsafe_allow_html=True)
 st.title("Harry Chang")
 # Create header
