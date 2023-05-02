@@ -87,7 +87,7 @@ def pdf_link(pdf_url, link_text="Click here to view PDF"):
 #lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
 # Assets for about me
 img_utown = Image.open("images/utown.JPG")
-img_quest = Image.open("images/quest.jpg") #unused
+img_quest = Image.open("images/quest.jpg")
 img_ifg = Image.open("images/ifg.jpg")
 #Assets for competitions
 img_lifehack = Image.open("images/lifehack.jpg")
@@ -305,6 +305,15 @@ add_bg_from_local('bg.png')
 
 # Sidebar: If using streamlit_option_menu
 with st.sidebar:
+    with st.container():
+        l, m, r = st.columns((1,3,1))
+        with l:
+            st.empty()
+        with m:
+            st.image(img_quest, width=175)
+        with r:
+            st.empty()
+    
     choose = option_menu(
                         "Harry Chang", 
                         ["About Me", "Site Overview", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Volunteering", "Blog", "Gallery", "Resume & CV", "Testimonials", "Contact"],
