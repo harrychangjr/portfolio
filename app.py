@@ -994,7 +994,7 @@ elif choose == "Projects":
             st.subheader("Computers and the Humanities: Text Processing and Analysis on Song Lyrics")
             st.write("*Completed assignment for module GET1030: Computers and the Humanities in Academic Year 2020/21 Semester 2*")
             st.markdown("""
-            - Utilised NLTK to process 10 sets of song lyrics from Fall Out Boy across 2 albums (Folie à Deux, Save Rock and Roll)
+            - Utilised custom Python file based on NetworkX and Glob to create networks using Harry Potter film database
             - Drafted visualizations using matplotlib and seaborn to compare proportions of nouns and verbs between different songs
             - Analysed type/token ratios of songs from both albums to evaluate which album produced better quality songs based on words used
             """)
