@@ -120,7 +120,7 @@ images_projects = [Image.open(f"images/{name}.{'jpg' if name not in ('map', 'gep
 # Assets for volunteering
 image_names_vol = ["sdslogo", "sportslogo", "gdsclogo", "csclogo", 
                          "nussulogo", "sklogo", "simlogo", "tpjclogo", 
-                         "sjilogo"]
+                         "sjilogo", "nuspc"]
 images_vol = [Image.open(f"images/{name}.{'jpg' if name not in ('map', 'gephi', 'health') else 'png'}") for name in image_names_vol]
 # Assets for blog
 img_outlier = Image.open("images/outlier.png")
@@ -1080,6 +1080,21 @@ elif choose == "Competitions":
             mention(label="Github Repo", icon="github", url="https://github.com/harrychangjr/runes",)
 elif choose == "Volunteering":
     st.header("Volunteering")
+    with st.container():
+        text_column, mid, image_column = st.columns((3,0.4,1))
+        with text_column:
+            st.subheader("NUS Product Club")
+            st.write("*April 2023 to April 2024*")
+            st.markdown("""
+            Publicity Head
+
+            - Spearheaded design of club's logo as inaugural Publicity Head
+            - Drafted publicity posters on Canva to drive publicity and outreach efforts for recruitment and club events
+            """)
+        with mid:
+            st.empty()
+        with image_column:
+            st.image(images_vol[9])
     with st.container():
         text_column, mid, image_column = st.columns((3,0.4,1))
         with text_column:
