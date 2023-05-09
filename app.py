@@ -874,6 +874,7 @@ elif choose == "Projects":
             - Identified top 10 most commonly used words between variants of the same article to assess suitability of ChatGPT in enhancing article quality
             """)
             #st.write("[Github Repo](https://github.com/harrychangjr/sp1541-nlp)")
+            mention(label="Streamlit App", icon="streamlit", url="https://sp1541-nlp.streamlit.app",)
             mention(label="Github Repo", icon="github", url="https://github.com/harrychangjr/sp1541-nlp",)
         with image_column:
             st.image(images_projects[1])
