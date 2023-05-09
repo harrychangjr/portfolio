@@ -115,7 +115,7 @@ img_saf = Image.open("images/saf.jpg")
 # Assets for projects
 image_names_projects = ["ecom", "chatgpt", "videogames", "health", 
                          "biopics", "anime", "word2vec", "cellphone", 
-                         "spotify", "map", "gephi", "fob", "get"]
+                         "spotify", "map", "gephi", "fob", "get", "ttdb"]
 images_projects = [Image.open(f"images/{name}.{'jpg' if name not in ('map', 'gephi', 'health') else 'png'}") for name in image_names_projects]
 # Assets for volunteering
 image_names_vol = ["sdslogo", "sportslogo", "gdsclogo", "csclogo", 
@@ -834,6 +834,20 @@ elif choose == "Projects":
     # Create section for Projects
     #st.write("---")
     st.header("Projects")
+    with st.container():
+        text_column, image_column = st.columns((3,1))
+        with text_column:
+            st.subheader("Enhanced TikTok Analytics Dashboard")
+            st.write("*Self-initiated project based on Marketing Internship stint at [Quest](https://quest-inc.co)*")
+            st.markdown("""
+            - Provided options to plot Tiktok user overview data using 3D lineplots, 3D scatterplots, 3D surfaceplots and radar chart from Plotly
+            - Filtered number of hashtags per Tiktok video to investigate relationship between hashtag count and other variables: views, comments, likes and shares
+            - Plotted average line for follower activity for individual day to gauge daily mean active users browsing user's TikTok videos
+            """)
+            # st.write("[Github Repo](https://github.com/harrychangjr/sales-prediction)")
+            mention(label="Github Repo", icon="github", url="https://github.com/harrychangjr/tiktok-analytics",)
+        with image_column:
+            st.image(images_projects[13])
     with st.container():
         text_column, image_column = st.columns((3,1))
         with text_column:
