@@ -842,7 +842,7 @@ elif choose == "Projects":
             st.markdown("""
             - Provided options to plot Tiktok user overview data using 3D lineplots, 3D scatterplots, 3D surfaceplots and radar chart from Plotly
             - Filtered number of hashtags per Tiktok video to investigate relationship between hashtag count and other variables: views, comments, likes and shares
-            - Plotted average line for follower activity for individual day to gauge daily mean active users browsing user's TikTok videos
+            - Performed hashtag analysis using Word2Vec to calculate cosine similarity scores and deduce correlation with average performance scores of each hashtag
             """)
             # st.write("[Github Repo](https://github.com/harrychangjr/sales-prediction)")
             mention(label="Streamlit App", icon="streamlit", url="https://tiktok-analytics.onrender.com/",)
