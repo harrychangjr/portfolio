@@ -845,7 +845,7 @@ elif choose == "Projects":
             - Performed hashtag analysis using Word2Vec to calculate cosine similarity scores and deduce correlation with average performance scores of each hashtag
             """)
             # st.write("[Github Repo](https://github.com/harrychangjr/sales-prediction)")
-            mention(label="Streamlit App", icon="streamlit", url="https://tiktok-analytics.onrender.com/",)
+            mention(label="Streamlit App", icon="streamlit", url="https://huggingface.co/spaces/harrychangjr/tiktok_analytics",)
             mention(label="Github Repo", icon="github", url="https://github.com/harrychangjr/tiktok-analytics",)
         with image_column:
             st.image(images_projects[13])
