@@ -231,7 +231,7 @@ for i in range(1, num_images + 1):
     image_dict[image_key] = Image.open(image_path)
 #2023
 image_dict = {}
-num_images = 3
+num_images = 4
 for i in range(1, num_images + 1):
     image_key = f"img_2023_{i}"
     image_path = f"gallery/2023_{i}.jpg"
@@ -2628,7 +2628,7 @@ elif choose == "Gallery":
         st.subheader("2023")
         st.write("*Success - being content at the present moment*")
         # Load the images
-        num_images = 3
+        num_images = 4
         images_2023 = [Image.open(f"gallery/2023_{i}.jpg") for i in range(1, num_images + 1)]
 
         # Display the images in a grid
