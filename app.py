@@ -604,7 +604,7 @@ elif choose == "Education":
                 st.markdown("""
                 Withdrew from course in 2020, before performing a clean slate transfer to pursue a Bachelor's Degree in Data Science and Analytics
                 - [NUS Students' Science Club](https://www.nussciencelife.com/) - Marketing Executive, Welfare Subcommittee
-                - Pharmaceutical Science (Class of 2023) - Assistance Class Representative
+                - Pharmaceutical Science (Class of 2023) - Assistant Class Representative
                 """)
         with st.container():
             image_column, text_column = st.columns((1,2.5))
