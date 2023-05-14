@@ -400,7 +400,7 @@ if choose == "About Me":
             st.write("🏋🏻 In addition, I like to exercise in the gym, run, write, play video games and... enjoy eating good food in my free time!")
             st.write("👨🏼‍💻 Academic interests: Data Visualization, Market Basket Analysis, Recommendation Systems, Natural Language Processing")
             st.write("💭 Ideal Career Prospects: Data Analyst, Data Scientist, Data Engineer, Business Intelligence Analyst, Product Manager")
-            st.write("📄 [Resume (1 page)](https://drive.google.com/file/d/13CHoDfb-mYr9F8YSA4ZDV3tZPpNF6eck/view?usp=sharing) | [CV (2 pages)](https://drive.google.com/file/d/1-aubNVEKkgmHdeCtlp_O1M99tVChXfYs/view?usp=sharing)")
+            st.write("📄 [Resume (1 page)](https://drive.google.com/file/d/1n4TQxDkn98Tu5i2--aNKbK-JvP7xGcDe/view?usp=sharing) | [CV (2 pages)](https://drive.google.com/file/d/1-aubNVEKkgmHdeCtlp_O1M99tVChXfYs/view?usp=sharing)")
         with middle_column:
             st.empty()
         with right_column:
@@ -2679,7 +2679,7 @@ elif choose == "Gallery":
             #st.write("...and now add `?analytics=on` to the URL to see the analytics dashboard 👀")
 
 elif choose == "Resume & CV":   
-    resume_url = "https://drive.google.com/file/d/13CHoDfb-mYr9F8YSA4ZDV3tZPpNF6eck/view?usp=sharing"
+    resume_url = "https://drive.google.com/file/d/1n4TQxDkn98Tu5i2--aNKbK-JvP7xGcDe/view?usp=sharing"
     cv_url = "https://drive.google.com/file/d/1-aubNVEKkgmHdeCtlp_O1M99tVChXfYs/view?usp=sharing"
     st.header("Resume & CV")
     st.write("*In case your current browser cannot display the PDF documents, do refer to either the hyperlinks below or the 'About Me' section to access the relevant files!*")
