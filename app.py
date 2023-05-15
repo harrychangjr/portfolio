@@ -401,7 +401,7 @@ if choose == "About Me":
             st.write("🏋🏻 In addition, I like to exercise in the gym, run, write, play video games and... enjoy eating good food in my free time!")
             st.write("👨🏼‍💻 Academic interests: Data Visualization, Market Basket Analysis, Recommendation Systems, Natural Language Processing")
             st.write("💭 Ideal Career Prospects: Data Analyst, Data Scientist, Data Engineer, Business Intelligence Analyst, Product Manager")
-            st.write("📄 [Resume (1 page)](https://drive.google.com/file/d/1n4TQxDkn98Tu5i2--aNKbK-JvP7xGcDe/view?usp=sharing) | [CV (2 pages)](https://drive.google.com/file/d/1-aubNVEKkgmHdeCtlp_O1M99tVChXfYs/view?usp=sharing)")
+            st.write("📄 [Resume (1 page)](https://drive.google.com/file/d/1n4TQxDkn98Tu5i2--aNKbK-JvP7xGcDe/view?usp=sharing) | [CV (2 pages)](https://drive.google.com/file/d/1RWx-vx0qHazc_Y4qFn7wL8p-iueG9o95/view?usp=share_link)")
         with middle_column:
             st.empty()
         with right_column:
@@ -919,7 +919,7 @@ elif choose == "Projects":
             - Built content-based recommendation system using cosine similarity to recommend similar movies based on input title
             """)
             #st.write("[Github Repo](https://github.com/harrychangjr/biopics) | [RPubs](https://rpubs.com/harrychangjr/biopics)")
-            mention(label="Github Repo", icon="github", url="https://github.com/harrychangjr/biopics)",)
+            mention(label="Github Repo", icon="github", url="https://github.com/harrychangjr/biopics",)
         with image_column:
             st.image(images_projects[4])
     with st.container():
@@ -933,7 +933,7 @@ elif choose == "Projects":
             - Provided optional recommendations to further optimise performance e.g scraping additional data, using deep learning methods
             """)
             #st.write("[Github Repo](https://github.com/harrychangjr/dsa4212) | [Report](https://github.com/harrychangjr/dsa4212/blob/main/DSA4212%20Assignment%202%20Group%2039%20Report.pdf)")
-            mention(label="Github Repo", icon="github", url="https://github.com/harrychangjr/dsa4212)",)
+            mention(label="Github Repo", icon="github", url="https://github.com/harrychangjr/dsa4212",)
         with image_column:
             st.image(images_projects[5])
     with st.container():
@@ -2743,7 +2743,7 @@ elif choose == "Gallery":
 
 elif choose == "Resume & CV":   
     resume_url = "https://drive.google.com/file/d/1n4TQxDkn98Tu5i2--aNKbK-JvP7xGcDe/view?usp=sharing"
-    cv_url = "https://drive.google.com/file/d/1-aubNVEKkgmHdeCtlp_O1M99tVChXfYs/view?usp=sharing"
+    cv_url = "https://drive.google.com/file/d/1RWx-vx0qHazc_Y4qFn7wL8p-iueG9o95/view?usp=share_link"
     st.header("Resume & CV")
     st.write("*In case your current browser cannot display the PDF documents, do refer to either the hyperlinks below or the 'About Me' section to access the relevant files!*")
     with st.container():
