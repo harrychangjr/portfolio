@@ -1104,10 +1104,11 @@ elif choose == "Volunteering":
             st.subheader("NUS Product Club")
             st.write("*April 2023 to April 2024*")
             st.markdown("""
-            Co-founder & Publicity Head
+            Co-founder & Co-President
 
             - Spearheaded design of club's logo as inaugural Publicity Head
-            - Drafted publicity posters on Canva to drive publicity and outreach efforts for recruitment and club events
+            - Drafted publicity posters on Canva to drive publicity and outreach efforts for recruitment
+            - Oversaw committee of 20 members in carrying out operations, partnerships efforts and curriculum workshops for NUS students
             """)
         with mid:
             st.empty()
