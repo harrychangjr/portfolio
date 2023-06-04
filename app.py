@@ -841,7 +841,7 @@ elif choose == "Projects":
         text_column, image_column = st.columns((3,1))
         with text_column:
             st.subheader("Enhanced TikTok Analytics Dashboard")
-            st.write("*Self-initiated project")
+            st.write("Self-initiated project")
             st.markdown("""
             - Provided options to plot Tiktok user overview data using 3D lineplots, 3D scatterplots, 3D surfaceplots and radar chart from Plotly
             - Filtered number of hashtags per Tiktok video to investigate relationship between hashtag count and other variables: views, comments, likes and shares
