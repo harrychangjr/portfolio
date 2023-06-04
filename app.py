@@ -841,7 +841,7 @@ elif choose == "Projects":
         text_column, image_column = st.columns((3,1))
         with text_column:
             st.subheader("Enhanced TikTok Analytics Dashboard")
-            st.write("*Self-initiated project based on Marketing Internship stint at [Quest](https://quest-inc.co)*")
+            st.write("*Self-initiated project")
             st.markdown("""
             - Provided options to plot Tiktok user overview data using 3D lineplots, 3D scatterplots, 3D surfaceplots and radar chart from Plotly
             - Filtered number of hashtags per Tiktok video to investigate relationship between hashtag count and other variables: views, comments, likes and shares
@@ -1132,7 +1132,7 @@ elif choose == "Volunteering":
             st.subheader("NUS Statistics and Data Science Society")
             st.write("*May 2021 to November 2022*")
             st.markdown("""
-            - President (2022) - Increased recruitment of student club by 50% while overseeing execution of career-related events and technical workshops organised by 70 members
+            - President (2022) - Increased recruitment of student club by 50% while overseeing execution of career-related events and technical workshops organised by 56 members
             - Marketing Director (2021-22) - Led 10 students to secure over $19,000 worth of sponsorships for 850 participants in annual Data Analytics Competition and increase society's merchandise sales revenue by over 50% compared to previous year
             """)
         with mid:
@@ -1286,7 +1286,7 @@ elif choose == "Blog":
         st.markdown("""
         I must admit - I hated reading books as a kid, and in turn, I disliked writing essays or expressing my thoughts as well. However, throughout my time in university, I have gradually picked up the essence of writing, to the extent of making use of it as a destressor from my technical modules.
 
-        Although my writing skills were novice at best when I was a freshman, I eventually got better at it (in my opinion), even to the extent of writing content articles for one of my experiences as a Marketing Intern at a tech start-up. It is indeed an asset to pick up as many skills as possible when still young, as you never know when you may need to utilise a particular skill whenever necessary.
+        Although my writing skills were novice at best when I was a freshman, I eventually got better at it (in my opinion), even to the extent of writing content articles as a regular hobby! It is indeed an asset to pick up as many skills as possible when still young, as you never know when you may need to utilise a particular skill whenever necessary.
 
         In this section, you will be able to read some of my finest write-ups from my university experiences, based on topics varying from science to politics. For those looking forward to a good read, enjoy!
         """)
