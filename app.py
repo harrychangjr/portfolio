@@ -233,7 +233,7 @@ for i in range(1, num_images + 1):
     image_dict[image_key] = Image.open(image_path)
 #2023
 image_dict = {}
-num_images = 13
+num_images = 20
 for i in range(1, num_images + 1):
     image_key = f"img_2023_{i}"
     image_path = f"gallery/2023_{i}.jpg"
@@ -402,7 +402,7 @@ if choose == "About Me":
             st.write("🏋🏻 In addition, I like to exercise in the gym, run, write, play video games and... enjoy eating good food in my free time!")
             st.write("👨🏼‍💻 Academic interests: Data Visualization, Market Basket Analysis, Recommendation Systems, Natural Language Processing")
             st.write("💭 Ideal Career Prospects: Data Analyst, Data Scientist, Data Engineer, Business Intelligence Analyst, Product Manager")
-            st.write("📄 [Resume (1 page)](https://drive.google.com/file/d/1n4TQxDkn98Tu5i2--aNKbK-JvP7xGcDe/view?usp=sharing) | [CV (2 pages)](https://drive.google.com/file/d/1RWx-vx0qHazc_Y4qFn7wL8p-iueG9o95/view?usp=share_link)")
+            st.write("📄 [Resume (1 page)](https://drive.google.com/file/d/1n4TQxDkn98Tu5i2--aNKbK-JvP7xGcDe/view?usp=drive_link) | [CV (2 pages)](https://drive.google.com/file/d/1RWx-vx0qHazc_Y4qFn7wL8p-iueG9o95/view?usp=share_link)")
         with middle_column:
             st.empty()
         with right_column:
@@ -450,20 +450,20 @@ elif choose == "Experience":
             `Domo` `Git` `Google BigQuery` `GCP` `PostgreSQL` `Python` `SQL` 
             """)
 
-    with st.container():
-        image_column, text_column = st.columns((1,5))
-        with image_column:
-            st.image(img_questlogo)
-        with text_column:
-            st.subheader("Marketing Intern, [Quest](https://quest-inc.co)")
-            st.write("*April to June 2023 (Ongoing)*")
-            st.markdown("""
-            - Launched marketing ad campaigns using Google Ads to target businesses to visit company's landing page
-            - Drafted content articles on Wordpress for search engine optimisation (SEO)
-            - Performed weekly reporting of user acquisition metrics from various marketing channels, including [TikTok](https://www.tiktok.com/@questhireahero?lang=en) and [Instagram](https://www.instagram.com/questhireahero/)
+    #with st.container():
+        #image_column, text_column = st.columns((1,5))
+        #with image_column:
+            #st.image(img_questlogo)
+        #with text_column:
+            #st.subheader("Marketing Intern, [Quest](https://quest-inc.co)")
+            #st.write("*April to June 2023 (Ongoing)*")
+            #st.markdown("""
+            #- Launched marketing ad campaigns using Google Ads to target businesses to visit company's landing page
+            #- Drafted content articles on Wordpress for search engine optimisation (SEO)
+            #- Performed weekly reporting of user acquisition metrics from various marketing channels, including [TikTok](https://www.tiktok.com/@questhireahero?lang=en) and [Instagram](https://www.instagram.com/questhireahero/)
 
-            `Canva` `Google Ads` `Google Analytics` `Wordpress` `SEM` `SEO`
-            """)
+            #`Canva` `Google Ads` `Google Analytics` `Wordpress` `SEM` `SEO`
+            #""")
     with st.container():
         image_column, text_column = st.columns((1,5))
         with image_column:
@@ -1250,7 +1250,7 @@ elif choose == "Volunteering":
 elif choose == "Blog":
     st.header("Blog")
     selected_options = ["Overview", "Article & Essay List",
-    "“It’s not pink, it’s salmon” – Why I returned to my previous start-up for FREE", 
+    #"“It’s not pink, it’s salmon” – Why I returned to my previous start-up for FREE", 
                         "Mayans MC – Season 5 Detailed Preview",
                         "Finding success as an outlier (Extracted Using Wordpress REST API)",
                         "Finding success as an outlier (Formatted Version)", 
@@ -1281,14 +1281,14 @@ elif choose == "Blog":
 
     elif selected == "Article & Essay List":
         st.subheader("Article & Essay List")
-        with st.container():
-            text_column, image_column = st.columns((3,1))
-            with image_column:
-                st.image(img_qb)
-            with text_column:
-                st.subheader("“It’s not pink, it’s salmon” – Why I returned to my previous start-up for FREE")
-                st.write("*May 21, 2023* | [*Article*](https://antcabbage.wordpress.com/2023/05/21/its-not-pink-its-salmon-why-i-chose-to-return-to-my-previous-start-up-for-free/)")
-                st.write("A personal reflection explaining why I returned to my former start-up to diversify my experiences")
+        #with st.container():
+            #text_column, image_column = st.columns((3,1))
+            #with image_column:
+                #st.image(img_qb)
+            #with text_column:
+                #st.subheader("“It’s not pink, it’s salmon” – Why I returned to my previous start-up for FREE")
+                #st.write("*May 21, 2023* | [*Article*](https://antcabbage.wordpress.com/2023/05/21/its-not-pink-its-salmon-why-i-chose-to-return-to-my-previous-start-up-for-free/)")
+                #st.write("A personal reflection explaining why I returned to my former start-up to diversify my experiences")
         with st.container():
             text_column, image_column = st.columns((3,1))
             with image_column:
@@ -1390,59 +1390,59 @@ elif choose == "Blog":
                 st.write("*September 30, 2020* | [*Article*](https://github.com/harrychangjr/sp1541-nlp/blob/main/Originals/SP1541%20NA1.pdf)")
                 st.write("*Despite having a vaccine that is readily accessible, measles cases and deaths are still surging worldwide, especially in recent years. Why is this so and are there any long-term solutions to resolve this?*")
                 st.write("Science news article submitted for the module SP1541: Exploring Science Communication through Popular Science in Academic Year 2020/21 Semester 1")
-    elif selected == "“It’s not pink, it’s salmon” – Why I returned to my previous start-up for FREE":
-        with st.echo(code_location="below"):
-            import streamlit as st
-            import requests
-            from bs4 import BeautifulSoup
+    #elif selected == "“It’s not pink, it’s salmon” – Why I returned to my previous start-up for FREE":
+        #with st.echo(code_location="below"):
+            #import streamlit as st
+            #import requests
+            #from bs4 import BeautifulSoup
 
-            def arrange_images_side_by_side(html_content):
-                soup = BeautifulSoup(html_content, "html.parser")
-                images = soup.find_all("img")
+            #def arrange_images_side_by_side(html_content):
+                #soup = BeautifulSoup(html_content, "html.parser")
+                #images = soup.find_all("img")
 
-                i = 0
-                while i < len(images) - 1:
-                    current_image = images[i]
-                    next_image = images[i + 1]
+                #i = 0
+                #while i < len(images) - 1:
+                    #current_image = images[i]
+                    #next_image = images[i + 1]
 
-                    current_figure = current_image.find_parent("figure")
-                    next_figure = next_image.find_parent("figure")
+                    #current_figure = current_image.find_parent("figure")
+                    #next_figure = next_image.find_parent("figure")
 
                     # Check if the next image is an immediate sibling
-                    if current_figure and next_figure and current_figure.find_next_sibling() == next_figure:
-                        container = soup.new_tag("div", style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; align-items: center;")
-                        current_figure.wrap(container)
-                        next_figure.wrap(container)
+                    #if current_figure and next_figure and current_figure.find_next_sibling() == next_figure:
+                        #container = soup.new_tag("div", style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; align-items: center;")
+                        #current_figure.wrap(container)
+                        #next_figure.wrap(container)
 
                         # Set the same height for both images and add a little margin for better centering
-                        current_image['style'] = "height: 400px; margin: auto;"
-                        next_image['style'] = "height: 400px; margin: auto;"
+                        #current_image['style'] = "height: 400px; margin: auto;"
+                        #next_image['style'] = "height: 400px; margin: auto;"
 
                         # Update the images list
-                        images = soup.find_all("img")
-                    i += 1
+                        #images = soup.find_all("img")
+                    #i += 1
 
-                return str(soup)
+                #return str(soup)
 
-            def get_post_by_id(url, post_id):
-                site_url = url.replace("https://", "").replace("http://", "")
-                response = requests.get(f"https://public-api.wordpress.com/wp/v2/sites/{site_url}/posts/{post_id}?_embed")
-                response.raise_for_status()
-                return response.json()
+            #def get_post_by_id(url, post_id):
+                #site_url = url.replace("https://", "").replace("http://", "")
+                #response = requests.get(f"https://public-api.wordpress.com/wp/v2/sites/{site_url}/posts/{post_id}?_embed")
+                #response.raise_for_status()
+                #return response.json()
 
-            url = "https://antcabbage.wordpress.com"
-            post_id = 110
-            post = get_post_by_id(url, post_id)
+            #url = "https://antcabbage.wordpress.com"
+            #post_id = 110
+            #post = get_post_by_id(url, post_id)
 
-            post_title = post["title"]["rendered"]
-            post_content = post["content"]["rendered"]
-            soup = BeautifulSoup(post_content, "html.parser")
-            clean_post_content = soup.get_text()
-            st.subheader(post_title)
-            st.write("May 21, 2023 | [Article](https://antcabbage.wordpress.com/2023/05/21/its-not-pink-its-salmon-why-i-chose-to-return-to-my-previous-start-up-for-free/)")
-            st.write("*The content of this article was extracted using `requests` and `BeautifulSoup`, along with the Worpress REST API. Thus, there may be some formatting and alignment issues, especially for the images and/or video featured. A code block will also be shown at the bottom of this article to demonstrate how the REST API was used with the respective libraries to extract the content from the Wordpress site*")
-            modified_content = arrange_images_side_by_side(post_content)
-            st.markdown(modified_content, unsafe_allow_html=True)
+            #post_title = post["title"]["rendered"]
+            #post_content = post["content"]["rendered"]
+            #soup = BeautifulSoup(post_content, "html.parser")
+            #clean_post_content = soup.get_text()
+            #st.subheader(post_title)
+            #st.write("May 21, 2023 | [Article](https://antcabbage.wordpress.com/2023/05/21/its-not-pink-its-salmon-why-i-chose-to-return-to-my-previous-start-up-for-free/)")
+            #st.write("*The content of this article was extracted using `requests` and `BeautifulSoup`, along with the Worpress REST API. Thus, there may be some formatting and alignment issues, especially for the images and/or video featured. A code block will also be shown at the bottom of this article to demonstrate how the REST API was used with the respective libraries to extract the content from the Wordpress site*")
+            #modified_content = arrange_images_side_by_side(post_content)
+            #st.markdown(modified_content, unsafe_allow_html=True)
     elif selected == "Mayans MC – Season 5 Detailed Preview":
         with st.echo(code_location="below"):
             import streamlit as st
@@ -2755,7 +2755,7 @@ elif choose == "Gallery":
         st.subheader("2023")
         st.write("*Success - being content at the present moment*")
         # Load the images
-        num_images = 13
+        num_images = 20
         images_2023 = [Image.open(f"gallery/2023_{i}.jpg") for i in range(1, num_images + 1)]
 
         # Display the images in a grid
@@ -2806,8 +2806,8 @@ elif choose == "Gallery":
             #st.write("...and now add `?analytics=on` to the URL to see the analytics dashboard 👀")
 
 elif choose == "Resume & CV":   
-    resume_url = "https://drive.google.com/file/d/1n4TQxDkn98Tu5i2--aNKbK-JvP7xGcDe/view?usp=sharing"
-    cv_url = "https://drive.google.com/file/d/1RWx-vx0qHazc_Y4qFn7wL8p-iueG9o95/view?usp=share_link"
+    resume_url = "https://drive.google.com/file/d/1n4TQxDkn98Tu5i2--aNKbK-JvP7xGcDe/view?usp=drive_link"
+    cv_url = "https://drive.google.com/file/d/1RWx-vx0qHazc_Y4qFn7wL8p-iueG9o95/view?usp=drive_link"
     st.header("Resume & CV")
     st.write("*In case your current browser cannot display the PDF documents, do refer to either the hyperlinks below or the 'About Me' section to access the relevant files!*")
     with st.container():
