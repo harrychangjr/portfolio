@@ -90,6 +90,7 @@ img_utown = Image.open("images/utown.JPG")
 img_quest = Image.open("images/quest.jpg")
 img_ifg = Image.open("images/ifg.jpg")
 #Assets for competitions
+img_lifehack2 = Image.open("images/lifehack2.jpg")
 img_lifehack = Image.open("images/lifehack.jpg")
 img_he4d = Image.open("images/he4d.jpg")
 img_ecc = Image.open("images/ecc.jpg")
@@ -1043,6 +1044,7 @@ elif choose == "Competitions":
         image_column, text_column = st.columns((1,3))
         with image_column:
             st.image(img_lifehack2)
+            #st.empty()
         with text_column:
             st.subheader("[NUS LifeHack 2023](https://lifehack-website.web.app//) - Hosted by [NUS Students' Computing Club](https://nuscomputing.com/)")
             st.write("Awarded Top 15 Finalist")
@@ -1114,7 +1116,7 @@ elif choose == "Volunteering":
             st.subheader("NUS Product Club")
             st.write("*April 2023 to April 2024*")
             st.markdown("""
-            Co-founder & Co-President
+            Co-founder & President
 
             - Spearheaded design of club's logo as inaugural Publicity Head
             - Drafted publicity posters on Canva to drive publicity and outreach efforts for recruitment
