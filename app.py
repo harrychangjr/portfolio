@@ -113,6 +113,7 @@ img_iasg = Image.open("images/iasg.jpg")
 img_sshsph = Image.open("images/sshsph.jpg")
 img_yll = Image.open("images/yll.jpg")
 img_saf = Image.open("images/saf.jpg")
+img_bitmetrix = Image.open("images/bitmetrix.jpg")
 # Assets for projects
 image_names_projects = ["ecom", "chatgpt", "videogames", "health", 
                          "biopics", "anime", "word2vec", "cellphone", 
@@ -442,7 +443,7 @@ elif choose == "Experience":
             st.image(img_sephora)
         with text_column:
             st.subheader("Product Data Analyst Intern, [Sephora](https://sephora.sg)")
-            st.write("*June to December 2023 (Upcoming)*")
+            st.write("*June to December 2023 (Ongoing)*")
             st.markdown("""
             - Built, documented and hosted SQL queries and processes to enable reproducible and effective pipelines, analysis and dashboards using BigQuery
             - Utilised Domo to create dataflows and visualizations that provide quick insights into product health and performance of e-commerce features (web and mobile)
@@ -451,20 +452,19 @@ elif choose == "Experience":
             `Domo` `Git` `Google BigQuery` `GCP` `PostgreSQL` `Python` `SQL` 
             """)
 
-    #with st.container():
-        #image_column, text_column = st.columns((1,5))
-        #with image_column:
-            #st.image(img_questlogo)
-        #with text_column:
-            #st.subheader("Marketing Intern, [Quest](https://quest-inc.co)")
-            #st.write("*April to June 2023 (Ongoing)*")
-            #st.markdown("""
-            #- Launched marketing ad campaigns using Google Ads to target businesses to visit company's landing page
-            #- Drafted content articles on Wordpress for search engine optimisation (SEO)
-            #- Performed weekly reporting of user acquisition metrics from various marketing channels, including [TikTok](https://www.tiktok.com/@questhireahero?lang=en) and [Instagram](https://www.instagram.com/questhireahero/)
+    with st.container():
+        image_column, text_column = st.columns((1,5))
+        with image_column:
+            #st.image(img_bitmetrix)
+        with text_column:
+            st.subheader("NLP Intern, [Bitmetrix](https://bitmetrix.ai)")
+            st.write("*June to August 2023 (Ongoing)*")
+            st.markdown("""
+            - Built social media scraper using snscrape to scrape Tweets from popular blockchain websites based on rankings from CoinGecko and CoinMarketCap
+            - Constructed webscraper using Streamlit and BeautifulSoup4 to collate news articles from various sources (e.g https://blockchain.news) into Pandas dataframe for future analysis using NLP
 
-            #`Canva` `Google Ads` `Google Analytics` `Wordpress` `SEM` `SEO`
-            #""")
+            `Python` `BeautifulSoup4` `snscrape` `Streamlit` `Pandas`
+            """)
     with st.container():
         image_column, text_column = st.columns((1,5))
         with image_column:
