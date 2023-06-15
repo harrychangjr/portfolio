@@ -117,7 +117,8 @@ img_bitmetrix = Image.open("images/bitmetrix.jpg")
 # Assets for projects
 image_names_projects = ["ecom", "chatgpt", "videogames", "health", 
                          "biopics", "anime", "word2vec", "cellphone", 
-                         "spotify", "map", "gephi", "fob", "get", "ttdb"]
+                         "spotify", "map", "gephi", "fob", "get", "ttdb",
+                         "blockchain"]
 images_projects = [Image.open(f"images/{name}.{'jpg' if name not in ('map', 'gephi', 'health') else 'png'}") for name in image_names_projects]
 # Assets for volunteering
 image_names_vol = ["sdslogo", "sportslogo", "gdsclogo", "csclogo", 
@@ -461,7 +462,7 @@ elif choose == "Experience":
             st.write("*June to August 2023 (Ongoing)*")
             st.markdown("""
             - Built social media scraper using snscrape to scrape Tweets from popular blockchain websites based on rankings from CoinGecko and CoinMarketCap
-            - Constructed webscraper using Streamlit and BeautifulSoup4 to collate news articles from various sources (e.g https://blockchain.news) into Pandas dataframe for future analysis using NLP
+            - Constructed webscraper using Streamlit and BeautifulSoup4 to collate news articles from various sources (e.g https://blockchain.news) into Pandas dataframe for future analysis using natural language processing methods
 
             `Python` `BeautifulSoup4` `snscrape` `Streamlit` `Pandas`
             """)
@@ -837,6 +838,19 @@ elif choose == "Projects":
     # Create section for Projects
     #st.write("---")
     st.header("Projects")
+    with st.container():
+        text_column, image_column = st.columns((3,1))
+        with text_column:
+            st.subheader("Blockchain Social Media Webscraper")
+            st.write("*Project for US-based stealth startup, Bitmetrix.ai (in progress)*")
+            st.markdown("""
+            - Utilised snscrape to scrape tweets from top blockchain websites such as CoinGecko and CoinMarketCap
+            - Built webscraper using BeautifulSoup4 to scrape content from fintech news websites such as https://blockchain.news
+            """)
+            # st.write("[Github Repo](https://github.com/harrychangjr/sales-prediction)")
+            mention(label="Github Repo", icon="github", url="https://github.com/harrychangjr/blockchain-webscraping",)
+        with image_column:
+            st.image(images_projects[14])
     with st.container():
         text_column, image_column = st.columns((3,1))
         with text_column:
