@@ -455,7 +455,7 @@ elif choose == "Experience":
     with st.container():
         image_column, text_column = st.columns((1,5))
         with image_column:
-            #st.image(img_bitmetrix)
+            st.image(img_bitmetrix)
         with text_column:
             st.subheader("NLP Intern, [Bitmetrix](https://bitmetrix.ai)")
             st.write("*June to August 2023 (Ongoing)*")
