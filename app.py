@@ -450,7 +450,7 @@ elif choose == "Experience":
             - Utilised Domo to create dataflows and visualizations that provide quick insights into product health and performance of e-commerce features (web and mobile)
             - Implemented A/B testing to measure potency of new e-commerce features before reporting results
             
-            `Domo` `Git` `Google BigQuery` `GCP` `PostgreSQL` `Python` `SQL` 
+            `Domo` `Git` `Google BigQuery` `GCP` `PostgreSQL` `Python` `SQL` `Jira` `Confluence`
             """)
 
     with st.container():
@@ -572,7 +572,7 @@ elif choose == "Technical Skills":
     txt3("Design and Front-end Development", "`Canva`, `Figma`, `HTML`, `CSS`, `Streamlit`, `Wordpress`")
     txt3("Data Science Techniques", "`Regression`, `Clustering`, `Association Rules Mining`, `Random Forest`, `Decison Trees`, `Principal Components Analysis`, `Text Classification`, `Sentiment Analysis`, `Matrix Factorisation`, `Collaborative Filtering`")
     txt3("Machine Learning Frameworks", "`Numpy`, `Pandas`, `Scikit-Learn`, `TensorFlow`, `Keras`, `JAX`")
-    txt3("Task Management Tools", "`Asana`, `Notion`, `ClickUp`, `Slack`")
+    txt3("Task Management Tools", "`Asana`, `Notion`, `ClickUp`, `Slack`, `Jira`, `Confluence`")
     txt3("Miscellaneous", "`Google Firebase`, `Microsoft Office`, `Retool`, `Google Ads`")
 
 # Create section for Education
