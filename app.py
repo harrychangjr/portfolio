@@ -87,9 +87,10 @@ def pdf_link(pdf_url, link_text="Click here to view PDF"):
 #lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
 # Assets for about me
 img_utown = Image.open("images/utown.JPG")
-img_quest = Image.open("images/quest.jpg")
+img_lh = Image.open("images/lh.jpg")
 img_ifg = Image.open("images/ifg.jpg")
 #Assets for competitions
+img_lit = Image.open("images/legalease.jpg")
 img_lifehack2 = Image.open("images/lifehack2.jpg")
 img_lifehack = Image.open("images/lifehack.jpg")
 img_he4d = Image.open("images/he4d.jpg")
@@ -106,9 +107,7 @@ img_gmss = Image.open("images/gmss.jpg")
 img_sjij = Image.open("images/sjij.jpg")
 img_dsa = Image.open("images/dsa.jpg")
 # Assets for experiences
-img_questlogo = Image.open("images/questlogo.jpg")
 img_scor = Image.open("images/scor.jpg")
-img_sephora = Image.open("images/sephora.jpg")
 img_iasg = Image.open("images/iasg.jpg")
 img_sshsph = Image.open("images/sshsph.jpg")
 img_yll = Image.open("images/yll.jpg")
@@ -229,14 +228,14 @@ for i in range(1, num_images + 1):
     image_dict[image_key] = Image.open(image_path)
 #2022
 image_dict = {}
-num_images = 34
+num_images = 19
 for i in range(1, num_images + 1):
     image_key = f"img_2022_{i}"
     image_path = f"gallery/2022_{i}.jpg"
     image_dict[image_key] = Image.open(image_path)
 #2023
 image_dict = {}
-num_images = 20
+num_images = 11
 for i in range(1, num_images + 1):
     image_key = f"img_2023_{i}"
     image_path = f"gallery/2023_{i}.jpg"
@@ -338,13 +337,13 @@ with st.sidebar:
         with l:
             st.empty()
         with m:
-            st.image(img_quest, width=175)
+            st.image(img_lh, width=175)
         with r:
             st.empty()
     
     choose = option_menu(
                         "Harry Chang", 
-                        ["About Me", "Site Overview", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Volunteering", "Blog", "Gallery", "Resume & CV", "Testimonials", "Contact"],
+                        ["About Me", "Site Overview", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Volunteering", "Blog", "Gallery", "Resume", "Testimonials", "Contact"],
                          icons=['person fill', 'globe', 'clock history', 'tools', 'book half', 'clipboard', 'trophy fill', 'heart', 'pencil square', 'image', 'paperclip', 'star fill', 'envelope'],
                          menu_icon="mortarboard", 
                          default_index=0,
@@ -370,25 +369,6 @@ with st.sidebar:
                 unsafe_allow_html=True)
         with r:
             st.empty()
-# Sidebar: If using streamlit_on_hover_tabs - not mobile friendly
-#with st.sidebar:
-#    choose = on_hover_tabs(tabName=["About Me", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Articles & Essays", "Site Analytics", "Contact"], 
-#                         iconName=['person', 'schedule', 'construction', 'book', 'assignment', 'work', 'edit', 'dashboard', 'mail'], default_choice=0,
-#                         styles = {'navtab': {'background-color':'#5a5a5a',
-#                                                  'color': 'beige',
-#                                                  'font-size': '18px',
-#                                                  'transition': '.2s',
-#                                                  'white-space': 'nowrap',
-#                                                  'text-transform': 'uppercase'},
-#                                       'tabOptionsStyle': {':hover :hover': {'color': 'darkorange',
-#                                                                      'cursor': 'pointer'}},
-#                                       'iconStyle':{'position':'fixed',
-#                                                    'left':'7.5px',
-#                                                    'text-align': 'left'},
-#                                       'tabStyle' : {'list-style-type': 'none',
-#                                                     'margin-bottom': '30px',
-#                                                     'padding-left': '30px'}},
-#                             key="1")
 
 st.write('<style>div.block-container{padding-top:0rem;}</style>', unsafe_allow_html=True)
 st.title("Harry Chang")
@@ -405,7 +385,7 @@ if choose == "About Me":
             st.write("🏋🏻 In addition, I like to exercise in the gym, run, write, play video games and... enjoy eating good food in my free time!")
             st.write("👨🏼‍💻 Academic interests: Data Visualization, Market Basket Analysis, Recommendation Systems, Natural Language Processing")
             st.write("💭 Ideal Career Prospects: Data Analyst, Data Scientist, Data Engineer, Business Intelligence Analyst, Product Manager")
-            st.write("📄 [Resume (1 page)](https://drive.google.com/file/d/1n4TQxDkn98Tu5i2--aNKbK-JvP7xGcDe/view?usp=drive_link) | [CV (2 pages)](https://drive.google.com/file/d/1RWx-vx0qHazc_Y4qFn7wL8p-iueG9o95/view?usp=share_link)")
+            st.write("📄 [Resume (1 page)](https://drive.google.com/file/d/1n4TQxDkn98Tu5i2--aNKbK-JvP7xGcDe/view?usp=drive_link)")
         with middle_column:
             st.empty()
         with right_column:
@@ -441,21 +421,6 @@ elif choose == "Experience":
     with st.container():
         image_column, text_column = st.columns((1,5))
         with image_column:
-            st.image(img_sephora)
-        with text_column:
-            st.subheader("Product Data Analyst Intern, [Sephora](https://sephora.sg)")
-            st.write("*June to December 2023 (Ongoing)*")
-            st.markdown("""
-            - Built, documented and hosted SQL queries and processes to enable reproducible and effective pipelines, analysis and dashboards using BigQuery
-            - Utilised Domo to create dataflows and visualizations that provide quick insights into product health and performance of e-commerce features (web and mobile)
-            - Implemented A/B testing to measure potency of new e-commerce features before reporting results
-            
-            `Domo` `Git` `Google BigQuery` `GCP` `PostgreSQL` `Python` `SQL` `Jira` `Confluence`
-            """)
-
-    with st.container():
-        image_column, text_column = st.columns((1,5))
-        with image_column:
             st.image(img_bitmetrix)
         with text_column:
             st.subheader("NLP Intern, [Bitmetrix](https://bitmetrix.ai)")
@@ -479,21 +444,6 @@ elif choose == "Experience":
             - Trained machine learning models (logistic regression, random forest) to predict insurance claims, with an average accuracy of 80% for each model
 
             `Excel` `Python` `R` `xAct` `VBA`
-            """)
-            #st.write("[Testimonial](https://drive.google.com/file/d/1seUP5OcXV5irA1Y1qt0cKnd7uQnLJLzw/view?usp=share_link)")
-    with st.container():
-        image_column, text_column = st.columns((1,5))
-        with image_column:
-            st.image(img_questlogo)
-        with text_column:
-            st.subheader("Data Analytics Intern, [Quest](https://quest-inc.co)")
-            st.write("*February to May 2022*")
-            st.markdown("""
-            - Conducted cohort analysis to optimise user acquisition and retention rates
-            - Collected, analysed and interpreted trends within user data to improve company’s growth and marketing strategies
-            - Built visualizations and dashboards using RStudio and Tableau to report monthly key metrics of company’s mobile application
-            
-            `Asana` `ClickUp` `Cloud Firestore` `Excel` `Figma` `Firebase` `GCP` `ggplot2` `Google Analytics` `Google BigQuery` `NoSQL` `Python` `R` `Retool` `Slack` `SQL` `Tableau`
             """)
     with st.container():
         image_column, text_column = st.columns((1,5))
@@ -521,7 +471,6 @@ elif choose == "Experience":
 
             `Excel` `ggplot2` `Python` `pandas` `R`
             """)
-            #st.write("[Testimonial](https://drive.google.com/file/d/11qFI-9TMfjOk1OxuyQ9ho9A7D6KuIsXp/view?usp=sharing)")
     with st.container():
         image_column, text_column = st.columns((1,5))
         with image_column:
@@ -548,7 +497,6 @@ elif choose == "Experience":
             
             `Excel` `GeBiz` `GIS` `Outlook` `PowerPoint` `Word`
             """)
-            #st.write("[Testimonial](https://drive.google.com/file/d/1O6Yu0P65dU8LCSDuXkf9BvlQJoz_5mRW/view?usp=sharing)")
     st.markdown('''
     <style>
     [data-testid="stMarkdownContainer"] ul{
@@ -1057,6 +1005,17 @@ elif choose == "Competitions":
     with st.container():
         image_column, text_column = st.columns((1,3))
         with image_column:
+            st.image(img_lit)
+            #st.empty()
+        with text_column:
+            st.subheader("[SMU-LIT Hackathon 2023](https://www.smulit.org/hackathon-2023/) - Hosted by [SMU Legal-in-Tech Club](https://smulit.org)")
+            st.write("Awarded Top 15 Finalist")
+            st.write("Built LegalEase with OpenAI - a Streamlit-based web application empowering lawyers in hybrid working environments with optimal task scheduling.")
+            #st.write("[Devpost](https://devpost.com/software/quest-busters) | [Github Repo](https://github.com/yuechen2001/LifeHack2022) | [Pitch Deck](https://www.canva.com/design/DAFGF_nbyZ8/noJnq3IGDdX6nvu7M_2pXQ/view?utm_content=DAFGF_nbyZ8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink) | [Demo Video](https://www.youtube.com/watch?v=su3_Y3yzeh8)")
+            mention(label="Github Repo", icon="github", url="https://github.com/harrychangjr/legalease",)
+    with st.container():
+        image_column, text_column = st.columns((1,3))
+        with image_column:
             st.image(img_lifehack2)
             #st.empty()
         with text_column:
@@ -1416,59 +1375,6 @@ elif choose == "Blog":
                 st.write("*September 30, 2020* | [*Article*](https://github.com/harrychangjr/sp1541-nlp/blob/main/Originals/SP1541%20NA1.pdf)")
                 st.write("*Despite having a vaccine that is readily accessible, measles cases and deaths are still surging worldwide, especially in recent years. Why is this so and are there any long-term solutions to resolve this?*")
                 st.write("Science news article submitted for the module SP1541: Exploring Science Communication through Popular Science in Academic Year 2020/21 Semester 1")
-    #elif selected == "“It’s not pink, it’s salmon” – Why I returned to my previous start-up for FREE":
-        #with st.echo(code_location="below"):
-            #import streamlit as st
-            #import requests
-            #from bs4 import BeautifulSoup
-
-            #def arrange_images_side_by_side(html_content):
-                #soup = BeautifulSoup(html_content, "html.parser")
-                #images = soup.find_all("img")
-
-                #i = 0
-                #while i < len(images) - 1:
-                    #current_image = images[i]
-                    #next_image = images[i + 1]
-
-                    #current_figure = current_image.find_parent("figure")
-                    #next_figure = next_image.find_parent("figure")
-
-                    # Check if the next image is an immediate sibling
-                    #if current_figure and next_figure and current_figure.find_next_sibling() == next_figure:
-                        #container = soup.new_tag("div", style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; align-items: center;")
-                        #current_figure.wrap(container)
-                        #next_figure.wrap(container)
-
-                        # Set the same height for both images and add a little margin for better centering
-                        #current_image['style'] = "height: 400px; margin: auto;"
-                        #next_image['style'] = "height: 400px; margin: auto;"
-
-                        # Update the images list
-                        #images = soup.find_all("img")
-                    #i += 1
-
-                #return str(soup)
-
-            #def get_post_by_id(url, post_id):
-                #site_url = url.replace("https://", "").replace("http://", "")
-                #response = requests.get(f"https://public-api.wordpress.com/wp/v2/sites/{site_url}/posts/{post_id}?_embed")
-                #response.raise_for_status()
-                #return response.json()
-
-            #url = "https://antcabbage.wordpress.com"
-            #post_id = 110
-            #post = get_post_by_id(url, post_id)
-
-            #post_title = post["title"]["rendered"]
-            #post_content = post["content"]["rendered"]
-            #soup = BeautifulSoup(post_content, "html.parser")
-            #clean_post_content = soup.get_text()
-            #st.subheader(post_title)
-            #st.write("May 21, 2023 | [Article](https://antcabbage.wordpress.com/2023/05/21/its-not-pink-its-salmon-why-i-chose-to-return-to-my-previous-start-up-for-free/)")
-            #st.write("*The content of this article was extracted using `requests` and `BeautifulSoup`, along with the Worpress REST API. Thus, there may be some formatting and alignment issues, especially for the images and/or video featured. A code block will also be shown at the bottom of this article to demonstrate how the REST API was used with the respective libraries to extract the content from the Wordpress site*")
-            #modified_content = arrange_images_side_by_side(post_content)
-            #st.markdown(modified_content, unsafe_allow_html=True)
     elif selected == "Mayans MC – Season 5 Detailed Preview":
         with st.echo(code_location="below"):
             import streamlit as st
@@ -2751,9 +2657,9 @@ elif choose == "Gallery":
 
     elif selected == "2022":
         st.subheader("2022")
-        st.write("*Highlights, lowlights, learnings, help sought, and kudos to everyone!*")
+        st.write("*We are one, but we are many*")
         # Load the images
-        num_images = 34
+        num_images = 19
         images_2022 = [Image.open(f"gallery/2022_{i}.jpg") for i in range(1, num_images + 1)]
 
         # Display the images in a grid
@@ -2781,7 +2687,7 @@ elif choose == "Gallery":
         st.subheader("2023")
         st.write("*Success - being content at the present moment*")
         # Load the images
-        num_images = 20
+        num_images = 11
         images_2023 = [Image.open(f"gallery/2023_{i}.jpg") for i in range(1, num_images + 1)]
 
         # Display the images in a grid
@@ -2831,33 +2737,20 @@ elif choose == "Gallery":
             #st.button("Click me!")
             #st.write("...and now add `?analytics=on` to the URL to see the analytics dashboard 👀")
 
-elif choose == "Resume & CV":   
+elif choose == "Resume":   
     resume_url = "https://drive.google.com/file/d/1n4TQxDkn98Tu5i2--aNKbK-JvP7xGcDe/view?usp=drive_link"
-    cv_url = "https://drive.google.com/file/d/1RWx-vx0qHazc_Y4qFn7wL8p-iueG9o95/view?usp=drive_link"
-    st.header("Resume & CV")
-    st.write("*In case your current browser cannot display the PDF documents, do refer to either the hyperlinks below or the 'About Me' section to access the relevant files!*")
-    with st.container():
-            col1, col2 = st.columns((1,1))
-            with col1:
-                st.markdown(pdf_link(resume_url, "**Resume (1 page)**"), unsafe_allow_html=True)
-                show_pdf("Harry Chang Resume2024.pdf")
-                with open("Harry Chang Resume2024.pdf", "rb") as file:
-                    btn = st.download_button(
-                        label="Download Resume (1 page)",
-                        data=file,
-                        file_name="Harry Chang Resume2024.pdf",
-                        mime="application/pdf"
-                    )
-            with col2:
-                st.markdown(pdf_link(cv_url, "**CV (2 pages)**"), unsafe_allow_html=True)
-                show_pdf("Harry Chang CV2023.pdf")
-                with open("Harry Chang CV2023.pdf", "rb") as file:
-                    btn = st.download_button(
-                        label="Download CV (2 pages)",
-                        data=file,
-                        file_name="Harry Chang CV2023.pdf",
-                        mime="application/pdf"
-                    )
+    st.header("Resume")
+    st.write("*In case your current browser cannot display the PDF documents, do refer to the hyperlink below!*")
+
+    st.markdown(pdf_link(resume_url, "**Resume (1 page)**"), unsafe_allow_html=True)
+    show_pdf("Harry Chang Resume2024.pdf")
+    with open("Harry Chang Resume2024.pdf", "rb") as file:
+        btn = st.download_button(
+            label="Download Resume (1 page)",
+            data=file,
+            file_name="Harry Chang Resume2024.pdf",
+            mime="application/pdf"
+        )
 elif choose == "Testimonials": 
     test_url = "https://drive.google.com/file/d/1ZyTmg_r18sUuuU5JOJBqUb2EP8MnjvJU/view?usp=sharing"  
     st.header("Testimonials")
