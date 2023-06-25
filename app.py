@@ -1092,7 +1092,7 @@ elif choose == "Volunteering":
 
             - Spearheaded design of club's logo
             - Drafted publicity posters on Canva to drive publicity and outreach efforts for recruitment
-            - Oversaw committee of 20 members in carrying out operations, partnerships efforts and curriculum workshops for NUS students
+            - Oversaw committee of 24 members in carrying out operations, partnerships efforts and curriculum workshops for NUS students
             """)
         with mid:
             st.empty()
