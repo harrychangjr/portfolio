@@ -1019,7 +1019,7 @@ elif choose == "Competitions":
             #st.empty()
         with text_column:
             st.subheader("[NUS LifeHack 2023](https://lifehack-website.web.app//) - Hosted by [NUS Students' Computing Club](https://nuscomputing.com/)")
-            st.write("Awarded Top 15 Finalist")
+            st.write("Awarded Top 15 Finalist out of 141 team submissions")
             st.write("Built and integrated PassionPassport with ChatGPT - a Streamlit-based web application that recommends travel locations based on one’s hobbies.")
             #st.write("[Devpost](https://devpost.com/software/quest-busters) | [Github Repo](https://github.com/yuechen2001/LifeHack2022) | [Pitch Deck](https://www.canva.com/design/DAFGF_nbyZ8/noJnq3IGDdX6nvu7M_2pXQ/view?utm_content=DAFGF_nbyZ8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink) | [Demo Video](https://www.youtube.com/watch?v=su3_Y3yzeh8)")
             mention(label="Github Repo", icon="github", url="https://github.com/BrendanCheong/lifehack-2023",)
