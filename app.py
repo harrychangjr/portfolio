@@ -113,6 +113,7 @@ img_sshsph = Image.open("images/sshsph.jpg")
 img_yll = Image.open("images/yll.jpg")
 img_saf = Image.open("images/saf.jpg")
 img_bitmetrix = Image.open("images/bitmetrix.jpg")
+img_groundup = Image.open("images/groundup.jpg")
 # Assets for projects
 image_names_projects = ["ecom", "chatgpt", "videogames", "health", 
                          "biopics", "anime", "word2vec", "cellphone", 
@@ -421,10 +422,25 @@ elif choose == "Experience":
     with st.container():
         image_column, text_column = st.columns((1,5))
         with image_column:
+            st.image(img_groundup)
+        with text_column:
+            st.subheader("Data Science Intern, [Groundup.ai](https://groundup.ai)")
+            st.write("*July to December 2023 (Expected)*")
+            st.markdown("""
+            - Deployed sound sensors using Raspberry Pi technology to acquire real-time noise data from naval vessels and support comprehensive analysis using spectrograms for anomaly detection
+            - Utilised Librosa, Matplotlib and Scikit-Learn to detect anomalies for predictive maintenance of machines using spectrograms and principal component analysis (PCA)
+            - Leveraged AWS CloudFormation and YAML to script automatic configuration of Amazon S3 buckets, leading to significant reduction in manual setup time and minimizing potential for human error
+            - Migrated and integrated mulitple databases from InfluxDB and PostgreSQL to ScyllaDB
+            
+            `Python` `Raspberry Pi` `Jira` `Confluence` `Amazon S3` `EC2` `Librosa` `Docker` `Git` `Scikit-Learn` `MLFlow` `YAML` `InfluxDB` `ScyllaDB` `PostgreSQL` `Matplotlib` `Plotly` `Minio`
+            """)
+    with st.container():
+        image_column, text_column = st.columns((1,5))
+        with image_column:
             st.image(img_bitmetrix)
         with text_column:
-            st.subheader("NLP Intern, [Bitmetrix](https://bitmetrix.ai)")
-            st.write("*June to August 2023 (Ongoing)*")
+            st.subheader("Data Science Intern, [Bitmetrix](https://bitmetrix.ai)")
+            st.write("*June to July 2023*")
             st.markdown("""
             - Built social media scraper using snscrape to scrape Tweets from popular blockchain websites based on rankings from CoinGecko and CoinMarketCap
             - Constructed webscraper using Streamlit and BeautifulSoup4 to collate news articles from various sources (e.g https://blockchain.news) into Pandas dataframe for future analysis using natural language processing methods
@@ -512,12 +528,12 @@ elif choose == "Technical Skills":
     st.header("Technical Skills")
     txt3("Programming Languages","`R`, `Python`, `SQL`, `Java`, `Stata`, `MATLAB`")
     txt3("Academic Interests","`Data Visualization`, `Market Basket Analysis`, `Recommendation Systems`, `Natural Language Processing`")
-    txt3("Data Visualization", "`ggplot2`, `matplotlib`, `seaborn`, `Plotly`, `Folium`, `Gephi`, `GIS`, `Tableau`, `Power BI`, `Google Data Studio`, `Domo`, `Google Analytics`")
-    txt3("Database Systems", "`MySQL`, `PostgreSQL`, `SQLite`, `NoSQL`, `Google BigQuery`, `Cloud Firestore`")
-    txt3("Cloud Platforms", "`Google Cloud Platform`, `Amazon Web Services`, `Heroku`, `Streamlit Cloud`, `Render`, `Hugging Face`")
+    txt3("Data Visualization", "`ggplot2`, `matplotlib`, `seaborn`, `Plotly`, `Librosa`, `Folium`, `Gephi`, `GIS`, `Tableau`, `Power BI`, `Google Data Studio`, `Domo`, `Google Analytics`")
+    txt3("Database Systems", "`MySQL`, `PostgreSQL`, `SQLite`, `NoSQL`, `Google BigQuery`, `Cloud Firestore`, `InfluxDB`, `ScyllaDB`")
+    txt3("Cloud Platforms", "`Google Cloud Platform`, `Amazon Web Services`, `Heroku`, `Streamlit Cloud`, `Render`, `Hugging Face`, `Minio`")
     txt3("Natural Language Processing", "`NLTK`, `Word2Vec`, `TF-IDF`, `TextStat`")
-    txt3("Version Control", "`Git`, `Docker`")
-    txt3("Design and Front-end Development", "`Canva`, `Figma`, `HTML`, `CSS`, `Streamlit`, `Wordpress`")
+    txt3("Version Control", "`Git`, `Docker`, `MLFlow`")
+    txt3("Design and Front-end Development", "`Canva`, `Figma`, `HTML`, `CSS`, `Streamlit`, `Wordpress`, `Webflow`")
     txt3("Data Science Techniques", "`Regression`, `Clustering`, `Association Rules Mining`, `Random Forest`, `Decison Trees`, `Principal Components Analysis`, `Text Classification`, `Sentiment Analysis`, `Matrix Factorisation`, `Collaborative Filtering`")
     txt3("Machine Learning Frameworks", "`Numpy`, `Pandas`, `Scikit-Learn`, `TensorFlow`, `Keras`, `JAX`")
     txt3("Task Management Tools", "`Asana`, `Notion`, `ClickUp`, `Slack`, `Jira`, `Confluence`")
