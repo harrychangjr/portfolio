@@ -107,6 +107,7 @@ img_gmss = Image.open("images/gmss.jpg")
 img_sjij = Image.open("images/sjij.jpg")
 img_dsa = Image.open("images/dsa.jpg")
 # Assets for experiences
+img_quest = Image.open("images/questlogo.jpg")
 img_scor = Image.open("images/scor.jpg")
 img_iasg = Image.open("images/iasg.jpg")
 img_sshsph = Image.open("images/sshsph.jpg")
@@ -114,6 +115,7 @@ img_yll = Image.open("images/yll.jpg")
 img_saf = Image.open("images/saf.jpg")
 img_bitmetrix = Image.open("images/bitmetrix.jpg")
 img_groundup = Image.open("images/groundup.jpg")
+img_hedgedrip = Image.open("images/hedgedrip.jpg")
 # Assets for projects
 image_names_projects = ["ecom", "chatgpt", "videogames", "health", 
                          "biopics", "anime", "word2vec", "cellphone", 
@@ -123,7 +125,7 @@ images_projects = [Image.open(f"images/{name}.{'jpg' if name not in ('map', 'gep
 # Assets for volunteering
 image_names_vol = ["sdslogo", "sportslogo", "gdsclogo", "csclogo", 
                          "nussulogo", "sklogo", "simlogo", "tpjclogo", 
-                         "sjilogo", "nuspc"]
+                         "sjilogo", "nuspc", "hcs", "fintech"]
 images_vol = [Image.open(f"images/{name}.{'jpg' if name not in ('map', 'gephi', 'health') else 'png'}") for name in image_names_vol]
 # Assets for blog
 img_qb = Image.open("images/qb.jpg")
@@ -236,7 +238,7 @@ for i in range(1, num_images + 1):
     image_dict[image_key] = Image.open(image_path)
 #2023
 image_dict = {}
-num_images = 11
+num_images = 22
 for i in range(1, num_images + 1):
     image_key = f"img_2023_{i}"
     image_path = f"gallery/2023_{i}.jpg"
@@ -380,13 +382,13 @@ if choose == "About Me":
         left_column, middle_column, right_column = st.columns((1,0.2,0.5))
         with left_column:
             st.header("About Me")
-            st.subheader("Aspiring Data Analyst/Data Scientist")
+            st.subheader("Aspiring Data Analyst/Product Manager")
             st.write("👋🏻 Hi, I'm Harry! I'm a data science and analytics undergraduate based in Singapore. Having prior relevant experiences in tech, reinsurance and consulting sectors, I am constantly seeking unique internships to broaden my horizons before embarking on my data career upon graduation.")
             st.write("💼 With the COVID-19 pandemic behind us, I believe there is potential for data science to be applied in the retail industry. In response to the increasing demand for data analytics from both online and brick-and-mortar sales, I am thus aiming to enter this industry for my first full-time job.")
             st.write("🏋🏻 In addition, I like to exercise in the gym, run, write, play video games and... enjoy eating good food in my free time!")
             st.write("👨🏼‍💻 Academic interests: Data Visualization, Market Basket Analysis, Recommendation Systems, Natural Language Processing")
             st.write("💭 Ideal Career Prospects: Data Analyst, Data Scientist, Data Engineer, Business Intelligence Analyst, Product Manager")
-            st.write("📄 [Resume (1 page)](https://drive.google.com/file/d/1n4TQxDkn98Tu5i2--aNKbK-JvP7xGcDe/view?usp=drive_link)")
+            st.write("📄 [Resume (1 page)](https://drive.google.com/file/d/164EEVH6BmvC89q2M4WsBNF1JyddDAbNY/view?usp=sharing)")
         with middle_column:
             st.empty()
         with right_column:
@@ -422,6 +424,16 @@ elif choose == "Experience":
     with st.container():
         image_column, text_column = st.columns((1,5))
         with image_column:
+            st.image(img_hedgedrip)
+        with text_column:
+            st.subheader("Product Manager, [HedgeDrip](https://hedgedrip.vercel.app)")
+            st.write("*September 2023 to Present*")
+            st.markdown("""
+            `Figma` `Notion` `Product Management`
+            """)
+    with st.container():
+        image_column, text_column = st.columns((1,5))
+        with image_column:
             st.image(img_groundup)
         with text_column:
             st.subheader("Data Science Intern, [Groundup.ai](https://groundup.ai)")
@@ -430,7 +442,7 @@ elif choose == "Experience":
             - Deployed sound sensors using Raspberry Pi technology to acquire real-time noise data from naval vessels and support comprehensive analysis using spectrograms for anomaly detection
             - Utilised Librosa, Matplotlib and Scikit-Learn to detect anomalies for predictive maintenance of machines using spectrograms and principal component analysis (PCA)
             - Leveraged AWS CloudFormation and YAML to script automatic configuration of Amazon S3 buckets, leading to significant reduction in manual setup time and minimizing potential for human error
-            - Migrated and integrated mulitple databases from InfluxDB and PostgreSQL to ScyllaDB
+            - Collaborated with Product Lead, AI Lead and Software Engineers to improve usability and customization for sound predictive maintenance dashboard
             
             `Python` `Raspberry Pi` `Jira` `Confluence` `Amazon S3` `EC2` `Librosa` `Docker` `Git` `Scikit-Learn` `MLFlow` `YAML` `InfluxDB` `ScyllaDB` `PostgreSQL` `Matplotlib` `Plotly` `Minio`
             """)
@@ -460,6 +472,20 @@ elif choose == "Experience":
             - Trained machine learning models (logistic regression, random forest) to predict insurance claims, with an average accuracy of 80% for each model
 
             `Excel` `Python` `R` `xAct` `VBA`
+            """)
+    with st.container():
+        image_column, text_column = st.columns((1,5))
+        with image_column:
+            st.image(img_quest)
+        with text_column:
+            st.subheader("Data Analytics Intern, [Quest](https://quest-inc.co)")
+            st.write("*Feb to May 2022*")
+            st.markdown("""
+            - Conducted cohort analysis and presented Tableau dashboards to company’s co-founders for boosting user acquisition and retention rates of flagship mobile application
+            - Streamlined data cleaning and dashboarding procedures for future data interns using Python (Pandas) and Tableau, resulting in standardised SOPs for company’s product analytics
+            - Wrote test cases for user acceptance testing of ’like’ feature, managing both front-end functionality and back-end usage tracking, resulting in increased user engagement and new downloads
+
+            `Python` `R` `Tableau` `Excel` `Figma` `Asana` `ClickUp` `Google Analytics` `Retool`
             """)
     with st.container():
         image_column, text_column = st.columns((1,5))
@@ -536,7 +562,7 @@ elif choose == "Technical Skills":
     txt3("Design and Front-end Development", "`Canva`, `Figma`, `HTML`, `CSS`, `Streamlit`, `Wordpress`, `Webflow`")
     txt3("Data Science Techniques", "`Regression`, `Clustering`, `Association Rules Mining`, `Random Forest`, `Decison Trees`, `Principal Components Analysis`, `Text Classification`, `Sentiment Analysis`, `Matrix Factorisation`, `Collaborative Filtering`")
     txt3("Machine Learning Frameworks", "`Numpy`, `Pandas`, `Scikit-Learn`, `TensorFlow`, `Keras`, `JAX`")
-    txt3("Task Management Tools", "`Asana`, `Notion`, `ClickUp`, `Slack`, `Jira`, `Confluence`")
+    txt3("Task Management Tools", "`Asana`, `Notion`, `ClickUp`, `Slack`, `Jira`, `Confluence`, `Miro`, `Mural`")
     txt3("Miscellaneous", "`Google Firebase`, `Microsoft Office`, `Retool`, `Google Ads`")
 
 # Create section for Education
@@ -759,16 +785,16 @@ elif choose == "Education":
         with st.container():
             sem1, mid, sem2 = st.columns((1,0.1,1))
             with sem1:
-                st.write("**Academic Year 2023/24 Semester 1 (Expected)**")
+                st.write("**Academic Year 2023/24 Semester 1**")
                 st.markdown("""
                 |Code|Module Title                       |Workload|
                 |--------|--------------------------------------|---------|
                 |CS4225|Big Data Systems for Data Science|4 MCs|
-                |DSA4299|Applied Project in Data Science and Analytics|16 MCs|
+                |DSA4199|Applied Project in Data Science and Analytics|8 MCs|
                 """)
                 st.write("")
                 st.markdown("""
-                Total Workload for Semester: **20 Modular Credits (MCs)**
+                Total Workload for Semester: **12 Modular Credits (MCs)**
                 """)
             with mid:
                 st.empty()
@@ -779,10 +805,11 @@ elif choose == "Education":
                 |--------|--------------------------------------|---------|
                 |DSA426X|Sense-Making Case Analysis|4 MCs|
                 |ST4234|Bayesian Statistics|4 MCs|
+                |DSA4199|Applied Project in Data Science and Analytics|8 MCs|
                 """)
                 st.write("")
                 st.markdown("""
-                Total Workload for Semester: **8 Modular Credits (MCs)**
+                Total Workload for Semester: *16 Modular Credits (MCs)**
                 """)
         with st.container():
             left, mid, right = st.columns((0.1,1,0.1))
@@ -806,7 +833,7 @@ elif choose == "Projects":
         text_column, image_column = st.columns((3,1))
         with text_column:
             st.subheader("Blockchain Social Media Webscraper")
-            st.write("*Project for US-based stealth startup, Bitmetrix.ai (in progress)*")
+            st.write("*Project for US-based stealth startup, Bitmetrix.ai*")
             st.markdown("""
             - Utilised snscrape to scrape tweets from top blockchain websites such as CoinGecko and CoinMarketCap
             - Built webscraper using BeautifulSoup4 to scrape content from fintech news websites such as https://blockchain.news
@@ -1101,14 +1128,41 @@ elif choose == "Volunteering":
     with st.container():
         text_column, mid, image_column = st.columns((3,0.4,1))
         with text_column:
+            st.subheader("NUS Fintech Society")
+            st.write("*August 2023 to April 2024*")
+            st.markdown("""
+            Design Manager (UI/UX Design Lead)
+
+
+            """)
+        with mid:
+            st.empty()
+        with image_column:
+            st.image(images_vol[11])
+    with st.container():
+        text_column, mid, image_column = st.columns((3,0.4,1))
+        with text_column:
+            st.subheader("NUS Human Capital Society")
+            st.write("*July 2023 to April 2024*")
+            st.markdown("""
+            Research & Strategy Executive
+
+            """)
+        with mid:
+            st.empty()
+        with image_column:
+            st.image(images_vol[10])
+    with st.container():
+        text_column, mid, image_column = st.columns((3,0.4,1))
+        with text_column:
             st.subheader("NUS Product Club")
             st.write("*April 2023 to April 2024*")
             st.markdown("""
             Co-founder & President
 
-            - Spearheaded design of club's logo
-            - Drafted publicity posters on Canva to drive publicity and outreach efforts for recruitment
-            - Oversaw committee of 24 members in carrying out operations, partnerships efforts and curriculum workshops for NUS students
+            - Designed recruitment posters, club logo and [information deck](https://bit.ly/nuspc-infodeck) using Canva and Figma to increase brand awareness of new club, increasing social media outreach to over 1,000 followers across LinkedIn, Telegram and Instagram within 2 months since club formation
+            - Onboarded Staff Advisor and Product Managers from various industries to organise club events, including fireside chats and curriculum workshops that would better educate students on product management
+            - Currently designing curriculum for future Product Analytics Workshop, covering essential topics including product metrics, A/B testing, predictive analytics and cohort analysis
             """)
         with mid:
             st.empty()
@@ -2702,7 +2756,7 @@ elif choose == "Gallery":
         st.subheader("2023")
         st.write("*Success - being content at the present moment*")
         # Load the images
-        num_images = 11
+        num_images = 22
         images_2023 = [Image.open(f"gallery/2023_{i}.jpg") for i in range(1, num_images + 1)]
 
         # Display the images in a grid
@@ -2753,17 +2807,17 @@ elif choose == "Gallery":
             #st.write("...and now add `?analytics=on` to the URL to see the analytics dashboard 👀")
 
 elif choose == "Resume":   
-    resume_url = "https://drive.google.com/file/d/1n4TQxDkn98Tu5i2--aNKbK-JvP7xGcDe/view?usp=drive_link"
+    resume_url = "https://drive.google.com/file/d/164EEVH6BmvC89q2M4WsBNF1JyddDAbNY/view?usp=sharing"
     st.header("Resume")
     st.write("*In case your current browser cannot display the PDF documents, do refer to the hyperlink below!*")
 
     st.markdown(pdf_link(resume_url, "**Resume (1 page)**"), unsafe_allow_html=True)
-    show_pdf("Harry Chang Resume2024.pdf")
-    with open("Harry Chang Resume2024.pdf", "rb") as file:
+    show_pdf("HarryChang_Resume.pdf")
+    with open("HarryChang_Resume.pdf", "rb") as file:
         btn = st.download_button(
             label="Download Resume (1 page)",
             data=file,
-            file_name="Harry Chang Resume2024.pdf",
+            file_name="HarryChang_Resume.pdf",
             mime="application/pdf"
         )
 elif choose == "Testimonials": 
