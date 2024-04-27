@@ -10,7 +10,7 @@ import base64
 from streamlit_extras.mention import mention
 from streamlit_extras.app_logo import add_logo
 import sqlite3
-from bs4 import BeautifulSoup
+#from bs4 import BeautifulSoup
 from streamlit_extras.echo_expander import echo_expander
 
 #test
