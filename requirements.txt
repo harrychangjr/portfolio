@@ -6,3 +6,4 @@ streamlit-on-Hover-tabs==1.0.1
 requests==2.28.2
 streamlit-analytics
 streamlit-extras
+beautifulsoup4
